@@ -31,8 +31,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginForm));
             this.logo = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.Admin_Box = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
@@ -70,16 +70,6 @@
             this.panel1.Size = new System.Drawing.Size(802, 174);
             this.panel1.TabIndex = 0;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(276, 66);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(244, 13);
-            this.label1.TabIndex = 1;
-            this.label1.Text = " ------------------------------------------------------------------------------";
-            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
@@ -89,6 +79,16 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label1.Location = new System.Drawing.Point(276, 66);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(244, 13);
+            this.label1.TabIndex = 1;
+            this.label1.Text = " ------------------------------------------------------------------------------";
             // 
             // Admin_Box
             // 
@@ -132,6 +132,7 @@
             this.ADMIN.TabIndex = 5;
             this.ADMIN.Text = "ADMIN";
             this.ADMIN.UseVisualStyleBackColor = true;
+            this.ADMIN.Click += new System.EventHandler(this.ADMIN_Click);
             // 
             // CASHIER
             // 
@@ -142,6 +143,7 @@
             this.CASHIER.TabIndex = 6;
             this.CASHIER.Text = "CASHIER";
             this.CASHIER.UseVisualStyleBackColor = true;
+            this.CASHIER.Click += new System.EventHandler(this.CASHIER_Click);
             // 
             // CUSTOMER
             // 
@@ -152,6 +154,7 @@
             this.CUSTOMER.TabIndex = 7;
             this.CUSTOMER.Text = "CUSTOMER";
             this.CUSTOMER.UseVisualStyleBackColor = true;
+            this.CUSTOMER.Click += new System.EventHandler(this.CUSTOMER_Click);
             // 
             // panel2
             // 

@@ -30,10 +30,10 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginAdmin));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.BACK_BOX = new System.Windows.Forms.PictureBox();
-            this.ADMIN_BOX = new System.Windows.Forms.PictureBox();
-            this.LINE_LBL = new System.Windows.Forms.Label();
             this.LINE_LBL2 = new System.Windows.Forms.Label();
+            this.LINE_LBL = new System.Windows.Forms.Label();
+            this.ADMIN_BOX = new System.Windows.Forms.PictureBox();
+            this.BACK_BOX = new System.Windows.Forms.PictureBox();
             this.LOGIN_LBL = new System.Windows.Forms.Label();
             this.ID = new System.Windows.Forms.Label();
             this.PASSWORD = new System.Windows.Forms.Label();
@@ -41,8 +41,8 @@
             this.PASSWORD_TXT = new System.Windows.Forms.TextBox();
             this.LOGIN = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.BACK_BOX)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ADMIN_BOX)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BACK_BOX)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -58,16 +58,25 @@
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
-            // BACK_BOX
+            // LINE_LBL2
             // 
-            this.BACK_BOX.BackColor = System.Drawing.SystemColors.Control;
-            this.BACK_BOX.Image = ((System.Drawing.Image)(resources.GetObject("BACK_BOX.Image")));
-            this.BACK_BOX.Location = new System.Drawing.Point(12, 12);
-            this.BACK_BOX.Name = "BACK_BOX";
-            this.BACK_BOX.Size = new System.Drawing.Size(67, 43);
-            this.BACK_BOX.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.BACK_BOX.TabIndex = 0;
-            this.BACK_BOX.TabStop = false;
+            this.LINE_LBL2.AutoSize = true;
+            this.LINE_LBL2.ForeColor = System.Drawing.SystemColors.Control;
+            this.LINE_LBL2.Location = new System.Drawing.Point(44, 261);
+            this.LINE_LBL2.Name = "LINE_LBL2";
+            this.LINE_LBL2.Size = new System.Drawing.Size(142, 13);
+            this.LINE_LBL2.TabIndex = 3;
+            this.LINE_LBL2.Text = "---------------------------------------------";
+            // 
+            // LINE_LBL
+            // 
+            this.LINE_LBL.AutoSize = true;
+            this.LINE_LBL.ForeColor = System.Drawing.SystemColors.Control;
+            this.LINE_LBL.Location = new System.Drawing.Point(44, 248);
+            this.LINE_LBL.Name = "LINE_LBL";
+            this.LINE_LBL.Size = new System.Drawing.Size(142, 13);
+            this.LINE_LBL.TabIndex = 2;
+            this.LINE_LBL.Text = "---------------------------------------------";
             // 
             // ADMIN_BOX
             // 
@@ -80,25 +89,17 @@
             this.ADMIN_BOX.TabIndex = 1;
             this.ADMIN_BOX.TabStop = false;
             // 
-            // LINE_LBL
+            // BACK_BOX
             // 
-            this.LINE_LBL.AutoSize = true;
-            this.LINE_LBL.ForeColor = System.Drawing.SystemColors.Control;
-            this.LINE_LBL.Location = new System.Drawing.Point(44, 248);
-            this.LINE_LBL.Name = "LINE_LBL";
-            this.LINE_LBL.Size = new System.Drawing.Size(142, 13);
-            this.LINE_LBL.TabIndex = 2;
-            this.LINE_LBL.Text = "---------------------------------------------";
-            // 
-            // LINE_LBL2
-            // 
-            this.LINE_LBL2.AutoSize = true;
-            this.LINE_LBL2.ForeColor = System.Drawing.SystemColors.Control;
-            this.LINE_LBL2.Location = new System.Drawing.Point(44, 261);
-            this.LINE_LBL2.Name = "LINE_LBL2";
-            this.LINE_LBL2.Size = new System.Drawing.Size(142, 13);
-            this.LINE_LBL2.TabIndex = 3;
-            this.LINE_LBL2.Text = "---------------------------------------------";
+            this.BACK_BOX.BackColor = System.Drawing.SystemColors.Control;
+            this.BACK_BOX.Image = ((System.Drawing.Image)(resources.GetObject("BACK_BOX.Image")));
+            this.BACK_BOX.Location = new System.Drawing.Point(12, 12);
+            this.BACK_BOX.Name = "BACK_BOX";
+            this.BACK_BOX.Size = new System.Drawing.Size(67, 43);
+            this.BACK_BOX.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.BACK_BOX.TabIndex = 0;
+            this.BACK_BOX.TabStop = false;
+            this.BACK_BOX.Click += new System.EventHandler(this.BACK_BOX_Click);
             // 
             // LOGIN_LBL
             // 
@@ -176,8 +177,8 @@
             this.Text = "LoginAdmin";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.BACK_BOX)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ADMIN_BOX)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BACK_BOX)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -31,5 +31,29 @@ namespace Mart_Management_System
         {
 
         }
+
+        private void ADMIN_Click(object sender, EventArgs e)
+        {
+           
+            LoginAdmin adlog=new LoginAdmin();
+            adlog.Show();
+            //this.Dispose();
+        }
+
+        private void CUSTOMER_Click(object sender, EventArgs e)
+        {
+            
+            LoginCustomer cuslog = new LoginCustomer();
+            cuslog.Show();
+            //this.Dispose();
+        }
+
+        private void CASHIER_Click(object sender, EventArgs e)
+        {
+            
+            LoginCashier cashlog = new LoginCashier();
+            cashlog.Show();
+            //this.Dispose();
+        }
     }
 }

@@ -16,5 +16,10 @@ namespace Mart_Management_System
         {
             InitializeComponent();
         }
+
+        private void BACK_BOX_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
+        }
     }
 }

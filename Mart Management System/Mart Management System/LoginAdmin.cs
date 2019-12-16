@@ -26,5 +26,11 @@ namespace Mart_Management_System
         {
 
         }
+
+        private void BACK_BOX_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
+
+        }
     }
 }
