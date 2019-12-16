@@ -47,21 +47,197 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Forms\LoginForm.cs">
+    <Compile Include="AddCashier.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\LoginForm.Designer.cs">
+    <Compile Include="AddCashier.Designer.cs">
+      <DependentUpon>AddCashier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddCategoru.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddCategoru.Designer.cs">
+      <DependentUpon>AddCategoru.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddCompany.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddCompany.Designer.cs">
+      <DependentUpon>AddCompany.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddProduct.Designer.cs">
+      <DependentUpon>AddProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin.Designer.cs">
+      <DependentUpon>Admin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cashier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cashier.Designer.cs">
+      <DependentUpon>Cashier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CashierOperations.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CashierOperations.Designer.cs">
+      <DependentUpon>CashierOperations.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CategoryOperations.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CategoryOperations.Designer.cs">
+      <DependentUpon>CategoryOperations.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CompanyOpearations.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CompanyOpearations.Designer.cs">
+      <DependentUpon>CompanyOpearations.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerOperations.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomerOperations.Designer.cs">
+      <DependentUpon>CustomerOperations.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomerView.Designer.cs">
+      <DependentUpon>CustomerView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DeleteCashier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeleteCashier.Designer.cs">
+      <DependentUpon>DeleteCashier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DeleteCategory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeleteCategory.Designer.cs">
+      <DependentUpon>DeleteCategory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DeleteCompany.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeleteCompany.Designer.cs">
+      <DependentUpon>DeleteCompany.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DeleteProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeleteProduct.Designer.cs">
+      <DependentUpon>DeleteProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginAdmin.Designer.cs">
+      <DependentUpon>LoginAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginCashier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginCashier.Designer.cs">
+      <DependentUpon>LoginCashier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginCustomer.Designer.cs">
+      <DependentUpon>LoginCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginForm.Designer.cs">
       <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProductOperations.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProductOperations.Designer.cs">
+      <DependentUpon>ProductOperations.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Forms\LoginForm.resx">
-      <DependentUpon>LoginForm.cs</DependentUpon>
-    </EmbeddedResource>
+    <Compile Include="SearchUpdateCashier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SearchUpdateCashier.Designer.cs">
+      <DependentUpon>SearchUpdateCashier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SearchUpdateCategory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SearchUpdateCategory.Designer.cs">
+      <DependentUpon>SearchUpdateCategory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SearchUpdateCompany.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SearchUpdateCompany.Designer.cs">
+      <DependentUpon>SearchUpdateCompany.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SearchUpdateProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SearchUpdateProduct.Designer.cs">
+      <DependentUpon>SearchUpdateProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SignUpCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SignUpCustomer.Designer.cs">
+      <DependentUpon>SignUpCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TransactionOperation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TransactionOperation.Designer.cs">
+      <DependentUpon>TransactionOperation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewCashier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewCashier.Designer.cs">
+      <DependentUpon>ViewCashier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewCategory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewCategory.Designer.cs">
+      <DependentUpon>ViewCategory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewCompany.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewCompany.Designer.cs">
+      <DependentUpon>ViewCompany.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewProduct.Designer.cs">
+      <DependentUpon>ViewProduct.cs</DependentUpon>
+    </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
@@ -71,6 +247,101 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="AddCashier.resx">
+      <DependentUpon>AddCashier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddCategoru.resx">
+      <DependentUpon>AddCategoru.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddCompany.resx">
+      <DependentUpon>AddCompany.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddProduct.resx">
+      <DependentUpon>AddProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin.resx">
+      <DependentUpon>Admin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cashier.resx">
+      <DependentUpon>Cashier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CashierOperations.resx">
+      <DependentUpon>CashierOperations.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CategoryOperations.resx">
+      <DependentUpon>CategoryOperations.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CompanyOpearations.resx">
+      <DependentUpon>CompanyOpearations.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomerOperations.resx">
+      <DependentUpon>CustomerOperations.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomerView.resx">
+      <DependentUpon>CustomerView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeleteCashier.resx">
+      <DependentUpon>DeleteCashier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeleteCategory.resx">
+      <DependentUpon>DeleteCategory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeleteCompany.resx">
+      <DependentUpon>DeleteCompany.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeleteProduct.resx">
+      <DependentUpon>DeleteProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginAdmin.resx">
+      <DependentUpon>LoginAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginCashier.resx">
+      <DependentUpon>LoginCashier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginCustomer.resx">
+      <DependentUpon>LoginCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProductOperations.resx">
+      <DependentUpon>ProductOperations.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SearchUpdateCashier.resx">
+      <DependentUpon>SearchUpdateCashier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SearchUpdateCategory.resx">
+      <DependentUpon>SearchUpdateCategory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SearchUpdateCompany.resx">
+      <DependentUpon>SearchUpdateCompany.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SearchUpdateProduct.resx">
+      <DependentUpon>SearchUpdateProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SignUpCustomer.resx">
+      <DependentUpon>SignUpCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TransactionOperation.resx">
+      <DependentUpon>TransactionOperation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewCashier.resx">
+      <DependentUpon>ViewCashier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewCategory.resx">
+      <DependentUpon>ViewCategory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewCompany.resx">
+      <DependentUpon>ViewCompany.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewProduct.resx">
+      <DependentUpon>ViewProduct.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
