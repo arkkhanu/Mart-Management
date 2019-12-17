@@ -50,3 +50,27 @@ F:\University Material\5th Semister\Project\Visual Programing\Git\Mart Managemen
 F:\University Material\5th Semister\Project\Visual Programing\Git\Mart Management System\Mart Management System\bin\Debug\Mart Management System.exe
 F:\University Material\5th Semister\Project\Visual Programing\Git\Mart Management System\Mart Management System\bin\Debug\Mart Management System.pdb
 F:\University Material\5th Semister\Project\Visual Programing\Git\Mart Management System\Mart Management System\obj\Debug\Mart Management System.csprojResolveAssemblyReference.cache
+C:\Users\USER\Desktop\Mart management system\Mart Management System\Mart Management System\obj\Debug\Mart_Management_System.AddCashier.resources
+C:\Users\USER\Desktop\Mart management system\Mart Management System\Mart Management System\obj\Debug\Mart_Management_System.AddCategoru.resources
+C:\Users\USER\Desktop\Mart management system\Mart Management System\Mart Management System\obj\Debug\Mart_Management_System.AddCompany.resources
+C:\Users\USER\Desktop\Mart management system\Mart Management System\Mart Management System\obj\Debug\Mart_Management_System.AddProduct.resources
+C:\Users\USER\Desktop\Mart management system\Mart Management System\Mart Management System\obj\Debug\Mart_Management_System.Cashier.resources
+C:\Users\USER\Desktop\Mart management system\Mart Management System\Mart Management System\obj\Debug\Mart_Management_System.CashierOperations.resources
+C:\Users\USER\Desktop\Mart management system\Mart Management System\Mart Management System\obj\Debug\Mart_Management_System.CategoryOperations.resources
+C:\Users\USER\Desktop\Mart management system\Mart Management System\Mart Management System\obj\Debug\Mart_Management_System.CompanyOpearations.resources
+C:\Users\USER\Desktop\Mart management system\Mart Management System\Mart Management System\obj\Debug\Mart_Management_System.CustomerOperations.resources
+C:\Users\USER\Desktop\Mart management system\Mart Management System\Mart Management System\obj\Debug\Mart_Management_System.CustomerView.resources
+C:\Users\USER\Desktop\Mart management system\Mart Management System\Mart Management System\obj\Debug\Mart_Management_System.DeleteCashier.resources
+C:\Users\USER\Desktop\Mart management system\Mart Management System\Mart Management System\obj\Debug\Mart_Management_System.DeleteCategory.resources
+C:\Users\USER\Desktop\Mart management system\Mart Management System\Mart Management System\obj\Debug\Mart_Management_System.DeleteCompany.resources
+C:\Users\USER\Desktop\Mart management system\Mart Management System\Mart Management System\obj\Debug\Mart_Management_System.DeleteProduct.resources
+C:\Users\USER\Desktop\Mart management system\Mart Management System\Mart Management System\obj\Debug\Mart_Management_System.ProductOperations.resources
+C:\Users\USER\Desktop\Mart management system\Mart Management System\Mart Management System\obj\Debug\Mart_Management_System.SearchUpdateCashier.resources
+C:\Users\USER\Desktop\Mart management system\Mart Management System\Mart Management System\obj\Debug\Mart_Management_System.SearchUpdateCategory.resources
+C:\Users\USER\Desktop\Mart management system\Mart Management System\Mart Management System\obj\Debug\Mart_Management_System.SearchUpdateCompany.resources
+C:\Users\USER\Desktop\Mart management system\Mart Management System\Mart Management System\obj\Debug\Mart_Management_System.SearchUpdateProduct.resources
+C:\Users\USER\Desktop\Mart management system\Mart Management System\Mart Management System\obj\Debug\Mart_Management_System.TransactionOperation.resources
+C:\Users\USER\Desktop\Mart management system\Mart Management System\Mart Management System\obj\Debug\Mart_Management_System.ViewCashier.resources
+C:\Users\USER\Desktop\Mart management system\Mart Management System\Mart Management System\obj\Debug\Mart_Management_System.ViewCategory.resources
+C:\Users\USER\Desktop\Mart management system\Mart Management System\Mart Management System\obj\Debug\Mart_Management_System.ViewCompany.resources
+C:\Users\USER\Desktop\Mart management system\Mart Management System\Mart Management System\obj\Debug\Mart_Management_System.ViewProduct.resources

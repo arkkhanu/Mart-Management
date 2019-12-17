@@ -37,9 +37,9 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.ID = new System.Windows.Forms.Label();
             this.PASSWORD = new System.Windows.Forms.Label();
-            this.ID_COMBO = new System.Windows.Forms.ComboBox();
             this.NAME_TXT = new System.Windows.Forms.TextBox();
             this.ADD_BUTTON = new System.Windows.Forms.Button();
+            this.ID_CAT = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CATEGORY_BOX)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -57,6 +57,7 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(802, 134);
             this.panel1.TabIndex = 1;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // label1
             // 
@@ -110,6 +111,7 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // ID
             // 
@@ -134,14 +136,6 @@
             this.PASSWORD.TabIndex = 17;
             this.PASSWORD.Text = "NAME";
             // 
-            // ID_COMBO
-            // 
-            this.ID_COMBO.FormattingEnabled = true;
-            this.ID_COMBO.Location = new System.Drawing.Point(325, 211);
-            this.ID_COMBO.Name = "ID_COMBO";
-            this.ID_COMBO.Size = new System.Drawing.Size(173, 21);
-            this.ID_COMBO.TabIndex = 18;
-            // 
             // NAME_TXT
             // 
             this.NAME_TXT.Location = new System.Drawing.Point(325, 271);
@@ -158,6 +152,14 @@
             this.ADD_BUTTON.TabIndex = 33;
             this.ADD_BUTTON.Text = "ADD";
             this.ADD_BUTTON.UseVisualStyleBackColor = true;
+            this.ADD_BUTTON.Click += new System.EventHandler(this.ADD_BUTTON_Click);
+            // 
+            // ID_CAT
+            // 
+            this.ID_CAT.Location = new System.Drawing.Point(325, 212);
+            this.ID_CAT.Name = "ID_CAT";
+            this.ID_CAT.Size = new System.Drawing.Size(173, 20);
+            this.ID_CAT.TabIndex = 34;
             // 
             // AddCategoru
             // 
@@ -165,14 +167,15 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.ID_CAT);
             this.Controls.Add(this.ADD_BUTTON);
             this.Controls.Add(this.NAME_TXT);
-            this.Controls.Add(this.ID_COMBO);
             this.Controls.Add(this.PASSWORD);
             this.Controls.Add(this.ID);
             this.Controls.Add(this.panel1);
             this.Name = "AddCategoru";
             this.Text = "AddCategoru";
+            this.Load += new System.EventHandler(this.AddCategoru_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CATEGORY_BOX)).EndInit();
@@ -192,8 +195,8 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label ID;
         private System.Windows.Forms.Label PASSWORD;
-        private System.Windows.Forms.ComboBox ID_COMBO;
         private System.Windows.Forms.TextBox NAME_TXT;
         private System.Windows.Forms.Button ADD_BUTTON;
+        private System.Windows.Forms.TextBox ID_CAT;
     }
 }

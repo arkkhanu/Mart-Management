@@ -30,10 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Admin));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.Admin_box = new System.Windows.Forms.PictureBox();
             this.Log_Out = new System.Windows.Forms.PictureBox();
-            this.Admin_lbl = new System.Windows.Forms.Label();
-            this.ADMIN_ID = new System.Windows.Forms.TextBox();
+            this.Admin_box = new System.Windows.Forms.PictureBox();
             this.PRODUCT_BOX = new System.Windows.Forms.PictureBox();
             this.CASHIER_BOX = new System.Windows.Forms.PictureBox();
             this.CATEGORY_BOX = new System.Windows.Forms.PictureBox();
@@ -47,8 +45,8 @@
             this.TRANSACTION = new System.Windows.Forms.Button();
             this.CUSTOMER = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Admin_box)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Log_Out)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Admin_box)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PRODUCT_BOX)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CASHIER_BOX)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CATEGORY_BOX)).BeginInit();
@@ -60,25 +58,12 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.panel1.Controls.Add(this.ADMIN_ID);
-            this.panel1.Controls.Add(this.Admin_lbl);
             this.panel1.Controls.Add(this.Log_Out);
             this.panel1.Controls.Add(this.Admin_box);
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(782, 151);
             this.panel1.TabIndex = 0;
-            // 
-            // Admin_box
-            // 
-            this.Admin_box.BackColor = System.Drawing.SystemColors.Control;
-            this.Admin_box.Image = ((System.Drawing.Image)(resources.GetObject("Admin_box.Image")));
-            this.Admin_box.Location = new System.Drawing.Point(562, 24);
-            this.Admin_box.Name = "Admin_box";
-            this.Admin_box.Size = new System.Drawing.Size(146, 98);
-            this.Admin_box.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.Admin_box.TabIndex = 1;
-            this.Admin_box.TabStop = false;
             // 
             // Log_Out
             // 
@@ -90,24 +75,18 @@
             this.Log_Out.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.Log_Out.TabIndex = 2;
             this.Log_Out.TabStop = false;
+            this.Log_Out.Click += new System.EventHandler(this.Log_Out_Click);
             // 
-            // Admin_lbl
+            // Admin_box
             // 
-            this.Admin_lbl.AutoSize = true;
-            this.Admin_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Admin_lbl.ForeColor = System.Drawing.SystemColors.Control;
-            this.Admin_lbl.Location = new System.Drawing.Point(211, 70);
-            this.Admin_lbl.Name = "Admin_lbl";
-            this.Admin_lbl.Size = new System.Drawing.Size(95, 20);
-            this.Admin_lbl.TabIndex = 3;
-            this.Admin_lbl.Text = "ADMIN ID:";
-            // 
-            // ADMIN_ID
-            // 
-            this.ADMIN_ID.Location = new System.Drawing.Point(322, 70);
-            this.ADMIN_ID.Name = "ADMIN_ID";
-            this.ADMIN_ID.Size = new System.Drawing.Size(122, 20);
-            this.ADMIN_ID.TabIndex = 4;
+            this.Admin_box.BackColor = System.Drawing.SystemColors.Control;
+            this.Admin_box.Image = ((System.Drawing.Image)(resources.GetObject("Admin_box.Image")));
+            this.Admin_box.Location = new System.Drawing.Point(562, 24);
+            this.Admin_box.Name = "Admin_box";
+            this.Admin_box.Size = new System.Drawing.Size(146, 98);
+            this.Admin_box.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.Admin_box.TabIndex = 1;
+            this.Admin_box.TabStop = false;
             // 
             // PRODUCT_BOX
             // 
@@ -185,6 +164,7 @@
             this.PRODUCT_BUTTON.TabIndex = 14;
             this.PRODUCT_BUTTON.Text = "PRODUCT";
             this.PRODUCT_BUTTON.UseVisualStyleBackColor = true;
+            this.PRODUCT_BUTTON.Click += new System.EventHandler(this.PRODUCT_BUTTON_Click);
             // 
             // CATEGORY_BUTTON
             // 
@@ -195,6 +175,7 @@
             this.CATEGORY_BUTTON.TabIndex = 15;
             this.CATEGORY_BUTTON.Text = "CATEGORY";
             this.CATEGORY_BUTTON.UseVisualStyleBackColor = true;
+            this.CATEGORY_BUTTON.Click += new System.EventHandler(this.CATEGORY_BUTTON_Click);
             // 
             // CASHIER_BUTTON
             // 
@@ -215,6 +196,7 @@
             this.COMPANY_BUTTON.TabIndex = 17;
             this.COMPANY_BUTTON.Text = "COMPANY";
             this.COMPANY_BUTTON.UseVisualStyleBackColor = true;
+            this.COMPANY_BUTTON.Click += new System.EventHandler(this.COMPANY_BUTTON_Click);
             // 
             // TRANSACTION
             // 
@@ -259,9 +241,8 @@
             this.Text = "Admin";
             this.Load += new System.EventHandler(this.Admin_Load);
             this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Admin_box)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Log_Out)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Admin_box)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PRODUCT_BOX)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CASHIER_BOX)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CATEGORY_BOX)).EndInit();
@@ -275,8 +256,6 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox ADMIN_ID;
-        private System.Windows.Forms.Label Admin_lbl;
         private System.Windows.Forms.PictureBox Log_Out;
         private System.Windows.Forms.PictureBox Admin_box;
         private System.Windows.Forms.PictureBox PRODUCT_BOX;

@@ -26,5 +26,34 @@ namespace Mart_Management_System
         {
 
         }
+
+        private void Log_Out_Click(object sender, EventArgs e)
+        {
+            LoginAdmin ad = new LoginAdmin();
+            this.Hide();
+            ad.Show();
+        }
+
+        private void PRODUCT_BUTTON_Click(object sender, EventArgs e)
+        {
+            ProductOperations op = new ProductOperations();
+            this.Hide();
+            op.Show();
+        }
+
+        private void COMPANY_BUTTON_Click(object sender, EventArgs e)
+        {
+            AddCompany co = new AddCompany();
+            this.Hide();
+            co.Show();
+
+        }
+
+        private void CATEGORY_BUTTON_Click(object sender, EventArgs e)
+        {
+            AddCategoru g = new AddCategoru();
+            this.Hide();
+            g.Show();
+        }
     }
 }

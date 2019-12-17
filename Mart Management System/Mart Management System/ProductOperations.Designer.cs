@@ -117,6 +117,7 @@
             this.BACK_BOX.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.BACK_BOX.TabIndex = 0;
             this.BACK_BOX.TabStop = false;
+            this.BACK_BOX.Click += new System.EventHandler(this.BACK_BOX_Click);
             // 
             // ADD_BOX
             // 
@@ -171,6 +172,7 @@
             this.ADD_BTN.TabIndex = 13;
             this.ADD_BTN.Text = "ADD";
             this.ADD_BTN.UseVisualStyleBackColor = true;
+            this.ADD_BTN.Click += new System.EventHandler(this.ADD_BTN_Click);
             // 
             // DELETE_BTN
             // 

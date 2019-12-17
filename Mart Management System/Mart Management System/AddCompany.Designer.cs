@@ -37,9 +37,9 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.ID = new System.Windows.Forms.Label();
             this.PASSWORD = new System.Windows.Forms.Label();
-            this.ID_COMBO = new System.Windows.Forms.ComboBox();
             this.NAME_TXT = new System.Windows.Forms.TextBox();
             this.ADD_BUTTON = new System.Windows.Forms.Button();
+            this.ID_COMP = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.COMPANY_BOX)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -110,6 +110,7 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // ID
             // 
@@ -134,20 +135,13 @@
             this.PASSWORD.TabIndex = 18;
             this.PASSWORD.Text = "NAME";
             // 
-            // ID_COMBO
-            // 
-            this.ID_COMBO.FormattingEnabled = true;
-            this.ID_COMBO.Location = new System.Drawing.Point(335, 222);
-            this.ID_COMBO.Name = "ID_COMBO";
-            this.ID_COMBO.Size = new System.Drawing.Size(173, 21);
-            this.ID_COMBO.TabIndex = 19;
-            // 
             // NAME_TXT
             // 
             this.NAME_TXT.Location = new System.Drawing.Point(335, 278);
             this.NAME_TXT.Name = "NAME_TXT";
             this.NAME_TXT.Size = new System.Drawing.Size(173, 20);
             this.NAME_TXT.TabIndex = 20;
+            this.NAME_TXT.TextChanged += new System.EventHandler(this.NAME_TXT_TextChanged);
             // 
             // ADD_BUTTON
             // 
@@ -158,6 +152,14 @@
             this.ADD_BUTTON.TabIndex = 34;
             this.ADD_BUTTON.Text = "ADD";
             this.ADD_BUTTON.UseVisualStyleBackColor = true;
+            this.ADD_BUTTON.Click += new System.EventHandler(this.ADD_BUTTON_Click);
+            // 
+            // ID_COMP
+            // 
+            this.ID_COMP.Location = new System.Drawing.Point(335, 227);
+            this.ID_COMP.Name = "ID_COMP";
+            this.ID_COMP.Size = new System.Drawing.Size(173, 20);
+            this.ID_COMP.TabIndex = 35;
             // 
             // AddCompany
             // 
@@ -165,14 +167,15 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.ID_COMP);
             this.Controls.Add(this.ADD_BUTTON);
             this.Controls.Add(this.NAME_TXT);
-            this.Controls.Add(this.ID_COMBO);
             this.Controls.Add(this.PASSWORD);
             this.Controls.Add(this.ID);
             this.Controls.Add(this.panel1);
             this.Name = "AddCompany";
             this.Text = "AddCompany";
+            this.Load += new System.EventHandler(this.AddCompany_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.COMPANY_BOX)).EndInit();
@@ -192,8 +195,8 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label ID;
         private System.Windows.Forms.Label PASSWORD;
-        private System.Windows.Forms.ComboBox ID_COMBO;
         private System.Windows.Forms.TextBox NAME_TXT;
         private System.Windows.Forms.Button ADD_BUTTON;
+        private System.Windows.Forms.TextBox ID_COMP;
     }
 }

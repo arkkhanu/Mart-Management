@@ -148,6 +148,7 @@
             this.PASSWORD_TXT.Name = "PASSWORD_TXT";
             this.PASSWORD_TXT.Size = new System.Drawing.Size(164, 20);
             this.PASSWORD_TXT.TabIndex = 7;
+            this.PASSWORD_TXT.UseSystemPasswordChar = true;
             // 
             // LOGIN
             // 
@@ -158,6 +159,7 @@
             this.LOGIN.TabIndex = 8;
             this.LOGIN.Text = "LOGIN";
             this.LOGIN.UseVisualStyleBackColor = true;
+            this.LOGIN.Click += new System.EventHandler(this.LOGIN_Click);
             // 
             // LoginAdmin
             // 
@@ -175,6 +177,7 @@
             this.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.Name = "LoginAdmin";
             this.Text = "LoginAdmin";
+            this.Load += new System.EventHandler(this.LoginAdmin_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ADMIN_BOX)).EndInit();

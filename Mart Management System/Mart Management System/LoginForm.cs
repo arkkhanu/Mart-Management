@@ -34,11 +34,13 @@ namespace Mart_Management_System
 
         private void ADMIN_Click(object sender, EventArgs e)
         {
-           
+          
             LoginAdmin adlog=new LoginAdmin();
-            adlog.Show();
-            //this.Dispose();
+             adlog.Show();
+            Visible = false; // Existing form close 
+   
         }
+       
 
         private void CUSTOMER_Click(object sender, EventArgs e)
         {
@@ -54,6 +56,11 @@ namespace Mart_Management_System
             LoginCashier cashlog = new LoginCashier();
             cashlog.Show();
             //this.Dispose();
+        }
+
+        private void LoginForm_Load(object sender, EventArgs e)
+        {
+           
         }
     }
 }
