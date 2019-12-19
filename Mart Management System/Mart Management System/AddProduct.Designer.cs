@@ -123,6 +123,7 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // ID
             // 
@@ -219,6 +220,7 @@
             this.NAME_TXT.Name = "NAME_TXT";
             this.NAME_TXT.Size = new System.Drawing.Size(173, 20);
             this.NAME_TXT.TabIndex = 39;
+            this.NAME_TXT.TextChanged += new System.EventHandler(this.NAME_TXT_TextChanged);
             // 
             // PRICE_TXT
             // 
@@ -269,17 +271,21 @@
             this.ID_TXT.Name = "ID_TXT";
             this.ID_TXT.Size = new System.Drawing.Size(173, 20);
             this.ID_TXT.TabIndex = 50;
+            this.ID_TXT.TextChanged += new System.EventHandler(this.ID_TXT_TextChanged);
             // 
             // Cat_Combo
             // 
+            this.Cat_Combo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.Cat_Combo.FormattingEnabled = true;
             this.Cat_Combo.Location = new System.Drawing.Point(413, 313);
             this.Cat_Combo.Name = "Cat_Combo";
             this.Cat_Combo.Size = new System.Drawing.Size(173, 21);
             this.Cat_Combo.TabIndex = 51;
+            this.Cat_Combo.SelectedIndexChanged += new System.EventHandler(this.Cat_Combo_SelectedIndexChanged);
             // 
             // Product_Combo
             // 
+            this.Product_Combo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.Product_Combo.FormattingEnabled = true;
             this.Product_Combo.Location = new System.Drawing.Point(413, 373);
             this.Product_Combo.Name = "Product_Combo";

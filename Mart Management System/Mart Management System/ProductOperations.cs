@@ -30,5 +30,26 @@ namespace Mart_Management_System
             this.Hide();
             op.Show();
         }
+
+        private void DELETE_BTN_Click(object sender, EventArgs e)
+        {
+            DeleteProduct d = new DeleteProduct();
+            this.Hide();
+            d.Show();
+        }
+
+        private void VIEW_BTN_Click(object sender, EventArgs e)
+        {
+            ViewProduct v = new ViewProduct();
+            this.Hide();
+            v.Show();
+        }
+
+        private void SEARCH_BTN_Click(object sender, EventArgs e)
+        {
+            SearchUpdateProduct p = new SearchUpdateProduct();
+            this.Hide();
+            p.Show();
+        }
     }
 }

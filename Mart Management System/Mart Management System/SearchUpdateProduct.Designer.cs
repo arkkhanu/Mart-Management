@@ -45,14 +45,13 @@
             this.PR_ID = new System.Windows.Forms.Label();
             this.QUAN_LBL = new System.Windows.Forms.Label();
             this.PRICE_TXT = new System.Windows.Forms.TextBox();
-            this.MANU_TXT = new System.Windows.Forms.TextBox();
-            this.EX_TXT = new System.Windows.Forms.TextBox();
             this.PRO_TXT = new System.Windows.Forms.TextBox();
             this.PRO_C_ID = new System.Windows.Forms.TextBox();
             this.QUANTITY_TXT = new System.Windows.Forms.TextBox();
             this.SEARCH_BUTTON = new System.Windows.Forms.Button();
             this.UPDATE = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
+            this.MANU_DATE = new System.Windows.Forms.DateTimePicker();
+            this.EXP_DATE = new System.Windows.Forms.DateTimePicker();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PRODUCT_BOX)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BACK_BOX)).BeginInit();
@@ -69,6 +68,7 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(802, 127);
             this.panel1.TabIndex = 2;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // SIGN_LBL
             // 
@@ -112,6 +112,7 @@
             this.BACK_BOX.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.BACK_BOX.TabIndex = 1;
             this.BACK_BOX.TabStop = false;
+            this.BACK_BOX.Click += new System.EventHandler(this.BACK_BOX_Click);
             // 
             // ID
             // 
@@ -132,6 +133,7 @@
             this.ID_Combo.Name = "ID_Combo";
             this.ID_Combo.Size = new System.Drawing.Size(173, 21);
             this.ID_Combo.TabIndex = 27;
+            this.ID_Combo.SelectedIndexChanged += new System.EventHandler(this.ID_Combo_SelectedIndexChanged);
             // 
             // NAME
             // 
@@ -156,7 +158,7 @@
             this.PRICE_LBL.AutoSize = true;
             this.PRICE_LBL.BackColor = System.Drawing.SystemColors.Control;
             this.PRICE_LBL.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PRICE_LBL.Location = new System.Drawing.Point(125, 329);
+            this.PRICE_LBL.Location = new System.Drawing.Point(125, 446);
             this.PRICE_LBL.Name = "PRICE_LBL";
             this.PRICE_LBL.Size = new System.Drawing.Size(44, 13);
             this.PRICE_LBL.TabIndex = 30;
@@ -167,7 +169,7 @@
             this.EX_LBL.AutoSize = true;
             this.EX_LBL.BackColor = System.Drawing.SystemColors.Control;
             this.EX_LBL.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EX_LBL.Location = new System.Drawing.Point(125, 443);
+            this.EX_LBL.Location = new System.Drawing.Point(125, 560);
             this.EX_LBL.Name = "EX_LBL";
             this.EX_LBL.Size = new System.Drawing.Size(89, 13);
             this.EX_LBL.TabIndex = 31;
@@ -178,7 +180,7 @@
             this.MANU_LBL.AutoSize = true;
             this.MANU_LBL.BackColor = System.Drawing.SystemColors.Control;
             this.MANU_LBL.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MANU_LBL.Location = new System.Drawing.Point(125, 383);
+            this.MANU_LBL.Location = new System.Drawing.Point(125, 502);
             this.MANU_LBL.Name = "MANU_LBL";
             this.MANU_LBL.Size = new System.Drawing.Size(137, 13);
             this.MANU_LBL.TabIndex = 32;
@@ -189,7 +191,7 @@
             this.PRO_LBL.AutoSize = true;
             this.PRO_LBL.BackColor = System.Drawing.SystemColors.Control;
             this.PRO_LBL.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PRO_LBL.Location = new System.Drawing.Point(125, 502);
+            this.PRO_LBL.Location = new System.Drawing.Point(125, 384);
             this.PRO_LBL.Name = "PRO_LBL";
             this.PRO_LBL.Size = new System.Drawing.Size(148, 13);
             this.PRO_LBL.TabIndex = 33;
@@ -200,7 +202,7 @@
             this.PR_ID.AutoSize = true;
             this.PR_ID.BackColor = System.Drawing.SystemColors.Control;
             this.PR_ID.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PR_ID.Location = new System.Drawing.Point(129, 564);
+            this.PR_ID.Location = new System.Drawing.Point(125, 329);
             this.PR_ID.Name = "PR_ID";
             this.PR_ID.Size = new System.Drawing.Size(155, 13);
             this.PR_ID.TabIndex = 34;
@@ -219,35 +221,23 @@
             // 
             // PRICE_TXT
             // 
-            this.PRICE_TXT.Location = new System.Drawing.Point(290, 329);
+            this.PRICE_TXT.Location = new System.Drawing.Point(290, 439);
             this.PRICE_TXT.Name = "PRICE_TXT";
             this.PRICE_TXT.Size = new System.Drawing.Size(173, 20);
             this.PRICE_TXT.TabIndex = 36;
             // 
-            // MANU_TXT
-            // 
-            this.MANU_TXT.Location = new System.Drawing.Point(290, 383);
-            this.MANU_TXT.Name = "MANU_TXT";
-            this.MANU_TXT.Size = new System.Drawing.Size(173, 20);
-            this.MANU_TXT.TabIndex = 37;
-            // 
-            // EX_TXT
-            // 
-            this.EX_TXT.Location = new System.Drawing.Point(290, 436);
-            this.EX_TXT.Name = "EX_TXT";
-            this.EX_TXT.Size = new System.Drawing.Size(173, 20);
-            this.EX_TXT.TabIndex = 38;
-            // 
             // PRO_TXT
             // 
-            this.PRO_TXT.Location = new System.Drawing.Point(290, 495);
+            this.PRO_TXT.Enabled = false;
+            this.PRO_TXT.Location = new System.Drawing.Point(290, 381);
             this.PRO_TXT.Name = "PRO_TXT";
             this.PRO_TXT.Size = new System.Drawing.Size(173, 20);
             this.PRO_TXT.TabIndex = 39;
             // 
             // PRO_C_ID
             // 
-            this.PRO_C_ID.Location = new System.Drawing.Point(290, 561);
+            this.PRO_C_ID.Enabled = false;
+            this.PRO_C_ID.Location = new System.Drawing.Point(290, 326);
             this.PRO_C_ID.Name = "PRO_C_ID";
             this.PRO_C_ID.Size = new System.Drawing.Size(173, 20);
             this.PRO_C_ID.TabIndex = 40;
@@ -278,17 +268,25 @@
             this.UPDATE.TabIndex = 43;
             this.UPDATE.Text = "UPDATE";
             this.UPDATE.UseVisualStyleBackColor = true;
+            this.UPDATE.Click += new System.EventHandler(this.UPDATE_Click);
             // 
-            // label1
+            // MANU_DATE
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.SystemColors.Control;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(380, 352);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(41, 13);
-            this.label1.TabIndex = 44;
-            this.label1.Text = "label1";
+            this.MANU_DATE.CustomFormat = "dd-MM-yyyy";
+            this.MANU_DATE.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.MANU_DATE.Location = new System.Drawing.Point(290, 495);
+            this.MANU_DATE.Name = "MANU_DATE";
+            this.MANU_DATE.Size = new System.Drawing.Size(173, 20);
+            this.MANU_DATE.TabIndex = 44;
+            // 
+            // EXP_DATE
+            // 
+            this.EXP_DATE.CustomFormat = "dd-MM-yyyy";
+            this.EXP_DATE.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.EXP_DATE.Location = new System.Drawing.Point(290, 554);
+            this.EXP_DATE.Name = "EXP_DATE";
+            this.EXP_DATE.Size = new System.Drawing.Size(173, 20);
+            this.EXP_DATE.TabIndex = 45;
             // 
             // SearchUpdateProduct
             // 
@@ -296,14 +294,13 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ClientSize = new System.Drawing.Size(800, 716);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.EXP_DATE);
+            this.Controls.Add(this.MANU_DATE);
             this.Controls.Add(this.UPDATE);
             this.Controls.Add(this.SEARCH_BUTTON);
             this.Controls.Add(this.QUANTITY_TXT);
             this.Controls.Add(this.PRO_C_ID);
             this.Controls.Add(this.PRO_TXT);
-            this.Controls.Add(this.EX_TXT);
-            this.Controls.Add(this.MANU_TXT);
             this.Controls.Add(this.PRICE_TXT);
             this.Controls.Add(this.QUAN_LBL);
             this.Controls.Add(this.PR_ID);
@@ -346,13 +343,12 @@
         private System.Windows.Forms.Label PR_ID;
         private System.Windows.Forms.Label QUAN_LBL;
         private System.Windows.Forms.TextBox PRICE_TXT;
-        private System.Windows.Forms.TextBox MANU_TXT;
-        private System.Windows.Forms.TextBox EX_TXT;
         private System.Windows.Forms.TextBox PRO_TXT;
         private System.Windows.Forms.TextBox PRO_C_ID;
         private System.Windows.Forms.TextBox QUANTITY_TXT;
         private System.Windows.Forms.Button SEARCH_BUTTON;
         private System.Windows.Forms.Button UPDATE;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DateTimePicker MANU_DATE;
+        private System.Windows.Forms.DateTimePicker EXP_DATE;
     }
 }

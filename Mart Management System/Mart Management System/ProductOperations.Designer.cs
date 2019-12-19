@@ -183,6 +183,7 @@
             this.DELETE_BTN.TabIndex = 14;
             this.DELETE_BTN.Text = "DELETE";
             this.DELETE_BTN.UseVisualStyleBackColor = true;
+            this.DELETE_BTN.Click += new System.EventHandler(this.DELETE_BTN_Click);
             // 
             // VIEW_BTN
             // 
@@ -193,6 +194,7 @@
             this.VIEW_BTN.TabIndex = 15;
             this.VIEW_BTN.Text = "VIEW";
             this.VIEW_BTN.UseVisualStyleBackColor = true;
+            this.VIEW_BTN.Click += new System.EventHandler(this.VIEW_BTN_Click);
             // 
             // SEARCH_BTN
             // 
@@ -203,6 +205,7 @@
             this.SEARCH_BTN.TabIndex = 16;
             this.SEARCH_BTN.Text = "SEARCH";
             this.SEARCH_BTN.UseVisualStyleBackColor = true;
+            this.SEARCH_BTN.Click += new System.EventHandler(this.SEARCH_BTN_Click);
             // 
             // ProductOperations
             // 

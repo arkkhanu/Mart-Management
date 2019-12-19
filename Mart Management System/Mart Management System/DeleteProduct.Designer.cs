@@ -108,6 +108,7 @@
             this.BACK_BOX.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.BACK_BOX.TabIndex = 1;
             this.BACK_BOX.TabStop = false;
+            this.BACK_BOX.Click += new System.EventHandler(this.BACK_BOX_Click);
             // 
             // ID_LBL
             // 
@@ -122,11 +123,13 @@
             // 
             // PRODUCT_COMBO
             // 
+            this.PRODUCT_COMBO.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.PRODUCT_COMBO.FormattingEnabled = true;
             this.PRODUCT_COMBO.Location = new System.Drawing.Point(264, 288);
             this.PRODUCT_COMBO.Name = "PRODUCT_COMBO";
             this.PRODUCT_COMBO.Size = new System.Drawing.Size(121, 21);
             this.PRODUCT_COMBO.TabIndex = 17;
+            this.PRODUCT_COMBO.SelectedIndexChanged += new System.EventHandler(this.PRODUCT_COMBO_SelectedIndexChanged);
             // 
             // DELETE
             // 
@@ -137,6 +140,7 @@
             this.DELETE.TabIndex = 18;
             this.DELETE.Text = "DELETE";
             this.DELETE.UseVisualStyleBackColor = true;
+            this.DELETE.Click += new System.EventHandler(this.DELETE_Click);
             // 
             // DeleteProduct
             // 
@@ -150,6 +154,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "DeleteProduct";
             this.Text = "DeleteProduct";
+            this.Load += new System.EventHandler(this.DeleteProduct_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CROSS_BOX)).EndInit();

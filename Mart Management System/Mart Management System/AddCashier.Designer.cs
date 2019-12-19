@@ -30,11 +30,11 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddCashier));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.CASHIER_LBL = new System.Windows.Forms.Label();
-            this.LINE_LBL = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.LINE_LBL = new System.Windows.Forms.Label();
+            this.CASHIER_LBL = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.ID = new System.Windows.Forms.Label();
             this.PASSWORD = new System.Windows.Forms.Label();
             this.NAME = new System.Windows.Forms.Label();
@@ -47,8 +47,8 @@
             this.HIREDATE_TXT = new System.Windows.Forms.TextBox();
             this.ADD_BUTTON = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -64,27 +64,25 @@
             this.panel1.Size = new System.Drawing.Size(802, 134);
             this.panel1.TabIndex = 0;
             // 
-            // pictureBox1
+            // label1
             // 
-            this.pictureBox1.BackColor = System.Drawing.SystemColors.Control;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(12, 34);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(78, 60);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.label1.AutoSize = true;
+            this.label1.ForeColor = System.Drawing.SystemColors.Control;
+            this.label1.Location = new System.Drawing.Point(321, 71);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(160, 13);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "---------------------------------------------------";
             // 
-            // pictureBox2
+            // LINE_LBL
             // 
-            this.pictureBox2.BackColor = System.Drawing.SystemColors.Control;
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(672, 44);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(106, 65);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 1;
-            this.pictureBox2.TabStop = false;
+            this.LINE_LBL.AutoSize = true;
+            this.LINE_LBL.ForeColor = System.Drawing.SystemColors.Control;
+            this.LINE_LBL.Location = new System.Drawing.Point(321, 61);
+            this.LINE_LBL.Name = "LINE_LBL";
+            this.LINE_LBL.Size = new System.Drawing.Size(160, 13);
+            this.LINE_LBL.TabIndex = 5;
+            this.LINE_LBL.Text = "---------------------------------------------------";
             // 
             // CASHIER_LBL
             // 
@@ -97,25 +95,28 @@
             this.CASHIER_LBL.TabIndex = 3;
             this.CASHIER_LBL.Text = "ADD CASHIER";
             // 
-            // LINE_LBL
+            // pictureBox2
             // 
-            this.LINE_LBL.AutoSize = true;
-            this.LINE_LBL.ForeColor = System.Drawing.SystemColors.Control;
-            this.LINE_LBL.Location = new System.Drawing.Point(321, 61);
-            this.LINE_LBL.Name = "LINE_LBL";
-            this.LINE_LBL.Size = new System.Drawing.Size(160, 13);
-            this.LINE_LBL.TabIndex = 5;
-            this.LINE_LBL.Text = "---------------------------------------------------";
+            this.pictureBox2.BackColor = System.Drawing.SystemColors.Control;
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(672, 44);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(106, 65);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 1;
+            this.pictureBox2.TabStop = false;
             // 
-            // label1
+            // pictureBox1
             // 
-            this.label1.AutoSize = true;
-            this.label1.ForeColor = System.Drawing.SystemColors.Control;
-            this.label1.Location = new System.Drawing.Point(321, 71);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(160, 13);
-            this.label1.TabIndex = 6;
-            this.label1.Text = "---------------------------------------------------";
+            this.pictureBox1.BackColor = System.Drawing.SystemColors.Control;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(12, 34);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(78, 60);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // ID
             // 
@@ -242,8 +243,8 @@
             this.Load += new System.EventHandler(this.AddCashier_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
