@@ -32,7 +32,6 @@ namespace Mart_Management_System
         
         void loaddata()
         {
-            
          
             SqlDataAdapter sda;
             DataTable dt = new DataTable();
@@ -40,9 +39,13 @@ namespace Mart_Management_System
             using (SqlConnection con = new SqlConnection(cs))
             {
                 con.Open();
-                sda = new SqlDataAdapter("select * from Product",con);
+                sda = new SqlDataAdapter("select * from Product where pro_id=@pro",con);
+                sda.SelectCommand.Parameters.AddWithValue("@pro", txt_id.Value);
                 sda.Fill(dt);
-                View_Product.DataSource = dt;
+                if (dt.Rows.Count > 0)
+                    View_Product.DataSource = dt;
+                else
+                    MessageBox.Show("No product Found !");
 
 
             }
@@ -50,9 +53,6 @@ namespace Mart_Management_System
 
         private void ViewProduct_Load(object sender, EventArgs e)
         {
-
-
-            loaddata();
 
 
 
@@ -63,6 +63,16 @@ namespace Mart_Management_System
             ProductOperations p = new ProductOperations();
             this.Hide();
             p.Show();
+        }
+
+        private void View_Product_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void btn_search_Click(object sender, EventArgs e)
+        {
+            loaddata();
         }
     }
 }

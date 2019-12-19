@@ -47,7 +47,7 @@ namespace Mart_Management_System
 
         private void SEARCH_BTN_Click(object sender, EventArgs e)
         {
-            SearchUpdateProduct p = new SearchUpdateProduct();
+            UpdateProduct p = new UpdateProduct();
             this.Hide();
             p.Show();
         }

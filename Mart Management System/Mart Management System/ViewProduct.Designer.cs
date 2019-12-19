@@ -36,10 +36,14 @@
             this.LOOK_BOX = new System.Windows.Forms.PictureBox();
             this.BACK_BOX = new System.Windows.Forms.PictureBox();
             this.View_Product = new System.Windows.Forms.DataGridView();
+            this.btn_search = new System.Windows.Forms.Button();
+            this.lbl_id = new System.Windows.Forms.Label();
+            this.txt_id = new System.Windows.Forms.NumericUpDown();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.LOOK_BOX)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BACK_BOX)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.View_Product)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_id)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -52,7 +56,7 @@
             this.panel1.Controls.Add(this.BACK_BOX);
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(801, 161);
+            this.panel1.Size = new System.Drawing.Size(848, 161);
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -113,17 +117,48 @@
             // View_Product
             // 
             this.View_Product.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.View_Product.Location = new System.Drawing.Point(0, 157);
+            this.View_Product.Location = new System.Drawing.Point(0, 288);
             this.View_Product.Name = "View_Product";
-            this.View_Product.Size = new System.Drawing.Size(801, 150);
+            this.View_Product.Size = new System.Drawing.Size(848, 150);
             this.View_Product.TabIndex = 5;
+            this.View_Product.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.View_Product_CellContentClick);
+            // 
+            // btn_search
+            // 
+            this.btn_search.Location = new System.Drawing.Point(411, 249);
+            this.btn_search.Name = "btn_search";
+            this.btn_search.Size = new System.Drawing.Size(75, 23);
+            this.btn_search.TabIndex = 6;
+            this.btn_search.Text = "View";
+            this.btn_search.UseVisualStyleBackColor = true;
+            this.btn_search.Click += new System.EventHandler(this.btn_search_Click);
+            // 
+            // lbl_id
+            // 
+            this.lbl_id.AutoSize = true;
+            this.lbl_id.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_id.Location = new System.Drawing.Point(233, 212);
+            this.lbl_id.Name = "lbl_id";
+            this.lbl_id.Size = new System.Drawing.Size(211, 18);
+            this.lbl_id.TabIndex = 8;
+            this.lbl_id.Text = "Enter Product ID to Search";
+            // 
+            // txt_id
+            // 
+            this.txt_id.Location = new System.Drawing.Point(450, 212);
+            this.txt_id.Name = "txt_id";
+            this.txt_id.Size = new System.Drawing.Size(120, 20);
+            this.txt_id.TabIndex = 9;
             // 
             // ViewProduct
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(849, 450);
+            this.Controls.Add(this.txt_id);
+            this.Controls.Add(this.lbl_id);
+            this.Controls.Add(this.btn_search);
             this.Controls.Add(this.View_Product);
             this.Controls.Add(this.panel1);
             this.Name = "ViewProduct";
@@ -134,7 +169,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.LOOK_BOX)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BACK_BOX)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.View_Product)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_id)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -147,5 +184,8 @@
         private System.Windows.Forms.PictureBox LOOK_BOX;
         private System.Windows.Forms.PictureBox BACK_BOX;
         private System.Windows.Forms.DataGridView View_Product;
+        private System.Windows.Forms.Button btn_search;
+        private System.Windows.Forms.Label lbl_id;
+        private System.Windows.Forms.NumericUpDown txt_id;
     }
 }

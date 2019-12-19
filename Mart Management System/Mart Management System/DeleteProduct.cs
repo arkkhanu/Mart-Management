@@ -23,51 +23,27 @@ namespace Mart_Management_System
 
         private void DELETE_Click(object sender, EventArgs e)
         {
-            
-            //string query = "delete product where pro_id=@pro_id";
-            //DISCONNECTED
-
-            //using(SqlConnection con=new SqlConnection(cs))
-            //{
-
-            //        con.Open();
-            //        SqlCommand cmd = new SqlCommand(query, con);
-
-            //        SqlDataAdapter adp = new SqlDataAdapter(query,con);
-
-
-            //    adp.SelectCommand.Parameters.AddWithValue("@pro_id", PRODUCT_COMBO.SelectedItem.ToString());
-
-
-            //        adp.DeleteCommand = new SqlCommand(query, con);
-            //        adp.DeleteCommand.ExecuteNonQuery();
-            //        MessageBox.Show("Record Deleted !");
-
-
-            //}
-
-
-            //CONNECTED
-
-            string query = "delete product where pro_id='"+ PRODUCT_COMBO.SelectedItem.ToString() + "'";
-
-
-            using (SqlConnection con = new SqlConnection(cs))
+           
+            using(SqlConnection con=new SqlConnection(cs))
             {
+                     string query = "delete product where pro_id=@pro_id";
+                     con.Open();
+                     SqlDataAdapter adp = new SqlDataAdapter(query,con);
 
-                con.Open();
-       
-                SqlDataAdapter adp = new SqlDataAdapter(query, con);
-
-                adp.DeleteCommand = new SqlCommand(query, con);
-                adp.DeleteCommand.ExecuteNonQuery();
-                MessageBox.Show("Record Deleted !");
-
-
+                    adp.DeleteCommand = con.CreateCommand();
+                    adp.DeleteCommand.CommandText = query;
+                    adp.DeleteCommand.Parameters.AddWithValue("@pro_id", PRODUCT_COMBO.SelectedItem.ToString());
+                    adp.DeleteCommand.ExecuteNonQuery();
+                    MessageBox.Show("Record Deleted !");
+                    
             }
+            loadProd();
+
+
         }
         void loadProd()
         {
+            PRODUCT_COMBO.Items.Clear();
             string query = "select pro_id from Product";
             SqlConnection con = new SqlConnection(cs);
 

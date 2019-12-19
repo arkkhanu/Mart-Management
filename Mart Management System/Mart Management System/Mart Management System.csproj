@@ -189,11 +189,11 @@
     <Compile Include="SearchUpdateCompany.Designer.cs">
       <DependentUpon>SearchUpdateCompany.cs</DependentUpon>
     </Compile>
-    <Compile Include="SearchUpdateProduct.cs">
+    <Compile Include="UpdateProduct.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SearchUpdateProduct.Designer.cs">
-      <DependentUpon>SearchUpdateProduct.cs</DependentUpon>
+    <Compile Include="UpdateProduct.Designer.cs">
+      <DependentUpon>UpdateProduct.cs</DependentUpon>
     </Compile>
     <Compile Include="SignUpCustomer.cs">
       <SubType>Form</SubType>
@@ -323,8 +323,8 @@
     <EmbeddedResource Include="SearchUpdateCompany.resx">
       <DependentUpon>SearchUpdateCompany.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SearchUpdateProduct.resx">
-      <DependentUpon>SearchUpdateProduct.cs</DependentUpon>
+    <EmbeddedResource Include="UpdateProduct.resx">
+      <DependentUpon>UpdateProduct.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SignUpCustomer.resx">
       <DependentUpon>SignUpCustomer.cs</DependentUpon>

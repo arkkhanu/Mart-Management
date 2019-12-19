@@ -56,7 +56,7 @@ namespace Mart_Management_System
                 DataRow dr = ds.Tables["Product"].NewRow();
             
                 dr["pro_id"] = ID_TXT.Text;
-               dr["pro_name"] = NAME.Text;
+               dr["pro_name"] = NAME_TXT.Text;
                dr["pro_comp"] = Int32.Parse(Product_Combo.SelectedItem.ToString());
                 dr["pro_cat"] = Int32.Parse( Cat_Combo.SelectedItem.ToString());
              
@@ -140,6 +140,11 @@ namespace Mart_Management_System
         }
 
         private void NAME_TXT_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void PRODUCT_BOX_Click(object sender, EventArgs e)
         {
 
         }

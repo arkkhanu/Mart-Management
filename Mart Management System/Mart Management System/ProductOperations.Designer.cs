@@ -203,7 +203,7 @@
             this.SEARCH_BTN.Name = "SEARCH_BTN";
             this.SEARCH_BTN.Size = new System.Drawing.Size(75, 23);
             this.SEARCH_BTN.TabIndex = 16;
-            this.SEARCH_BTN.Text = "SEARCH";
+            this.SEARCH_BTN.Text = "UPDATE";
             this.SEARCH_BTN.UseVisualStyleBackColor = true;
             this.SEARCH_BTN.Click += new System.EventHandler(this.SEARCH_BTN_Click);
             // 
