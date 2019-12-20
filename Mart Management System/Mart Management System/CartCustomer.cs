@@ -119,19 +119,23 @@ namespace Mart_Management_System
 
                 //}
 
-
-                SqlConnection conn = new SqlConnection(cs);
-                conn.Open();
-                SqlDataAdapter da = new SqlDataAdapter("select pro_name, pro_price, quantity from Product where pro_comp='" + comp + "' and pro_cat='" + cat + "'", conn);
-                DataSet ds = new DataSet();
-                da.Fill(ds);
-               
-                if (ds.Tables[0].Rows.Count > 0)
+                using (SqlConnection con = new SqlConnection(cs))
                 {
-                    foreach (DataRow item in ds.Tables[0].Rows)
+
+                    con.Open();
+                    SqlDataAdapter da = new SqlDataAdapter("select pro_name, pro_price from Product where pro_comp='" + comp + "' and pro_cat='" + cat + "'", con);
+                    DataSet ds = new DataSet();
+                    da.Fill(ds);
+
+                    if (ds.Tables[0].Rows.Count > 0)
                     {
-                        pro_list.Items.Add(item["pro_name"].ToString());
+                        foreach (DataRow item in ds.Tables[0].Rows)
+                        {
+                            pro_list.Items.Add(item["pro_name"].ToString() +" Rs. "+ item["pro_price"]);
+                        }
                     }
+                    else
+                        MessageBox.Show("No product Found !");
                 }
 
             }

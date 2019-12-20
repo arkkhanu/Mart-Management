@@ -36,11 +36,11 @@
             this.CUSTOMER_BOX = new System.Windows.Forms.PictureBox();
             this.BACK_BOX = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.cat_combo = new System.Windows.Forms.ComboBox();
-            this.comp_combo = new System.Windows.Forms.ComboBox();
-            this.lbl_cat = new System.Windows.Forms.Label();
-            this.lbl_comp = new System.Windows.Forms.Label();
             this.btn_go = new System.Windows.Forms.Button();
+            this.lbl_comp = new System.Windows.Forms.Label();
+            this.lbl_cat = new System.Windows.Forms.Label();
+            this.comp_combo = new System.Windows.Forms.ComboBox();
+            this.cat_combo = new System.Windows.Forms.ComboBox();
             this.btn_addPro = new System.Windows.Forms.Button();
             this.pro_list = new System.Windows.Forms.CheckedListBox();
             this.panel1.SuspendLayout();
@@ -131,30 +131,15 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Filter";
             // 
-            // cat_combo
+            // btn_go
             // 
-            this.cat_combo.FormattingEnabled = true;
-            this.cat_combo.Location = new System.Drawing.Point(95, 17);
-            this.cat_combo.Name = "cat_combo";
-            this.cat_combo.Size = new System.Drawing.Size(155, 21);
-            this.cat_combo.TabIndex = 0;
-            // 
-            // comp_combo
-            // 
-            this.comp_combo.FormattingEnabled = true;
-            this.comp_combo.Location = new System.Drawing.Point(95, 44);
-            this.comp_combo.Name = "comp_combo";
-            this.comp_combo.Size = new System.Drawing.Size(155, 21);
-            this.comp_combo.TabIndex = 1;
-            // 
-            // lbl_cat
-            // 
-            this.lbl_cat.AutoSize = true;
-            this.lbl_cat.Location = new System.Drawing.Point(7, 20);
-            this.lbl_cat.Name = "lbl_cat";
-            this.lbl_cat.Size = new System.Drawing.Size(82, 13);
-            this.lbl_cat.TabIndex = 2;
-            this.lbl_cat.Text = "Select Category";
+            this.btn_go.Location = new System.Drawing.Point(95, 71);
+            this.btn_go.Name = "btn_go";
+            this.btn_go.Size = new System.Drawing.Size(75, 23);
+            this.btn_go.TabIndex = 5;
+            this.btn_go.Text = "GO";
+            this.btn_go.UseVisualStyleBackColor = true;
+            this.btn_go.Click += new System.EventHandler(this.btn_go_Click);
             // 
             // lbl_comp
             // 
@@ -165,15 +150,32 @@
             this.lbl_comp.TabIndex = 3;
             this.lbl_comp.Text = "Select Company";
             // 
-            // btn_go
+            // lbl_cat
             // 
-            this.btn_go.Location = new System.Drawing.Point(95, 71);
-            this.btn_go.Name = "btn_go";
-            this.btn_go.Size = new System.Drawing.Size(75, 23);
-            this.btn_go.TabIndex = 5;
-            this.btn_go.Text = "GO";
-            this.btn_go.UseVisualStyleBackColor = true;
-            this.btn_go.Click += new System.EventHandler(this.btn_go_Click);
+            this.lbl_cat.AutoSize = true;
+            this.lbl_cat.Location = new System.Drawing.Point(7, 20);
+            this.lbl_cat.Name = "lbl_cat";
+            this.lbl_cat.Size = new System.Drawing.Size(82, 13);
+            this.lbl_cat.TabIndex = 2;
+            this.lbl_cat.Text = "Select Category";
+            // 
+            // comp_combo
+            // 
+            this.comp_combo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comp_combo.FormattingEnabled = true;
+            this.comp_combo.Location = new System.Drawing.Point(95, 44);
+            this.comp_combo.Name = "comp_combo";
+            this.comp_combo.Size = new System.Drawing.Size(155, 21);
+            this.comp_combo.TabIndex = 1;
+            // 
+            // cat_combo
+            // 
+            this.cat_combo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cat_combo.FormattingEnabled = true;
+            this.cat_combo.Location = new System.Drawing.Point(95, 17);
+            this.cat_combo.Name = "cat_combo";
+            this.cat_combo.Size = new System.Drawing.Size(155, 21);
+            this.cat_combo.TabIndex = 0;
             // 
             // btn_addPro
             // 
