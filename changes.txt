@@ -1,0 +1,14 @@
+CASHIER TABLE :
+ADD  cashier_pass FIELD  IN DATABASE
+
+
+CUSTOMER Table:
+ADD cust_pass FIeld in database
+
+
+
+PRODCUT TABLE :
+add quantity field in database 
+
+
+        

@@ -1,6 +1,6 @@
 ﻿namespace Mart_Management_System
 {
-    partial class SearchUpdateCategory
+    partial class UpdateCategory
     {
         /// <summary>
         /// Required designer variable.
@@ -28,21 +28,22 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SearchUpdateCategory));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UpdateCategory));
             this.panel1 = new System.Windows.Forms.Panel();
             this.SIGN_LBL = new System.Windows.Forms.Label();
             this.SIGNUP_LBL = new System.Windows.Forms.Label();
             this.CATEGORY_BOX = new System.Windows.Forms.PictureBox();
             this.BACK_BOX = new System.Windows.Forms.PictureBox();
             this.ID = new System.Windows.Forms.Label();
-            this.PASSWORD = new System.Windows.Forms.Label();
-            this.ID_COMBO = new System.Windows.Forms.ComboBox();
-            this.PASSWORD_TXT = new System.Windows.Forms.TextBox();
-            this.SEARCH_BUTTON = new System.Windows.Forms.Button();
+            this.NAME = new System.Windows.Forms.Label();
+            this.NAME_TXT = new System.Windows.Forms.TextBox();
             this.UPDATE = new System.Windows.Forms.Button();
+            this.cat_data = new System.Windows.Forms.DataGridView();
+            this.ID_TXT = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CATEGORY_BOX)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BACK_BOX)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cat_data)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -72,11 +73,11 @@
             this.SIGNUP_LBL.AutoSize = true;
             this.SIGNUP_LBL.BackColor = System.Drawing.SystemColors.Control;
             this.SIGNUP_LBL.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SIGNUP_LBL.Location = new System.Drawing.Point(183, 34);
+            this.SIGNUP_LBL.Location = new System.Drawing.Point(240, 34);
             this.SIGNUP_LBL.Name = "SIGNUP_LBL";
-            this.SIGNUP_LBL.Size = new System.Drawing.Size(390, 25);
+            this.SIGNUP_LBL.Size = new System.Drawing.Size(236, 25);
             this.SIGNUP_LBL.TabIndex = 3;
-            this.SIGNUP_LBL.Text = "SEARCH AND UPDATE CATEGORY";
+            this.SIGNUP_LBL.Text = "UPDATE CATEGORY";
             // 
             // CATEGORY_BOX
             // 
@@ -106,77 +107,78 @@
             this.ID.BackColor = System.Drawing.SystemColors.Control;
             this.ID.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ID.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.ID.Location = new System.Drawing.Point(215, 204);
+            this.ID.Location = new System.Drawing.Point(31, 187);
             this.ID.Name = "ID";
             this.ID.Size = new System.Drawing.Size(20, 13);
             this.ID.TabIndex = 7;
             this.ID.Text = "ID";
             // 
-            // PASSWORD
+            // NAME
             // 
-            this.PASSWORD.AutoSize = true;
-            this.PASSWORD.BackColor = System.Drawing.SystemColors.Control;
-            this.PASSWORD.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PASSWORD.Location = new System.Drawing.Point(215, 258);
-            this.PASSWORD.Name = "PASSWORD";
-            this.PASSWORD.Size = new System.Drawing.Size(78, 13);
-            this.PASSWORD.TabIndex = 16;
-            this.PASSWORD.Text = "PASSWORD";
+            this.NAME.AutoSize = true;
+            this.NAME.BackColor = System.Drawing.SystemColors.Control;
+            this.NAME.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NAME.Location = new System.Drawing.Point(31, 241);
+            this.NAME.Name = "NAME";
+            this.NAME.Size = new System.Drawing.Size(42, 13);
+            this.NAME.TabIndex = 16;
+            this.NAME.Text = "NAME";
             // 
-            // ID_COMBO
+            // NAME_TXT
             // 
-            this.ID_COMBO.FormattingEnabled = true;
-            this.ID_COMBO.Location = new System.Drawing.Point(322, 201);
-            this.ID_COMBO.Name = "ID_COMBO";
-            this.ID_COMBO.Size = new System.Drawing.Size(173, 21);
-            this.ID_COMBO.TabIndex = 17;
-            // 
-            // PASSWORD_TXT
-            // 
-            this.PASSWORD_TXT.Location = new System.Drawing.Point(322, 251);
-            this.PASSWORD_TXT.Name = "PASSWORD_TXT";
-            this.PASSWORD_TXT.Size = new System.Drawing.Size(173, 20);
-            this.PASSWORD_TXT.TabIndex = 18;
-            // 
-            // SEARCH_BUTTON
-            // 
-            this.SEARCH_BUTTON.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SEARCH_BUTTON.Location = new System.Drawing.Point(272, 382);
-            this.SEARCH_BUTTON.Name = "SEARCH_BUTTON";
-            this.SEARCH_BUTTON.Size = new System.Drawing.Size(84, 34);
-            this.SEARCH_BUTTON.TabIndex = 24;
-            this.SEARCH_BUTTON.Text = "SEARCH";
-            this.SEARCH_BUTTON.UseVisualStyleBackColor = true;
+            this.NAME_TXT.Location = new System.Drawing.Point(138, 234);
+            this.NAME_TXT.Name = "NAME_TXT";
+            this.NAME_TXT.Size = new System.Drawing.Size(173, 20);
+            this.NAME_TXT.TabIndex = 18;
             // 
             // UPDATE
             // 
             this.UPDATE.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UPDATE.Location = new System.Drawing.Point(425, 382);
+            this.UPDATE.Location = new System.Drawing.Point(248, 371);
             this.UPDATE.Name = "UPDATE";
-            this.UPDATE.Size = new System.Drawing.Size(84, 34);
+            this.UPDATE.Size = new System.Drawing.Size(290, 34);
             this.UPDATE.TabIndex = 25;
             this.UPDATE.Text = "UPDATE";
             this.UPDATE.UseVisualStyleBackColor = true;
+            this.UPDATE.Click += new System.EventHandler(this.UPDATE_Click);
             // 
-            // SearchUpdateCategory
+            // cat_data
+            // 
+            this.cat_data.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.cat_data.Location = new System.Drawing.Point(393, 174);
+            this.cat_data.Name = "cat_data";
+            this.cat_data.Size = new System.Drawing.Size(383, 150);
+            this.cat_data.TabIndex = 26;
+            this.cat_data.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.cat_data_CellClick);
+            // 
+            // ID_TXT
+            // 
+            this.ID_TXT.Location = new System.Drawing.Point(138, 187);
+            this.ID_TXT.Name = "ID_TXT";
+            this.ID_TXT.Size = new System.Drawing.Size(173, 20);
+            this.ID_TXT.TabIndex = 27;
+            // 
+            // UpdateCategory
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.ID_TXT);
+            this.Controls.Add(this.cat_data);
             this.Controls.Add(this.UPDATE);
-            this.Controls.Add(this.SEARCH_BUTTON);
-            this.Controls.Add(this.PASSWORD_TXT);
-            this.Controls.Add(this.ID_COMBO);
-            this.Controls.Add(this.PASSWORD);
+            this.Controls.Add(this.NAME_TXT);
+            this.Controls.Add(this.NAME);
             this.Controls.Add(this.ID);
             this.Controls.Add(this.panel1);
-            this.Name = "SearchUpdateCategory";
+            this.Name = "UpdateCategory";
             this.Text = "SearchUpdateCategory";
+            this.Load += new System.EventHandler(this.UpdateCategory_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CATEGORY_BOX)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BACK_BOX)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cat_data)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -190,10 +192,10 @@
         private System.Windows.Forms.PictureBox CATEGORY_BOX;
         private System.Windows.Forms.PictureBox BACK_BOX;
         private System.Windows.Forms.Label ID;
-        private System.Windows.Forms.Label PASSWORD;
-        private System.Windows.Forms.ComboBox ID_COMBO;
-        private System.Windows.Forms.TextBox PASSWORD_TXT;
-        private System.Windows.Forms.Button SEARCH_BUTTON;
+        private System.Windows.Forms.Label NAME;
+        private System.Windows.Forms.TextBox NAME_TXT;
         private System.Windows.Forms.Button UPDATE;
+        private System.Windows.Forms.DataGridView cat_data;
+        private System.Windows.Forms.TextBox ID_TXT;
     }
 }

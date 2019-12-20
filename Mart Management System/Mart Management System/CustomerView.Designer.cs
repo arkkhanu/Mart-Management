@@ -36,14 +36,14 @@
             this.CUSTOMER_BOX = new System.Windows.Forms.PictureBox();
             this.BACK_BOX = new System.Windows.Forms.PictureBox();
             this.CUSTOMER_VIEW = new System.Windows.Forms.DataGridView();
-            this.NAME_LBL = new System.Windows.Forms.Label();
             this.ID_LBL = new System.Windows.Forms.Label();
-            this.ID_TXT = new System.Windows.Forms.TextBox();
-            this.NAME_TXT = new System.Windows.Forms.TextBox();
+            this.txt_id = new System.Windows.Forms.NumericUpDown();
+            this.btn_search = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CUSTOMER_BOX)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BACK_BOX)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CUSTOMER_VIEW)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_id)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -112,25 +112,15 @@
             this.BACK_BOX.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.BACK_BOX.TabIndex = 0;
             this.BACK_BOX.TabStop = false;
+            this.BACK_BOX.Click += new System.EventHandler(this.BACK_BOX_Click);
             // 
             // CUSTOMER_VIEW
             // 
             this.CUSTOMER_VIEW.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.CUSTOMER_VIEW.Location = new System.Drawing.Point(-3, 240);
+            this.CUSTOMER_VIEW.Location = new System.Drawing.Point(-3, 288);
             this.CUSTOMER_VIEW.Name = "CUSTOMER_VIEW";
             this.CUSTOMER_VIEW.Size = new System.Drawing.Size(853, 150);
             this.CUSTOMER_VIEW.TabIndex = 8;
-            // 
-            // NAME_LBL
-            // 
-            this.NAME_LBL.AutoSize = true;
-            this.NAME_LBL.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NAME_LBL.ForeColor = System.Drawing.SystemColors.Control;
-            this.NAME_LBL.Location = new System.Drawing.Point(568, 197);
-            this.NAME_LBL.Name = "NAME_LBL";
-            this.NAME_LBL.Size = new System.Drawing.Size(42, 13);
-            this.NAME_LBL.TabIndex = 9;
-            this.NAME_LBL.Text = "NAME";
             // 
             // ID_LBL
             // 
@@ -143,19 +133,27 @@
             this.ID_LBL.TabIndex = 10;
             this.ID_LBL.Text = "CUSTOMER ID";
             // 
-            // ID_TXT
+            // txt_id
             // 
-            this.ID_TXT.Location = new System.Drawing.Point(305, 194);
-            this.ID_TXT.Name = "ID_TXT";
-            this.ID_TXT.Size = new System.Drawing.Size(115, 20);
-            this.ID_TXT.TabIndex = 11;
+            this.txt_id.Location = new System.Drawing.Point(309, 195);
+            this.txt_id.Maximum = new decimal(new int[] {
+            2000,
+            0,
+            0,
+            0});
+            this.txt_id.Name = "txt_id";
+            this.txt_id.Size = new System.Drawing.Size(120, 20);
+            this.txt_id.TabIndex = 11;
             // 
-            // NAME_TXT
+            // btn_search
             // 
-            this.NAME_TXT.Location = new System.Drawing.Point(638, 194);
-            this.NAME_TXT.Name = "NAME_TXT";
-            this.NAME_TXT.Size = new System.Drawing.Size(122, 20);
-            this.NAME_TXT.TabIndex = 12;
+            this.btn_search.Location = new System.Drawing.Point(321, 250);
+            this.btn_search.Name = "btn_search";
+            this.btn_search.Size = new System.Drawing.Size(75, 23);
+            this.btn_search.TabIndex = 12;
+            this.btn_search.Text = "View";
+            this.btn_search.UseVisualStyleBackColor = true;
+            this.btn_search.Click += new System.EventHandler(this.btn_search_Click);
             // 
             // CustomerView
             // 
@@ -163,19 +161,20 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ClientSize = new System.Drawing.Size(849, 450);
-            this.Controls.Add(this.NAME_TXT);
-            this.Controls.Add(this.ID_TXT);
+            this.Controls.Add(this.btn_search);
+            this.Controls.Add(this.txt_id);
             this.Controls.Add(this.ID_LBL);
-            this.Controls.Add(this.NAME_LBL);
             this.Controls.Add(this.CUSTOMER_VIEW);
             this.Controls.Add(this.panel1);
             this.Name = "CustomerView";
             this.Text = "CustomerView";
+            this.Load += new System.EventHandler(this.CustomerView_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CUSTOMER_BOX)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BACK_BOX)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CUSTOMER_VIEW)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_id)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -190,9 +189,8 @@
         private System.Windows.Forms.PictureBox CUSTOMER_BOX;
         private System.Windows.Forms.PictureBox BACK_BOX;
         private System.Windows.Forms.DataGridView CUSTOMER_VIEW;
-        private System.Windows.Forms.Label NAME_LBL;
         private System.Windows.Forms.Label ID_LBL;
-        private System.Windows.Forms.TextBox ID_TXT;
-        private System.Windows.Forms.TextBox NAME_TXT;
+        private System.Windows.Forms.NumericUpDown txt_id;
+        private System.Windows.Forms.Button btn_search;
     }
 }

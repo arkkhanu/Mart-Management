@@ -146,6 +146,11 @@
             // txt_id
             // 
             this.txt_id.Location = new System.Drawing.Point(450, 212);
+            this.txt_id.Maximum = new decimal(new int[] {
+            2000,
+            0,
+            0,
+            0});
             this.txt_id.Name = "txt_id";
             this.txt_id.Size = new System.Drawing.Size(120, 20);
             this.txt_id.TabIndex = 9;

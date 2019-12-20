@@ -9,20 +9,19 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.Configuration;
-
 namespace Mart_Management_System
 {
-    public partial class DeleteCashier : Form
+    public partial class DeleteCustomer : Form
     {
         string cs = ConfigurationManager.ConnectionStrings["myCon"].ConnectionString;
-        public DeleteCashier()
+        public DeleteCustomer()
         {
             InitializeComponent();
         }
-        void loadCash()
+        void loadCust()
         {
-            CASHIER_COMBO.Items.Clear();
-            string query = "select cashier_id from Cashier";
+            CUSTOMER_COMBO.Items.Clear();
+            string query = "select cust_id from Customer";
             SqlConnection con = new SqlConnection(cs);
 
 
@@ -31,42 +30,43 @@ namespace Mart_Management_System
             SqlDataReader rdr = cmd.ExecuteReader();
             if (rdr.Read())
             {
-                CASHIER_COMBO.Items.Add(rdr["cashier_id"].ToString());
+                CUSTOMER_COMBO.Items.Add(rdr["cust_id"].ToString());
                 while (rdr.Read())
                 {
-                    CASHIER_COMBO.Items.Add(rdr["cashier_id"].ToString());
-
+                    CUSTOMER_COMBO.Items.Add(rdr["cust_id"].ToString());
                 }
-
             }
-        }
-        private void BACK_BOX_Click(object sender, EventArgs e)
-        {
-            CashierOperations co = new CashierOperations();
-            this.Hide();
-            co.Show();
+
         }
 
-        private void DeleteCashier_Load(object sender, EventArgs e)
+        private void DeleteCustomer_Load(object sender, EventArgs e)
         {
-            loadCash();
+            loadCust();
+
         }
 
         private void DELETE_Click(object sender, EventArgs e)
         {
             using (SqlConnection con = new SqlConnection(cs))
             {
-                string query = "delete Cashier where cashier_id=@cashier_id";
+                string query = "delete Customer where cust_id=@cust_id";
                 con.Open();
                 SqlDataAdapter adp = new SqlDataAdapter(query, con);
 
                 adp.DeleteCommand = con.CreateCommand();
                 adp.DeleteCommand.CommandText = query;
-                adp.DeleteCommand.Parameters.AddWithValue("@cashier_id", CASHIER_COMBO.SelectedItem.ToString());
+                adp.DeleteCommand.Parameters.AddWithValue("@cust_id", CUSTOMER_COMBO.SelectedItem.ToString());
                 adp.DeleteCommand.ExecuteNonQuery();
                 MessageBox.Show("Record Deleted !");
             }
-            loadCash();
+            loadCust();
+        }
+
+        private void BACK_BOX_Click(object sender, EventArgs e)
+        {
+            CustomerOperations co = new CustomerOperations();
+            this.Hide();
+            co.Show();
         }
     }
 }

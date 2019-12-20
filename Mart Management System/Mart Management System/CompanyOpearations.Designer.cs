@@ -42,7 +42,7 @@
             this.ADD_BTN = new System.Windows.Forms.Button();
             this.DELETE_BTN = new System.Windows.Forms.Button();
             this.VIEW_BTN = new System.Windows.Forms.Button();
-            this.SEARCH_BTN = new System.Windows.Forms.Button();
+            this.UPDATE_BUTTON = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CATEGORY_BOX)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BACK_BOX)).BeginInit();
@@ -117,6 +117,7 @@
             this.BACK_BOX.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.BACK_BOX.TabIndex = 0;
             this.BACK_BOX.TabStop = false;
+            this.BACK_BOX.Click += new System.EventHandler(this.BACK_BOX_Click);
             // 
             // ADD_BOX
             // 
@@ -171,6 +172,7 @@
             this.ADD_BTN.TabIndex = 13;
             this.ADD_BTN.Text = "ADD";
             this.ADD_BTN.UseVisualStyleBackColor = true;
+            this.ADD_BTN.Click += new System.EventHandler(this.ADD_BTN_Click);
             // 
             // DELETE_BTN
             // 
@@ -181,6 +183,7 @@
             this.DELETE_BTN.TabIndex = 14;
             this.DELETE_BTN.Text = "DELETE";
             this.DELETE_BTN.UseVisualStyleBackColor = true;
+            this.DELETE_BTN.Click += new System.EventHandler(this.DELETE_BTN_Click);
             // 
             // VIEW_BTN
             // 
@@ -191,16 +194,18 @@
             this.VIEW_BTN.TabIndex = 15;
             this.VIEW_BTN.Text = "VIEW";
             this.VIEW_BTN.UseVisualStyleBackColor = true;
+            this.VIEW_BTN.Click += new System.EventHandler(this.VIEW_BTN_Click);
             // 
-            // SEARCH_BTN
+            // UPDATE_BUTTON
             // 
-            this.SEARCH_BTN.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SEARCH_BTN.Location = new System.Drawing.Point(587, 564);
-            this.SEARCH_BTN.Name = "SEARCH_BTN";
-            this.SEARCH_BTN.Size = new System.Drawing.Size(75, 23);
-            this.SEARCH_BTN.TabIndex = 16;
-            this.SEARCH_BTN.Text = "SEARCH";
-            this.SEARCH_BTN.UseVisualStyleBackColor = true;
+            this.UPDATE_BUTTON.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UPDATE_BUTTON.Location = new System.Drawing.Point(587, 564);
+            this.UPDATE_BUTTON.Name = "UPDATE_BUTTON";
+            this.UPDATE_BUTTON.Size = new System.Drawing.Size(75, 23);
+            this.UPDATE_BUTTON.TabIndex = 16;
+            this.UPDATE_BUTTON.Text = "UPDATE";
+            this.UPDATE_BUTTON.UseVisualStyleBackColor = true;
+            this.UPDATE_BUTTON.Click += new System.EventHandler(this.UPDATE_BUTTON_Click);
             // 
             // CompanyOpearations
             // 
@@ -208,7 +213,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ClientSize = new System.Drawing.Size(800, 599);
-            this.Controls.Add(this.SEARCH_BTN);
+            this.Controls.Add(this.UPDATE_BUTTON);
             this.Controls.Add(this.VIEW_BTN);
             this.Controls.Add(this.DELETE_BTN);
             this.Controls.Add(this.ADD_BTN);
@@ -246,6 +251,6 @@
         private System.Windows.Forms.Button ADD_BTN;
         private System.Windows.Forms.Button DELETE_BTN;
         private System.Windows.Forms.Button VIEW_BTN;
-        private System.Windows.Forms.Button SEARCH_BTN;
+        private System.Windows.Forms.Button UPDATE_BUTTON;
     }
 }

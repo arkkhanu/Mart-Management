@@ -16,5 +16,38 @@ namespace Mart_Management_System
         {
             InitializeComponent();
         }
+
+        private void BACK_BOX_Click(object sender, EventArgs e)
+        {
+            Admin ad = new Admin();
+            this.Hide();
+            ad.Show();
+        }
+
+        private void CustomerOperations_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void VIEW_BTN_Click(object sender, EventArgs e)
+        {
+            CustomerView co = new CustomerView();
+            this.Hide();
+            co.Show();
+        }
+
+        private void DELETE_BTN_Click(object sender, EventArgs e)
+        {
+            DeleteCustomer c = new DeleteCustomer();
+            this.Hide();
+            c.Show();
+        }
+
+        private void SEARCH_BTN_Click(object sender, EventArgs e)
+        {
+            UpdateCustomer u = new UpdateCustomer();
+            this.Hide();
+            u.Show();
+        }
     }
 }

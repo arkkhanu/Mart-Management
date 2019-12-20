@@ -186,6 +186,7 @@
             this.CASHIER_BUTTON.TabIndex = 16;
             this.CASHIER_BUTTON.Text = "CASHIER";
             this.CASHIER_BUTTON.UseVisualStyleBackColor = true;
+            this.CASHIER_BUTTON.Click += new System.EventHandler(this.CASHIER_BUTTON_Click);
             // 
             // COMPANY_BUTTON
             // 
@@ -217,6 +218,7 @@
             this.CUSTOMER.TabIndex = 19;
             this.CUSTOMER.Text = "CUSTOMER";
             this.CUSTOMER.UseVisualStyleBackColor = true;
+            this.CUSTOMER.Click += new System.EventHandler(this.CUSTOMER_Click);
             // 
             // Admin
             // 

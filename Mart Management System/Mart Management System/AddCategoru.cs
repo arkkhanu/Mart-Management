@@ -22,7 +22,7 @@ namespace Mart_Management_System
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            Admin a = new Admin();
+            CategoryOperations a = new CategoryOperations();
             this.Hide();
             a.Show();
         }

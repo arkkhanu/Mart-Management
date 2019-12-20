@@ -64,13 +64,15 @@ C:\Users\USER\Desktop\Mart management system\Mart Management System\Mart Managem
 C:\Users\USER\Desktop\Mart management system\Mart Management System\Mart Management System\obj\Debug\Mart_Management_System.DeleteCompany.resources
 C:\Users\USER\Desktop\Mart management system\Mart Management System\Mart Management System\obj\Debug\Mart_Management_System.DeleteProduct.resources
 C:\Users\USER\Desktop\Mart management system\Mart Management System\Mart Management System\obj\Debug\Mart_Management_System.ProductOperations.resources
-C:\Users\USER\Desktop\Mart management system\Mart Management System\Mart Management System\obj\Debug\Mart_Management_System.SearchUpdateCashier.resources
-C:\Users\USER\Desktop\Mart management system\Mart Management System\Mart Management System\obj\Debug\Mart_Management_System.SearchUpdateCategory.resources
-C:\Users\USER\Desktop\Mart management system\Mart Management System\Mart Management System\obj\Debug\Mart_Management_System.SearchUpdateCompany.resources
-C:\Users\USER\Desktop\Mart management system\Mart Management System\Mart Management System\obj\Debug\Mart_Management_System.SearchUpdateProduct.resources
 C:\Users\USER\Desktop\Mart management system\Mart Management System\Mart Management System\obj\Debug\Mart_Management_System.TransactionOperation.resources
 C:\Users\USER\Desktop\Mart management system\Mart Management System\Mart Management System\obj\Debug\Mart_Management_System.ViewCashier.resources
 C:\Users\USER\Desktop\Mart management system\Mart Management System\Mart Management System\obj\Debug\Mart_Management_System.ViewCategory.resources
 C:\Users\USER\Desktop\Mart management system\Mart Management System\Mart Management System\obj\Debug\Mart_Management_System.ViewCompany.resources
 C:\Users\USER\Desktop\Mart management system\Mart Management System\Mart Management System\obj\Debug\Mart_Management_System.ViewProduct.resources
 F:\University Material\5th Semister\Project\Visual Programing\Git\Mart Management System\Mart Management System\obj\Debug\Mart_Management_System.UpdateProduct.resources
+C:\Users\USER\Desktop\Mart ManageMent system\Mart Management System\Mart Management System\obj\Debug\Mart_Management_System.UpdateProduct.resources
+C:\Users\USER\Desktop\Mart ManageMent system\Mart Management System\Mart Management System\obj\Debug\Mart_Management_System.UpdateCompany.resources
+C:\Users\USER\Desktop\Mart ManageMent system\Mart Management System\Mart Management System\obj\Debug\Mart_Management_System.UpdateCategory.resources
+C:\Users\USER\Desktop\Mart management system\Mart Management System\Mart Management System\obj\Debug\Mart_Management_System.UpdateCashier.resources
+C:\Users\USER\Desktop\Mart management system\Mart Management System\Mart Management System\obj\Debug\Mart_Management_System.DeleteCustomer.resources
+C:\Users\USER\Desktop\Mart management system\Mart Management System\Mart Management System\obj\Debug\Mart_Management_System.UpdateCustomer.resources

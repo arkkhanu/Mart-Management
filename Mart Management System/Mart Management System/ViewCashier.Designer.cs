@@ -36,10 +36,14 @@
             this.LOOK_BOX = new System.Windows.Forms.PictureBox();
             this.BACK_BOX = new System.Windows.Forms.PictureBox();
             this.CASHIER_VIEW = new System.Windows.Forms.DataGridView();
+            this.btn_search = new System.Windows.Forms.Button();
+            this.txt_id = new System.Windows.Forms.NumericUpDown();
+            this.lbl_id = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.LOOK_BOX)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BACK_BOX)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CASHIER_VIEW)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_id)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -107,15 +111,48 @@
             this.BACK_BOX.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.BACK_BOX.TabIndex = 0;
             this.BACK_BOX.TabStop = false;
+            this.BACK_BOX.Click += new System.EventHandler(this.BACK_BOX_Click);
             // 
             // CASHIER_VIEW
             // 
             this.CASHIER_VIEW.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.CASHIER_VIEW.Location = new System.Drawing.Point(1, 150);
+            this.CASHIER_VIEW.Location = new System.Drawing.Point(0, 288);
             this.CASHIER_VIEW.Name = "CASHIER_VIEW";
             this.CASHIER_VIEW.Size = new System.Drawing.Size(798, 150);
             this.CASHIER_VIEW.TabIndex = 6;
             this.CASHIER_VIEW.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.COMPANY_VIEW_CellContentClick);
+            // 
+            // btn_search
+            // 
+            this.btn_search.Location = new System.Drawing.Point(383, 234);
+            this.btn_search.Name = "btn_search";
+            this.btn_search.Size = new System.Drawing.Size(75, 23);
+            this.btn_search.TabIndex = 14;
+            this.btn_search.Text = "View";
+            this.btn_search.UseVisualStyleBackColor = true;
+            this.btn_search.Click += new System.EventHandler(this.btn_search_Click);
+            // 
+            // txt_id
+            // 
+            this.txt_id.Location = new System.Drawing.Point(435, 193);
+            this.txt_id.Maximum = new decimal(new int[] {
+            2000,
+            0,
+            0,
+            0});
+            this.txt_id.Name = "txt_id";
+            this.txt_id.Size = new System.Drawing.Size(120, 20);
+            this.txt_id.TabIndex = 13;
+            // 
+            // lbl_id
+            // 
+            this.lbl_id.AutoSize = true;
+            this.lbl_id.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_id.Location = new System.Drawing.Point(196, 193);
+            this.lbl_id.Name = "lbl_id";
+            this.lbl_id.Size = new System.Drawing.Size(210, 18);
+            this.lbl_id.TabIndex = 12;
+            this.lbl_id.Text = "Enter Cashier ID to Search";
             // 
             // ViewCashier
             // 
@@ -123,6 +160,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ClientSize = new System.Drawing.Size(797, 450);
+            this.Controls.Add(this.btn_search);
+            this.Controls.Add(this.txt_id);
+            this.Controls.Add(this.lbl_id);
             this.Controls.Add(this.CASHIER_VIEW);
             this.Controls.Add(this.panel1);
             this.Name = "ViewCashier";
@@ -132,7 +172,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.LOOK_BOX)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BACK_BOX)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CASHIER_VIEW)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_id)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -145,5 +187,8 @@
         private System.Windows.Forms.PictureBox LOOK_BOX;
         private System.Windows.Forms.PictureBox BACK_BOX;
         private System.Windows.Forms.DataGridView CASHIER_VIEW;
+        private System.Windows.Forms.Button btn_search;
+        private System.Windows.Forms.NumericUpDown txt_id;
+        private System.Windows.Forms.Label lbl_id;
     }
 }

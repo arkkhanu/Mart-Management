@@ -147,6 +147,7 @@
             this.PASSWORD_TXT.Name = "PASSWORD_TXT";
             this.PASSWORD_TXT.Size = new System.Drawing.Size(164, 20);
             this.PASSWORD_TXT.TabIndex = 9;
+            this.PASSWORD_TXT.UseSystemPasswordChar = true;
             // 
             // LOGIN_BUTTON
             // 
@@ -157,6 +158,7 @@
             this.LOGIN_BUTTON.TabIndex = 10;
             this.LOGIN_BUTTON.Text = "LOGIN";
             this.LOGIN_BUTTON.UseVisualStyleBackColor = true;
+            this.LOGIN_BUTTON.Click += new System.EventHandler(this.LOGIN_BUTTON_Click);
             // 
             // LoginCashier
             // 
@@ -173,6 +175,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "LoginCashier";
             this.Text = "LoginCashier";
+            this.Load += new System.EventHandler(this.LoginCashier_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CASHIER_BOX)).EndInit();

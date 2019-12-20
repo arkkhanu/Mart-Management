@@ -45,7 +45,7 @@ namespace Mart_Management_System
         }
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            Admin a = new Admin();
+            CompanyOpearations a = new CompanyOpearations();
             this.Hide();
             a.Show();
         }

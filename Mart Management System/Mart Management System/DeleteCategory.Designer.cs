@@ -108,6 +108,7 @@
             this.BACK_BOX.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.BACK_BOX.TabIndex = 1;
             this.BACK_BOX.TabStop = false;
+            this.BACK_BOX.Click += new System.EventHandler(this.BACK_BOX_Click);
             // 
             // ID_LBL
             // 
@@ -137,6 +138,7 @@
             this.DELETE.TabIndex = 16;
             this.DELETE.Text = "DELETE";
             this.DELETE.UseVisualStyleBackColor = true;
+            this.DELETE.Click += new System.EventHandler(this.DELETE_Click);
             // 
             // DeleteCategory
             // 
@@ -150,6 +152,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "DeleteCategory";
             this.Text = "DeleteCategory";
+            this.Load += new System.EventHandler(this.DeleteCategory_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CROSS_BOX)).EndInit();

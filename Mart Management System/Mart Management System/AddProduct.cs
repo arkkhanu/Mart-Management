@@ -16,6 +16,7 @@ namespace Mart_Management_System
 {
     public partial class AddProduct : Form
     {
+    
         string cs = ConfigurationManager.ConnectionStrings["myCon"].ConnectionString;
         public AddProduct()
         {
@@ -77,7 +78,7 @@ namespace Mart_Management_System
 
         void loadCatrec()
         {
-            string query = "select cat_id from Category;";
+            string query = "select cat_id , cat_name from Category;";
             SqlConnection con = new SqlConnection(cs);
             
 
@@ -90,7 +91,7 @@ namespace Mart_Management_System
                 Cat_Combo.Items.Add(rdr["cat_id"].ToString());
                 while (rdr.Read())
                 {
-                    Cat_Combo.Items.Add(rdr["cat_id"].ToString());
+                    Cat_Combo.Items.Add( rdr["cat_id"].ToString());
                 }
             }
             

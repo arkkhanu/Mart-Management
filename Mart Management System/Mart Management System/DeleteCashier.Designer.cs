@@ -30,17 +30,17 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DeleteCashier));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.BACK_BOX = new System.Windows.Forms.PictureBox();
-            this.CUSTOMER_LBL = new System.Windows.Forms.Label();
-            this.LINE_LBL = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.CROSS_BOX = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.LINE_LBL = new System.Windows.Forms.Label();
+            this.CUSTOMER_LBL = new System.Windows.Forms.Label();
+            this.BACK_BOX = new System.Windows.Forms.PictureBox();
             this.ID_LBL = new System.Windows.Forms.Label();
             this.DELETE = new System.Windows.Forms.Button();
             this.CASHIER_COMBO = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.BACK_BOX)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CROSS_BOX)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BACK_BOX)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -56,16 +56,36 @@
             this.panel1.Size = new System.Drawing.Size(608, 151);
             this.panel1.TabIndex = 0;
             // 
-            // BACK_BOX
+            // CROSS_BOX
             // 
-            this.BACK_BOX.BackColor = System.Drawing.SystemColors.Control;
-            this.BACK_BOX.Image = ((System.Drawing.Image)(resources.GetObject("BACK_BOX.Image")));
-            this.BACK_BOX.Location = new System.Drawing.Point(12, 46);
-            this.BACK_BOX.Name = "BACK_BOX";
-            this.BACK_BOX.Size = new System.Drawing.Size(100, 50);
-            this.BACK_BOX.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.BACK_BOX.TabIndex = 1;
-            this.BACK_BOX.TabStop = false;
+            this.CROSS_BOX.BackColor = System.Drawing.SystemColors.Control;
+            this.CROSS_BOX.Image = ((System.Drawing.Image)(resources.GetObject("CROSS_BOX.Image")));
+            this.CROSS_BOX.Location = new System.Drawing.Point(474, 46);
+            this.CROSS_BOX.Name = "CROSS_BOX";
+            this.CROSS_BOX.Size = new System.Drawing.Size(100, 50);
+            this.CROSS_BOX.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.CROSS_BOX.TabIndex = 7;
+            this.CROSS_BOX.TabStop = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.ForeColor = System.Drawing.SystemColors.Control;
+            this.label1.Location = new System.Drawing.Point(224, 83);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(160, 13);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "---------------------------------------------------";
+            // 
+            // LINE_LBL
+            // 
+            this.LINE_LBL.AutoSize = true;
+            this.LINE_LBL.ForeColor = System.Drawing.SystemColors.Control;
+            this.LINE_LBL.Location = new System.Drawing.Point(224, 69);
+            this.LINE_LBL.Name = "LINE_LBL";
+            this.LINE_LBL.Size = new System.Drawing.Size(160, 13);
+            this.LINE_LBL.TabIndex = 5;
+            this.LINE_LBL.Text = "---------------------------------------------------";
             // 
             // CUSTOMER_LBL
             // 
@@ -78,36 +98,17 @@
             this.CUSTOMER_LBL.TabIndex = 3;
             this.CUSTOMER_LBL.Text = "DELETE CASHIER";
             // 
-            // LINE_LBL
+            // BACK_BOX
             // 
-            this.LINE_LBL.AutoSize = true;
-            this.LINE_LBL.ForeColor = System.Drawing.SystemColors.Control;
-            this.LINE_LBL.Location = new System.Drawing.Point(224, 69);
-            this.LINE_LBL.Name = "LINE_LBL";
-            this.LINE_LBL.Size = new System.Drawing.Size(160, 13);
-            this.LINE_LBL.TabIndex = 5;
-            this.LINE_LBL.Text = "---------------------------------------------------";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.ForeColor = System.Drawing.SystemColors.Control;
-            this.label1.Location = new System.Drawing.Point(224, 83);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(160, 13);
-            this.label1.TabIndex = 6;
-            this.label1.Text = "---------------------------------------------------";
-            // 
-            // CROSS_BOX
-            // 
-            this.CROSS_BOX.BackColor = System.Drawing.SystemColors.Control;
-            this.CROSS_BOX.Image = ((System.Drawing.Image)(resources.GetObject("CROSS_BOX.Image")));
-            this.CROSS_BOX.Location = new System.Drawing.Point(474, 46);
-            this.CROSS_BOX.Name = "CROSS_BOX";
-            this.CROSS_BOX.Size = new System.Drawing.Size(100, 50);
-            this.CROSS_BOX.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.CROSS_BOX.TabIndex = 7;
-            this.CROSS_BOX.TabStop = false;
+            this.BACK_BOX.BackColor = System.Drawing.SystemColors.Control;
+            this.BACK_BOX.Image = ((System.Drawing.Image)(resources.GetObject("BACK_BOX.Image")));
+            this.BACK_BOX.Location = new System.Drawing.Point(12, 46);
+            this.BACK_BOX.Name = "BACK_BOX";
+            this.BACK_BOX.Size = new System.Drawing.Size(100, 50);
+            this.BACK_BOX.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.BACK_BOX.TabIndex = 1;
+            this.BACK_BOX.TabStop = false;
+            this.BACK_BOX.Click += new System.EventHandler(this.BACK_BOX_Click);
             // 
             // ID_LBL
             // 
@@ -129,6 +130,7 @@
             this.DELETE.TabIndex = 13;
             this.DELETE.Text = "DELETE";
             this.DELETE.UseVisualStyleBackColor = true;
+            this.DELETE.Click += new System.EventHandler(this.DELETE_Click);
             // 
             // CASHIER_COMBO
             // 
@@ -150,10 +152,11 @@
             this.Controls.Add(this.panel1);
             this.Name = "DeleteCashier";
             this.Text = "DeleteCashier";
+            this.Load += new System.EventHandler(this.DeleteCashier_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.BACK_BOX)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CROSS_BOX)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BACK_BOX)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

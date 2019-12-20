@@ -51,14 +51,14 @@
             this.MANU_DATE = new System.Windows.Forms.DateTimePicker();
             this.EXP_DATE = new System.Windows.Forms.DateTimePicker();
             this.ID_TXT = new System.Windows.Forms.TextBox();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.Update_Box = new System.Windows.Forms.GroupBox();
+            this.Show_Data = new System.Windows.Forms.GroupBox();
             this.view_data = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PRODUCT_BOX)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BACK_BOX)).BeginInit();
-            this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
+            this.Update_Box.SuspendLayout();
+            this.Show_Data.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.view_data)).BeginInit();
             this.SuspendLayout();
             // 
@@ -281,40 +281,40 @@
             this.ID_TXT.Size = new System.Drawing.Size(173, 20);
             this.ID_TXT.TabIndex = 46;
             // 
-            // groupBox1
+            // Update_Box
             // 
-            this.groupBox1.Controls.Add(this.QUAN_LBL);
-            this.groupBox1.Controls.Add(this.QUANTITY_TXT);
-            this.groupBox1.Controls.Add(this.EX_LBL);
-            this.groupBox1.Controls.Add(this.MANU_LBL);
-            this.groupBox1.Controls.Add(this.EXP_DATE);
-            this.groupBox1.Controls.Add(this.ID_TXT);
-            this.groupBox1.Controls.Add(this.MANU_DATE);
-            this.groupBox1.Controls.Add(this.ID);
-            this.groupBox1.Controls.Add(this.NAME_TXT);
-            this.groupBox1.Controls.Add(this.PRICE_TXT);
-            this.groupBox1.Controls.Add(this.PRO_LBL);
-            this.groupBox1.Controls.Add(this.PR_ID);
-            this.groupBox1.Controls.Add(this.PRICE_LBL);
-            this.groupBox1.Controls.Add(this.PRO_C_ID);
-            this.groupBox1.Controls.Add(this.PRO_TXT);
-            this.groupBox1.Controls.Add(this.NAME);
-            this.groupBox1.Location = new System.Drawing.Point(6, 145);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(373, 471);
-            this.groupBox1.TabIndex = 47;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Update";
+            this.Update_Box.Controls.Add(this.QUAN_LBL);
+            this.Update_Box.Controls.Add(this.QUANTITY_TXT);
+            this.Update_Box.Controls.Add(this.EX_LBL);
+            this.Update_Box.Controls.Add(this.MANU_LBL);
+            this.Update_Box.Controls.Add(this.EXP_DATE);
+            this.Update_Box.Controls.Add(this.ID_TXT);
+            this.Update_Box.Controls.Add(this.MANU_DATE);
+            this.Update_Box.Controls.Add(this.ID);
+            this.Update_Box.Controls.Add(this.NAME_TXT);
+            this.Update_Box.Controls.Add(this.PRICE_TXT);
+            this.Update_Box.Controls.Add(this.PRO_LBL);
+            this.Update_Box.Controls.Add(this.PR_ID);
+            this.Update_Box.Controls.Add(this.PRICE_LBL);
+            this.Update_Box.Controls.Add(this.PRO_C_ID);
+            this.Update_Box.Controls.Add(this.PRO_TXT);
+            this.Update_Box.Controls.Add(this.NAME);
+            this.Update_Box.Location = new System.Drawing.Point(6, 145);
+            this.Update_Box.Name = "Update_Box";
+            this.Update_Box.Size = new System.Drawing.Size(373, 471);
+            this.Update_Box.TabIndex = 47;
+            this.Update_Box.TabStop = false;
+            this.Update_Box.Text = "Update";
             // 
-            // groupBox2
+            // Show_Data
             // 
-            this.groupBox2.Controls.Add(this.view_data);
-            this.groupBox2.Location = new System.Drawing.Point(385, 145);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(604, 246);
-            this.groupBox2.TabIndex = 48;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Show Data";
+            this.Show_Data.Controls.Add(this.view_data);
+            this.Show_Data.Location = new System.Drawing.Point(385, 145);
+            this.Show_Data.Name = "Show_Data";
+            this.Show_Data.Size = new System.Drawing.Size(604, 246);
+            this.Show_Data.TabIndex = 48;
+            this.Show_Data.TabStop = false;
+            this.Show_Data.Text = "Show Data";
             // 
             // view_data
             // 
@@ -332,9 +332,9 @@
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ClientSize = new System.Drawing.Size(1015, 716);
             this.Controls.Add(this.UPDATE);
-            this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.Show_Data);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.Update_Box);
             this.Name = "UpdateProduct";
             this.Text = "SearchUpdateProduct";
             this.Load += new System.EventHandler(this.UpdateProduct_Load);
@@ -342,9 +342,9 @@
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PRODUCT_BOX)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BACK_BOX)).EndInit();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
+            this.Update_Box.ResumeLayout(false);
+            this.Update_Box.PerformLayout();
+            this.Show_Data.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.view_data)).EndInit();
             this.ResumeLayout(false);
 
@@ -374,8 +374,8 @@
         private System.Windows.Forms.DateTimePicker MANU_DATE;
         private System.Windows.Forms.DateTimePicker EXP_DATE;
         private System.Windows.Forms.TextBox ID_TXT;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.GroupBox Update_Box;
+        private System.Windows.Forms.GroupBox Show_Data;
         private System.Windows.Forms.DataGridView view_data;
     }
 }

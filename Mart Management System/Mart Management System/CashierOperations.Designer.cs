@@ -117,6 +117,7 @@
             this.BACK_BOX.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.BACK_BOX.TabIndex = 0;
             this.BACK_BOX.TabStop = false;
+            this.BACK_BOX.Click += new System.EventHandler(this.BACK_BOX_Click);
             // 
             // SEARCH_BOX
             // 
@@ -171,6 +172,7 @@
             this.ADD_BTN.TabIndex = 9;
             this.ADD_BTN.Text = "ADD";
             this.ADD_BTN.UseVisualStyleBackColor = true;
+            this.ADD_BTN.Click += new System.EventHandler(this.ADD_BTN_Click);
             // 
             // DELETE_BTN
             // 
@@ -181,6 +183,7 @@
             this.DELETE_BTN.TabIndex = 10;
             this.DELETE_BTN.Text = "DELETE";
             this.DELETE_BTN.UseVisualStyleBackColor = true;
+            this.DELETE_BTN.Click += new System.EventHandler(this.DELETE_BTN_Click);
             // 
             // VIEW_BTN
             // 
@@ -191,6 +194,7 @@
             this.VIEW_BTN.TabIndex = 11;
             this.VIEW_BTN.Text = "VIEW";
             this.VIEW_BTN.UseVisualStyleBackColor = true;
+            this.VIEW_BTN.Click += new System.EventHandler(this.VIEW_BTN_Click);
             // 
             // SEARCH_BTN
             // 
@@ -199,8 +203,9 @@
             this.SEARCH_BTN.Name = "SEARCH_BTN";
             this.SEARCH_BTN.Size = new System.Drawing.Size(75, 23);
             this.SEARCH_BTN.TabIndex = 12;
-            this.SEARCH_BTN.Text = "SEARCH";
+            this.SEARCH_BTN.Text = "UPDATE";
             this.SEARCH_BTN.UseVisualStyleBackColor = true;
+            this.SEARCH_BTN.Click += new System.EventHandler(this.SEARCH_BTN_Click);
             // 
             // CashierOperations
             // 

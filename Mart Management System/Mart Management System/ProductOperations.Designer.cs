@@ -140,6 +140,7 @@
             this.DELETE_BOX.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.DELETE_BOX.TabIndex = 10;
             this.DELETE_BOX.TabStop = false;
+            this.DELETE_BOX.Click += new System.EventHandler(this.DELETE_BOX_Click);
             // 
             // VIEW_BOX
             // 
@@ -151,6 +152,7 @@
             this.VIEW_BOX.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.VIEW_BOX.TabIndex = 11;
             this.VIEW_BOX.TabStop = false;
+            this.VIEW_BOX.Click += new System.EventHandler(this.VIEW_BOX_Click);
             // 
             // SEARCH_BOX
             // 
@@ -162,6 +164,7 @@
             this.SEARCH_BOX.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.SEARCH_BOX.TabIndex = 12;
             this.SEARCH_BOX.TabStop = false;
+            this.SEARCH_BOX.Click += new System.EventHandler(this.SEARCH_BOX_Click);
             // 
             // ADD_BTN
             // 

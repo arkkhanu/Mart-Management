@@ -40,12 +40,12 @@
             this.NAME = new System.Windows.Forms.Label();
             this.SALARY = new System.Windows.Forms.Label();
             this.HIREDATE = new System.Windows.Forms.Label();
-            this.ID_Combo = new System.Windows.Forms.ComboBox();
             this.PASSWORD_TXT = new System.Windows.Forms.TextBox();
             this.NAME_TXT = new System.Windows.Forms.TextBox();
             this.SALARY_TXT = new System.Windows.Forms.TextBox();
-            this.HIREDATE_TXT = new System.Windows.Forms.TextBox();
             this.ADD_BUTTON = new System.Windows.Forms.Button();
+            this.HIRE_DATE = new System.Windows.Forms.DateTimePicker();
+            this.ID_TXT = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -135,7 +135,7 @@
             this.PASSWORD.AutoSize = true;
             this.PASSWORD.BackColor = System.Drawing.SystemColors.Control;
             this.PASSWORD.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PASSWORD.Location = new System.Drawing.Point(209, 237);
+            this.PASSWORD.Location = new System.Drawing.Point(209, 414);
             this.PASSWORD.Name = "PASSWORD";
             this.PASSWORD.Size = new System.Drawing.Size(78, 13);
             this.PASSWORD.TabIndex = 16;
@@ -146,7 +146,7 @@
             this.NAME.AutoSize = true;
             this.NAME.BackColor = System.Drawing.SystemColors.Control;
             this.NAME.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NAME.Location = new System.Drawing.Point(209, 298);
+            this.NAME.Location = new System.Drawing.Point(209, 243);
             this.NAME.Name = "NAME";
             this.NAME.Size = new System.Drawing.Size(42, 13);
             this.NAME.TabIndex = 18;
@@ -157,7 +157,7 @@
             this.SALARY.AutoSize = true;
             this.SALARY.BackColor = System.Drawing.SystemColors.Control;
             this.SALARY.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SALARY.Location = new System.Drawing.Point(209, 351);
+            this.SALARY.Location = new System.Drawing.Point(209, 302);
             this.SALARY.Name = "SALARY";
             this.SALARY.Size = new System.Drawing.Size(55, 13);
             this.SALARY.TabIndex = 20;
@@ -168,47 +168,32 @@
             this.HIREDATE.AutoSize = true;
             this.HIREDATE.BackColor = System.Drawing.SystemColors.Control;
             this.HIREDATE.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.HIREDATE.Location = new System.Drawing.Point(209, 401);
+            this.HIREDATE.Location = new System.Drawing.Point(209, 360);
             this.HIREDATE.Name = "HIREDATE";
             this.HIREDATE.Size = new System.Drawing.Size(70, 13);
             this.HIREDATE.TabIndex = 22;
             this.HIREDATE.Text = "HIREDATE";
             // 
-            // ID_Combo
-            // 
-            this.ID_Combo.FormattingEnabled = true;
-            this.ID_Combo.Location = new System.Drawing.Point(324, 180);
-            this.ID_Combo.Name = "ID_Combo";
-            this.ID_Combo.Size = new System.Drawing.Size(173, 21);
-            this.ID_Combo.TabIndex = 27;
-            // 
             // PASSWORD_TXT
             // 
-            this.PASSWORD_TXT.Location = new System.Drawing.Point(324, 230);
+            this.PASSWORD_TXT.Location = new System.Drawing.Point(324, 411);
             this.PASSWORD_TXT.Name = "PASSWORD_TXT";
             this.PASSWORD_TXT.Size = new System.Drawing.Size(173, 20);
             this.PASSWORD_TXT.TabIndex = 28;
             // 
             // NAME_TXT
             // 
-            this.NAME_TXT.Location = new System.Drawing.Point(324, 291);
+            this.NAME_TXT.Location = new System.Drawing.Point(324, 240);
             this.NAME_TXT.Name = "NAME_TXT";
             this.NAME_TXT.Size = new System.Drawing.Size(173, 20);
             this.NAME_TXT.TabIndex = 29;
             // 
             // SALARY_TXT
             // 
-            this.SALARY_TXT.Location = new System.Drawing.Point(324, 351);
+            this.SALARY_TXT.Location = new System.Drawing.Point(324, 295);
             this.SALARY_TXT.Name = "SALARY_TXT";
             this.SALARY_TXT.Size = new System.Drawing.Size(173, 20);
             this.SALARY_TXT.TabIndex = 30;
-            // 
-            // HIREDATE_TXT
-            // 
-            this.HIREDATE_TXT.Location = new System.Drawing.Point(324, 398);
-            this.HIREDATE_TXT.Name = "HIREDATE_TXT";
-            this.HIREDATE_TXT.Size = new System.Drawing.Size(173, 20);
-            this.HIREDATE_TXT.TabIndex = 31;
             // 
             // ADD_BUTTON
             // 
@@ -219,6 +204,23 @@
             this.ADD_BUTTON.TabIndex = 32;
             this.ADD_BUTTON.Text = "ADD";
             this.ADD_BUTTON.UseVisualStyleBackColor = true;
+            this.ADD_BUTTON.Click += new System.EventHandler(this.ADD_BUTTON_Click);
+            // 
+            // HIRE_DATE
+            // 
+            this.HIRE_DATE.CustomFormat = "dd-MM-yyyy";
+            this.HIRE_DATE.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.HIRE_DATE.Location = new System.Drawing.Point(324, 354);
+            this.HIRE_DATE.Name = "HIRE_DATE";
+            this.HIRE_DATE.Size = new System.Drawing.Size(173, 20);
+            this.HIRE_DATE.TabIndex = 33;
+            // 
+            // ID_TXT
+            // 
+            this.ID_TXT.Location = new System.Drawing.Point(324, 185);
+            this.ID_TXT.Name = "ID_TXT";
+            this.ID_TXT.Size = new System.Drawing.Size(173, 20);
+            this.ID_TXT.TabIndex = 34;
             // 
             // AddCashier
             // 
@@ -226,12 +228,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ClientSize = new System.Drawing.Size(800, 497);
+            this.Controls.Add(this.ID_TXT);
+            this.Controls.Add(this.HIRE_DATE);
             this.Controls.Add(this.ADD_BUTTON);
-            this.Controls.Add(this.HIREDATE_TXT);
             this.Controls.Add(this.SALARY_TXT);
             this.Controls.Add(this.NAME_TXT);
             this.Controls.Add(this.PASSWORD_TXT);
-            this.Controls.Add(this.ID_Combo);
             this.Controls.Add(this.HIREDATE);
             this.Controls.Add(this.SALARY);
             this.Controls.Add(this.NAME);
@@ -263,11 +265,11 @@
         private System.Windows.Forms.Label NAME;
         private System.Windows.Forms.Label SALARY;
         private System.Windows.Forms.Label HIREDATE;
-        private System.Windows.Forms.ComboBox ID_Combo;
         private System.Windows.Forms.TextBox PASSWORD_TXT;
         private System.Windows.Forms.TextBox NAME_TXT;
         private System.Windows.Forms.TextBox SALARY_TXT;
-        private System.Windows.Forms.TextBox HIREDATE_TXT;
         private System.Windows.Forms.Button ADD_BUTTON;
+        private System.Windows.Forms.DateTimePicker HIRE_DATE;
+        private System.Windows.Forms.TextBox ID_TXT;
     }
 }

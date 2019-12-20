@@ -36,10 +36,14 @@
             this.LOOK_BOX = new System.Windows.Forms.PictureBox();
             this.BACK_BOX = new System.Windows.Forms.PictureBox();
             this.CATEGORY_VIEW = new System.Windows.Forms.DataGridView();
+            this.btn_search = new System.Windows.Forms.Button();
+            this.txt_id = new System.Windows.Forms.NumericUpDown();
+            this.lbl_id = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.LOOK_BOX)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BACK_BOX)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CATEGORY_VIEW)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_id)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -107,14 +111,47 @@
             this.BACK_BOX.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.BACK_BOX.TabIndex = 0;
             this.BACK_BOX.TabStop = false;
+            this.BACK_BOX.Click += new System.EventHandler(this.BACK_BOX_Click);
             // 
             // CATEGORY_VIEW
             // 
             this.CATEGORY_VIEW.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.CATEGORY_VIEW.Location = new System.Drawing.Point(0, 150);
+            this.CATEGORY_VIEW.Location = new System.Drawing.Point(-1, 259);
             this.CATEGORY_VIEW.Name = "CATEGORY_VIEW";
             this.CATEGORY_VIEW.Size = new System.Drawing.Size(798, 150);
             this.CATEGORY_VIEW.TabIndex = 6;
+            // 
+            // btn_search
+            // 
+            this.btn_search.Location = new System.Drawing.Point(384, 234);
+            this.btn_search.Name = "btn_search";
+            this.btn_search.Size = new System.Drawing.Size(75, 23);
+            this.btn_search.TabIndex = 14;
+            this.btn_search.Text = "View";
+            this.btn_search.UseVisualStyleBackColor = true;
+            this.btn_search.Click += new System.EventHandler(this.btn_search_Click);
+            // 
+            // txt_id
+            // 
+            this.txt_id.Location = new System.Drawing.Point(452, 193);
+            this.txt_id.Maximum = new decimal(new int[] {
+            2000,
+            0,
+            0,
+            0});
+            this.txt_id.Name = "txt_id";
+            this.txt_id.Size = new System.Drawing.Size(120, 20);
+            this.txt_id.TabIndex = 13;
+            // 
+            // lbl_id
+            // 
+            this.lbl_id.AutoSize = true;
+            this.lbl_id.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_id.Location = new System.Drawing.Point(226, 193);
+            this.lbl_id.Name = "lbl_id";
+            this.lbl_id.Size = new System.Drawing.Size(220, 18);
+            this.lbl_id.TabIndex = 12;
+            this.lbl_id.Text = "Enter Category ID to Search";
             // 
             // ViewCategory
             // 
@@ -122,16 +159,22 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ClientSize = new System.Drawing.Size(798, 450);
+            this.Controls.Add(this.btn_search);
+            this.Controls.Add(this.txt_id);
+            this.Controls.Add(this.lbl_id);
             this.Controls.Add(this.CATEGORY_VIEW);
             this.Controls.Add(this.panel1);
             this.Name = "ViewCategory";
             this.Text = "ViewCategory";
+            this.Load += new System.EventHandler(this.ViewCategory_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.LOOK_BOX)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BACK_BOX)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CATEGORY_VIEW)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_id)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -144,5 +187,8 @@
         private System.Windows.Forms.PictureBox LOOK_BOX;
         private System.Windows.Forms.PictureBox BACK_BOX;
         private System.Windows.Forms.DataGridView CATEGORY_VIEW;
+        private System.Windows.Forms.Button btn_search;
+        private System.Windows.Forms.NumericUpDown txt_id;
+        private System.Windows.Forms.Label lbl_id;
     }
 }

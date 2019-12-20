@@ -43,7 +43,7 @@ namespace Mart_Management_System
 
         private void COMPANY_BUTTON_Click(object sender, EventArgs e)
         {
-            AddCompany co = new AddCompany();
+            CompanyOpearations co = new CompanyOpearations();
             this.Hide();
             co.Show();
 
@@ -51,9 +51,23 @@ namespace Mart_Management_System
 
         private void CATEGORY_BUTTON_Click(object sender, EventArgs e)
         {
-            AddCategoru g = new AddCategoru();
+            CategoryOperations g = new CategoryOperations();
             this.Hide();
             g.Show();
+        }
+
+        private void CASHIER_BUTTON_Click(object sender, EventArgs e)
+        {
+            CashierOperations co = new CashierOperations();
+            this.Hide();
+            co.Show();
+        }
+
+        private void CUSTOMER_Click(object sender, EventArgs e)
+        {
+            CustomerOperations cu = new CustomerOperations();
+            this.Hide();
+            cu.Show();
         }
     }
 }

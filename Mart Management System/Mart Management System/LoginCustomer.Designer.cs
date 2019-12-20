@@ -147,6 +147,7 @@
             this.PASSWORD_TXT.Name = "PASSWORD_TXT";
             this.PASSWORD_TXT.Size = new System.Drawing.Size(164, 20);
             this.PASSWORD_TXT.TabIndex = 10;
+            this.PASSWORD_TXT.UseSystemPasswordChar = true;
             // 
             // LOGIN_BUTTON
             // 
@@ -157,6 +158,7 @@
             this.LOGIN_BUTTON.TabIndex = 11;
             this.LOGIN_BUTTON.Text = "LOGIN";
             this.LOGIN_BUTTON.UseVisualStyleBackColor = true;
+            this.LOGIN_BUTTON.Click += new System.EventHandler(this.LOGIN_BUTTON_Click);
             // 
             // SIGNUP
             // 
@@ -167,6 +169,7 @@
             this.SIGNUP.TabIndex = 12;
             this.SIGNUP.Text = "SIGNUP";
             this.SIGNUP.UseVisualStyleBackColor = true;
+            this.SIGNUP.Click += new System.EventHandler(this.SIGNUP_Click);
             // 
             // LoginCustomer
             // 
@@ -184,6 +187,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "LoginCustomer";
             this.Text = "LoginCustomer";
+            this.Load += new System.EventHandler(this.LoginCustomer_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CUSTOMER_BOX)).EndInit();

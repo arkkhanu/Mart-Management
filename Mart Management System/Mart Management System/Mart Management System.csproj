@@ -133,6 +133,12 @@
     <Compile Include="DeleteCompany.Designer.cs">
       <DependentUpon>DeleteCompany.cs</DependentUpon>
     </Compile>
+    <Compile Include="DeleteCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeleteCustomer.Designer.cs">
+      <DependentUpon>DeleteCustomer.cs</DependentUpon>
+    </Compile>
     <Compile Include="DeleteProduct.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -171,23 +177,29 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SearchUpdateCashier.cs">
+    <Compile Include="UpdateCashier.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SearchUpdateCashier.Designer.cs">
-      <DependentUpon>SearchUpdateCashier.cs</DependentUpon>
+    <Compile Include="UpdateCashier.Designer.cs">
+      <DependentUpon>UpdateCashier.cs</DependentUpon>
     </Compile>
-    <Compile Include="SearchUpdateCategory.cs">
+    <Compile Include="UpdateCategory.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SearchUpdateCategory.Designer.cs">
-      <DependentUpon>SearchUpdateCategory.cs</DependentUpon>
+    <Compile Include="UpdateCategory.Designer.cs">
+      <DependentUpon>UpdateCategory.cs</DependentUpon>
     </Compile>
-    <Compile Include="SearchUpdateCompany.cs">
+    <Compile Include="UpdateCompany.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SearchUpdateCompany.Designer.cs">
-      <DependentUpon>SearchUpdateCompany.cs</DependentUpon>
+    <Compile Include="UpdateCompany.Designer.cs">
+      <DependentUpon>UpdateCompany.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateCustomer.Designer.cs">
+      <DependentUpon>UpdateCustomer.cs</DependentUpon>
     </Compile>
     <Compile Include="UpdateProduct.cs">
       <SubType>Form</SubType>
@@ -292,6 +304,9 @@
     <EmbeddedResource Include="DeleteCompany.resx">
       <DependentUpon>DeleteCompany.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="DeleteCustomer.resx">
+      <DependentUpon>DeleteCustomer.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DeleteProduct.resx">
       <DependentUpon>DeleteProduct.cs</DependentUpon>
     </EmbeddedResource>
@@ -314,14 +329,17 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="SearchUpdateCashier.resx">
-      <DependentUpon>SearchUpdateCashier.cs</DependentUpon>
+    <EmbeddedResource Include="UpdateCashier.resx">
+      <DependentUpon>UpdateCashier.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SearchUpdateCategory.resx">
-      <DependentUpon>SearchUpdateCategory.cs</DependentUpon>
+    <EmbeddedResource Include="UpdateCategory.resx">
+      <DependentUpon>UpdateCategory.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SearchUpdateCompany.resx">
-      <DependentUpon>SearchUpdateCompany.cs</DependentUpon>
+    <EmbeddedResource Include="UpdateCompany.resx">
+      <DependentUpon>UpdateCompany.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateCustomer.resx">
+      <DependentUpon>UpdateCustomer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UpdateProduct.resx">
       <DependentUpon>UpdateProduct.cs</DependentUpon>

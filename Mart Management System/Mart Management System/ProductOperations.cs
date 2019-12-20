@@ -51,5 +51,20 @@ namespace Mart_Management_System
             this.Hide();
             p.Show();
         }
+
+        private void SEARCH_BOX_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void DELETE_BOX_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void VIEW_BOX_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
