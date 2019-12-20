@@ -49,5 +49,12 @@ namespace Mart_Management_System
             this.Hide();
             u.Show();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            CartCustomer cart = new CartCustomer();
+            this.Hide();
+            cart.Show();
+        }
     }
 }

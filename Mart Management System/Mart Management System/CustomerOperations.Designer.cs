@@ -41,12 +41,15 @@
             this.SEARCH_BOX = new System.Windows.Forms.PictureBox();
             this.VIEW_BOX = new System.Windows.Forms.PictureBox();
             this.DELETE_BOX = new System.Windows.Forms.PictureBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CUSTOMER_BOX)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BACK_BOX)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SEARCH_BOX)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.VIEW_BOX)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DELETE_BOX)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -119,11 +122,11 @@
             // SEARCH_BTN
             // 
             this.SEARCH_BTN.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SEARCH_BTN.Location = new System.Drawing.Point(607, 521);
+            this.SEARCH_BTN.Location = new System.Drawing.Point(590, 521);
             this.SEARCH_BTN.Name = "SEARCH_BTN";
-            this.SEARCH_BTN.Size = new System.Drawing.Size(75, 23);
+            this.SEARCH_BTN.Size = new System.Drawing.Size(100, 23);
             this.SEARCH_BTN.TabIndex = 22;
-            this.SEARCH_BTN.Text = "UPDATE";
+            this.SEARCH_BTN.Text = "Edit Profile";
             this.SEARCH_BTN.UseVisualStyleBackColor = true;
             this.SEARCH_BTN.Click += new System.EventHandler(this.SEARCH_BTN_Click);
             // 
@@ -134,18 +137,18 @@
             this.VIEW_BTN.Name = "VIEW_BTN";
             this.VIEW_BTN.Size = new System.Drawing.Size(75, 23);
             this.VIEW_BTN.TabIndex = 21;
-            this.VIEW_BTN.Text = "VIEW";
+            this.VIEW_BTN.Text = "Profile";
             this.VIEW_BTN.UseVisualStyleBackColor = true;
             this.VIEW_BTN.Click += new System.EventHandler(this.VIEW_BTN_Click);
             // 
             // DELETE_BTN
             // 
             this.DELETE_BTN.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DELETE_BTN.Location = new System.Drawing.Point(367, 340);
+            this.DELETE_BTN.Location = new System.Drawing.Point(94, 332);
             this.DELETE_BTN.Name = "DELETE_BTN";
-            this.DELETE_BTN.Size = new System.Drawing.Size(75, 23);
+            this.DELETE_BTN.Size = new System.Drawing.Size(121, 23);
             this.DELETE_BTN.TabIndex = 20;
-            this.DELETE_BTN.Text = "DELETE";
+            this.DELETE_BTN.Text = "Delete Account";
             this.DELETE_BTN.UseVisualStyleBackColor = true;
             this.DELETE_BTN.Click += new System.EventHandler(this.DELETE_BTN_Click);
             // 
@@ -153,7 +156,7 @@
             // 
             this.SEARCH_BOX.BackColor = System.Drawing.SystemColors.Control;
             this.SEARCH_BOX.Image = ((System.Drawing.Image)(resources.GetObject("SEARCH_BOX.Image")));
-            this.SEARCH_BOX.Location = new System.Drawing.Point(548, 374);
+            this.SEARCH_BOX.Location = new System.Drawing.Point(548, 387);
             this.SEARCH_BOX.Name = "SEARCH_BOX";
             this.SEARCH_BOX.Size = new System.Drawing.Size(169, 107);
             this.SEARCH_BOX.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -164,7 +167,7 @@
             // 
             this.VIEW_BOX.BackColor = System.Drawing.SystemColors.Control;
             this.VIEW_BOX.Image = ((System.Drawing.Image)(resources.GetObject("VIEW_BOX.Image")));
-            this.VIEW_BOX.Location = new System.Drawing.Point(78, 374);
+            this.VIEW_BOX.Location = new System.Drawing.Point(78, 387);
             this.VIEW_BOX.Name = "VIEW_BOX";
             this.VIEW_BOX.Size = new System.Drawing.Size(166, 107);
             this.VIEW_BOX.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -175,12 +178,34 @@
             // 
             this.DELETE_BOX.BackColor = System.Drawing.SystemColors.Control;
             this.DELETE_BOX.Image = ((System.Drawing.Image)(resources.GetObject("DELETE_BOX.Image")));
-            this.DELETE_BOX.Location = new System.Drawing.Point(317, 196);
+            this.DELETE_BOX.Location = new System.Drawing.Point(75, 210);
             this.DELETE_BOX.Name = "DELETE_BOX";
             this.DELETE_BOX.Size = new System.Drawing.Size(169, 103);
             this.DELETE_BOX.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.DELETE_BOX.TabIndex = 17;
             this.DELETE_BOX.TabStop = false;
+            // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(578, 332);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(121, 23);
+            this.button1.TabIndex = 23;
+            this.button1.Text = "Go to AMS Mart";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.SystemColors.Control;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(548, 210);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(169, 107);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 24;
+            this.pictureBox1.TabStop = false;
             // 
             // CustomerOperations
             // 
@@ -188,6 +213,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ClientSize = new System.Drawing.Size(800, 563);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.SEARCH_BTN);
             this.Controls.Add(this.VIEW_BTN);
             this.Controls.Add(this.DELETE_BTN);
@@ -205,6 +232,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.SEARCH_BOX)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.VIEW_BOX)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DELETE_BOX)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -223,5 +251,7 @@
         private System.Windows.Forms.PictureBox SEARCH_BOX;
         private System.Windows.Forms.PictureBox VIEW_BOX;
         private System.Windows.Forms.PictureBox DELETE_BOX;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

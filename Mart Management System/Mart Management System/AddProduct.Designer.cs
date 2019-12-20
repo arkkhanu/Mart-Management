@@ -188,9 +188,9 @@
             this.PRO_LBL.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PRO_LBL.Location = new System.Drawing.Point(234, 376);
             this.PRO_LBL.Name = "PRO_LBL";
-            this.PRO_LBL.Size = new System.Drawing.Size(148, 13);
+            this.PRO_LBL.Size = new System.Drawing.Size(131, 13);
             this.PRO_LBL.TabIndex = 35;
-            this.PRO_LBL.Text = "PRODUCT COMPANY ID";
+            this.PRO_LBL.Text = "PRODUCT COMPANY";
             // 
             // PR_ID
             // 
@@ -199,9 +199,9 @@
             this.PR_ID.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PR_ID.Location = new System.Drawing.Point(234, 321);
             this.PR_ID.Name = "PR_ID";
-            this.PR_ID.Size = new System.Drawing.Size(155, 13);
+            this.PR_ID.Size = new System.Drawing.Size(138, 13);
             this.PR_ID.TabIndex = 36;
-            this.PR_ID.Text = "PRODUCT CATEGORY ID";
+            this.PR_ID.Text = "PRODUCT CATEGORY";
             // 
             // QUAN_LBL
             // 

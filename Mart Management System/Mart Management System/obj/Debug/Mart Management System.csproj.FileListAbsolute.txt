@@ -34,9 +34,6 @@ F:\University Material\5th Semister\Project\Visual Programing\Git\Mart Managemen
 F:\University Material\5th Semister\Project\Visual Programing\Git\Mart Management System\Mart Management System\obj\Debug\Mart_Management_System.LoginForm.resources
 F:\University Material\5th Semister\Project\Visual Programing\Git\Mart Management System\Mart Management System\obj\Debug\Mart_Management_System.ProductOperations.resources
 F:\University Material\5th Semister\Project\Visual Programing\Git\Mart Management System\Mart Management System\obj\Debug\Mart_Management_System.Properties.Resources.resources
-F:\University Material\5th Semister\Project\Visual Programing\Git\Mart Management System\Mart Management System\obj\Debug\Mart_Management_System.SearchUpdateCashier.resources
-F:\University Material\5th Semister\Project\Visual Programing\Git\Mart Management System\Mart Management System\obj\Debug\Mart_Management_System.SearchUpdateCategory.resources
-F:\University Material\5th Semister\Project\Visual Programing\Git\Mart Management System\Mart Management System\obj\Debug\Mart_Management_System.SearchUpdateCompany.resources
 F:\University Material\5th Semister\Project\Visual Programing\Git\Mart Management System\Mart Management System\obj\Debug\Mart_Management_System.SignUpCustomer.resources
 F:\University Material\5th Semister\Project\Visual Programing\Git\Mart Management System\Mart Management System\obj\Debug\Mart_Management_System.TransactionOperation.resources
 F:\University Material\5th Semister\Project\Visual Programing\Git\Mart Management System\Mart Management System\obj\Debug\Mart_Management_System.ViewCashier.resources
@@ -76,3 +73,9 @@ C:\Users\USER\Desktop\Mart ManageMent system\Mart Management System\Mart Managem
 C:\Users\USER\Desktop\Mart management system\Mart Management System\Mart Management System\obj\Debug\Mart_Management_System.UpdateCashier.resources
 C:\Users\USER\Desktop\Mart management system\Mart Management System\Mart Management System\obj\Debug\Mart_Management_System.DeleteCustomer.resources
 C:\Users\USER\Desktop\Mart management system\Mart Management System\Mart Management System\obj\Debug\Mart_Management_System.UpdateCustomer.resources
+F:\University Material\5th Semister\Project\Visual Programing\Git\Mart Management System\Mart Management System\obj\Debug\Mart_Management_System.DeleteCustomer.resources
+F:\University Material\5th Semister\Project\Visual Programing\Git\Mart Management System\Mart Management System\obj\Debug\Mart_Management_System.UpdateCashier.resources
+F:\University Material\5th Semister\Project\Visual Programing\Git\Mart Management System\Mart Management System\obj\Debug\Mart_Management_System.UpdateCategory.resources
+F:\University Material\5th Semister\Project\Visual Programing\Git\Mart Management System\Mart Management System\obj\Debug\Mart_Management_System.UpdateCompany.resources
+F:\University Material\5th Semister\Project\Visual Programing\Git\Mart Management System\Mart Management System\obj\Debug\Mart_Management_System.UpdateCustomer.resources
+F:\University Material\5th Semister\Project\Visual Programing\Git\Mart Management System\Mart Management System\obj\Debug\Mart_Management_System.CartCustomer.resources

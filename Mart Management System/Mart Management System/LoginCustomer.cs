@@ -64,10 +64,10 @@ namespace Mart_Management_System
                 if (dt.Rows.Count == 1)
                 {
                     MessageBox.Show("Welcome");
-                   
-                    CustomerView cu = new CustomerView();
+
+                    CustomerOperations co = new CustomerOperations();
                     this.Hide();
-                    cu.Show();
+                    co.Show();
                 }
                 else
                 {

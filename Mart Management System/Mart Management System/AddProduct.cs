@@ -25,15 +25,6 @@ namespace Mart_Management_System
 
         private void AddProduct_Load(object sender, EventArgs e)
         {
-            //DataSet ds = new DataSet();
-            //AddCategoru cs = new AddCategoru();
-            //Cat_Combo.DataSource = ds.Tables["Category"];
-            //Cat_Combo.DisplayMember = ("cat_id");
-            //Cat_Combo.ValueMember = ("cat_id");
-            //AddCompany ss = new AddCompany();
-            //Product_Combo.DataSource = ds.Tables["Company"];
-            //Product_Combo.DisplayMember = ("comp_id");
-            //Product_Combo.ValueMember = ("comp_id");
 
 
             loadCatrec();
@@ -49,6 +40,7 @@ namespace Mart_Management_System
         {
             using (SqlConnection con = new SqlConnection(cs))
             {
+                con.Open();
                 DataSet ds = new DataSet();
                 string query = "select * from Product where 0=1";
                 SqlDataAdapter adp = new SqlDataAdapter(query, con);
@@ -58,8 +50,20 @@ namespace Mart_Management_System
             
                 dr["pro_id"] = ID_TXT.Text;
                dr["pro_name"] = NAME_TXT.Text;
-               dr["pro_comp"] = Int32.Parse(Product_Combo.SelectedItem.ToString());
-                dr["pro_cat"] = Int32.Parse( Cat_Combo.SelectedItem.ToString());
+              
+                
+                    SqlCommand catCmd = new SqlCommand("select cat_id from category where cat_name='" + Cat_Combo.SelectedItem.ToString() + "'", con);
+                    SqlDataReader catRdr= catCmd.ExecuteReader();
+                    catRdr.Read();
+                    dr["pro_cat"] = catRdr["cat_id"];
+                    catRdr.Close();
+
+                    SqlCommand comCmd = new SqlCommand("select comp_id from company where comp_name='" +Product_Combo.SelectedItem.ToString() + "'", con);
+                    SqlDataReader comRdr = comCmd.ExecuteReader();
+                    comRdr.Read();
+                    dr["pro_comp"] = comRdr["comp_id"];
+                    comRdr.Close();
+                
              
                 dr["pro_price"] = PRICE_TXT.Text;
                 dr["pro_manuf_date"] =MANU_DATE.Text.ToString();
@@ -78,7 +82,7 @@ namespace Mart_Management_System
 
         void loadCatrec()
         {
-            string query = "select cat_id , cat_name from Category;";
+            string query = "select cat_name from Category;";
             SqlConnection con = new SqlConnection(cs);
             
 
@@ -88,10 +92,10 @@ namespace Mart_Management_System
 
             if (rdr.Read())
             {
-                Cat_Combo.Items.Add(rdr["cat_id"].ToString());
+                Cat_Combo.Items.Add(rdr["cat_name"].ToString());
                 while (rdr.Read())
                 {
-                    Cat_Combo.Items.Add( rdr["cat_id"].ToString());
+                    Cat_Combo.Items.Add( rdr["cat_name"].ToString());
                 }
             }
             
@@ -100,7 +104,7 @@ namespace Mart_Management_System
 
         void loadComrec()
         {
-            string query = "select comp_id from Company";
+            string query = "select comp_name from Company";
             SqlConnection con = new SqlConnection(cs);
 
 
@@ -109,10 +113,10 @@ namespace Mart_Management_System
             SqlDataReader rdr = cmd.ExecuteReader();
             if (rdr.Read())
             {
-                Product_Combo.Items.Add(rdr["comp_id"].ToString());
+                Product_Combo.Items.Add(rdr["comp_name"].ToString());
                 while (rdr.Read())
                 {
-                    Product_Combo.Items.Add(rdr["comp_id"].ToString());
+                    Product_Combo.Items.Add(rdr["comp_name"].ToString());
                 }
             }
 
