@@ -43,6 +43,12 @@
             this.cat_combo = new System.Windows.Forms.ComboBox();
             this.btn_addPro = new System.Windows.Forms.Button();
             this.pro_list = new System.Windows.Forms.CheckedListBox();
+            this.phone_box = new System.Windows.Forms.TextBox();
+            this.email_box = new System.Windows.Forms.TextBox();
+            this.id_box = new System.Windows.Forms.TextBox();
+            this.lbl_id = new System.Windows.Forms.Label();
+            this.lbl_ph = new System.Windows.Forms.Label();
+            this.lbl_mail = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CUSTOMER_BOX)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BACK_BOX)).BeginInit();
@@ -124,7 +130,7 @@
             this.groupBox1.Controls.Add(this.lbl_cat);
             this.groupBox1.Controls.Add(this.comp_combo);
             this.groupBox1.Controls.Add(this.cat_combo);
-            this.groupBox1.Location = new System.Drawing.Point(303, 138);
+            this.groupBox1.Location = new System.Drawing.Point(53, 212);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(256, 101);
             this.groupBox1.TabIndex = 5;
@@ -179,7 +185,7 @@
             // 
             // btn_addPro
             // 
-            this.btn_addPro.Location = new System.Drawing.Point(398, 402);
+            this.btn_addPro.Location = new System.Drawing.Point(369, 402);
             this.btn_addPro.Name = "btn_addPro";
             this.btn_addPro.Size = new System.Drawing.Size(75, 23);
             this.btn_addPro.TabIndex = 7;
@@ -190,10 +196,58 @@
             // pro_list
             // 
             this.pro_list.FormattingEnabled = true;
-            this.pro_list.Location = new System.Drawing.Point(368, 245);
+            this.pro_list.Location = new System.Drawing.Point(369, 159);
             this.pro_list.Name = "pro_list";
-            this.pro_list.Size = new System.Drawing.Size(163, 154);
+            this.pro_list.Size = new System.Drawing.Size(190, 184);
             this.pro_list.TabIndex = 8;
+            // 
+            // phone_box
+            // 
+            this.phone_box.Location = new System.Drawing.Point(369, 350);
+            this.phone_box.Name = "phone_box";
+            this.phone_box.Size = new System.Drawing.Size(100, 20);
+            this.phone_box.TabIndex = 9;
+            // 
+            // email_box
+            // 
+            this.email_box.Location = new System.Drawing.Point(587, 350);
+            this.email_box.Name = "email_box";
+            this.email_box.Size = new System.Drawing.Size(179, 20);
+            this.email_box.TabIndex = 10;
+            // 
+            // id_box
+            // 
+            this.id_box.Location = new System.Drawing.Point(123, 350);
+            this.id_box.Name = "id_box";
+            this.id_box.Size = new System.Drawing.Size(141, 20);
+            this.id_box.TabIndex = 11;
+            // 
+            // lbl_id
+            // 
+            this.lbl_id.AutoSize = true;
+            this.lbl_id.Location = new System.Drawing.Point(53, 350);
+            this.lbl_id.Name = "lbl_id";
+            this.lbl_id.Size = new System.Drawing.Size(43, 13);
+            this.lbl_id.TabIndex = 12;
+            this.lbl_id.Text = "Your ID";
+            // 
+            // lbl_ph
+            // 
+            this.lbl_ph.AutoSize = true;
+            this.lbl_ph.Location = new System.Drawing.Point(288, 353);
+            this.lbl_ph.Name = "lbl_ph";
+            this.lbl_ph.Size = new System.Drawing.Size(50, 13);
+            this.lbl_ph.TabIndex = 13;
+            this.lbl_ph.Text = "phone #:";
+            // 
+            // lbl_mail
+            // 
+            this.lbl_mail.AutoSize = true;
+            this.lbl_mail.Location = new System.Drawing.Point(499, 353);
+            this.lbl_mail.Name = "lbl_mail";
+            this.lbl_mail.Size = new System.Drawing.Size(46, 13);
+            this.lbl_mail.TabIndex = 14;
+            this.lbl_mail.Text = "Email id:";
             // 
             // CartCustomer
             // 
@@ -201,6 +255,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ClientSize = new System.Drawing.Size(835, 437);
+            this.Controls.Add(this.lbl_mail);
+            this.Controls.Add(this.lbl_ph);
+            this.Controls.Add(this.lbl_id);
+            this.Controls.Add(this.id_box);
+            this.Controls.Add(this.email_box);
+            this.Controls.Add(this.phone_box);
             this.Controls.Add(this.pro_list);
             this.Controls.Add(this.btn_addPro);
             this.Controls.Add(this.groupBox1);
@@ -216,6 +276,7 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -235,6 +296,12 @@
         private System.Windows.Forms.Button btn_go;
         private System.Windows.Forms.Button btn_addPro;
         private System.Windows.Forms.CheckedListBox pro_list;
+        private System.Windows.Forms.TextBox phone_box;
+        private System.Windows.Forms.TextBox email_box;
+        private System.Windows.Forms.TextBox id_box;
+        private System.Windows.Forms.Label lbl_id;
+        private System.Windows.Forms.Label lbl_ph;
+        private System.Windows.Forms.Label lbl_mail;
 
     }
 }

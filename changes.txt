@@ -10,5 +10,10 @@ ADD cust_pass FIeld in database
 PRODCUT TABLE :
 add quantity field in database 
 
+reference->add->visual basic
+add library->using Microsoft.VisualBasic;
+
+create table cart(transaction_id primary key not null,product varchar(50), price int, quantity int, id int, phone int, email varchar(50));
+
 
         
