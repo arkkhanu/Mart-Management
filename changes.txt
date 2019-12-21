@@ -11,4 +11,7 @@ PRODCUT TABLE :
 add quantity field in database 
 
 
+PRODUCT  TABLE :
+image field data type image 
+
         

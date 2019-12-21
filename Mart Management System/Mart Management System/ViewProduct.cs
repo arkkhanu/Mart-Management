@@ -32,9 +32,12 @@ namespace Mart_Management_System
         
         void loaddata()
         {
-         
             SqlDataAdapter sda;
             DataTable dt = new DataTable();
+            View_Product.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            View_Product.RowTemplate.Height = 200;
+            View_Product.AllowUserToAddRows = false;
+
            // System.Data.DataSet ds = new System.Data.DataSet();
             using (SqlConnection con = new SqlConnection(cs))
             {
@@ -46,6 +49,10 @@ namespace Mart_Management_System
                     View_Product.DataSource = dt;
                 else
                     MessageBox.Show("No product Found !");
+                DataGridViewImageColumn imageColumn = new DataGridViewImageColumn();
+                imageColumn = (DataGridViewImageColumn)View_Product.Columns[8];
+                imageColumn.ImageLayout = DataGridViewImageCellLayout.Stretch;
+             
 
 
             }

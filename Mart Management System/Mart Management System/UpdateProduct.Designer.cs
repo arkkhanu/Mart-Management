@@ -54,12 +54,15 @@
             this.Update_Box = new System.Windows.Forms.GroupBox();
             this.Show_Data = new System.Windows.Forms.GroupBox();
             this.view_data = new System.Windows.Forms.DataGridView();
+            this.PRO_BOX = new System.Windows.Forms.PictureBox();
+            this.BRO_BTN = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PRODUCT_BOX)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BACK_BOX)).BeginInit();
             this.Update_Box.SuspendLayout();
             this.Show_Data.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.view_data)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PRO_BOX)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -247,7 +250,7 @@
             // UPDATE
             // 
             this.UPDATE.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UPDATE.Location = new System.Drawing.Point(568, 493);
+            this.UPDATE.Location = new System.Drawing.Point(654, 648);
             this.UPDATE.Name = "UPDATE";
             this.UPDATE.Size = new System.Drawing.Size(284, 34);
             this.UPDATE.TabIndex = 43;
@@ -284,6 +287,7 @@
             // Update_Box
             // 
             this.Update_Box.Controls.Add(this.QUAN_LBL);
+            this.Update_Box.Controls.Add(this.PRO_BOX);
             this.Update_Box.Controls.Add(this.QUANTITY_TXT);
             this.Update_Box.Controls.Add(this.EX_LBL);
             this.Update_Box.Controls.Add(this.MANU_LBL);
@@ -301,7 +305,7 @@
             this.Update_Box.Controls.Add(this.NAME);
             this.Update_Box.Location = new System.Drawing.Point(6, 145);
             this.Update_Box.Name = "Update_Box";
-            this.Update_Box.Size = new System.Drawing.Size(373, 471);
+            this.Update_Box.Size = new System.Drawing.Size(388, 577);
             this.Update_Box.TabIndex = 47;
             this.Update_Box.TabStop = false;
             this.Update_Box.Text = "Update";
@@ -309,9 +313,9 @@
             // Show_Data
             // 
             this.Show_Data.Controls.Add(this.view_data);
-            this.Show_Data.Location = new System.Drawing.Point(385, 145);
+            this.Show_Data.Location = new System.Drawing.Point(464, 145);
             this.Show_Data.Name = "Show_Data";
-            this.Show_Data.Size = new System.Drawing.Size(604, 246);
+            this.Show_Data.Size = new System.Drawing.Size(581, 246);
             this.Show_Data.TabIndex = 48;
             this.Show_Data.TabStop = false;
             this.Show_Data.Text = "Show Data";
@@ -319,18 +323,39 @@
             // view_data
             // 
             this.view_data.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.view_data.Location = new System.Drawing.Point(7, 20);
+            this.view_data.Location = new System.Drawing.Point(6, 19);
             this.view_data.Name = "view_data";
-            this.view_data.Size = new System.Drawing.Size(591, 212);
+            this.view_data.Size = new System.Drawing.Size(560, 212);
             this.view_data.TabIndex = 0;
             this.view_data.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.view_data_CellClick);
+            // 
+            // PRO_BOX
+            // 
+            this.PRO_BOX.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.PRO_BOX.Location = new System.Drawing.Point(181, 467);
+            this.PRO_BOX.Name = "PRO_BOX";
+            this.PRO_BOX.Size = new System.Drawing.Size(148, 104);
+            this.PRO_BOX.TabIndex = 54;
+            this.PRO_BOX.TabStop = false;
+            // 
+            // BRO_BTN
+            // 
+            this.BRO_BTN.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BRO_BTN.Location = new System.Drawing.Point(514, 648);
+            this.BRO_BTN.Name = "BRO_BTN";
+            this.BRO_BTN.Size = new System.Drawing.Size(84, 34);
+            this.BRO_BTN.TabIndex = 55;
+            this.BRO_BTN.Text = "BROWSE";
+            this.BRO_BTN.UseVisualStyleBackColor = true;
+            this.BRO_BTN.Click += new System.EventHandler(this.BRO_BTN_Click);
             // 
             // UpdateProduct
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.ClientSize = new System.Drawing.Size(1015, 716);
+            this.ClientSize = new System.Drawing.Size(1112, 749);
+            this.Controls.Add(this.BRO_BTN);
             this.Controls.Add(this.UPDATE);
             this.Controls.Add(this.Show_Data);
             this.Controls.Add(this.panel1);
@@ -346,6 +371,7 @@
             this.Update_Box.PerformLayout();
             this.Show_Data.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.view_data)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PRO_BOX)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -377,5 +403,7 @@
         private System.Windows.Forms.GroupBox Update_Box;
         private System.Windows.Forms.GroupBox Show_Data;
         private System.Windows.Forms.DataGridView view_data;
+        private System.Windows.Forms.PictureBox PRO_BOX;
+        private System.Windows.Forms.Button BRO_BTN;
     }
 }

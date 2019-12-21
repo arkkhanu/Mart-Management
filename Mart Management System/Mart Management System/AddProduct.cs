@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.Configuration;
+using System.IO;
 
 using System.Data;
 using System.Collections.Specialized;
@@ -38,6 +39,11 @@ namespace Mart_Management_System
         }
         private void AddData()
         {
+            byte[] images = null;
+            FileStream Stream = new FileStream(imglocation, FileMode.Open, FileAccess.Read);
+            BinaryReader brs = new BinaryReader(Stream);
+            images = brs.ReadBytes((int)Stream.Length);
+
             using (SqlConnection con = new SqlConnection(cs))
             {
                 con.Open();
@@ -69,6 +75,7 @@ namespace Mart_Management_System
                 dr["pro_manuf_date"] =MANU_DATE.Text.ToString();
                 dr["pro_exp_date"] = EXP_DATE.Text.ToString();
                 dr["quantity"] = QUANTITY_TXT.Text;
+                dr["image"] = images;
                 ds.Tables["Product"].Rows.Add(dr);
                 new SqlCommandBuilder(adp);
                 adp.Update(ds,"Product");
@@ -151,6 +158,19 @@ namespace Mart_Management_System
 
         private void PRODUCT_BOX_Click(object sender, EventArgs e)
         {
+
+        }
+        string imglocation = "";
+        private void BRO_BTN_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog dialog = new OpenFileDialog();
+            dialog.Filter ="png files (* .png)|*.png|jpg files(* .jpg)|* .jpg|All files(*.*)|*.* ";
+            if(dialog.ShowDialog() == DialogResult.OK)
+            {
+                imglocation = dialog.FileName.ToString();
+                PRO_BOX.ImageLocation = imglocation;
+            }
+
 
         }
     }
