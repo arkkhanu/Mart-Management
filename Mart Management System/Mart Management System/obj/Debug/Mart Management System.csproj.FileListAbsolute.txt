@@ -79,3 +79,4 @@ F:\University Material\5th Semister\Project\Visual Programing\Git\Mart Managemen
 F:\University Material\5th Semister\Project\Visual Programing\Git\Mart Management System\Mart Management System\obj\Debug\Mart_Management_System.UpdateCompany.resources
 F:\University Material\5th Semister\Project\Visual Programing\Git\Mart Management System\Mart Management System\obj\Debug\Mart_Management_System.UpdateCustomer.resources
 F:\University Material\5th Semister\Project\Visual Programing\Git\Mart Management System\Mart Management System\obj\Debug\Mart_Management_System.CartCustomer.resources
+C:\Users\USER\Desktop\Mart ManageMent system\Mart Management System\Mart Management System\obj\Debug\Mart_Management_System.CartCustomer.resources

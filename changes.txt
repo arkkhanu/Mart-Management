@@ -16,4 +16,7 @@ add library->using Microsoft.VisualBasic;
 create table cart(transaction_id primary key not null,product varchar(50), price int, quantity int, id int, phone int, email varchar(50));
 
 
+PRODUCT  TABLE :
+image field data type image 
+
         

@@ -122,10 +122,11 @@
             this.View_Product.Size = new System.Drawing.Size(848, 150);
             this.View_Product.TabIndex = 5;
             this.View_Product.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.View_Product_CellContentClick);
+            this.View_Product.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.View_Product_DataError);
             // 
             // btn_search
             // 
-            this.btn_search.Location = new System.Drawing.Point(411, 249);
+            this.btn_search.Location = new System.Drawing.Point(60, 241);
             this.btn_search.Name = "btn_search";
             this.btn_search.Size = new System.Drawing.Size(75, 23);
             this.btn_search.TabIndex = 6;
@@ -137,7 +138,7 @@
             // 
             this.lbl_id.AutoSize = true;
             this.lbl_id.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_id.Location = new System.Drawing.Point(233, 212);
+            this.lbl_id.Location = new System.Drawing.Point(12, 195);
             this.lbl_id.Name = "lbl_id";
             this.lbl_id.Size = new System.Drawing.Size(211, 18);
             this.lbl_id.TabIndex = 8;
@@ -145,7 +146,7 @@
             // 
             // txt_id
             // 
-            this.txt_id.Location = new System.Drawing.Point(450, 212);
+            this.txt_id.Location = new System.Drawing.Point(249, 197);
             this.txt_id.Maximum = new decimal(new int[] {
             2000,
             0,
@@ -160,7 +161,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.ClientSize = new System.Drawing.Size(849, 450);
+            this.ClientSize = new System.Drawing.Size(849, 514);
             this.Controls.Add(this.txt_id);
             this.Controls.Add(this.lbl_id);
             this.Controls.Add(this.btn_search);

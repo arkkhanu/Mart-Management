@@ -52,9 +52,12 @@
             this.ID_TXT = new System.Windows.Forms.TextBox();
             this.Cat_Combo = new System.Windows.Forms.ComboBox();
             this.Product_Combo = new System.Windows.Forms.ComboBox();
+            this.PRO_BOX = new System.Windows.Forms.PictureBox();
+            this.BRO_BTN = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PRODUCT_BOX)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PRO_BOX)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -131,7 +134,7 @@
             this.ID.BackColor = System.Drawing.SystemColors.Control;
             this.ID.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ID.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.ID.Location = new System.Drawing.Point(234, 210);
+            this.ID.Location = new System.Drawing.Point(69, 212);
             this.ID.Name = "ID";
             this.ID.Size = new System.Drawing.Size(20, 13);
             this.ID.TabIndex = 8;
@@ -142,7 +145,7 @@
             this.NAME.AutoSize = true;
             this.NAME.BackColor = System.Drawing.SystemColors.Control;
             this.NAME.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NAME.Location = new System.Drawing.Point(234, 262);
+            this.NAME.Location = new System.Drawing.Point(69, 264);
             this.NAME.Name = "NAME";
             this.NAME.Size = new System.Drawing.Size(42, 13);
             this.NAME.TabIndex = 29;
@@ -153,7 +156,7 @@
             this.PRICE_LBL.AutoSize = true;
             this.PRICE_LBL.BackColor = System.Drawing.SystemColors.Control;
             this.PRICE_LBL.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PRICE_LBL.Location = new System.Drawing.Point(234, 432);
+            this.PRICE_LBL.Location = new System.Drawing.Point(69, 434);
             this.PRICE_LBL.Name = "PRICE_LBL";
             this.PRICE_LBL.Size = new System.Drawing.Size(44, 13);
             this.PRICE_LBL.TabIndex = 31;
@@ -164,7 +167,7 @@
             this.MANU_LBL.AutoSize = true;
             this.MANU_LBL.BackColor = System.Drawing.SystemColors.Control;
             this.MANU_LBL.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MANU_LBL.Location = new System.Drawing.Point(234, 497);
+            this.MANU_LBL.Location = new System.Drawing.Point(69, 499);
             this.MANU_LBL.Name = "MANU_LBL";
             this.MANU_LBL.Size = new System.Drawing.Size(137, 13);
             this.MANU_LBL.TabIndex = 33;
@@ -175,7 +178,7 @@
             this.EX_LBL.AutoSize = true;
             this.EX_LBL.BackColor = System.Drawing.SystemColors.Control;
             this.EX_LBL.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EX_LBL.Location = new System.Drawing.Point(234, 559);
+            this.EX_LBL.Location = new System.Drawing.Point(69, 561);
             this.EX_LBL.Name = "EX_LBL";
             this.EX_LBL.Size = new System.Drawing.Size(89, 13);
             this.EX_LBL.TabIndex = 34;
@@ -186,7 +189,7 @@
             this.PRO_LBL.AutoSize = true;
             this.PRO_LBL.BackColor = System.Drawing.SystemColors.Control;
             this.PRO_LBL.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PRO_LBL.Location = new System.Drawing.Point(234, 376);
+            this.PRO_LBL.Location = new System.Drawing.Point(69, 378);
             this.PRO_LBL.Name = "PRO_LBL";
             this.PRO_LBL.Size = new System.Drawing.Size(131, 13);
             this.PRO_LBL.TabIndex = 35;
@@ -197,7 +200,7 @@
             this.PR_ID.AutoSize = true;
             this.PR_ID.BackColor = System.Drawing.SystemColors.Control;
             this.PR_ID.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PR_ID.Location = new System.Drawing.Point(234, 321);
+            this.PR_ID.Location = new System.Drawing.Point(69, 323);
             this.PR_ID.Name = "PR_ID";
             this.PR_ID.Size = new System.Drawing.Size(138, 13);
             this.PR_ID.TabIndex = 36;
@@ -208,7 +211,7 @@
             this.QUAN_LBL.AutoSize = true;
             this.QUAN_LBL.BackColor = System.Drawing.SystemColors.Control;
             this.QUAN_LBL.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.QUAN_LBL.Location = new System.Drawing.Point(234, 603);
+            this.QUAN_LBL.Location = new System.Drawing.Point(69, 605);
             this.QUAN_LBL.Name = "QUAN_LBL";
             this.QUAN_LBL.Size = new System.Drawing.Size(70, 13);
             this.QUAN_LBL.TabIndex = 37;
@@ -216,7 +219,7 @@
             // 
             // NAME_TXT
             // 
-            this.NAME_TXT.Location = new System.Drawing.Point(413, 259);
+            this.NAME_TXT.Location = new System.Drawing.Point(248, 261);
             this.NAME_TXT.Name = "NAME_TXT";
             this.NAME_TXT.Size = new System.Drawing.Size(173, 20);
             this.NAME_TXT.TabIndex = 39;
@@ -224,14 +227,14 @@
             // 
             // PRICE_TXT
             // 
-            this.PRICE_TXT.Location = new System.Drawing.Point(417, 429);
+            this.PRICE_TXT.Location = new System.Drawing.Point(252, 431);
             this.PRICE_TXT.Name = "PRICE_TXT";
             this.PRICE_TXT.Size = new System.Drawing.Size(173, 20);
             this.PRICE_TXT.TabIndex = 40;
             // 
             // QUANTITY_TXT
             // 
-            this.QUANTITY_TXT.Location = new System.Drawing.Point(417, 600);
+            this.QUANTITY_TXT.Location = new System.Drawing.Point(252, 602);
             this.QUANTITY_TXT.Name = "QUANTITY_TXT";
             this.QUANTITY_TXT.Size = new System.Drawing.Size(173, 20);
             this.QUANTITY_TXT.TabIndex = 45;
@@ -251,7 +254,7 @@
             // 
             this.MANU_DATE.CustomFormat = "dd-MM-yyyy";
             this.MANU_DATE.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.MANU_DATE.Location = new System.Drawing.Point(413, 491);
+            this.MANU_DATE.Location = new System.Drawing.Point(248, 493);
             this.MANU_DATE.Name = "MANU_DATE";
             this.MANU_DATE.Size = new System.Drawing.Size(173, 20);
             this.MANU_DATE.TabIndex = 48;
@@ -260,14 +263,14 @@
             // 
             this.EXP_DATE.CustomFormat = "dd-MM-yyyy";
             this.EXP_DATE.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.EXP_DATE.Location = new System.Drawing.Point(413, 552);
+            this.EXP_DATE.Location = new System.Drawing.Point(248, 554);
             this.EXP_DATE.Name = "EXP_DATE";
             this.EXP_DATE.Size = new System.Drawing.Size(173, 20);
             this.EXP_DATE.TabIndex = 49;
             // 
             // ID_TXT
             // 
-            this.ID_TXT.Location = new System.Drawing.Point(413, 203);
+            this.ID_TXT.Location = new System.Drawing.Point(248, 205);
             this.ID_TXT.Name = "ID_TXT";
             this.ID_TXT.Size = new System.Drawing.Size(173, 20);
             this.ID_TXT.TabIndex = 50;
@@ -277,7 +280,7 @@
             // 
             this.Cat_Combo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.Cat_Combo.FormattingEnabled = true;
-            this.Cat_Combo.Location = new System.Drawing.Point(413, 313);
+            this.Cat_Combo.Location = new System.Drawing.Point(248, 315);
             this.Cat_Combo.Name = "Cat_Combo";
             this.Cat_Combo.Size = new System.Drawing.Size(173, 21);
             this.Cat_Combo.TabIndex = 51;
@@ -287,10 +290,30 @@
             // 
             this.Product_Combo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.Product_Combo.FormattingEnabled = true;
-            this.Product_Combo.Location = new System.Drawing.Point(413, 373);
+            this.Product_Combo.Location = new System.Drawing.Point(248, 375);
             this.Product_Combo.Name = "Product_Combo";
             this.Product_Combo.Size = new System.Drawing.Size(173, 21);
             this.Product_Combo.TabIndex = 52;
+            // 
+            // PRO_BOX
+            // 
+            this.PRO_BOX.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.PRO_BOX.Location = new System.Drawing.Point(553, 305);
+            this.PRO_BOX.Name = "PRO_BOX";
+            this.PRO_BOX.Size = new System.Drawing.Size(148, 146);
+            this.PRO_BOX.TabIndex = 53;
+            this.PRO_BOX.TabStop = false;
+            // 
+            // BRO_BTN
+            // 
+            this.BRO_BTN.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BRO_BTN.Location = new System.Drawing.Point(584, 499);
+            this.BRO_BTN.Name = "BRO_BTN";
+            this.BRO_BTN.Size = new System.Drawing.Size(84, 34);
+            this.BRO_BTN.TabIndex = 54;
+            this.BRO_BTN.Text = "BROWSE";
+            this.BRO_BTN.UseVisualStyleBackColor = true;
+            this.BRO_BTN.Click += new System.EventHandler(this.BRO_BTN_Click);
             // 
             // AddProduct
             // 
@@ -298,6 +321,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ClientSize = new System.Drawing.Size(800, 720);
+            this.Controls.Add(this.BRO_BTN);
+            this.Controls.Add(this.PRO_BOX);
             this.Controls.Add(this.Product_Combo);
             this.Controls.Add(this.Cat_Combo);
             this.Controls.Add(this.ID_TXT);
@@ -323,6 +348,7 @@
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PRODUCT_BOX)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PRO_BOX)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -353,5 +379,7 @@
         private System.Windows.Forms.TextBox ID_TXT;
         private System.Windows.Forms.ComboBox Cat_Combo;
         private System.Windows.Forms.ComboBox Product_Combo;
+        private System.Windows.Forms.PictureBox PRO_BOX;
+        private System.Windows.Forms.Button BRO_BTN;
     }
 }
