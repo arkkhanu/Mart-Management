@@ -122,6 +122,7 @@
             this.View_Product.Size = new System.Drawing.Size(848, 150);
             this.View_Product.TabIndex = 5;
             this.View_Product.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.View_Product_CellContentClick);
+            this.View_Product.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.View_Product_DataError);
             // 
             // btn_search
             // 

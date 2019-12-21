@@ -20,7 +20,10 @@ namespace Mart_Management_System
         {
             InitializeComponent();
         }
-
+        private void IntializeComponent()
+        {
+            this.view_data.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.view_data_DataError);
+        }
         private void UpdateProduct_Load(object sender, EventArgs e)
         {
             loaddata();
@@ -30,6 +33,9 @@ namespace Mart_Management_System
         {
             SqlDataAdapter sda;
             DataTable dt = new DataTable();
+            view_data.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            view_data.RowTemplate.Height = 200;
+           view_data.AllowUserToAddRows = false;
             // System.Data.DataSet ds = new System.Data.DataSet();
             using (SqlConnection con = new SqlConnection(cs))
             {
@@ -40,6 +46,9 @@ namespace Mart_Management_System
 
 
             }
+            DataGridViewImageColumn imageColumn = new DataGridViewImageColumn();
+            imageColumn = (DataGridViewImageColumn)view_data.Columns[8];
+            imageColumn.ImageLayout = DataGridViewImageCellLayout.Stretch;
 
 
         }
@@ -83,9 +92,10 @@ namespace Mart_Management_System
                 EXP_DATE.Value = DateTime.ParseExact(view_data.SelectedRows[0].Cells[6].Value.ToString(), pattern, null);
 
                 QUANTITY_TXT.Text = view_data.SelectedRows[0].Cells[7].Value.ToString();
-                byte[] data = (byte[])view_data.SelectedRows[0].Cells[8].Value;
-                MemoryStream ms = new MemoryStream(data);
-                PRO_BOX.Image = Image.FromStream(ms);
+           
+                  byte[] data = (byte[])view_data.SelectedRows[0].Cells[8].Value;
+                 MemoryStream ms = new MemoryStream(data);
+                   PRO_BOX.Image = Image.FromStream(ms);
 
                 //  MemoryStream ms = new MemoryStream();
                 //  Bitmap img =(Bitmap)view_data.SelectedRows[0].Cells[8].Value;
@@ -103,8 +113,13 @@ namespace Mart_Management_System
         private void AddData()
         {
             MemoryStream ms = new MemoryStream();
-            PRO_BOX.Image = Image.FromStream(ms);
-            Byte[] img = ms.ToArray();
+            PRO_BOX.Image.Save(ms, PRO_BOX.Image.RawFormat);
+            byte[] img = ms.ToArray();
+            view_data.CurrentRow.Cells[8].Value = img;
+        //    byte[] img = null;1
+          //  FileStream fs = new FileStream(imglocation, FileMode.Open, FileAccess.Read);
+          //  BinaryReader br = new BinaryReader(fs);
+          //  img = br.ReadBytes((int)fs.Length);
 
             using (SqlConnection con = new SqlConnection(cs))
             {
@@ -133,6 +148,32 @@ namespace Mart_Management_System
             {
                 imglocation = dialog.FileName.ToString();
                 PRO_BOX.ImageLocation = imglocation;
+            }
+        }
+
+        private void view_data_DataError(object sender, DataGridViewDataErrorEventArgs e)
+        {
+            // e.Cancel = true;
+            try
+            {
+                //To handle 'ConstraintException' default error dialog (for example, unique value)
+                if ((e.Exception) is System.Data.ConstraintException)
+                {
+                    // ErrorText glyphs show
+                    view_data.Rows[e.RowIndex].ErrorText = "must be unique value";
+                    view_data.Rows[e.RowIndex].Cells[e.ColumnIndex].ErrorText = "must be unique value";
+
+                    //...or MessageBox show
+                    MessageBox.Show(e.Exception.Message, "Error ConstraintException",
+                                                   MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    //Suppress a ConstraintException
+                    e.ThrowException = false;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "ERROR: dataGridView1_DataError",
+                                         MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

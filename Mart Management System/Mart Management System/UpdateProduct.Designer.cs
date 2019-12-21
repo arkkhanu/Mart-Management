@@ -52,17 +52,17 @@
             this.EXP_DATE = new System.Windows.Forms.DateTimePicker();
             this.ID_TXT = new System.Windows.Forms.TextBox();
             this.Update_Box = new System.Windows.Forms.GroupBox();
+            this.PRO_BOX = new System.Windows.Forms.PictureBox();
             this.Show_Data = new System.Windows.Forms.GroupBox();
             this.view_data = new System.Windows.Forms.DataGridView();
-            this.PRO_BOX = new System.Windows.Forms.PictureBox();
             this.BRO_BTN = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PRODUCT_BOX)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BACK_BOX)).BeginInit();
             this.Update_Box.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PRO_BOX)).BeginInit();
             this.Show_Data.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.view_data)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PRO_BOX)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -310,6 +310,15 @@
             this.Update_Box.TabStop = false;
             this.Update_Box.Text = "Update";
             // 
+            // PRO_BOX
+            // 
+            this.PRO_BOX.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.PRO_BOX.Location = new System.Drawing.Point(181, 467);
+            this.PRO_BOX.Name = "PRO_BOX";
+            this.PRO_BOX.Size = new System.Drawing.Size(148, 104);
+            this.PRO_BOX.TabIndex = 54;
+            this.PRO_BOX.TabStop = false;
+            // 
             // Show_Data
             // 
             this.Show_Data.Controls.Add(this.view_data);
@@ -328,15 +337,7 @@
             this.view_data.Size = new System.Drawing.Size(560, 212);
             this.view_data.TabIndex = 0;
             this.view_data.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.view_data_CellClick);
-            // 
-            // PRO_BOX
-            // 
-            this.PRO_BOX.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.PRO_BOX.Location = new System.Drawing.Point(181, 467);
-            this.PRO_BOX.Name = "PRO_BOX";
-            this.PRO_BOX.Size = new System.Drawing.Size(148, 104);
-            this.PRO_BOX.TabIndex = 54;
-            this.PRO_BOX.TabStop = false;
+            this.view_data.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.view_data_DataError);
             // 
             // BRO_BTN
             // 
@@ -369,9 +370,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.BACK_BOX)).EndInit();
             this.Update_Box.ResumeLayout(false);
             this.Update_Box.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PRO_BOX)).EndInit();
             this.Show_Data.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.view_data)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PRO_BOX)).EndInit();
             this.ResumeLayout(false);
 
         }
