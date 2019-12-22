@@ -36,7 +36,7 @@ namespace Mart_Management_System
             SqlDataAdapter sda;
             DataTable dt = new DataTable();
             View_Product.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            View_Product.RowTemplate.Height = 200;
+            View_Product.RowTemplate.Height = 150;
             View_Product.AllowUserToAddRows = false;
 
            // System.Data.DataSet ds = new System.Data.DataSet();

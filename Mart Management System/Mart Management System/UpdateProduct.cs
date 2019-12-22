@@ -10,6 +10,8 @@ using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.Configuration;
 using System.IO;
+using System.Drawing.Imaging;
+
 
 namespace Mart_Management_System
 {
@@ -34,7 +36,7 @@ namespace Mart_Management_System
             SqlDataAdapter sda;
             DataTable dt = new DataTable();
             view_data.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            view_data.RowTemplate.Height = 200;
+            view_data.RowTemplate.Height = 150;
            view_data.AllowUserToAddRows = false;
             // System.Data.DataSet ds = new System.Data.DataSet();
             using (SqlConnection con = new SqlConnection(cs))
@@ -43,12 +45,14 @@ namespace Mart_Management_System
                 sda = new SqlDataAdapter("select * from Product", con);
                 sda.Fill(dt);
                 view_data.DataSource = dt;
-
-
+               
+                
             }
             DataGridViewImageColumn imageColumn = new DataGridViewImageColumn();
             imageColumn = (DataGridViewImageColumn)view_data.Columns[8];
             imageColumn.ImageLayout = DataGridViewImageCellLayout.Stretch;
+   
+
 
 
         }
@@ -58,6 +62,7 @@ namespace Mart_Management_System
             AddData();
             loaddata();
         }
+
         
        
 
@@ -92,15 +97,29 @@ namespace Mart_Management_System
                 EXP_DATE.Value = DateTime.ParseExact(view_data.SelectedRows[0].Cells[6].Value.ToString(), pattern, null);
 
                 QUANTITY_TXT.Text = view_data.SelectedRows[0].Cells[7].Value.ToString();
-           
-                  byte[] data = (byte[])view_data.SelectedRows[0].Cells[8].Value;
-                 MemoryStream ms = new MemoryStream(data);
-                   PRO_BOX.Image = Image.FromStream(ms);
 
-                //  MemoryStream ms = new MemoryStream();
-                //  Bitmap img =(Bitmap)view_data.SelectedRows[0].Cells[8].Value;
-                //  PRO_BOX.Image.Save(ms, PRO_BOX.Image.RawFormat);
-                // PRO_BOX.Image = Bitmap.FromStream(ms);
+
+
+                byte[] data = (byte[])view_data.SelectedRows[0].Cells[8].Value;
+                MemoryStream ms = new MemoryStream(data);
+                ms.Write(data, 0, data.Length);
+                ms.Position = 0;
+                PRO_BOX.Image = Image.FromStream(ms);
+
+                //MemoryStream ms = new MemoryStream();
+                //Bitmap img = (Bitmap)view_data.CurrentRow.Cells[0].Value;
+                //img.Save(ms, ImageFormat.Jpeg);
+                //PRO_BOX.Image = Image.FromStream(ms);
+
+
+
+
+
+                // PRO_BOX.Image = (Image)view_data.SelectedRows[0].Cells[8].Value;
+                // MemoryStream ms = new MemoryStream();
+                //Bitmap img = (Bitmap)view_data.CurrentRow.Cells[0].Value ;
+                //  img.Save(ms,PRO_BOX.Image.RawFormat );
+                // PRO_BOX.Image =Image.FromStream(ms);
                 //  MemoryStream ms = new MemoryStream();
                 //  PRO_BOX.Image = Image.FromStream(ms);
 
@@ -109,34 +128,79 @@ namespace Mart_Management_System
 
             }
         }
+       
 
         private void AddData()
         {
-            MemoryStream ms = new MemoryStream();
-            PRO_BOX.Image.Save(ms, PRO_BOX.Image.RawFormat);
-            byte[] img = ms.ToArray();
-            view_data.CurrentRow.Cells[8].Value = img;
-        //    byte[] img = null;1
-          //  FileStream fs = new FileStream(imglocation, FileMode.Open, FileAccess.Read);
-          //  BinaryReader br = new BinaryReader(fs);
-          //  img = br.ReadBytes((int)fs.Length);
+            int Count = 0;
+            System.Data.DataSet ds = new System.Data.DataSet();
+
+            byte[] images = null;
+            FileStream Stream = new FileStream(imglocation, FileMode.Open, FileAccess.Read);
+            BinaryReader brs = new BinaryReader(Stream);
+            images = brs.ReadBytes((int)Stream.Length);
+
+            //MemoryStream ms = new MemoryStream();
+            //PRO_BOX.Image.Save(ms, PRO_BOX.Image.RawFormat);
+            //byte[] img = ms.ToArray();
+            //view_data.CurrentRow.Cells[8].Value = img;
 
             using (SqlConnection con = new SqlConnection(cs))
             {
-                con.Open();
-           //     string query = "update product set pro_name='" + NAME_TXT.Text + "', pro_comp='" + Int32.Parse(PRO_C_ID.Text) + "', pro_cat='" + Int32.Parse(PRO_TXT.Text) + "', pro_price='" + PRICE_TXT.Text + "', pro_manuf_date='" + MANU_DATE.Text.ToString() + "', pro_exp_date='" + EXP_DATE.Text.ToString() + "', quantity='" + QUANTITY_TXT.Text + "' where pro_id='" + ID_TXT.Text.ToString() + "'";
-               string query = "update product set pro_name='" + NAME_TXT.Text + "', pro_price='" + PRICE_TXT.Text + "', pro_manuf_date='" + MANU_DATE.Text.ToString() + "', pro_exp_date='" + EXP_DATE.Text.ToString() + "', quantity='" + QUANTITY_TXT.Text + "',image='"+img+"' where pro_id='" + ID_TXT.Text.ToString() + "'";
-                //  string query = "update product set pro_name='" + NAME_TXT.Text + "', pro_comp='" + Int32.Parse(PRO_C_ID.Text) + "', pro_cat='" + Int32.Parse(PRO_TXT.Text) + "', pro_price='" + PRICE_TXT.Text + "', pro_manuf_date='" + MANU_DATE.Text.ToString() + "', pro_exp_date='" + EXP_DATE.Text.ToString() + "', quantity='" + QUANTITY_TXT.Text + "' where pro_id='" + ID_TXT.Text.ToString() + "'";
-                SqlCommand cmd = new SqlCommand(query, con);
-                cmd.CommandText = query;
-              
-                if(cmd.ExecuteNonQuery()>0)
-                {
-                    MessageBox.Show("Record Updated !");
-                }
-                
+                SqlCommand cmd;
+                string Query = "update Product set pro_name=@pro_name,pro_price=@pro_price,pro_manuf_date=@pro_manuf_date,pro_exp_date=@pro_exp_date,quantity=@quantity,image=@image where pro_id=@pro_id ";
 
+                con.Open();
+                cmd = new SqlCommand(Query, con);
+                cmd.Parameters.AddWithValue("@pro_id", ID_TXT.Text);
+                cmd.Parameters.AddWithValue("@pro_name", NAME_TXT.Text);
+              //  cmd.Parameters.AddWithValue("@pro_comp", Int32.Parse(PRO_C_ID.Text));
+             //   cmd.Parameters.AddWithValue("@pro_cat", Int32.Parse(PRO_TXT.Text));
+                cmd.Parameters.AddWithValue("@pro_price", PRICE_TXT.Text);
+                cmd.Parameters.AddWithValue("@pro_manuf_date", MANU_DATE.Text.ToString());
+                cmd.Parameters.AddWithValue("@pro_exp_date", EXP_DATE.Text.ToString());
+                cmd.Parameters.AddWithValue("@quantity", QUANTITY_TXT.Text);
+                cmd.Parameters.AddWithValue("@image", images);
+                cmd.ExecuteNonQuery();
+                con.Close();
+                MessageBox.Show("Record updated");
             }
+
+
+
+
+                //byte[] img = null;
+                //  FileStream fs = new FileStream(imglocation, FileMode.Open, FileAccess.Read);
+                //  BinaryReader br = new BinaryReader(fs);
+                //  img = br.ReadBytes((int)fs.Length);
+
+                //MemoryStream ms = new MemoryStream();
+                //try
+                //{
+                //    PRO_BOX.Image.Save(ms, PRO_BOX.Image.RawFormat);
+                //    byte[] img = ms.ToArray();
+                //    view_data.CurrentRow.Cells[8].Value = img;
+                //}
+                //catch (Exception ex)
+                //{
+                //    MessageBox.Show(ex.Message);
+                //}
+                //using (SqlConnection con = new SqlConnection(cs))
+                //{
+                //    con.Open();
+                //    //     string query = "update product set pro_name='" + NAME_TXT.Text + "', pro_comp='" + Int32.Parse(PRO_C_ID.Text) + "', pro_cat='" + Int32.Parse(PRO_TXT.Text) + "', pro_price='" + PRICE_TXT.Text + "', pro_manuf_date='" + MANU_DATE.Text.ToString() + "', pro_exp_date='" + EXP_DATE.Text.ToString() + "', quantity='" + QUANTITY_TXT.Text + "' where pro_id='" + ID_TXT.Text.ToString() + "'";
+                //    string query = "update product set pro_name='" + NAME_TXT.Text + "', pro_price='" + PRICE_TXT.Text + "', pro_manuf_date='" + MANU_DATE.Text.ToString() + "', pro_exp_date='" + EXP_DATE.Text.ToString() + "', quantity='" + QUANTITY_TXT.Text + "',image='" + PRO_BOX.Image + "' where pro_id='" + ID_TXT.Text.ToString() + "'";
+                //    //  string query = "update product set pro_name='" + NAME_TXT.Text + "', pro_comp='" + Int32.Parse(PRO_C_ID.Text) + "', pro_cat='" + Int32.Parse(PRO_TXT.Text) + "', pro_price='" + PRICE_TXT.Text + "', pro_manuf_date='" + MANU_DATE.Text.ToString() + "', pro_exp_date='" + EXP_DATE.Text.ToString() + "', quantity='" + QUANTITY_TXT.Text + "' where pro_id='" + ID_TXT.Text.ToString() + "'";
+                //    SqlCommand cmd = new SqlCommand(query, con);
+                //    cmd.CommandText = query;
+
+                //    if (cmd.ExecuteNonQuery() > 0)
+                //    {
+                //        MessageBox.Show("Record Updated !");
+                //    }
+
+
+                //}
         }
         string imglocation = "";
         private void BRO_BTN_Click(object sender, EventArgs e)
