@@ -56,6 +56,9 @@
             this.Show_Data = new System.Windows.Forms.GroupBox();
             this.view_data = new System.Windows.Forms.DataGridView();
             this.BRO_BTN = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.price_error_label = new System.Windows.Forms.Label();
+            this.quantity_error_label = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PRODUCT_BOX)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BACK_BOX)).BeginInit();
@@ -150,6 +153,7 @@
             this.NAME_TXT.Name = "NAME_TXT";
             this.NAME_TXT.Size = new System.Drawing.Size(173, 20);
             this.NAME_TXT.TabIndex = 29;
+            this.NAME_TXT.KeyUp += new System.Windows.Forms.KeyEventHandler(this.validatename);
             // 
             // PRICE_LBL
             // 
@@ -223,6 +227,7 @@
             this.PRICE_TXT.Name = "PRICE_TXT";
             this.PRICE_TXT.Size = new System.Drawing.Size(173, 20);
             this.PRICE_TXT.TabIndex = 36;
+            this.PRICE_TXT.KeyUp += new System.Windows.Forms.KeyEventHandler(this.validateprice);
             // 
             // PRO_TXT
             // 
@@ -246,6 +251,7 @@
             this.QUANTITY_TXT.Name = "QUANTITY_TXT";
             this.QUANTITY_TXT.Size = new System.Drawing.Size(173, 20);
             this.QUANTITY_TXT.TabIndex = 41;
+            this.QUANTITY_TXT.KeyUp += new System.Windows.Forms.KeyEventHandler(this.validatequantity);
             // 
             // UPDATE
             // 
@@ -286,6 +292,9 @@
             // 
             // Update_Box
             // 
+            this.Update_Box.Controls.Add(this.quantity_error_label);
+            this.Update_Box.Controls.Add(this.price_error_label);
+            this.Update_Box.Controls.Add(this.label1);
             this.Update_Box.Controls.Add(this.QUAN_LBL);
             this.Update_Box.Controls.Add(this.PRO_BOX);
             this.Update_Box.Controls.Add(this.QUANTITY_TXT);
@@ -305,7 +314,7 @@
             this.Update_Box.Controls.Add(this.NAME);
             this.Update_Box.Location = new System.Drawing.Point(6, 145);
             this.Update_Box.Name = "Update_Box";
-            this.Update_Box.Size = new System.Drawing.Size(388, 577);
+            this.Update_Box.Size = new System.Drawing.Size(430, 577);
             this.Update_Box.TabIndex = 47;
             this.Update_Box.TabStop = false;
             this.Update_Box.Text = "Update";
@@ -349,6 +358,32 @@
             this.BRO_BTN.Text = "BROWSE";
             this.BRO_BTN.UseVisualStyleBackColor = true;
             this.BRO_BTN.Click += new System.EventHandler(this.BRO_BTN_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(362, 89);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(0, 13);
+            this.label1.TabIndex = 55;
+            // 
+            // price_error_label
+            // 
+            this.price_error_label.AutoSize = true;
+            this.price_error_label.Location = new System.Drawing.Point(362, 261);
+            this.price_error_label.Name = "price_error_label";
+            this.price_error_label.Size = new System.Drawing.Size(0, 13);
+            this.price_error_label.TabIndex = 56;
+            // 
+            // quantity_error_label
+            // 
+            this.quantity_error_label.AutoSize = true;
+            this.quantity_error_label.Location = new System.Drawing.Point(362, 427);
+            this.quantity_error_label.Name = "quantity_error_label";
+            this.quantity_error_label.Size = new System.Drawing.Size(35, 13);
+            this.quantity_error_label.TabIndex = 57;
+            this.quantity_error_label.Text = "label4";
+            this.quantity_error_label.Click += new System.EventHandler(this.quantity_error_label_Click);
             // 
             // UpdateProduct
             // 
@@ -406,5 +441,8 @@
         private System.Windows.Forms.DataGridView view_data;
         private System.Windows.Forms.PictureBox PRO_BOX;
         private System.Windows.Forms.Button BRO_BTN;
+        private System.Windows.Forms.Label quantity_error_label;
+        private System.Windows.Forms.Label price_error_label;
+        private System.Windows.Forms.Label label1;
     }
 }

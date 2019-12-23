@@ -11,12 +11,13 @@ using System.Data.SqlClient;
 using System.Configuration;
 using System.IO;
 using System.Drawing.Imaging;
-
+using System.Text.RegularExpressions;
 
 namespace Mart_Management_System
 {
     public partial class UpdateProduct : Form
     {
+        bool cname, cprice, cquantity;
         string cs = ConfigurationManager.ConnectionStrings["myCon"].ConnectionString;
         public UpdateProduct()
         {
@@ -59,8 +60,15 @@ namespace Mart_Management_System
 
         private void UPDATE_Click(object sender, EventArgs e)
         {
-            AddData();
-            loaddata();
+
+            if (cname && cprice && cquantity  && imglocation != "")
+            {
+                AddData();
+                loaddata();
+            }
+            else
+                MessageBox.Show("Please Fill the Form Correctly !");
+           
         }
 
         
@@ -74,8 +82,34 @@ namespace Mart_Management_System
             p.Show();
         }
 
-        
-       
+        public void Regexp(string re, TextBox tb, Label lbl, string s)
+        {
+            Regex regex = new Regex(re);
+
+            if (regex.IsMatch(tb.Text))
+            {
+
+                lbl.ForeColor = Color.Green;
+                if (s == "Name ")
+                    cname = true;
+                else if (s == "Price ")
+                    cprice = true;
+                else if (s == "Quantity ")
+                    cquantity = true;
+
+                lbl.Visible = false;
+
+            }
+            else
+            {
+
+                lbl.ForeColor = Color.Red;
+                lbl.Visible = true;
+                lbl.Text = s + " Invalid";
+
+            }
+        }
+
         private void view_data_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             
@@ -206,6 +240,27 @@ namespace Mart_Management_System
             //}
         }
         string imglocation = "";
+
+        private void validatename(object sender, KeyEventArgs e)
+        {
+            Regexp(@"^[a-zA-Z\s]+$", NAME_TXT, price_error_label, "Name ");
+        }
+
+        private void validateprice(object sender, KeyEventArgs e)
+        {
+            Regexp(@"^[0-9]+$", PRICE_TXT, price_error_label, "Price ");
+        }
+
+        private void validatequantity(object sender, KeyEventArgs e)
+        {
+            Regexp(@"^[0-9]+$", QUANTITY_TXT, quantity_error_label, "Quantity ");
+        }
+
+        private void quantity_error_label_Click(object sender, EventArgs e)
+        {
+
+        }
+
         private void BRO_BTN_Click(object sender, EventArgs e)
         {
 

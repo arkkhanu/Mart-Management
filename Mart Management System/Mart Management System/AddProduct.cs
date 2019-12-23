@@ -211,6 +211,7 @@ namespace Mart_Management_System
             {
 
                 lbl.ForeColor = Color.Red;
+                lbl.Visible = true;
                 lbl.Text = s + " Invalid";
                 
             }

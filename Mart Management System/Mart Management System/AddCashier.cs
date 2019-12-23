@@ -9,15 +9,44 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.Configuration;
+using System.Text.RegularExpressions;
 
 namespace Mart_Management_System
 {
     public partial class AddCashier : Form
     {
+        bool cname, pass, salary;
         string cs = ConfigurationManager.ConnectionStrings["myCon"].ConnectionString;
         public AddCashier()
         {
             InitializeComponent();
+        }
+        public void Regexp(string re, TextBox tb, Label lbl, string s)
+        {
+            Regex regex = new Regex(re);
+
+            if (regex.IsMatch(tb.Text))
+            {
+
+                lbl.ForeColor = Color.Green;
+                if (s == "Name ")
+                    cname = true;
+                else if (s == "Salary ")
+                    salary = true;
+                else if (s == "Password ")
+                    pass = true;
+
+                lbl.Visible = false;
+
+            }
+            else
+            {
+
+                lbl.ForeColor = Color.Red;
+                lbl.Visible = true;
+                lbl.Text = s + " Invalid";
+
+            }
         }
         private void AddData()
         {
@@ -30,7 +59,7 @@ namespace Mart_Management_System
 
                 DataRow dr = ds.Tables["Cashier"].NewRow();
 
-                dr["cashier_id"] = ID_TXT.Text.ToString();
+               
                 dr["cashier_name"] = NAME_TXT.Text;
            
 
@@ -61,9 +90,37 @@ namespace Mart_Management_System
             co.Show();
         }
 
+        private void validatesalary(object sender, KeyEventArgs e)
+        {
+            Regexp(@"^[0-9]+$", SALARY_TXT, sal_lbl, "Salary ");
+        }
+
+        private void validatepass(object sender, KeyEventArgs e)
+        {
+            Regexp(@"^[0-9]+$", PASSWORD_TXT, pass_lbl, "Password ");
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
         private void ADD_BUTTON_Click(object sender, EventArgs e)
         {
-            AddData();
+            if (cname && salary && HIRE_DATE.Text != "" && pass)
+            {
+                AddData();
+            }
+            else
+            {
+                MessageBox.Show("Please Fill the Form Correctly");
+            }
+            
+        }
+
+        private void validatename(object sender, KeyEventArgs e)
+        {
+            Regexp(@"^[a-zA-Z\s]+$", NAME_TXT, lbl_name, "Name ");
         }
     }
 }

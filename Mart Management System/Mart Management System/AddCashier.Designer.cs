@@ -45,7 +45,10 @@
             this.SALARY_TXT = new System.Windows.Forms.TextBox();
             this.ADD_BUTTON = new System.Windows.Forms.Button();
             this.HIRE_DATE = new System.Windows.Forms.DateTimePicker();
-            this.ID_TXT = new System.Windows.Forms.TextBox();
+            this.lbl_id = new System.Windows.Forms.Label();
+            this.lbl_name = new System.Windows.Forms.Label();
+            this.sal_lbl = new System.Windows.Forms.Label();
+            this.pass_lbl = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -180,6 +183,7 @@
             this.PASSWORD_TXT.Name = "PASSWORD_TXT";
             this.PASSWORD_TXT.Size = new System.Drawing.Size(173, 20);
             this.PASSWORD_TXT.TabIndex = 28;
+            this.PASSWORD_TXT.KeyUp += new System.Windows.Forms.KeyEventHandler(this.validatepass);
             // 
             // NAME_TXT
             // 
@@ -187,6 +191,7 @@
             this.NAME_TXT.Name = "NAME_TXT";
             this.NAME_TXT.Size = new System.Drawing.Size(173, 20);
             this.NAME_TXT.TabIndex = 29;
+            this.NAME_TXT.KeyUp += new System.Windows.Forms.KeyEventHandler(this.validatename);
             // 
             // SALARY_TXT
             // 
@@ -194,6 +199,7 @@
             this.SALARY_TXT.Name = "SALARY_TXT";
             this.SALARY_TXT.Size = new System.Drawing.Size(173, 20);
             this.SALARY_TXT.TabIndex = 30;
+            this.SALARY_TXT.KeyUp += new System.Windows.Forms.KeyEventHandler(this.validatesalary);
             // 
             // ADD_BUTTON
             // 
@@ -215,12 +221,42 @@
             this.HIRE_DATE.Size = new System.Drawing.Size(173, 20);
             this.HIRE_DATE.TabIndex = 33;
             // 
-            // ID_TXT
+            // lbl_id
             // 
-            this.ID_TXT.Location = new System.Drawing.Point(324, 185);
-            this.ID_TXT.Name = "ID_TXT";
-            this.ID_TXT.Size = new System.Drawing.Size(173, 20);
-            this.ID_TXT.TabIndex = 34;
+            this.lbl_id.AutoSize = true;
+            this.lbl_id.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.lbl_id.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_id.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.lbl_id.Location = new System.Drawing.Point(321, 186);
+            this.lbl_id.Name = "lbl_id";
+            this.lbl_id.Size = new System.Drawing.Size(187, 15);
+            this.lbl_id.TabIndex = 57;
+            this.lbl_id.Text = "*Will generate automatically";
+            // 
+            // lbl_name
+            // 
+            this.lbl_name.AutoSize = true;
+            this.lbl_name.Location = new System.Drawing.Point(529, 243);
+            this.lbl_name.Name = "lbl_name";
+            this.lbl_name.Size = new System.Drawing.Size(0, 13);
+            this.lbl_name.TabIndex = 58;
+            // 
+            // sal_lbl
+            // 
+            this.sal_lbl.AutoSize = true;
+            this.sal_lbl.Location = new System.Drawing.Point(529, 298);
+            this.sal_lbl.Name = "sal_lbl";
+            this.sal_lbl.Size = new System.Drawing.Size(0, 13);
+            this.sal_lbl.TabIndex = 59;
+            this.sal_lbl.Click += new System.EventHandler(this.label2_Click);
+            // 
+            // pass_lbl
+            // 
+            this.pass_lbl.AutoSize = true;
+            this.pass_lbl.Location = new System.Drawing.Point(529, 418);
+            this.pass_lbl.Name = "pass_lbl";
+            this.pass_lbl.Size = new System.Drawing.Size(0, 13);
+            this.pass_lbl.TabIndex = 60;
             // 
             // AddCashier
             // 
@@ -228,7 +264,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ClientSize = new System.Drawing.Size(800, 497);
-            this.Controls.Add(this.ID_TXT);
+            this.Controls.Add(this.pass_lbl);
+            this.Controls.Add(this.sal_lbl);
+            this.Controls.Add(this.lbl_name);
+            this.Controls.Add(this.lbl_id);
             this.Controls.Add(this.HIRE_DATE);
             this.Controls.Add(this.ADD_BUTTON);
             this.Controls.Add(this.SALARY_TXT);
@@ -270,6 +309,9 @@
         private System.Windows.Forms.TextBox SALARY_TXT;
         private System.Windows.Forms.Button ADD_BUTTON;
         private System.Windows.Forms.DateTimePicker HIRE_DATE;
-        private System.Windows.Forms.TextBox ID_TXT;
+        private System.Windows.Forms.Label lbl_id;
+        private System.Windows.Forms.Label lbl_name;
+        private System.Windows.Forms.Label sal_lbl;
+        private System.Windows.Forms.Label pass_lbl;
     }
 }
