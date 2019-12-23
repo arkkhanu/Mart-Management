@@ -10,7 +10,7 @@ using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.Configuration;
 using System.IO;
-
+using System.Text.RegularExpressions;
 using System.Data;
 using System.Collections.Specialized;
 namespace Mart_Management_System
@@ -30,15 +30,57 @@ namespace Mart_Management_System
 
             loadCatrec();
             loadComrec();
-           
-        }
+          
 
+
+        }
+        public void Regexp(string re, TextBox tb,  Label lbl, string s)
+        {
+            Regex regex = new Regex(re);
+
+            if (regex.IsMatch(tb.Text))
+            {
+               
+                lbl.ForeColor = Color.Green;
+                lbl.Text = s + " Valid";
+            }
+            else
+            {
+               
+                lbl.ForeColor = Color.Red;
+                lbl.Text = s + " InValid";
+            }
+        }
+        private void clear()
+        {
+          //  ID_TXT.Text = "";
+            NAME_TXT.Text = "";
+            Cat_Combo.Items.Clear();
+            Product_Combo.Items.Clear();
+            PRICE_TXT.Text = "";
+            QUANTITY_TXT.Text = "";
+            PRO_BOX.Image = null;
+
+
+        }
+      
         private void ADD_BUTTON_Click(object sender, EventArgs e)
         {
+
+            Regexp(@"^([\w]+)@([\w]+)\.([\w]+)$", NAME_TXT, lbl_name, "Name ");
+            //   Regexp(@"^(http://www\.)([\w]+)\.([\w]+)$", textBox2, pictureBox2, lblwebsite, "Web Site");
+            // Regexp(@"^(0011)(([ ][0-9]{3}){3})$", PRICE_LBL,, "Phone Number");
+
+            //  Regexp(@"^([0-9]{2})\/([0-9]{2})\/([0-9]{4})$",MANU_DATE,date_lbl, "Date");
             AddData();
+           
+          
+            
         }
         private void AddData()
         {
+           
+
             byte[] images = null;
             FileStream Stream = new FileStream(imglocation, FileMode.Open, FileAccess.Read);
             BinaryReader brs = new BinaryReader(Stream);
@@ -46,6 +88,7 @@ namespace Mart_Management_System
 
             using (SqlConnection con = new SqlConnection(cs))
             {
+                
                 con.Open();
                 DataSet ds = new DataSet();
                 string query = "select * from Product where 0=1";
@@ -54,7 +97,7 @@ namespace Mart_Management_System
           
                 DataRow dr = ds.Tables["Product"].NewRow();
             
-                dr["pro_id"] = ID_TXT.Text;
+               // dr["pro_id"] = ID_TXT.Text;
                dr["pro_name"] = NAME_TXT.Text;
               
                 
@@ -83,8 +126,12 @@ namespace Mart_Management_System
 
 
                 MessageBox.Show("Record Inserted !");
+                clear();
+               
+
 
             }
+
         }
 
         void loadCatrec()

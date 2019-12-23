@@ -54,6 +54,7 @@
             this.Product_Combo = new System.Windows.Forms.ComboBox();
             this.PRO_BOX = new System.Windows.Forms.PictureBox();
             this.BRO_BTN = new System.Windows.Forms.Button();
+            this.lbl_name = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PRODUCT_BOX)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -270,6 +271,7 @@
             // 
             // ID_TXT
             // 
+            this.ID_TXT.Enabled = false;
             this.ID_TXT.Location = new System.Drawing.Point(248, 205);
             this.ID_TXT.Name = "ID_TXT";
             this.ID_TXT.Size = new System.Drawing.Size(173, 20);
@@ -315,12 +317,22 @@
             this.BRO_BTN.UseVisualStyleBackColor = true;
             this.BRO_BTN.Click += new System.EventHandler(this.BRO_BTN_Click);
             // 
+            // lbl_name
+            // 
+            this.lbl_name.AutoSize = true;
+            this.lbl_name.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lbl_name.Location = new System.Drawing.Point(427, 264);
+            this.lbl_name.Name = "lbl_name";
+            this.lbl_name.Size = new System.Drawing.Size(0, 13);
+            this.lbl_name.TabIndex = 55;
+            // 
             // AddProduct
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ClientSize = new System.Drawing.Size(800, 720);
+            this.Controls.Add(this.lbl_name);
             this.Controls.Add(this.BRO_BTN);
             this.Controls.Add(this.PRO_BOX);
             this.Controls.Add(this.Product_Combo);
@@ -381,5 +393,6 @@
         private System.Windows.Forms.ComboBox Product_Combo;
         private System.Windows.Forms.PictureBox PRO_BOX;
         private System.Windows.Forms.Button BRO_BTN;
+        private System.Windows.Forms.Label lbl_name;
     }
 }

@@ -39,11 +39,12 @@ namespace Mart_Management_System
         {
             using (SqlConnection con = new SqlConnection(cs))
             {
-                string query = "Select  * from Cashier where cashier_id = @cashier_id";
+                string query = "Select  * from Cashier where cashier_id = @cashier_id and cashier_pass=@cashier_pass";
                 DataTable dt = new DataTable();
                 SqlDataAdapter da = new SqlDataAdapter();
                 da.SelectCommand = new SqlCommand(query, con);
                 da.SelectCommand.Parameters.AddWithValue("@cashier_id", ID_TXT.Text);
+                da.SelectCommand.Parameters.AddWithValue("@cashier_pass", PASSWORD_TXT.Text);
                 try
                 {
                     da.Fill(dt);
@@ -64,9 +65,17 @@ namespace Mart_Management_System
                     this.Hide();
                     cu.Show();
                 }
+                 else if (ID_TXT.Text == "")
+                {
+                    MessageBox.Show("ID not Empty");
+                }
+               else  if (PASSWORD_TXT.Text == "")
+                {
+                    MessageBox.Show("Password not Empty");
+                }
                 else
                 {
-                    MessageBox.Show("Check your username and password");
+                    MessageBox.Show("Check your userid and password");
                     ID_TXT.Text = "";
                     PASSWORD_TXT.Text = "";
                 }

@@ -37,8 +37,8 @@ namespace Mart_Management_System
         {
           
             LoginAdmin adlog=new LoginAdmin();
-             adlog.Show();
-            Visible = false; // Existing form close 
+            this.Hide();
+            adlog.Show(); // Existing form close 
    
         }
        
@@ -62,6 +62,16 @@ namespace Mart_Management_System
         private void LoginForm_Load(object sender, EventArgs e)
         {
            
+        }
+
+        private void Admin_Box_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

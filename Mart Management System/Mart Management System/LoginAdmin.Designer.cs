@@ -141,6 +141,7 @@
             this.ID_TXT.Name = "ID_TXT";
             this.ID_TXT.Size = new System.Drawing.Size(164, 20);
             this.ID_TXT.TabIndex = 6;
+            this.ID_TXT.TextChanged += new System.EventHandler(this.ID_TXT_TextChanged);
             // 
             // PASSWORD_TXT
             // 
@@ -149,6 +150,7 @@
             this.PASSWORD_TXT.Size = new System.Drawing.Size(164, 20);
             this.PASSWORD_TXT.TabIndex = 7;
             this.PASSWORD_TXT.UseSystemPasswordChar = true;
+            this.PASSWORD_TXT.TextChanged += new System.EventHandler(this.PASSWORD_TXT_TextChanged);
             // 
             // LOGIN
             // 

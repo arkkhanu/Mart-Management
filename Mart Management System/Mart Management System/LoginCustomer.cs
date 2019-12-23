@@ -44,11 +44,12 @@ namespace Mart_Management_System
         {
             using (SqlConnection con = new SqlConnection(cs))
             {
-                string query = "Select  * from Customer where cust_id = @cust_id";
+                string query = "Select  * from Customer where cust_id = @cust_id and cust_pass=@cust_pass";
                 DataTable dt = new DataTable();
                 SqlDataAdapter da = new SqlDataAdapter();
                 da.SelectCommand = new SqlCommand(query, con);
                 da.SelectCommand.Parameters.AddWithValue("@cust_id", ID_TXT.Text);
+                da.SelectCommand.Parameters.AddWithValue("@cust_pass", PASSWORD_TXT.Text);
                 try
                 {
                     da.Fill(dt);
@@ -68,6 +69,14 @@ namespace Mart_Management_System
                     CustomerOperations co = new CustomerOperations();
                     this.Hide();
                     co.Show();
+                }
+                else if  (ID_TXT.Text == "")
+                {
+                    MessageBox.Show("ID not Empty");
+                }
+                else if (PASSWORD_TXT.Text == "")
+                {
+                    MessageBox.Show("Password not Empty");
                 }
                 else
                 {

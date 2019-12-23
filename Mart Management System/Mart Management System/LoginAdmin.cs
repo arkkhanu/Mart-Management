@@ -49,11 +49,12 @@ namespace Mart_Management_System
         {
             using (SqlConnection con = new SqlConnection(cs))
             {
-                string query = "Select  * from Admin where admin_id = @admin_id";
+                string query = "Select  * from Admin where admin_id = @admin_id and admin_pass=@admin_pass";
                 DataTable dt = new DataTable();
                 SqlDataAdapter da = new SqlDataAdapter();
                 da.SelectCommand = new SqlCommand(query, con);
                 da.SelectCommand.Parameters.AddWithValue("@admin_id", ID_TXT.Text);
+                da.SelectCommand.Parameters.AddWithValue("@admin_pass", PASSWORD_TXT.Text);
                 try
                 {
                     da.Fill(dt);
@@ -73,19 +74,40 @@ namespace Mart_Management_System
                     this.Hide();
                     ad.Show();
                 }
+                else if (ID_TXT.Text == "")
+                {
+                    MessageBox.Show("ID not Empty");
+                }
+                 else if (PASSWORD_TXT.Text == "")
+                {
+                    MessageBox.Show("Password not Empty");
+                }
                 else
                 {
-                    MessageBox.Show("Check your username and password");
+                    MessageBox.Show("Check your userid and password");
                     ID_TXT.Text = "";
                     PASSWORD_TXT.Text = "";
                 }
+              
 
             }
 
 
 
         }
-            
 
+        private void ID_TXT_TextChanged(object sender, EventArgs e)
+        {
+            if(ID_TXT.Text == "")
+            {
+                MessageBox.Show("ID not Empty");
+            }
+        }
+
+        private void PASSWORD_TXT_TextChanged(object sender, EventArgs e)
+        {
+           
+
+        }
     }
 }

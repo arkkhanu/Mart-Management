@@ -48,10 +48,10 @@ namespace Mart_Management_System
                
                 
             }
-            DataGridViewImageColumn imageColumn = new DataGridViewImageColumn();
-            imageColumn = (DataGridViewImageColumn)view_data.Columns[8];
-            imageColumn.ImageLayout = DataGridViewImageCellLayout.Stretch;
-   
+           // DataGridViewImageColumn imageColumn = new DataGridViewImageColumn();
+          //  imageColumn = (DataGridViewImageColumn)view_data.Columns[8];
+          //  imageColumn.ImageLayout = DataGridViewImageCellLayout.Stretch;
+
 
 
 
@@ -144,7 +144,7 @@ namespace Mart_Management_System
             //PRO_BOX.Image.Save(ms, PRO_BOX.Image.RawFormat);
             //byte[] img = ms.ToArray();
             //view_data.CurrentRow.Cells[8].Value = img;
-
+            
             using (SqlConnection con = new SqlConnection(cs))
             {
                 SqlCommand cmd;
@@ -164,43 +164,46 @@ namespace Mart_Management_System
                 cmd.ExecuteNonQuery();
                 con.Close();
                 MessageBox.Show("Record updated");
+
+
             }
+            PRO_BOX.Image = null;
 
 
 
 
-                //byte[] img = null;
-                //  FileStream fs = new FileStream(imglocation, FileMode.Open, FileAccess.Read);
-                //  BinaryReader br = new BinaryReader(fs);
-                //  img = br.ReadBytes((int)fs.Length);
+            //byte[] img = null;
+            //  FileStream fs = new FileStream(imglocation, FileMode.Open, FileAccess.Read);
+            //  BinaryReader br = new BinaryReader(fs);
+            //  img = br.ReadBytes((int)fs.Length);
 
-                //MemoryStream ms = new MemoryStream();
-                //try
-                //{
-                //    PRO_BOX.Image.Save(ms, PRO_BOX.Image.RawFormat);
-                //    byte[] img = ms.ToArray();
-                //    view_data.CurrentRow.Cells[8].Value = img;
-                //}
-                //catch (Exception ex)
-                //{
-                //    MessageBox.Show(ex.Message);
-                //}
-                //using (SqlConnection con = new SqlConnection(cs))
-                //{
-                //    con.Open();
-                //    //     string query = "update product set pro_name='" + NAME_TXT.Text + "', pro_comp='" + Int32.Parse(PRO_C_ID.Text) + "', pro_cat='" + Int32.Parse(PRO_TXT.Text) + "', pro_price='" + PRICE_TXT.Text + "', pro_manuf_date='" + MANU_DATE.Text.ToString() + "', pro_exp_date='" + EXP_DATE.Text.ToString() + "', quantity='" + QUANTITY_TXT.Text + "' where pro_id='" + ID_TXT.Text.ToString() + "'";
-                //    string query = "update product set pro_name='" + NAME_TXT.Text + "', pro_price='" + PRICE_TXT.Text + "', pro_manuf_date='" + MANU_DATE.Text.ToString() + "', pro_exp_date='" + EXP_DATE.Text.ToString() + "', quantity='" + QUANTITY_TXT.Text + "',image='" + PRO_BOX.Image + "' where pro_id='" + ID_TXT.Text.ToString() + "'";
-                //    //  string query = "update product set pro_name='" + NAME_TXT.Text + "', pro_comp='" + Int32.Parse(PRO_C_ID.Text) + "', pro_cat='" + Int32.Parse(PRO_TXT.Text) + "', pro_price='" + PRICE_TXT.Text + "', pro_manuf_date='" + MANU_DATE.Text.ToString() + "', pro_exp_date='" + EXP_DATE.Text.ToString() + "', quantity='" + QUANTITY_TXT.Text + "' where pro_id='" + ID_TXT.Text.ToString() + "'";
-                //    SqlCommand cmd = new SqlCommand(query, con);
-                //    cmd.CommandText = query;
+            //MemoryStream ms = new MemoryStream();
+            //try
+            //{
+            //    PRO_BOX.Image.Save(ms, PRO_BOX.Image.RawFormat);
+            //    byte[] img = ms.ToArray();
+            //    view_data.CurrentRow.Cells[8].Value = img;
+            //}
+            //catch (Exception ex)
+            //{
+            //    MessageBox.Show(ex.Message);
+            //}
+            //using (SqlConnection con = new SqlConnection(cs))
+            //{
+            //    con.Open();
+            //    //     string query = "update product set pro_name='" + NAME_TXT.Text + "', pro_comp='" + Int32.Parse(PRO_C_ID.Text) + "', pro_cat='" + Int32.Parse(PRO_TXT.Text) + "', pro_price='" + PRICE_TXT.Text + "', pro_manuf_date='" + MANU_DATE.Text.ToString() + "', pro_exp_date='" + EXP_DATE.Text.ToString() + "', quantity='" + QUANTITY_TXT.Text + "' where pro_id='" + ID_TXT.Text.ToString() + "'";
+            //    string query = "update product set pro_name='" + NAME_TXT.Text + "', pro_price='" + PRICE_TXT.Text + "', pro_manuf_date='" + MANU_DATE.Text.ToString() + "', pro_exp_date='" + EXP_DATE.Text.ToString() + "', quantity='" + QUANTITY_TXT.Text + "',image='" + PRO_BOX.Image + "' where pro_id='" + ID_TXT.Text.ToString() + "'";
+            //    //  string query = "update product set pro_name='" + NAME_TXT.Text + "', pro_comp='" + Int32.Parse(PRO_C_ID.Text) + "', pro_cat='" + Int32.Parse(PRO_TXT.Text) + "', pro_price='" + PRICE_TXT.Text + "', pro_manuf_date='" + MANU_DATE.Text.ToString() + "', pro_exp_date='" + EXP_DATE.Text.ToString() + "', quantity='" + QUANTITY_TXT.Text + "' where pro_id='" + ID_TXT.Text.ToString() + "'";
+            //    SqlCommand cmd = new SqlCommand(query, con);
+            //    cmd.CommandText = query;
 
-                //    if (cmd.ExecuteNonQuery() > 0)
-                //    {
-                //        MessageBox.Show("Record Updated !");
-                //    }
+            //    if (cmd.ExecuteNonQuery() > 0)
+            //    {
+            //        MessageBox.Show("Record Updated !");
+            //    }
 
 
-                //}
+            //}
         }
         string imglocation = "";
         private void BRO_BTN_Click(object sender, EventArgs e)
