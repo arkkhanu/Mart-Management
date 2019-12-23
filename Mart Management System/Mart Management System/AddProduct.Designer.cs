@@ -49,12 +49,14 @@
             this.ADD_BUTTON = new System.Windows.Forms.Button();
             this.MANU_DATE = new System.Windows.Forms.DateTimePicker();
             this.EXP_DATE = new System.Windows.Forms.DateTimePicker();
-            this.ID_TXT = new System.Windows.Forms.TextBox();
             this.Cat_Combo = new System.Windows.Forms.ComboBox();
             this.Product_Combo = new System.Windows.Forms.ComboBox();
             this.PRO_BOX = new System.Windows.Forms.PictureBox();
             this.BRO_BTN = new System.Windows.Forms.Button();
             this.lbl_name = new System.Windows.Forms.Label();
+            this.lbl_id = new System.Windows.Forms.Label();
+            this.price_error_label = new System.Windows.Forms.Label();
+            this.quantity_error_label = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PRODUCT_BOX)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -73,7 +75,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(802, 134);
             this.panel1.TabIndex = 3;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // label1
             // 
@@ -224,7 +225,7 @@
             this.NAME_TXT.Name = "NAME_TXT";
             this.NAME_TXT.Size = new System.Drawing.Size(173, 20);
             this.NAME_TXT.TabIndex = 39;
-            this.NAME_TXT.TextChanged += new System.EventHandler(this.NAME_TXT_TextChanged);
+            this.NAME_TXT.KeyUp += new System.Windows.Forms.KeyEventHandler(this.validateName);
             // 
             // PRICE_TXT
             // 
@@ -232,6 +233,7 @@
             this.PRICE_TXT.Name = "PRICE_TXT";
             this.PRICE_TXT.Size = new System.Drawing.Size(173, 20);
             this.PRICE_TXT.TabIndex = 40;
+            this.PRICE_TXT.KeyUp += new System.Windows.Forms.KeyEventHandler(this.validatePrice);
             // 
             // QUANTITY_TXT
             // 
@@ -239,6 +241,7 @@
             this.QUANTITY_TXT.Name = "QUANTITY_TXT";
             this.QUANTITY_TXT.Size = new System.Drawing.Size(173, 20);
             this.QUANTITY_TXT.TabIndex = 45;
+            this.QUANTITY_TXT.KeyUp += new System.Windows.Forms.KeyEventHandler(this.validatequan);
             // 
             // ADD_BUTTON
             // 
@@ -269,15 +272,6 @@
             this.EXP_DATE.Size = new System.Drawing.Size(173, 20);
             this.EXP_DATE.TabIndex = 49;
             // 
-            // ID_TXT
-            // 
-            this.ID_TXT.Enabled = false;
-            this.ID_TXT.Location = new System.Drawing.Point(248, 205);
-            this.ID_TXT.Name = "ID_TXT";
-            this.ID_TXT.Size = new System.Drawing.Size(173, 20);
-            this.ID_TXT.TabIndex = 50;
-            this.ID_TXT.TextChanged += new System.EventHandler(this.ID_TXT_TextChanged);
-            // 
             // Cat_Combo
             // 
             this.Cat_Combo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -286,7 +280,6 @@
             this.Cat_Combo.Name = "Cat_Combo";
             this.Cat_Combo.Size = new System.Drawing.Size(173, 21);
             this.Cat_Combo.TabIndex = 51;
-            this.Cat_Combo.SelectedIndexChanged += new System.EventHandler(this.Cat_Combo_SelectedIndexChanged);
             // 
             // Product_Combo
             // 
@@ -326,18 +319,50 @@
             this.lbl_name.Size = new System.Drawing.Size(0, 13);
             this.lbl_name.TabIndex = 55;
             // 
+            // lbl_id
+            // 
+            this.lbl_id.AutoSize = true;
+            this.lbl_id.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.lbl_id.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_id.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.lbl_id.Location = new System.Drawing.Point(253, 212);
+            this.lbl_id.Name = "lbl_id";
+            this.lbl_id.Size = new System.Drawing.Size(187, 15);
+            this.lbl_id.TabIndex = 56;
+            this.lbl_id.Text = "*Will generate automatically";
+            // 
+            // price_error_label
+            // 
+            this.price_error_label.AutoSize = true;
+            this.price_error_label.BackColor = System.Drawing.SystemColors.Control;
+            this.price_error_label.Location = new System.Drawing.Point(450, 433);
+            this.price_error_label.Name = "price_error_label";
+            this.price_error_label.Size = new System.Drawing.Size(0, 13);
+            this.price_error_label.TabIndex = 57;
+            // 
+            // quantity_error_label
+            // 
+            this.quantity_error_label.AutoSize = true;
+            this.quantity_error_label.BackColor = System.Drawing.SystemColors.Control;
+            this.quantity_error_label.Location = new System.Drawing.Point(450, 609);
+            this.quantity_error_label.Name = "quantity_error_label";
+            this.quantity_error_label.Size = new System.Drawing.Size(0, 13);
+            this.quantity_error_label.TabIndex = 58;
+            // 
             // AddProduct
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ClientSize = new System.Drawing.Size(800, 720);
+            this.Controls.Add(this.quantity_error_label);
+            this.Controls.Add(this.price_error_label);
+            this.Controls.Add(this.lbl_id);
             this.Controls.Add(this.lbl_name);
             this.Controls.Add(this.BRO_BTN);
             this.Controls.Add(this.PRO_BOX);
             this.Controls.Add(this.Product_Combo);
             this.Controls.Add(this.Cat_Combo);
-            this.Controls.Add(this.ID_TXT);
             this.Controls.Add(this.EXP_DATE);
             this.Controls.Add(this.MANU_DATE);
             this.Controls.Add(this.ADD_BUTTON);
@@ -388,11 +413,13 @@
         private System.Windows.Forms.Button ADD_BUTTON;
         private System.Windows.Forms.DateTimePicker MANU_DATE;
         private System.Windows.Forms.DateTimePicker EXP_DATE;
-        private System.Windows.Forms.TextBox ID_TXT;
         private System.Windows.Forms.ComboBox Cat_Combo;
         private System.Windows.Forms.ComboBox Product_Combo;
         private System.Windows.Forms.PictureBox PRO_BOX;
         private System.Windows.Forms.Button BRO_BTN;
         private System.Windows.Forms.Label lbl_name;
+        private System.Windows.Forms.Label lbl_id;
+        private System.Windows.Forms.Label price_error_label;
+        private System.Windows.Forms.Label quantity_error_label;
     }
 }

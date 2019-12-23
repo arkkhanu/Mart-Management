@@ -17,7 +17,7 @@ namespace Mart_Management_System
 {
     public partial class AddProduct : Form
     {
-    
+        bool cname, cprice, cquantity;
         string cs = ConfigurationManager.ConnectionStrings["myCon"].ConnectionString;
         public AddProduct()
         {
@@ -27,33 +27,15 @@ namespace Mart_Management_System
         private void AddProduct_Load(object sender, EventArgs e)
         {
 
-
             loadCatrec();
             loadComrec();
-          
-
 
         }
-        public void Regexp(string re, TextBox tb,  Label lbl, string s)
-        {
-            Regex regex = new Regex(re);
-
-            if (regex.IsMatch(tb.Text))
-            {
-               
-                lbl.ForeColor = Color.Green;
-                lbl.Text = s + " Valid";
-            }
-            else
-            {
-               
-                lbl.ForeColor = Color.Red;
-                lbl.Text = s + " InValid";
-            }
-        }
+        
+       
         private void clear()
         {
-          //  ID_TXT.Text = "";
+            //  ID_TXT.Text = "";
             NAME_TXT.Text = "";
             Cat_Combo.Items.Clear();
             Product_Combo.Items.Clear();
@@ -63,23 +45,28 @@ namespace Mart_Management_System
 
 
         }
-      
+
         private void ADD_BUTTON_Click(object sender, EventArgs e)
         {
 
-            Regexp(@"^([\w]+)@([\w]+)\.([\w]+)$", NAME_TXT, lbl_name, "Name ");
+
+            if (cname && cprice && cquantity && Cat_Combo.SelectedIndex>-1 && Product_Combo.SelectedIndex>-1 && imglocation!="" )
+            {
+                AddData();
+            }
+            else
+                MessageBox.Show("Please Fill the Form Correctly !");
+
             //   Regexp(@"^(http://www\.)([\w]+)\.([\w]+)$", textBox2, pictureBox2, lblwebsite, "Web Site");
             // Regexp(@"^(0011)(([ ][0-9]{3}){3})$", PRICE_LBL,, "Phone Number");
 
             //  Regexp(@"^([0-9]{2})\/([0-9]{2})\/([0-9]{4})$",MANU_DATE,date_lbl, "Date");
-            AddData();
-           
+            
           
             
         }
         private void AddData()
         {
-           
 
             byte[] images = null;
             FileStream Stream = new FileStream(imglocation, FileMode.Open, FileAccess.Read);
@@ -88,46 +75,46 @@ namespace Mart_Management_System
 
             using (SqlConnection con = new SqlConnection(cs))
             {
-                
+
                 con.Open();
                 DataSet ds = new DataSet();
                 string query = "select * from Product where 0=1";
                 SqlDataAdapter adp = new SqlDataAdapter(query, con);
                 adp.Fill(ds, "Product");
-          
-                DataRow dr = ds.Tables["Product"].NewRow();
-            
-               // dr["pro_id"] = ID_TXT.Text;
-               dr["pro_name"] = NAME_TXT.Text;
-              
-                
-                    SqlCommand catCmd = new SqlCommand("select cat_id from category where cat_name='" + Cat_Combo.SelectedItem.ToString() + "'", con);
-                    SqlDataReader catRdr= catCmd.ExecuteReader();
-                    catRdr.Read();
-                    dr["pro_cat"] = catRdr["cat_id"];
-                    catRdr.Close();
 
-                    SqlCommand comCmd = new SqlCommand("select comp_id from company where comp_name='" +Product_Combo.SelectedItem.ToString() + "'", con);
-                    SqlDataReader comRdr = comCmd.ExecuteReader();
-                    comRdr.Read();
-                    dr["pro_comp"] = comRdr["comp_id"];
-                    comRdr.Close();
-                
-             
+                DataRow dr = ds.Tables["Product"].NewRow();
+
+                // dr["pro_id"] = ID_TXT.Text;
+                dr["pro_name"] = NAME_TXT.Text;
+
+
+                SqlCommand catCmd = new SqlCommand("select cat_id from category where cat_name='" + Cat_Combo.SelectedItem.ToString() + "'", con);
+                SqlDataReader catRdr = catCmd.ExecuteReader();
+                catRdr.Read();
+                dr["pro_cat"] = catRdr["cat_id"];
+                catRdr.Close();
+
+                SqlCommand comCmd = new SqlCommand("select comp_id from company where comp_name='" + Product_Combo.SelectedItem.ToString() + "'", con);
+                SqlDataReader comRdr = comCmd.ExecuteReader();
+                comRdr.Read();
+                dr["pro_comp"] = comRdr["comp_id"];
+                comRdr.Close();
+
+
                 dr["pro_price"] = PRICE_TXT.Text;
-                dr["pro_manuf_date"] =MANU_DATE.Text.ToString();
+                dr["pro_manuf_date"] = MANU_DATE.Text.ToString();
                 dr["pro_exp_date"] = EXP_DATE.Text.ToString();
                 dr["quantity"] = QUANTITY_TXT.Text;
                 dr["image"] = images;
                 ds.Tables["Product"].Rows.Add(dr);
                 new SqlCommandBuilder(adp);
-                adp.Update(ds,"Product");
+                adp.Update(ds, "Product");
 
 
 
                 MessageBox.Show("Record Inserted !");
                 clear();
-               
+
 
 
             }
@@ -138,21 +125,21 @@ namespace Mart_Management_System
         {
             string query = "select cat_name from Category;";
             SqlConnection con = new SqlConnection(cs);
-            
 
-                SqlCommand cmd = new SqlCommand(query, con);
-                con.Open();
-                SqlDataReader rdr = cmd.ExecuteReader();
+
+            SqlCommand cmd = new SqlCommand(query, con);
+            con.Open();
+            SqlDataReader rdr = cmd.ExecuteReader();
 
             if (rdr.Read())
             {
                 Cat_Combo.Items.Add(rdr["cat_name"].ToString());
                 while (rdr.Read())
                 {
-                    Cat_Combo.Items.Add( rdr["cat_name"].ToString());
+                    Cat_Combo.Items.Add(rdr["cat_name"].ToString());
                 }
             }
-            
+
 
         }
 
@@ -176,20 +163,7 @@ namespace Mart_Management_System
 
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
 
-        }
-
-        private void Cat_Combo_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void ID_TXT_TextChanged(object sender, EventArgs e)
-        {
-
-        }
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
@@ -198,27 +172,65 @@ namespace Mart_Management_System
             p.Show();
         }
 
-        private void NAME_TXT_TextChanged(object sender, EventArgs e)
-        {
 
-        }
-
-        private void PRODUCT_BOX_Click(object sender, EventArgs e)
-        {
-
-        }
         string imglocation = "";
         private void BRO_BTN_Click(object sender, EventArgs e)
         {
             OpenFileDialog dialog = new OpenFileDialog();
-            dialog.Filter ="png files (* .png)|*.png|jpg files(* .jpg)|* .jpg|All files(*.*)|*.* ";
-            if(dialog.ShowDialog() == DialogResult.OK)
+            dialog.Filter = "png files (* .png)|*.png|jpg files(* .jpg)|* .jpg|All files(*.*)|*.* ";
+            if (dialog.ShowDialog() == DialogResult.OK)
             {
                 imglocation = dialog.FileName.ToString();
                 PRO_BOX.ImageLocation = imglocation;
             }
 
 
+        }
+
+
+       
+        public void Regexp(string re, TextBox tb, Label lbl, string s)
+        {
+            Regex regex = new Regex(re);
+
+            if (regex.IsMatch(tb.Text))
+            {
+
+                lbl.ForeColor = Color.Green;
+                if (s == "Name ")
+                    cname = true;
+                else if (s == "Price ")
+                    cprice = true;
+                else if (s == "Quantity ")
+                    cquantity = true;
+
+                lbl.Visible = false;
+                
+            }
+            else
+            {
+
+                lbl.ForeColor = Color.Red;
+                lbl.Text = s + " Invalid";
+                
+            }
+        }
+
+        private void validatePrice(object sender, KeyEventArgs e)
+        {
+            Regexp(@"^[0-9]+$", PRICE_TXT, price_error_label, "Price ");
+        }
+
+        private void validateName(object sender, KeyEventArgs e)
+        {
+
+            Regexp(@"^[a-zA-Z\s]+$", NAME_TXT, lbl_name, "Name ");
+
+        }
+
+        private void validatequan(object sender, KeyEventArgs e)
+        {
+            Regexp(@"^[0-9]+$", QUANTITY_TXT, quantity_error_label, "Quantity ");
         }
     }
 }
