@@ -19,10 +19,10 @@ namespace Mart_Management_System
         {
             InitializeComponent();
         }
-
+      
         private void NAME_TXT_TextChanged(object sender, EventArgs e)
         {
-
+           
         }
         private void AddComp()
         {

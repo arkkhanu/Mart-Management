@@ -9,17 +9,33 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.Configuration;
+using System.Net.Mail;
+using System.Text.RegularExpressions;
 
 namespace Mart_Management_System
 {
     public partial class SignUpCustomer : Form
     {
+        bool cname, age, pass;
         string cs = ConfigurationManager.ConnectionStrings["myCon"].ConnectionString;
         public SignUpCustomer()
         {
             InitializeComponent();
         }
+        public bool IsValid(string emailaddress)
+        {
+            try
+            {
+                MailAddress m = new MailAddress(emailaddress);
 
+                return true;
+            }
+            catch (FormatException)
+            {
+                return false;
+            }
+        }
+      
         private void BACK_BOX_Click(object sender, EventArgs e)
         {
             LoginCustomer cu = new LoginCustomer();
@@ -38,7 +54,7 @@ namespace Mart_Management_System
 
                 DataRow dr = ds.Tables["Customer"].NewRow();
 
-                dr["cust_id"] = ID_TXT.Text;
+            //    dr["cust_id"] = ID_TXT.Text;
                 dr["cust_name"] = NAME_TXT.Text;
 
                 //getting customer type///
@@ -77,7 +93,13 @@ namespace Mart_Management_System
 
         private void SIGNUP_BUTTON_Click(object sender, EventArgs e)
         {
-            insertdata();
+           if (NAME_TXT.Text!=""   && AGE_TXT.Text!=""  && PASSWORD_TXT.Text!="" && EMAIL_TXT.Text!="" && ADDRESS_TXT.Text!="")
+            {
+
+                insertdata();
+            }
+            else
+                MessageBox.Show("Please Fill the Form Correctly");
         }
     }
 }

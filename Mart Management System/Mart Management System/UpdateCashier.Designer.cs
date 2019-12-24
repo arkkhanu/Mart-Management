@@ -44,11 +44,14 @@
             this.HIREDATE = new System.Windows.Forms.Label();
             this.UPDATE = new System.Windows.Forms.Button();
             this.UPDATE_RECORD = new System.Windows.Forms.GroupBox();
+            this.HIREDATE_TXT = new System.Windows.Forms.DateTimePicker();
+            this.ID_TXT = new System.Windows.Forms.TextBox();
             this.Show_Data = new System.Windows.Forms.GroupBox();
             this.View_Cashier = new System.Windows.Forms.DataGridView();
             this.UPDATE_BTN = new System.Windows.Forms.Button();
-            this.ID_TXT = new System.Windows.Forms.TextBox();
-            this.HIREDATE_TXT = new System.Windows.Forms.DateTimePicker();
+            this.name_lbl = new System.Windows.Forms.Label();
+            this.sal_lbl = new System.Windows.Forms.Label();
+            this.pass_lbl = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CASHIER_BOX)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BACK_BOX)).BeginInit();
@@ -162,6 +165,7 @@
             this.NAME_TXT.Name = "NAME_TXT";
             this.NAME_TXT.Size = new System.Drawing.Size(172, 20);
             this.NAME_TXT.TabIndex = 18;
+            this.NAME_TXT.KeyUp += new System.Windows.Forms.KeyEventHandler(this.validatename);
             // 
             // SALARY
             // 
@@ -204,6 +208,9 @@
             // 
             // UPDATE_RECORD
             // 
+            this.UPDATE_RECORD.Controls.Add(this.pass_lbl);
+            this.UPDATE_RECORD.Controls.Add(this.sal_lbl);
+            this.UPDATE_RECORD.Controls.Add(this.name_lbl);
             this.UPDATE_RECORD.Controls.Add(this.HIREDATE_TXT);
             this.UPDATE_RECORD.Controls.Add(this.ID_TXT);
             this.UPDATE_RECORD.Controls.Add(this.ID);
@@ -217,17 +224,34 @@
             this.UPDATE_RECORD.Controls.Add(this.SALARY);
             this.UPDATE_RECORD.Location = new System.Drawing.Point(27, 155);
             this.UPDATE_RECORD.Name = "UPDATE_RECORD";
-            this.UPDATE_RECORD.Size = new System.Drawing.Size(285, 293);
+            this.UPDATE_RECORD.Size = new System.Drawing.Size(368, 293);
             this.UPDATE_RECORD.TabIndex = 27;
             this.UPDATE_RECORD.TabStop = false;
             this.UPDATE_RECORD.Text = "UPDATE";
             // 
+            // HIREDATE_TXT
+            // 
+            this.HIREDATE_TXT.CustomFormat = "dd-MM-yyyy";
+            this.HIREDATE_TXT.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.HIREDATE_TXT.Location = new System.Drawing.Point(102, 204);
+            this.HIREDATE_TXT.Name = "HIREDATE_TXT";
+            this.HIREDATE_TXT.Size = new System.Drawing.Size(172, 20);
+            this.HIREDATE_TXT.TabIndex = 26;
+            // 
+            // ID_TXT
+            // 
+            this.ID_TXT.Enabled = false;
+            this.ID_TXT.Location = new System.Drawing.Point(102, 31);
+            this.ID_TXT.Name = "ID_TXT";
+            this.ID_TXT.Size = new System.Drawing.Size(172, 20);
+            this.ID_TXT.TabIndex = 25;
+            // 
             // Show_Data
             // 
             this.Show_Data.Controls.Add(this.View_Cashier);
-            this.Show_Data.Location = new System.Drawing.Point(387, 172);
+            this.Show_Data.Location = new System.Drawing.Point(412, 172);
             this.Show_Data.Name = "Show_Data";
-            this.Show_Data.Size = new System.Drawing.Size(431, 191);
+            this.Show_Data.Size = new System.Drawing.Size(453, 191);
             this.Show_Data.TabIndex = 50;
             this.Show_Data.TabStop = false;
             this.Show_Data.Text = "Show Data";
@@ -235,9 +259,9 @@
             // View_Cashier
             // 
             this.View_Cashier.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.View_Cashier.Location = new System.Drawing.Point(6, 14);
+            this.View_Cashier.Location = new System.Drawing.Point(22, 14);
             this.View_Cashier.Name = "View_Cashier";
-            this.View_Cashier.Size = new System.Drawing.Size(419, 166);
+            this.View_Cashier.Size = new System.Drawing.Size(403, 166);
             this.View_Cashier.TabIndex = 0;
             this.View_Cashier.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.View_Cashier_CellClick);
             this.View_Cashier.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.View_Cashier_CellContentClick);
@@ -253,21 +277,29 @@
             this.UPDATE_BTN.UseVisualStyleBackColor = true;
             this.UPDATE_BTN.Click += new System.EventHandler(this.button1_Click);
             // 
-            // ID_TXT
+            // name_lbl
             // 
-            this.ID_TXT.Location = new System.Drawing.Point(102, 31);
-            this.ID_TXT.Name = "ID_TXT";
-            this.ID_TXT.Size = new System.Drawing.Size(172, 20);
-            this.ID_TXT.TabIndex = 25;
+            this.name_lbl.AutoSize = true;
+            this.name_lbl.Location = new System.Drawing.Point(295, 95);
+            this.name_lbl.Name = "name_lbl";
+            this.name_lbl.Size = new System.Drawing.Size(0, 13);
+            this.name_lbl.TabIndex = 27;
             // 
-            // HIREDATE_TXT
+            // sal_lbl
             // 
-            this.HIREDATE_TXT.CustomFormat = "dd-MM-yyyy";
-            this.HIREDATE_TXT.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.HIREDATE_TXT.Location = new System.Drawing.Point(102, 204);
-            this.HIREDATE_TXT.Name = "HIREDATE_TXT";
-            this.HIREDATE_TXT.Size = new System.Drawing.Size(172, 20);
-            this.HIREDATE_TXT.TabIndex = 26;
+            this.sal_lbl.AutoSize = true;
+            this.sal_lbl.Location = new System.Drawing.Point(295, 155);
+            this.sal_lbl.Name = "sal_lbl";
+            this.sal_lbl.Size = new System.Drawing.Size(0, 13);
+            this.sal_lbl.TabIndex = 28;
+            // 
+            // pass_lbl
+            // 
+            this.pass_lbl.AutoSize = true;
+            this.pass_lbl.Location = new System.Drawing.Point(295, 263);
+            this.pass_lbl.Name = "pass_lbl";
+            this.pass_lbl.Size = new System.Drawing.Size(0, 13);
+            this.pass_lbl.TabIndex = 29;
             // 
             // UpdateCashier
             // 
@@ -316,5 +348,8 @@
         private System.Windows.Forms.Button UPDATE_BTN;
         private System.Windows.Forms.TextBox ID_TXT;
         private System.Windows.Forms.DateTimePicker HIREDATE_TXT;
+        private System.Windows.Forms.Label name_lbl;
+        private System.Windows.Forms.Label pass_lbl;
+        private System.Windows.Forms.Label sal_lbl;
     }
 }

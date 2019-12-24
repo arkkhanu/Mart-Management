@@ -42,7 +42,6 @@
             this.ADDRESS = new System.Windows.Forms.Label();
             this.EMAIL = new System.Windows.Forms.Label();
             this.SIGNUP_BUTTON = new System.Windows.Forms.Button();
-            this.ID_TXT = new System.Windows.Forms.TextBox();
             this.PASSWORD_TXT = new System.Windows.Forms.TextBox();
             this.NAME_TXT = new System.Windows.Forms.TextBox();
             this.AGE_TXT = new System.Windows.Forms.TextBox();
@@ -50,6 +49,11 @@
             this.EMAIL_TXT = new System.Windows.Forms.TextBox();
             this.Male_Radio = new System.Windows.Forms.RadioButton();
             this.Female_Radio = new System.Windows.Forms.RadioButton();
+            this.lbl_id = new System.Windows.Forms.Label();
+            this.name_lbl = new System.Windows.Forms.Label();
+            this.age_lbl = new System.Windows.Forms.Label();
+            this.pass_lbl = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CUSTOMER_BOX)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BACK_BOX)).BeginInit();
@@ -200,13 +204,6 @@
             this.SIGNUP_BUTTON.UseVisualStyleBackColor = true;
             this.SIGNUP_BUTTON.Click += new System.EventHandler(this.SIGNUP_BUTTON_Click);
             // 
-            // ID_TXT
-            // 
-            this.ID_TXT.Location = new System.Drawing.Point(277, 166);
-            this.ID_TXT.Name = "ID_TXT";
-            this.ID_TXT.Size = new System.Drawing.Size(173, 20);
-            this.ID_TXT.TabIndex = 13;
-            // 
             // PASSWORD_TXT
             // 
             this.PASSWORD_TXT.Location = new System.Drawing.Point(277, 487);
@@ -264,12 +261,62 @@
             this.Female_Radio.Text = "Female";
             this.Female_Radio.UseVisualStyleBackColor = true;
             // 
+            // lbl_id
+            // 
+            this.lbl_id.AutoSize = true;
+            this.lbl_id.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.lbl_id.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_id.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.lbl_id.Location = new System.Drawing.Point(274, 171);
+            this.lbl_id.Name = "lbl_id";
+            this.lbl_id.Size = new System.Drawing.Size(187, 15);
+            this.lbl_id.TabIndex = 58;
+            this.lbl_id.Text = "*Will generate automatically";
+            // 
+            // name_lbl
+            // 
+            this.name_lbl.AutoSize = true;
+            this.name_lbl.Location = new System.Drawing.Point(480, 228);
+            this.name_lbl.Name = "name_lbl";
+            this.name_lbl.Size = new System.Drawing.Size(0, 13);
+            this.name_lbl.TabIndex = 59;
+            // 
+            // age_lbl
+            // 
+            this.age_lbl.AutoSize = true;
+            this.age_lbl.Location = new System.Drawing.Point(480, 327);
+            this.age_lbl.Name = "age_lbl";
+            this.age_lbl.Size = new System.Drawing.Size(0, 13);
+            this.age_lbl.TabIndex = 60;
+            // 
+            // pass_lbl
+            // 
+            this.pass_lbl.AutoSize = true;
+            this.pass_lbl.Location = new System.Drawing.Point(480, 494);
+            this.pass_lbl.Name = "pass_lbl";
+            this.pass_lbl.Size = new System.Drawing.Size(0, 13);
+            this.pass_lbl.TabIndex = 61;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(486, 221);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(35, 13);
+            this.label1.TabIndex = 62;
+            this.label1.Text = "label1";
+            // 
             // SignUpCustomer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ClientSize = new System.Drawing.Size(750, 598);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.pass_lbl);
+            this.Controls.Add(this.age_lbl);
+            this.Controls.Add(this.name_lbl);
+            this.Controls.Add(this.lbl_id);
             this.Controls.Add(this.Female_Radio);
             this.Controls.Add(this.Male_Radio);
             this.Controls.Add(this.EMAIL_TXT);
@@ -277,7 +324,6 @@
             this.Controls.Add(this.AGE_TXT);
             this.Controls.Add(this.NAME_TXT);
             this.Controls.Add(this.PASSWORD_TXT);
-            this.Controls.Add(this.ID_TXT);
             this.Controls.Add(this.SIGNUP_BUTTON);
             this.Controls.Add(this.EMAIL);
             this.Controls.Add(this.ADDRESS);
@@ -314,7 +360,6 @@
         private System.Windows.Forms.Label ADDRESS;
         private System.Windows.Forms.Label EMAIL;
         private System.Windows.Forms.Button SIGNUP_BUTTON;
-        private System.Windows.Forms.TextBox ID_TXT;
         private System.Windows.Forms.TextBox PASSWORD_TXT;
         private System.Windows.Forms.TextBox NAME_TXT;
         private System.Windows.Forms.TextBox AGE_TXT;
@@ -322,5 +367,10 @@
         private System.Windows.Forms.TextBox EMAIL_TXT;
         private System.Windows.Forms.RadioButton Male_Radio;
         private System.Windows.Forms.RadioButton Female_Radio;
+        private System.Windows.Forms.Label lbl_id;
+        private System.Windows.Forms.Label name_lbl;
+        private System.Windows.Forms.Label age_lbl;
+        private System.Windows.Forms.Label pass_lbl;
+        private System.Windows.Forms.Label label1;
     }
 }

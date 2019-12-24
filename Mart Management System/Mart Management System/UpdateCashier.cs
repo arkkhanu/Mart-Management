@@ -9,10 +9,12 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.Configuration;
+using System.Text.RegularExpressions;
 namespace Mart_Management_System
 {
     public partial class UpdateCashier : Form
     {
+        bool cname, salary, pass;
         string cs = ConfigurationManager.ConnectionStrings["myCon"].ConnectionString;
         public UpdateCashier()
         {
@@ -35,6 +37,33 @@ namespace Mart_Management_System
 
 
         }
+        public void Regexp(string re, TextBox tb, Label lbl, string s)
+        {
+            Regex regex = new Regex(re);
+
+            if (regex.IsMatch(tb.Text))
+            {
+
+                lbl.ForeColor = Color.Green;
+                if (s == "Name ")
+                    cname = true;
+                else if (s == "Salary ")
+                    salary = true;
+                else if (s == "Password ")
+                    pass = true;
+
+                lbl.Visible = false;
+
+            }
+            else
+            {
+
+                lbl.ForeColor = Color.Red;
+                lbl.Visible = true;
+                lbl.Text = s + " Invalid";
+
+            }
+        }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
@@ -48,8 +77,13 @@ namespace Mart_Management_System
 
         private void button1_Click(object sender, EventArgs e)
         {
-            AddData();
-            loaddata();
+            if (cname)
+            {
+                AddData();
+                loaddata();
+            }
+            else
+                MessageBox.Show("Please Fill the Form Correctly");
 
         }
 
@@ -102,6 +136,20 @@ namespace Mart_Management_System
 
             }
 
+        }
+        private void validatesalary(object sender, KeyEventArgs e)
+        {
+            Regexp(@"^[0-9]+$", SALARY_TXT, sal_lbl, "Salary ");
+        }
+
+        private void validatepass(object sender, KeyEventArgs e)
+        {
+            Regexp(@"^[0-9]+$", PASSWORD_TXT, pass_lbl, "Password ");
+        }
+
+        private void validatename(object sender, KeyEventArgs e)
+        {
+            Regexp(@"^[a-zA-Z\s]+$", NAME_TXT, name_lbl, "Name ");
         }
     }
 }
