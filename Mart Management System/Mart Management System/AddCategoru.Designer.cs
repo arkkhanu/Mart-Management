@@ -39,7 +39,7 @@
             this.PASSWORD = new System.Windows.Forms.Label();
             this.NAME_TXT = new System.Windows.Forms.TextBox();
             this.ADD_BUTTON = new System.Windows.Forms.Button();
-            this.ID_CAT = new System.Windows.Forms.TextBox();
+            this.lbl_id = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CATEGORY_BOX)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -154,12 +154,17 @@
             this.ADD_BUTTON.UseVisualStyleBackColor = true;
             this.ADD_BUTTON.Click += new System.EventHandler(this.ADD_BUTTON_Click);
             // 
-            // ID_CAT
+            // lbl_id
             // 
-            this.ID_CAT.Location = new System.Drawing.Point(325, 212);
-            this.ID_CAT.Name = "ID_CAT";
-            this.ID_CAT.Size = new System.Drawing.Size(173, 20);
-            this.ID_CAT.TabIndex = 34;
+            this.lbl_id.AutoSize = true;
+            this.lbl_id.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.lbl_id.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_id.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.lbl_id.Location = new System.Drawing.Point(307, 218);
+            this.lbl_id.Name = "lbl_id";
+            this.lbl_id.Size = new System.Drawing.Size(187, 15);
+            this.lbl_id.TabIndex = 57;
+            this.lbl_id.Text = "*Will generate automatically";
             // 
             // AddCategoru
             // 
@@ -167,7 +172,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.ID_CAT);
+            this.Controls.Add(this.lbl_id);
             this.Controls.Add(this.ADD_BUTTON);
             this.Controls.Add(this.NAME_TXT);
             this.Controls.Add(this.PASSWORD);
@@ -197,6 +202,6 @@
         private System.Windows.Forms.Label PASSWORD;
         private System.Windows.Forms.TextBox NAME_TXT;
         private System.Windows.Forms.Button ADD_BUTTON;
-        private System.Windows.Forms.TextBox ID_CAT;
+        private System.Windows.Forms.Label lbl_id;
     }
 }

@@ -22,6 +22,8 @@ namespace Mart_Management_System
             Admin ad = new Admin();
             this.Hide();
             ad.Show();
+
+
         }
 
         private void ADD_BTN_Click(object sender, EventArgs e)

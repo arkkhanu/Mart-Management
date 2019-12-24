@@ -1,0 +1,51 @@
+create procedure GetCompid
+@compname varchar(50)
+as
+begin
+
+ select comp_id from company where comp_name=@compname
+
+ end
+
+create procedure GetCatid
+@catname varchar(50)
+as
+begin
+
+ select cat_id from category where cat_name=@catpname
+
+ end
+
+create procedure LoginAdmin
+@id int, @password varchar(8)
+as
+begin
+
+ Select  * from Admin where admin_id = @id and admin_pass=@password
+
+ end
+
+create procedure LoginCashier
+@id int, @password varchar(8)
+as
+begin
+
+ Select  * from Cashier where cashier_id = @id and cashier_pass=@password
+
+ end
+
+create procedure LoginCustomer
+@id int, @password varchar(8)
+as
+begin
+
+ Select  * from Customer where cust_id = @id and cust_pass=@password
+
+ end
+
+create procedure cashierWork
+@trasid int, @custid int, @cashid int, @cashname varchar(50), @proname varchar(50), @quan int, @price int, @date varchar(20)
+as
+begin
+  insert into details (cashier_id, customer_id, cashier_name, product_name, price, quantity, date, trans_id) values(@cashid,@custid, @cashname, @proname, @price, @quan, @date, @trasid)
+end

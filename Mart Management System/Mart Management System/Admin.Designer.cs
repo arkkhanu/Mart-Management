@@ -120,7 +120,6 @@
             this.CATEGORY_BOX.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.CATEGORY_BOX.TabIndex = 10;
             this.CATEGORY_BOX.TabStop = false;
-            this.CATEGORY_BOX.Click += new System.EventHandler(this.pictureBox6_Click);
             // 
             // COMPANY
             // 
@@ -208,6 +207,7 @@
             this.TRANSACTION.TabIndex = 18;
             this.TRANSACTION.Text = "TRANSACTION";
             this.TRANSACTION.UseVisualStyleBackColor = true;
+            this.TRANSACTION.Click += new System.EventHandler(this.TRANSACTION_Click);
             // 
             // CUSTOMER
             // 
@@ -241,7 +241,6 @@
             this.Controls.Add(this.panel1);
             this.Name = "Admin";
             this.Text = "Admin";
-            this.Load += new System.EventHandler(this.Admin_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.Log_Out)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Admin_box)).EndInit();

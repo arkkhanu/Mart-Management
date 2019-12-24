@@ -34,13 +34,14 @@ namespace Mart_Management_System
                 adp.Fill(ds, "Company");
                 DataRow dr = ds.Tables["Company"].NewRow();
 
-                dr["comp_id"] = ID_COMP.Text;
+                
                 dr["comp_name"] = NAME_TXT.Text;
                 ds.Tables["Company"].Rows.Add(dr);
                 new SqlCommandBuilder(adp);
                 adp.Update(ds, "Company");
 
                 MessageBox.Show("Record Inserted !");
+                NAME_TXT.Text = "";
             }
         }
         private void pictureBox1_Click(object sender, EventArgs e)

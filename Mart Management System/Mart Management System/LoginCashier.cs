@@ -39,48 +39,55 @@ namespace Mart_Management_System
         {
             using (SqlConnection con = new SqlConnection(cs))
             {
-                string query = "Select  * from Cashier where cashier_id = @cashier_id and cashier_pass=@cashier_pass";
-                DataTable dt = new DataTable();
-                SqlDataAdapter da = new SqlDataAdapter();
-                da.SelectCommand = new SqlCommand(query, con);
-                da.SelectCommand.Parameters.AddWithValue("@cashier_id", ID_TXT.Text);
-                da.SelectCommand.Parameters.AddWithValue("@cashier_pass", PASSWORD_TXT.Text);
-                try
+
+                if (ID_TXT.Text == "")
                 {
-                    da.Fill(dt);
-
-
-
+                    MessageBox.Show("Please Enter ID");
                 }
-                catch (Exception Ex)
+                if (PASSWORD_TXT.Text == "")
                 {
-                    MessageBox.Show(Ex.Message.ToString());
-                }
-
-                if (dt.Rows.Count == 1)
-                {
-                    MessageBox.Show("Welcome");
-
-                    Cashier cu = new Cashier();
-                    this.Hide();
-                    cu.Show();
-                }
-                 else if (ID_TXT.Text == "")
-                {
-                    MessageBox.Show("ID not Empty");
-                }
-               else  if (PASSWORD_TXT.Text == "")
-                {
-                    MessageBox.Show("Password not Empty");
+                    MessageBox.Show("Please Enter Password");
                 }
                 else
                 {
-                    MessageBox.Show("Check your userid and password");
-                    ID_TXT.Text = "";
-                    PASSWORD_TXT.Text = "";
+                    DataTable dt = new DataTable();
+                    SqlDataAdapter da = new SqlDataAdapter();
+
+                    da.SelectCommand = new SqlCommand("LoginCashier", con);
+                    da.SelectCommand.Parameters.AddWithValue("@id", ID_TXT.Text);
+                    da.SelectCommand.Parameters.AddWithValue("@password", PASSWORD_TXT.Text);
+                    da.SelectCommand.CommandType = CommandType.StoredProcedure;
+
+                    try
+                    {
+                        da.Fill(dt);
+                        if (dt.Rows.Count == 1)
+                        {
+                            MessageBox.Show("Welcome");
+
+                            Cashier cu = new Cashier();
+                            this.Hide();
+                            cu.Show();
+                        }
+
+                        else
+                        {
+                            MessageBox.Show("Check your userid and password");
+                            ID_TXT.Text = "";
+                            PASSWORD_TXT.Text = "";
+                        }
+
+
+
+                    }
+                    catch (Exception Ex)
+                    {
+                        MessageBox.Show(Ex.Message.ToString());
+                    }
+
+                    
+
                 }
-
-
             }
         }
     }

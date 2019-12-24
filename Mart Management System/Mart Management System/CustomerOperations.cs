@@ -19,9 +19,16 @@ namespace Mart_Management_System
 
         private void BACK_BOX_Click(object sender, EventArgs e)
         {
-            Admin ad = new Admin();
-            this.Hide();
-            ad.Show();
+            
+            DialogResult dialogResult = MessageBox.Show("Are you sure you want to logout ?", "Admin",
+                                                        MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (dialogResult == DialogResult.Yes)
+            {
+                LoginCustomer lc = new LoginCustomer();
+                this.Hide();
+                lc.Show();
+            }
+
         }
 
         private void CustomerOperations_Load(object sender, EventArgs e)

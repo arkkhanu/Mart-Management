@@ -47,67 +47,59 @@ namespace Mart_Management_System
 
         private void LOGIN_Click(object sender, EventArgs e)
         {
-            using (SqlConnection con = new SqlConnection(cs))
-            {
-                string query = "Select  * from Admin where admin_id = @admin_id and admin_pass=@admin_pass";
-                DataTable dt = new DataTable();
-                SqlDataAdapter da = new SqlDataAdapter();
-                da.SelectCommand = new SqlCommand(query, con);
-                da.SelectCommand.Parameters.AddWithValue("@admin_id", ID_TXT.Text);
-                da.SelectCommand.Parameters.AddWithValue("@admin_pass", PASSWORD_TXT.Text);
-                try
-                {
-                    da.Fill(dt);
-
-
-
-                }
-                catch (Exception Ex)
-                {
-                    MessageBox.Show(Ex.Message.ToString());
-                }
-
-                if (dt.Rows.Count == 1)
-                {
-                    MessageBox.Show("Welcome");
-                    Admin ad = new Admin();
-                    this.Hide();
-                    ad.Show();
-                }
-                else if (ID_TXT.Text == "")
-                {
-                    MessageBox.Show("ID not Empty");
-                }
-                 else if (PASSWORD_TXT.Text == "")
-                {
-                    MessageBox.Show("Password not Empty");
-                }
-                else
-                {
-                    MessageBox.Show("Check your userid and password");
-                    ID_TXT.Text = "";
-                    PASSWORD_TXT.Text = "";
-                }
-              
-
-            }
-
-
-
-        }
-
-        private void ID_TXT_TextChanged(object sender, EventArgs e)
-        {
             if(ID_TXT.Text == "")
+                MessageBox.Show("Please Enter ID");
+
+            if (PASSWORD_TXT.Text == "")
+
+                MessageBox.Show("Please Enter Password");
+
+            else
             {
-                MessageBox.Show("ID not Empty");
+                using (SqlConnection con = new SqlConnection(cs))
+                {
+               
+                    DataTable dt = new DataTable();
+                    SqlDataAdapter da = new SqlDataAdapter();
+
+                    da.SelectCommand = new SqlCommand("LoginAdmin", con);
+                    da.SelectCommand.Parameters.AddWithValue("@id", ID_TXT.Text);
+                    da.SelectCommand.Parameters.AddWithValue("@password", PASSWORD_TXT.Text);
+                    da.SelectCommand.CommandType = CommandType.StoredProcedure;
+
+                    try
+                    {
+                        da.Fill(dt);
+                        if (dt.Rows.Count == 1)
+                        {
+                            MessageBox.Show("Welcome");
+                            Admin ad = new Admin();
+                            this.Hide();
+                            ad.Show();
+                        }
+
+                        else
+                        {
+                            MessageBox.Show("Check your userid and password");
+                            ID_TXT.Text = "";
+                            PASSWORD_TXT.Text = "";
+                        }
+
+                    }
+                    catch (Exception Ex)
+                    {
+                        MessageBox.Show(Ex.Message.ToString());
+                    }
+
+                    
+
+
+                }
+
             }
-        }
-
-        private void PASSWORD_TXT_TextChanged(object sender, EventArgs e)
-        {
-           
 
         }
+
+      
     }
 }

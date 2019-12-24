@@ -144,6 +144,14 @@ namespace Mart_Management_System
             else
                 MessageBox.Show("Please Select Category And Company First !");
         }
+        void clear()
+        {
+            cat_combo.SelectedIndex = -1;
+            comp_combo.SelectedIndex = -1;
+            id_box.Text = "";
+            phone_box.Text = "";
+            email_box.Text = "";
+        }
 
         private void btn_addPro_Click(object sender, EventArgs e)
         {
@@ -188,6 +196,7 @@ namespace Mart_Management_System
 
                }
                MessageBox.Show("Record Inserted !");
+               clear();
            }
            
         }

@@ -75,30 +75,52 @@ namespace Mart_Management_System
 
             using (SqlConnection con = new SqlConnection(cs))
             {
-
+                try{
                 con.Open();
                 DataSet ds = new DataSet();
                 string query = "select * from Product where 0=1";
                 SqlDataAdapter adp = new SqlDataAdapter(query, con);
                 adp.Fill(ds, "Product");
-
                 DataRow dr = ds.Tables["Product"].NewRow();
 
                 // dr["pro_id"] = ID_TXT.Text;
                 dr["pro_name"] = NAME_TXT.Text;
 
+                //stored procedure to get category id
+                    SqlCommand catcmd = new SqlCommand("GetCatid", con);
+                    catcmd.CommandType = CommandType.StoredProcedure;
+                    catcmd.Parameters.AddWithValue("@catname", Cat_Combo.SelectedItem.ToString());
+                    try
+                    {
+                        
+                        SqlDataReader catRdr = catcmd.ExecuteReader();
+                        catRdr.Read();
+                        dr["pro_cat"] = catRdr["cat_id"];
+                        catRdr.Close();
+                    }
+                        catch(Exception Ex)
+                    {
+                        MessageBox.Show(Ex.Message.ToString());
+                    }
 
-                SqlCommand catCmd = new SqlCommand("select cat_id from category where cat_name='" + Cat_Combo.SelectedItem.ToString() + "'", con);
-                SqlDataReader catRdr = catCmd.ExecuteReader();
-                catRdr.Read();
-                dr["pro_cat"] = catRdr["cat_id"];
-                catRdr.Close();
 
-                SqlCommand comCmd = new SqlCommand("select comp_id from company where comp_name='" + Product_Combo.SelectedItem.ToString() + "'", con);
-                SqlDataReader comRdr = comCmd.ExecuteReader();
-                comRdr.Read();
-                dr["pro_comp"] = comRdr["comp_id"];
-                comRdr.Close();
+                    //stored procedure to get company id
+                    SqlCommand concmd = new SqlCommand("GetCompid", con);
+                    concmd.CommandType = CommandType.StoredProcedure;
+                    concmd.Parameters.AddWithValue("@compname", Product_Combo.SelectedItem.ToString());
+                    try
+                    {
+                        
+                        SqlDataReader comRdr = concmd.ExecuteReader();
+                        comRdr.Read();
+                        dr["pro_comp"] = comRdr["comp_id"];
+                        comRdr.Close();
+                    }
+                    catch (Exception Ex)
+                    {
+                        MessageBox.Show(Ex.Message.ToString());
+                    }
+            
 
 
                 dr["pro_price"] = PRICE_TXT.Text;
@@ -115,8 +137,15 @@ namespace Mart_Management_System
                 MessageBox.Show("Record Inserted !");
                 clear();
 
-
-
+                }
+                catch(Exception e)
+                {
+                    MessageBox.Show(e.Message.ToString());
+                }
+                finally
+                {
+                    con.Close();
+                }
             }
 
         }

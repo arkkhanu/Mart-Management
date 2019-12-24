@@ -1,0 +1,23 @@
+create database Mart_Management_System;
+then change current db to mart
+
+create table Admin(admin_id int primary key not null, admin_name varchar(8), admin_pass varchar(8));
+
+insert into admin(admin_name,admin_pass) values ('saif', '147');
+
+create table Customer(cust_id int primary key not null, cust_name varchar (15), cust_gender varchar (8),cust_age int, cust_address varchar (25),cust_email varchar (50));
+create table Company(comp_id int primary key not null, comp_name varchar(25));
+create table Category(cat_id int primary key not null, cat_name varchar(25));
+create table Product(pro_id int primary key not null, pro_name varchar(25),pro_cat int foreign key references Category(cat_id),pro_comp int foreign key references Company(comp_id),pro_price int,pro_manuf_date varchar(25),pro_exp_date varchar(25));
+create table Cashier(cashier_id int primary key not null, cashier_name varchar(25),cashier_sal int, cashier_hidate varchar(25));
+create table Transactions (trans_id int primary key not null,amount int, trans_date varchar(25), cust_id int foreign key references Customer(cust_id), cashier_id int foreign key references Cashier(cashier_id));
+create table Details(trans_id int foreign key references Transactions(trans_id), pro_id int foreign key references Product(pro_id), amount int, pro_qty int, Trans_date varchar(25) , constraint pk primary key(trans_id, pro_id));
+
+create function detailmart(@a int) returns table
+as
+return
+(
+select trans_id,pro_id,amount,pro_qty, Trans_date from Details
+where pro_id=@a 
+);
+

@@ -107,6 +107,10 @@ namespace Mart_Management_System
             QUANTITY_TXT.Text = "";
             PRO_TXT.Text = "";
             PRICE_TXT.Text = "";
+            CASHIER_NAME.Text = "";
+            DATE_TXT.Text = "";
+            CASH_Combo.SelectedIndex = -1;
+            CUSTOM_COMBO.SelectedIndex = -1;
             
 
         }
@@ -118,7 +122,7 @@ namespace Mart_Management_System
                 adddata();
             }
             else
-                MessageBox.Show("please Fill Complte Form !");
+                MessageBox.Show("please Fill Complete Form !");
             
             
         }
@@ -126,34 +130,32 @@ namespace Mart_Management_System
         {
             using (SqlConnection con = new SqlConnection(cs))
             {
-                con.Open();
-                DataSet ds = new DataSet();
-                string query = "select * from details where 0=1";
-                SqlDataAdapter adp = new SqlDataAdapter(query, con);
-                adp.Fill(ds, "Details");
-          
-                DataRow dr = ds.Tables["Details"].NewRow();
-            
-                dr["trans_id"] = TRAN_TXT.Text;
-                dr["cashier_id"] = Int32.Parse(CASH_Combo.SelectedItem.ToString());
-                dr["customer_id"] = Int32.Parse(CUSTOM_COMBO.SelectedItem.ToString());
-                dr["cashier_name"] =CASHIER_NAME.Text;
-                dr["product_name"] = PRO_TXT.Text;
-                dr["quantity"] = QUANTITY_TXT.Text;
-                dr["price"] = PRICE_TXT.Text;
-                dr["date"] = DATE_TXT.Text;
-               
 
-                ds.Tables["Details"].Rows.Add(dr);
-                new SqlCommandBuilder(adp);
-                adp.Update(ds,"Details");
-
-
-
+            con.Open();
+            SqlDataAdapter da = new SqlDataAdapter();
+            da.InsertCommand = new SqlCommand("cashierwork", con);
+            da.InsertCommand.Parameters.AddWithValue("@cashid", Int32.Parse(CASH_Combo.SelectedItem.ToString()));
+            da.InsertCommand.Parameters.AddWithValue("@custid", Int32.Parse(CUSTOM_COMBO.SelectedItem.ToString()));
+            da.InsertCommand.Parameters.AddWithValue("@cashname",CASHIER_NAME.Text);
+            da.InsertCommand.Parameters.AddWithValue("@proname",PRO_TXT.Text);
+            da.InsertCommand.Parameters.AddWithValue("@price", PRICE_TXT.Text);
+            da.InsertCommand.Parameters.AddWithValue("@quan", QUANTITY_TXT.Text);
+            da.InsertCommand.Parameters.AddWithValue("@date", DATE_TXT.Text);
+            da.InsertCommand.Parameters.AddWithValue("@trasid", TRAN_TXT.Text);
+            da.InsertCommand.CommandType = CommandType.StoredProcedure;
+            try
+            {
+                da.InsertCommand.ExecuteNonQuery();
                 MessageBox.Show("Record Inserted !");
-
             }
-        }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
+            }
+
+               
+            }
+      }
         
 
         private void BACK_BOX_Click(object sender, EventArgs e)
@@ -161,6 +163,18 @@ namespace Mart_Management_System
             LoginForm log = new LoginForm();
             this.Hide();
             log.Show();
+        }
+
+        private void BACK_BOX_Click_1(object sender, EventArgs e)
+        {
+            DialogResult dialogResult = MessageBox.Show("Are you sure you want to logout ?", "Admin",
+                                                        MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (dialogResult == DialogResult.Yes)
+            {
+                LoginCashier lc = new LoginCashier();
+                this.Hide();
+                lc.Show();
+            }
         }
     }
 }

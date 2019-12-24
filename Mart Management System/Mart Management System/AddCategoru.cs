@@ -42,13 +42,14 @@ namespace Mart_Management_System
                 adp.Fill(ds, "Category");
                 DataRow dr = ds.Tables["Category"].NewRow();
 
-                dr["cat_id"] = ID_CAT.Text;
+               
                 dr["cat_name"] = NAME_TXT.Text;
                 ds.Tables["Category"].Rows.Add(dr);
                 new SqlCommandBuilder(adp);
                 adp.Update(ds, "Category");
 
                 MessageBox.Show("Record Inserted !");
+                NAME_TXT.Text = "";
             }
         }
         private void AddCategoru_Load(object sender, EventArgs e)

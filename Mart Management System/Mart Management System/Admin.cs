@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Microsoft.VisualBasic;
 
 namespace Mart_Management_System
 {
@@ -17,21 +18,20 @@ namespace Mart_Management_System
             InitializeComponent();
         }
 
-        private void pictureBox6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Admin_Load(object sender, EventArgs e)
-        {
-
-        }
+       
 
         private void Log_Out_Click(object sender, EventArgs e)
         {
-            LoginAdmin ad = new LoginAdmin();
-            this.Hide();
-            ad.Show();
+            DialogResult dialogResult = MessageBox.Show("Are you sure you want to logout ?", "Admin",
+                                                        MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (dialogResult == DialogResult.Yes)
+            {
+                LoginAdmin ad = new LoginAdmin();
+                this.Hide();
+                ad.Show();
+            }
+            
+            
         }
 
         private void PRODUCT_BUTTON_Click(object sender, EventArgs e)
@@ -68,6 +68,11 @@ namespace Mart_Management_System
             CustomerOperations cu = new CustomerOperations();
             this.Hide();
             cu.Show();
+        }
+
+        private void TRANSACTION_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
