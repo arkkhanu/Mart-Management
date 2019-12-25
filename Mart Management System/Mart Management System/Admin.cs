@@ -72,7 +72,9 @@ namespace Mart_Management_System
 
         private void TRANSACTION_Click(object sender, EventArgs e)
         {
-
+            TransactionOperation op = new TransactionOperation();
+            this.Hide();
+            op.Show();
         }
     }
 }

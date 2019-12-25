@@ -281,6 +281,7 @@
             this.CASHIER_VIEW.Size = new System.Drawing.Size(777, 150);
             this.CASHIER_VIEW.TabIndex = 52;
             this.CASHIER_VIEW.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.CASHIER_VIEW_CellClick);
+            this.CASHIER_VIEW.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.CASHIER_VIEW_CellContentClick);
             // 
             // SUBMIT_BTN
             // 

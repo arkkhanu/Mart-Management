@@ -70,7 +70,7 @@ namespace Mart_Management_System
                         {
                             MessageBox.Show("Welcome");
 
-                            CustomerOperations co = new CustomerOperations();
+                            CustomerPortal co = new CustomerPortal();
                             this.Hide();
                             co.Show();
                         }

@@ -36,10 +36,6 @@
             this.CHART_BOX = new System.Windows.Forms.PictureBox();
             this.BACK_BOX = new System.Windows.Forms.PictureBox();
             this.TRANSACTION_VIEW = new System.Windows.Forms.DataGridView();
-            this.FROM_LBL = new System.Windows.Forms.Label();
-            this.TO_LBL = new System.Windows.Forms.Label();
-            this.FROM_TXT = new System.Windows.Forms.TextBox();
-            this.TO_TXT = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CHART_BOX)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BACK_BOX)).BeginInit();
@@ -111,6 +107,7 @@
             this.BACK_BOX.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.BACK_BOX.TabIndex = 0;
             this.BACK_BOX.TabStop = false;
+            this.BACK_BOX.Click += new System.EventHandler(this.BACK_BOX_Click);
             // 
             // TRANSACTION_VIEW
             // 
@@ -120,61 +117,23 @@
             this.TRANSACTION_VIEW.Size = new System.Drawing.Size(853, 150);
             this.TRANSACTION_VIEW.TabIndex = 7;
             // 
-            // FROM_LBL
-            // 
-            this.FROM_LBL.AutoSize = true;
-            this.FROM_LBL.ForeColor = System.Drawing.SystemColors.Control;
-            this.FROM_LBL.Location = new System.Drawing.Point(119, 179);
-            this.FROM_LBL.Name = "FROM_LBL";
-            this.FROM_LBL.Size = new System.Drawing.Size(38, 13);
-            this.FROM_LBL.TabIndex = 8;
-            this.FROM_LBL.Text = "FROM";
-            // 
-            // TO_LBL
-            // 
-            this.TO_LBL.AutoSize = true;
-            this.TO_LBL.ForeColor = System.Drawing.SystemColors.Control;
-            this.TO_LBL.Location = new System.Drawing.Point(623, 179);
-            this.TO_LBL.Name = "TO_LBL";
-            this.TO_LBL.Size = new System.Drawing.Size(22, 13);
-            this.TO_LBL.TabIndex = 9;
-            this.TO_LBL.Text = "TO";
-            // 
-            // FROM_TXT
-            // 
-            this.FROM_TXT.Location = new System.Drawing.Point(200, 176);
-            this.FROM_TXT.Name = "FROM_TXT";
-            this.FROM_TXT.Size = new System.Drawing.Size(100, 20);
-            this.FROM_TXT.TabIndex = 10;
-            // 
-            // TO_TXT
-            // 
-            this.TO_TXT.Location = new System.Drawing.Point(664, 176);
-            this.TO_TXT.Name = "TO_TXT";
-            this.TO_TXT.Size = new System.Drawing.Size(100, 20);
-            this.TO_TXT.TabIndex = 11;
-            // 
             // TransactionOperation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ClientSize = new System.Drawing.Size(854, 404);
-            this.Controls.Add(this.TO_TXT);
-            this.Controls.Add(this.FROM_TXT);
-            this.Controls.Add(this.TO_LBL);
-            this.Controls.Add(this.FROM_LBL);
             this.Controls.Add(this.TRANSACTION_VIEW);
             this.Controls.Add(this.panel1);
             this.Name = "TransactionOperation";
             this.Text = "TransactionOperation";
+            this.Load += new System.EventHandler(this.TransactionOperation_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CHART_BOX)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BACK_BOX)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TRANSACTION_VIEW)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -187,9 +146,5 @@
         private System.Windows.Forms.PictureBox CHART_BOX;
         private System.Windows.Forms.PictureBox BACK_BOX;
         private System.Windows.Forms.DataGridView TRANSACTION_VIEW;
-        private System.Windows.Forms.Label FROM_LBL;
-        private System.Windows.Forms.Label TO_LBL;
-        private System.Windows.Forms.TextBox FROM_TXT;
-        private System.Windows.Forms.TextBox TO_TXT;
     }
 }

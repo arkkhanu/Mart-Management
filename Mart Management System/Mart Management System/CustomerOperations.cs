@@ -24,7 +24,7 @@ namespace Mart_Management_System
                                                         MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (dialogResult == DialogResult.Yes)
             {
-                LoginCustomer lc = new LoginCustomer();
+                Admin lc = new Admin();
                 this.Hide();
                 lc.Show();
             }
@@ -62,6 +62,11 @@ namespace Mart_Management_System
             CartCustomer cart = new CartCustomer();
             this.Hide();
             cart.Show();
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

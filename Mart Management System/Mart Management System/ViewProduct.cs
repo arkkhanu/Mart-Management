@@ -39,23 +39,30 @@ namespace Mart_Management_System
             View_Product.RowTemplate.Height = 150;
             View_Product.AllowUserToAddRows = false;
 
-           // System.Data.DataSet ds = new System.Data.DataSet();
-            using (SqlConnection con = new SqlConnection(cs))
+            // System.Data.DataSet ds = new System.Data.DataSet();
+            try
             {
-                con.Open();
-                sda = new SqlDataAdapter("select * from Product where pro_id=@pro",con);
-                sda.SelectCommand.Parameters.AddWithValue("@pro", txt_id.Value);
-                sda.Fill(dt);
-                if (dt.Rows.Count > 0)
-                    View_Product.DataSource = dt;
-                else
-                    MessageBox.Show("No product Found !");
-                DataGridViewImageColumn imageColumn = new DataGridViewImageColumn();
-                imageColumn = (DataGridViewImageColumn)View_Product.Columns[8];
-                imageColumn.ImageLayout = DataGridViewImageCellLayout.Stretch;
-             
+                using (SqlConnection con = new SqlConnection(cs))
+                {
+                    con.Open();
+                    sda = new SqlDataAdapter("select * from Product where pro_id=@pro", con);
+                    sda.SelectCommand.Parameters.AddWithValue("@pro", txt_id.Value);
+                    sda.Fill(dt);
+                    if (dt.Rows.Count > 0)
+                        View_Product.DataSource = dt;
+                    else
+                        MessageBox.Show("No product Found !");
+                    DataGridViewImageColumn imageColumn = new DataGridViewImageColumn();
+                    imageColumn = (DataGridViewImageColumn)View_Product.Columns[8];
+                    imageColumn.ImageLayout = DataGridViewImageCellLayout.Stretch;
 
 
+
+                }
+            }
+            catch (Exception Ex)
+            {
+                MessageBox.Show("Please Enter Id to View Your Details");
             }
         }
 

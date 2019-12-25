@@ -176,7 +176,7 @@
         eFg+Qk9Ab9jCw/KBP6Wr/DoY4AiO8etgEO4afh0kKpV/2WJ86UatJU8AAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="SEARCH_BOX.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="pictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAYAAABw4pVUAAAABGdBTUEAALGPC/xhBQAAC0ZJREFUeF7t
         XXlsE9kZZ3uq932q/aO3KrVVVVW9pVatWrWVKvXY7X0fq5VaWtFCPB4HMAkJxDNjh4Qc9hx2DnI4IQdJ
@@ -288,44 +288,6 @@
         Oi9Gurrcn4GR8AKY5JSYlm3hqbIGOuIXF+XUlAlLp8jidpjSToF5tKMLuZpduhMgbLFafdeTx3AyIV4E
         2MRHzDZhB3SQAczFx/3pKrXJ+OmzzXXAZHM9Z3KK328WhI31b1xtRHAZjV8nx0eTzXPrpt0vcDgcDofD
         4XA4HA6Hw+FwOBwOh8PhcDgcDodz0aNQ/A/qIbkf3BTuPwAAAABJRU5ErkJggg==
-</value>
-  </data>
-  <data name="DELETE_BOX.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        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
 </value>
   </data>
 </root>

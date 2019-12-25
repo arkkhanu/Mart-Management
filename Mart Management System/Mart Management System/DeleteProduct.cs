@@ -23,22 +23,27 @@ namespace Mart_Management_System
 
         private void DELETE_Click(object sender, EventArgs e)
         {
-           
-            using(SqlConnection con=new SqlConnection(cs))
+            try
             {
-                     string query = "delete product where pro_id=@pro_id";
-                     con.Open();
-                     SqlDataAdapter adp = new SqlDataAdapter(query,con);
+                using (SqlConnection con = new SqlConnection(cs))
+                {
+                    string query = "delete product where pro_id=@pro_id";
+                    con.Open();
+                    SqlDataAdapter adp = new SqlDataAdapter(query, con);
 
                     adp.DeleteCommand = con.CreateCommand();
                     adp.DeleteCommand.CommandText = query;
                     adp.DeleteCommand.Parameters.AddWithValue("@pro_id", PRODUCT_COMBO.SelectedItem.ToString());
                     adp.DeleteCommand.ExecuteNonQuery();
                     MessageBox.Show("Record Deleted !");
-                    
-            }
-            loadProd();
 
+                }
+                loadProd();
+            }
+            catch (Exception Ex)
+            {
+                MessageBox.Show("Please Select Combo to Delete");
+            }
 
         }
         void loadProd()

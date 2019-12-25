@@ -176,5 +176,10 @@ namespace Mart_Management_System
                 lc.Show();
             }
         }
+
+        private void CASHIER_VIEW_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

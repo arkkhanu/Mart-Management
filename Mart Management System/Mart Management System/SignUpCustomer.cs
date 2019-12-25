@@ -84,7 +84,47 @@ namespace Mart_Management_System
             }
 
         }
-        
+        public void Regexp(string re, TextBox tb, Label lbl, string s)
+        {
+            Regex regex = new Regex(re);
+
+            if (regex.IsMatch(tb.Text))
+            {
+
+                lbl.ForeColor = Color.Green;
+                if (s == "Name ")
+                    cname = true;
+                else if (s == "Age ")
+                    age = true;
+                else if (s == "Password")
+                    pass = true;
+
+                lbl.Visible = false;
+
+            }
+            else
+            {
+
+                lbl.ForeColor = Color.Red;
+                lbl.Visible = true;
+                lbl.Text = s + " Invalid";
+
+            }
+        }
+        private void validatename(object sender, KeyEventArgs e)
+        {
+            Regexp(@"^[a-zA-Z\s]+$", NAME_TXT, name_lbl, "Name ");
+        }
+
+        private void validateage(object sender, KeyPressEventArgs e)
+        {
+            Regexp(@"^[0-9]+$", AGE_TXT, ag_lbl, "Age ");
+        }
+
+        private void validatepass(object sender, KeyEventArgs e)
+        {
+            Regexp(@"^[0-9]+$", PASSWORD_TXT,pa_lbl , "Password ");
+        }
 
         private void SignUpCustomer_Load(object sender, EventArgs e)
         {
@@ -93,13 +133,12 @@ namespace Mart_Management_System
 
         private void SIGNUP_BUTTON_Click(object sender, EventArgs e)
         {
-           if (NAME_TXT.Text!=""   && AGE_TXT.Text!=""  && PASSWORD_TXT.Text!="" && EMAIL_TXT.Text!="" && ADDRESS_TXT.Text!="")
+            if (NAME_TXT.Text!="" && AGE_TXT.Text!="" && ADDRESS_TXT.Text!="" && EMAIL_TXT.Text!="" && PASSWORD_TXT.Text!="" )
             {
-
                 insertdata();
             }
             else
-                MessageBox.Show("Please Fill the Form Correctly");
+                MessageBox.Show("Please Fill the form Correctly");
         }
     }
 }

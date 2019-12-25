@@ -7,21 +7,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Data.SqlClient;
 using System.Configuration;
+using System.Data.SqlClient;
 namespace Mart_Management_System
 {
-    public partial class TransactionOperation : Form
+    public partial class CustomersDetails : Form
     {
         string cs = ConfigurationManager.ConnectionStrings["myCon"].ConnectionString;
-        public TransactionOperation()
+        public CustomersDetails()
         {
             InitializeComponent();
-        }
-
-        private void TransactionOperation_Load(object sender, EventArgs e)
-        {
-            loaddata();
         }
         void loaddata()
         {
@@ -32,22 +27,32 @@ namespace Mart_Management_System
             using (SqlConnection con = new SqlConnection(cs))
             {
                 con.Open();
-                sda = new SqlDataAdapter("select * from cart", con);
-
+                sda = new SqlDataAdapter("select * from Customer where cust_id=@cust", con);
+                sda.SelectCommand.Parameters.AddWithValue("@cust", txt_id.Value);
                 sda.Fill(dt);
                 if (dt.Rows.Count > 0)
-                    TRANSACTION_VIEW.DataSource = dt;
+                    CUSTOMER_VIEW.DataSource = dt;
                 else
-                    MessageBox.Show("Currently No Data to Show !");
+                    MessageBox.Show("No customer Found !");
 
 
             }
         }
+        private void CustomersDetails_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_search_Click(object sender, EventArgs e)
+        {
+            loaddata();
+        }
+
         private void BACK_BOX_Click(object sender, EventArgs e)
         {
-            Admin ad = new Admin();
+            CustomerPortal cu = new CustomerPortal();
             this.Hide();
-            ad.Show();
+            cu.Show();
         }
     }
 }

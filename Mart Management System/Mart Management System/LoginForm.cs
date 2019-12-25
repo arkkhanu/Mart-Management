@@ -47,16 +47,18 @@ namespace Mart_Management_System
         {
             
             LoginCustomer cuslog = new LoginCustomer();
+            this.Hide();
             cuslog.Show();
-            //this.Dispose();
+            
         }
 
         private void CASHIER_Click(object sender, EventArgs e)
         {
             
             LoginCashier cashlog = new LoginCashier();
+            this.Hide();
             cashlog.Show();
-            //this.Dispose();
+           
         }
 
         private void LoginForm_Load(object sender, EventArgs e)

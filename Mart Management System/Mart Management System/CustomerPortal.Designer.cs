@@ -1,6 +1,6 @@
 ﻿namespace Mart_Management_System
 {
-    partial class CustomerOperations
+    partial class CustomerPortal
     {
         /// <summary>
         /// Required designer variable.
@@ -28,25 +28,22 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CustomerOperations));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CustomerPortal));
             this.panel1 = new System.Windows.Forms.Panel();
             this.LINE_LBL = new System.Windows.Forms.Label();
             this.LINE_LBL2 = new System.Windows.Forms.Label();
             this.CUSTOMER_LBL = new System.Windows.Forms.Label();
             this.CUSTOMER_BOX = new System.Windows.Forms.PictureBox();
             this.BACK_BOX = new System.Windows.Forms.PictureBox();
-            this.SEARCH_BTN = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.AMS_BTN = new System.Windows.Forms.Button();
             this.VIEW_BTN = new System.Windows.Forms.Button();
-            this.DELETE_BTN = new System.Windows.Forms.Button();
-            this.SEARCH_BOX = new System.Windows.Forms.PictureBox();
             this.VIEW_BOX = new System.Windows.Forms.PictureBox();
-            this.DELETE_BOX = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CUSTOMER_BOX)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BACK_BOX)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.SEARCH_BOX)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.VIEW_BOX)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DELETE_BOX)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -57,17 +54,17 @@
             this.panel1.Controls.Add(this.CUSTOMER_LBL);
             this.panel1.Controls.Add(this.CUSTOMER_BOX);
             this.panel1.Controls.Add(this.BACK_BOX);
-            this.panel1.Location = new System.Drawing.Point(0, 3);
+            this.panel1.Location = new System.Drawing.Point(0, 2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(801, 161);
-            this.panel1.TabIndex = 3;
+            this.panel1.TabIndex = 4;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // LINE_LBL
             // 
             this.LINE_LBL.AutoSize = true;
             this.LINE_LBL.ForeColor = System.Drawing.SystemColors.Control;
-            this.LINE_LBL.Location = new System.Drawing.Point(326, 85);
+            this.LINE_LBL.Location = new System.Drawing.Point(315, 83);
             this.LINE_LBL.Name = "LINE_LBL";
             this.LINE_LBL.Size = new System.Drawing.Size(160, 13);
             this.LINE_LBL.TabIndex = 4;
@@ -77,7 +74,7 @@
             // 
             this.LINE_LBL2.AutoSize = true;
             this.LINE_LBL2.ForeColor = System.Drawing.SystemColors.Control;
-            this.LINE_LBL2.Location = new System.Drawing.Point(326, 98);
+            this.LINE_LBL2.Location = new System.Drawing.Point(315, 96);
             this.LINE_LBL2.Name = "LINE_LBL2";
             this.LINE_LBL2.Size = new System.Drawing.Size(160, 13);
             this.LINE_LBL2.TabIndex = 3;
@@ -90,9 +87,9 @@
             this.CUSTOMER_LBL.ForeColor = System.Drawing.SystemColors.Control;
             this.CUSTOMER_LBL.Location = new System.Drawing.Point(285, 46);
             this.CUSTOMER_LBL.Name = "CUSTOMER_LBL";
-            this.CUSTOMER_LBL.Size = new System.Drawing.Size(277, 24);
+            this.CUSTOMER_LBL.Size = new System.Drawing.Size(212, 24);
             this.CUSTOMER_LBL.TabIndex = 2;
-            this.CUSTOMER_LBL.Text = "CUSTOMERS OPERATIONS";
+            this.CUSTOMER_LBL.Text = "CUSTOMER PORTAL\r\n";
             // 
             // CUSTOMER_BOX
             // 
@@ -117,95 +114,70 @@
             this.BACK_BOX.TabStop = false;
             this.BACK_BOX.Click += new System.EventHandler(this.BACK_BOX_Click);
             // 
-            // SEARCH_BTN
+            // pictureBox1
             // 
-            this.SEARCH_BTN.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SEARCH_BTN.Location = new System.Drawing.Point(572, 332);
-            this.SEARCH_BTN.Name = "SEARCH_BTN";
-            this.SEARCH_BTN.Size = new System.Drawing.Size(100, 23);
-            this.SEARCH_BTN.TabIndex = 22;
-            this.SEARCH_BTN.Text = "Edit Profile";
-            this.SEARCH_BTN.UseVisualStyleBackColor = true;
-            this.SEARCH_BTN.Click += new System.EventHandler(this.SEARCH_BTN_Click);
+            this.pictureBox1.BackColor = System.Drawing.SystemColors.Control;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(73, 230);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(169, 107);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 26;
+            this.pictureBox1.TabStop = false;
+            // 
+            // AMS_BTN
+            // 
+            this.AMS_BTN.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AMS_BTN.Location = new System.Drawing.Point(92, 362);
+            this.AMS_BTN.Name = "AMS_BTN";
+            this.AMS_BTN.Size = new System.Drawing.Size(121, 23);
+            this.AMS_BTN.TabIndex = 25;
+            this.AMS_BTN.Text = "Go to AMS Mart";
+            this.AMS_BTN.UseVisualStyleBackColor = true;
+            this.AMS_BTN.Click += new System.EventHandler(this.button1_Click);
             // 
             // VIEW_BTN
             // 
             this.VIEW_BTN.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.VIEW_BTN.Location = new System.Drawing.Point(362, 528);
+            this.VIEW_BTN.Location = new System.Drawing.Point(536, 364);
             this.VIEW_BTN.Name = "VIEW_BTN";
             this.VIEW_BTN.Size = new System.Drawing.Size(75, 23);
-            this.VIEW_BTN.TabIndex = 21;
+            this.VIEW_BTN.TabIndex = 28;
             this.VIEW_BTN.Text = "Profile";
             this.VIEW_BTN.UseVisualStyleBackColor = true;
             this.VIEW_BTN.Click += new System.EventHandler(this.VIEW_BTN_Click);
-            // 
-            // DELETE_BTN
-            // 
-            this.DELETE_BTN.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DELETE_BTN.Location = new System.Drawing.Point(94, 332);
-            this.DELETE_BTN.Name = "DELETE_BTN";
-            this.DELETE_BTN.Size = new System.Drawing.Size(121, 23);
-            this.DELETE_BTN.TabIndex = 20;
-            this.DELETE_BTN.Text = "Delete Account";
-            this.DELETE_BTN.UseVisualStyleBackColor = true;
-            this.DELETE_BTN.Click += new System.EventHandler(this.DELETE_BTN_Click);
-            // 
-            // SEARCH_BOX
-            // 
-            this.SEARCH_BOX.BackColor = System.Drawing.SystemColors.Control;
-            this.SEARCH_BOX.Image = ((System.Drawing.Image)(resources.GetObject("SEARCH_BOX.Image")));
-            this.SEARCH_BOX.Location = new System.Drawing.Point(538, 206);
-            this.SEARCH_BOX.Name = "SEARCH_BOX";
-            this.SEARCH_BOX.Size = new System.Drawing.Size(169, 107);
-            this.SEARCH_BOX.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.SEARCH_BOX.TabIndex = 19;
-            this.SEARCH_BOX.TabStop = false;
             // 
             // VIEW_BOX
             // 
             this.VIEW_BOX.BackColor = System.Drawing.SystemColors.Control;
             this.VIEW_BOX.Image = ((System.Drawing.Image)(resources.GetObject("VIEW_BOX.Image")));
-            this.VIEW_BOX.Location = new System.Drawing.Point(320, 394);
+            this.VIEW_BOX.Location = new System.Drawing.Point(489, 230);
             this.VIEW_BOX.Name = "VIEW_BOX";
             this.VIEW_BOX.Size = new System.Drawing.Size(166, 107);
             this.VIEW_BOX.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.VIEW_BOX.TabIndex = 18;
+            this.VIEW_BOX.TabIndex = 27;
             this.VIEW_BOX.TabStop = false;
             // 
-            // DELETE_BOX
-            // 
-            this.DELETE_BOX.BackColor = System.Drawing.SystemColors.Control;
-            this.DELETE_BOX.Image = ((System.Drawing.Image)(resources.GetObject("DELETE_BOX.Image")));
-            this.DELETE_BOX.Location = new System.Drawing.Point(75, 210);
-            this.DELETE_BOX.Name = "DELETE_BOX";
-            this.DELETE_BOX.Size = new System.Drawing.Size(169, 103);
-            this.DELETE_BOX.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.DELETE_BOX.TabIndex = 17;
-            this.DELETE_BOX.TabStop = false;
-            // 
-            // CustomerOperations
+            // CustomerPortal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.ClientSize = new System.Drawing.Size(800, 563);
-            this.Controls.Add(this.SEARCH_BTN);
+            this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.VIEW_BTN);
-            this.Controls.Add(this.DELETE_BTN);
-            this.Controls.Add(this.SEARCH_BOX);
             this.Controls.Add(this.VIEW_BOX);
-            this.Controls.Add(this.DELETE_BOX);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.AMS_BTN);
             this.Controls.Add(this.panel1);
-            this.Name = "CustomerOperations";
-            this.Text = "CustomerOperations";
-            this.Load += new System.EventHandler(this.CustomerOperations_Load);
+            this.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.Name = "CustomerPortal";
+            this.Text = "CustomerPortal";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CUSTOMER_BOX)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BACK_BOX)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.SEARCH_BOX)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.VIEW_BOX)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DELETE_BOX)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -218,11 +190,9 @@
         private System.Windows.Forms.Label CUSTOMER_LBL;
         private System.Windows.Forms.PictureBox CUSTOMER_BOX;
         private System.Windows.Forms.PictureBox BACK_BOX;
-        private System.Windows.Forms.Button SEARCH_BTN;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button AMS_BTN;
         private System.Windows.Forms.Button VIEW_BTN;
-        private System.Windows.Forms.Button DELETE_BTN;
-        private System.Windows.Forms.PictureBox SEARCH_BOX;
         private System.Windows.Forms.PictureBox VIEW_BOX;
-        private System.Windows.Forms.PictureBox DELETE_BOX;
     }
 }

@@ -53,7 +53,9 @@
             this.name_lbl = new System.Windows.Forms.Label();
             this.age_lbl = new System.Windows.Forms.Label();
             this.pass_lbl = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.Na_lbl = new System.Windows.Forms.Label();
+            this.ag_lbl = new System.Windows.Forms.Label();
+            this.pa_lbl = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CUSTOMER_BOX)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BACK_BOX)).BeginInit();
@@ -210,6 +212,7 @@
             this.PASSWORD_TXT.Name = "PASSWORD_TXT";
             this.PASSWORD_TXT.Size = new System.Drawing.Size(173, 20);
             this.PASSWORD_TXT.TabIndex = 14;
+            this.PASSWORD_TXT.KeyUp += new System.Windows.Forms.KeyEventHandler(this.validatepass);
             // 
             // NAME_TXT
             // 
@@ -217,6 +220,7 @@
             this.NAME_TXT.Name = "NAME_TXT";
             this.NAME_TXT.Size = new System.Drawing.Size(173, 20);
             this.NAME_TXT.TabIndex = 15;
+            this.NAME_TXT.KeyUp += new System.Windows.Forms.KeyEventHandler(this.validatename);
             // 
             // AGE_TXT
             // 
@@ -224,6 +228,7 @@
             this.AGE_TXT.Name = "AGE_TXT";
             this.AGE_TXT.Size = new System.Drawing.Size(173, 20);
             this.AGE_TXT.TabIndex = 17;
+            this.AGE_TXT.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.validateage);
             // 
             // ADDRESS_TXT
             // 
@@ -297,14 +302,29 @@
             this.pass_lbl.Size = new System.Drawing.Size(0, 13);
             this.pass_lbl.TabIndex = 61;
             // 
-            // label1
+            // Na_lbl
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(486, 221);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
-            this.label1.TabIndex = 62;
-            this.label1.Text = "label1";
+            this.Na_lbl.AutoSize = true;
+            this.Na_lbl.Location = new System.Drawing.Point(480, 224);
+            this.Na_lbl.Name = "Na_lbl";
+            this.Na_lbl.Size = new System.Drawing.Size(0, 13);
+            this.Na_lbl.TabIndex = 62;
+            // 
+            // ag_lbl
+            // 
+            this.ag_lbl.AutoSize = true;
+            this.ag_lbl.Location = new System.Drawing.Point(480, 331);
+            this.ag_lbl.Name = "ag_lbl";
+            this.ag_lbl.Size = new System.Drawing.Size(0, 13);
+            this.ag_lbl.TabIndex = 63;
+            // 
+            // pa_lbl
+            // 
+            this.pa_lbl.AutoSize = true;
+            this.pa_lbl.Location = new System.Drawing.Point(480, 494);
+            this.pa_lbl.Name = "pa_lbl";
+            this.pa_lbl.Size = new System.Drawing.Size(0, 13);
+            this.pa_lbl.TabIndex = 64;
             // 
             // SignUpCustomer
             // 
@@ -312,7 +332,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ClientSize = new System.Drawing.Size(750, 598);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.pa_lbl);
+            this.Controls.Add(this.ag_lbl);
+            this.Controls.Add(this.Na_lbl);
             this.Controls.Add(this.pass_lbl);
             this.Controls.Add(this.age_lbl);
             this.Controls.Add(this.name_lbl);
@@ -371,6 +393,8 @@
         private System.Windows.Forms.Label name_lbl;
         private System.Windows.Forms.Label age_lbl;
         private System.Windows.Forms.Label pass_lbl;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label Na_lbl;
+        private System.Windows.Forms.Label ag_lbl;
+        private System.Windows.Forms.Label pa_lbl;
     }
 }

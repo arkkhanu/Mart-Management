@@ -61,13 +61,10 @@ namespace Mart_Management_System
         private void UPDATE_Click(object sender, EventArgs e)
         {
 
-            if (cname && cprice && cquantity  && imglocation != "")
-            {
                 AddData();
                 loaddata();
-            }
-            else
-                MessageBox.Show("Please Fill the Form Correctly !");
+            
+         
            
         }
 
@@ -162,46 +159,55 @@ namespace Mart_Management_System
 
             }
         }
-       
+
 
         private void AddData()
         {
-            int Count = 0;
-            System.Data.DataSet ds = new System.Data.DataSet();
+           //ft Count = 0;
+           //ystem.Data.DataSet ds = new System.Data.DataSet();
 
-            byte[] images = null;
-            FileStream Stream = new FileStream(imglocation, FileMode.Open, FileAccess.Read);
-            BinaryReader brs = new BinaryReader(Stream);
-            images = brs.ReadBytes((int)Stream.Length);
+           
 
             //MemoryStream ms = new MemoryStream();
             //PRO_BOX.Image.Save(ms, PRO_BOX.Image.RawFormat);
             //byte[] img = ms.ToArray();
             //view_data.CurrentRow.Cells[8].Value = img;
-            
-            using (SqlConnection con = new SqlConnection(cs))
+            try
             {
-                SqlCommand cmd;
-                string Query = "update Product set pro_name=@pro_name,pro_price=@pro_price,pro_manuf_date=@pro_manuf_date,pro_exp_date=@pro_exp_date,quantity=@quantity,image=@image where pro_id=@pro_id ";
+                byte[] images = null;
+                FileStream Stream = new FileStream(imglocation, FileMode.Open, FileAccess.Read);
+                BinaryReader brs = new BinaryReader(Stream);
+                images = brs.ReadBytes((int)Stream.Length);
 
-                con.Open();
-                cmd = new SqlCommand(Query, con);
-                cmd.Parameters.AddWithValue("@pro_id", ID_TXT.Text);
-                cmd.Parameters.AddWithValue("@pro_name", NAME_TXT.Text);
-              //  cmd.Parameters.AddWithValue("@pro_comp", Int32.Parse(PRO_C_ID.Text));
-             //   cmd.Parameters.AddWithValue("@pro_cat", Int32.Parse(PRO_TXT.Text));
-                cmd.Parameters.AddWithValue("@pro_price", PRICE_TXT.Text);
-                cmd.Parameters.AddWithValue("@pro_manuf_date", MANU_DATE.Text.ToString());
-                cmd.Parameters.AddWithValue("@pro_exp_date", EXP_DATE.Text.ToString());
-                cmd.Parameters.AddWithValue("@quantity", QUANTITY_TXT.Text);
-                cmd.Parameters.AddWithValue("@image", images);
-                cmd.ExecuteNonQuery();
-                con.Close();
-                MessageBox.Show("Record updated");
+                using (SqlConnection con = new SqlConnection(cs))
+                {
+                    SqlCommand cmd;
+                    string Query = "update Product set pro_name=@pro_name,pro_price=@pro_price,pro_manuf_date=@pro_manuf_date,pro_exp_date=@pro_exp_date,quantity=@quantity,image=@image where pro_id=@pro_id ";
 
-
+                    con.Open();
+                    cmd = new SqlCommand(Query, con);
+                    cmd.Parameters.AddWithValue("@pro_id", ID_TXT.Text);
+                    cmd.Parameters.AddWithValue("@pro_name", NAME_TXT.Text);
+                    //  cmd.Parameters.AddWithValue("@pro_comp", Int32.Parse(PRO_C_ID.Text));
+                    //   cmd.Parameters.AddWithValue("@pro_cat", Int32.Parse(PRO_TXT.Text));
+                    cmd.Parameters.AddWithValue("@pro_price", PRICE_TXT.Text);
+                    cmd.Parameters.AddWithValue("@pro_manuf_date", MANU_DATE.Text.ToString());
+                    cmd.Parameters.AddWithValue("@pro_exp_date", EXP_DATE.Text.ToString());
+                    cmd.Parameters.AddWithValue("@quantity", QUANTITY_TXT.Text);
+                    cmd.Parameters.AddWithValue("@image", images);
+                    cmd.ExecuteNonQuery();
+                    con.Close();
+                    MessageBox.Show("Record updated");
+                    clear();
+                }
             }
-            PRO_BOX.Image = null;
+
+            catch (Exception Ex)
+            {
+                MessageBox.Show("Please Fill the form Correctly");
+            }
+        }
+                       // PRO_BOX.Image = null;
 
 
 
@@ -238,25 +244,41 @@ namespace Mart_Management_System
 
 
             //}
-        }
+        
         string imglocation = "";
 
         private void validatename(object sender, KeyEventArgs e)
         {
-            Regexp(@"^[a-zA-Z\s]+$", NAME_TXT, price_error_label, "Name ");
+            Regexp(@"^[a-zA-Z\s]+$", NAME_TXT, Name_lbl, "Name ");
         }
 
         private void validateprice(object sender, KeyEventArgs e)
         {
-            Regexp(@"^[0-9]+$", PRICE_TXT, price_error_label, "Price ");
+            Regexp(@"^[0-9]+$", PRICE_TXT, pr_lbl, "Price ");
         }
 
         private void validatequantity(object sender, KeyEventArgs e)
         {
-            Regexp(@"^[0-9]+$", QUANTITY_TXT, quantity_error_label, "Quantity ");
+            Regexp(@"^[0-9]+$", QUANTITY_TXT, quantity_lbl, "Quantity ");
         }
 
         private void quantity_error_label_Click(object sender, EventArgs e)
+        {
+
+        }
+        private void clear()
+        {
+            //  ID_TXT.Text = "";
+            NAME_TXT.Text = "";
+          //  Cat_Combo.Items.Clear();
+           // Product_Combo.Items.Clear();
+            PRICE_TXT.Text = "";
+            QUANTITY_TXT.Text = "";
+            PRO_BOX.Image = null;
+
+
+        }
+        private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
         }

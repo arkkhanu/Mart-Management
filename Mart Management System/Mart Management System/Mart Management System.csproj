@@ -116,6 +116,18 @@
     <Compile Include="CustomerOperations.Designer.cs">
       <DependentUpon>CustomerOperations.cs</DependentUpon>
     </Compile>
+    <Compile Include="CustomerPortal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomerPortal.Designer.cs">
+      <DependentUpon>CustomerPortal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomersDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomersDetails.Designer.cs">
+      <DependentUpon>CustomersDetails.cs</DependentUpon>
+    </Compile>
     <Compile Include="CustomerView.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -301,6 +313,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CustomerOperations.resx">
       <DependentUpon>CustomerOperations.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomerPortal.resx">
+      <DependentUpon>CustomerPortal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomersDetails.resx">
+      <DependentUpon>CustomersDetails.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CustomerView.resx">
       <DependentUpon>CustomerView.cs</DependentUpon>

@@ -52,13 +52,15 @@
             this.EXP_DATE = new System.Windows.Forms.DateTimePicker();
             this.ID_TXT = new System.Windows.Forms.TextBox();
             this.Update_Box = new System.Windows.Forms.GroupBox();
+            this.price_error_label = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.PRO_BOX = new System.Windows.Forms.PictureBox();
             this.Show_Data = new System.Windows.Forms.GroupBox();
             this.view_data = new System.Windows.Forms.DataGridView();
             this.BRO_BTN = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.price_error_label = new System.Windows.Forms.Label();
-            this.quantity_error_label = new System.Windows.Forms.Label();
+            this.Name_lbl = new System.Windows.Forms.Label();
+            this.quantity_lbl = new System.Windows.Forms.Label();
+            this.pr_lbl = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PRODUCT_BOX)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BACK_BOX)).BeginInit();
@@ -75,10 +77,11 @@
             this.panel1.Controls.Add(this.PRODUCT_LBL);
             this.panel1.Controls.Add(this.PRODUCT_BOX);
             this.panel1.Controls.Add(this.BACK_BOX);
-            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Location = new System.Drawing.Point(3, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1019, 127);
+            this.panel1.Size = new System.Drawing.Size(1113, 127);
             this.panel1.TabIndex = 2;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // SIGN_LBL
             // 
@@ -105,7 +108,7 @@
             // 
             this.PRODUCT_BOX.BackColor = System.Drawing.SystemColors.Control;
             this.PRODUCT_BOX.Image = ((System.Drawing.Image)(resources.GetObject("PRODUCT_BOX.Image")));
-            this.PRODUCT_BOX.Location = new System.Drawing.Point(862, 34);
+            this.PRODUCT_BOX.Location = new System.Drawing.Point(970, 24);
             this.PRODUCT_BOX.Name = "PRODUCT_BOX";
             this.PRODUCT_BOX.Size = new System.Drawing.Size(127, 70);
             this.PRODUCT_BOX.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -292,7 +295,9 @@
             // 
             // Update_Box
             // 
-            this.Update_Box.Controls.Add(this.quantity_error_label);
+            this.Update_Box.Controls.Add(this.pr_lbl);
+            this.Update_Box.Controls.Add(this.quantity_lbl);
+            this.Update_Box.Controls.Add(this.Name_lbl);
             this.Update_Box.Controls.Add(this.price_error_label);
             this.Update_Box.Controls.Add(this.label1);
             this.Update_Box.Controls.Add(this.QUAN_LBL);
@@ -318,6 +323,22 @@
             this.Update_Box.TabIndex = 47;
             this.Update_Box.TabStop = false;
             this.Update_Box.Text = "Update";
+            // 
+            // price_error_label
+            // 
+            this.price_error_label.AutoSize = true;
+            this.price_error_label.Location = new System.Drawing.Point(362, 261);
+            this.price_error_label.Name = "price_error_label";
+            this.price_error_label.Size = new System.Drawing.Size(0, 13);
+            this.price_error_label.TabIndex = 56;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(362, 89);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(0, 13);
+            this.label1.TabIndex = 55;
             // 
             // PRO_BOX
             // 
@@ -359,31 +380,29 @@
             this.BRO_BTN.UseVisualStyleBackColor = true;
             this.BRO_BTN.Click += new System.EventHandler(this.BRO_BTN_Click);
             // 
-            // label1
+            // Name_lbl
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(362, 89);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(0, 13);
-            this.label1.TabIndex = 55;
+            this.Name_lbl.AutoSize = true;
+            this.Name_lbl.Location = new System.Drawing.Point(368, 93);
+            this.Name_lbl.Name = "Name_lbl";
+            this.Name_lbl.Size = new System.Drawing.Size(0, 13);
+            this.Name_lbl.TabIndex = 57;
             // 
-            // price_error_label
+            // quantity_lbl
             // 
-            this.price_error_label.AutoSize = true;
-            this.price_error_label.Location = new System.Drawing.Point(362, 261);
-            this.price_error_label.Name = "price_error_label";
-            this.price_error_label.Size = new System.Drawing.Size(0, 13);
-            this.price_error_label.TabIndex = 56;
+            this.quantity_lbl.AutoSize = true;
+            this.quantity_lbl.Location = new System.Drawing.Point(368, 427);
+            this.quantity_lbl.Name = "quantity_lbl";
+            this.quantity_lbl.Size = new System.Drawing.Size(0, 13);
+            this.quantity_lbl.TabIndex = 58;
             // 
-            // quantity_error_label
+            // pr_lbl
             // 
-            this.quantity_error_label.AutoSize = true;
-            this.quantity_error_label.Location = new System.Drawing.Point(362, 427);
-            this.quantity_error_label.Name = "quantity_error_label";
-            this.quantity_error_label.Size = new System.Drawing.Size(35, 13);
-            this.quantity_error_label.TabIndex = 57;
-            this.quantity_error_label.Text = "label4";
-            this.quantity_error_label.Click += new System.EventHandler(this.quantity_error_label_Click);
+            this.pr_lbl.AutoSize = true;
+            this.pr_lbl.Location = new System.Drawing.Point(368, 265);
+            this.pr_lbl.Name = "pr_lbl";
+            this.pr_lbl.Size = new System.Drawing.Size(0, 13);
+            this.pr_lbl.TabIndex = 59;
             // 
             // UpdateProduct
             // 
@@ -441,8 +460,10 @@
         private System.Windows.Forms.DataGridView view_data;
         private System.Windows.Forms.PictureBox PRO_BOX;
         private System.Windows.Forms.Button BRO_BTN;
-        private System.Windows.Forms.Label quantity_error_label;
         private System.Windows.Forms.Label price_error_label;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label quantity_lbl;
+        private System.Windows.Forms.Label Name_lbl;
+        private System.Windows.Forms.Label pr_lbl;
     }
 }
