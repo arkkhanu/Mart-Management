@@ -9,11 +9,13 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.Configuration;
+using System.Text.RegularExpressions;
 
 namespace Mart_Management_System
 {
     public partial class UpdateCustomer : Form
     {
+        bool cname, age;
         string cs = ConfigurationManager.ConnectionStrings["myCon"].ConnectionString;
         public UpdateCustomer()
         {
@@ -36,7 +38,32 @@ namespace Mart_Management_System
 
 
         }
+        public void Regexp(string re, TextBox tb, Label lbl, string s)
+        {
+            Regex regex = new Regex(re);
 
+            if (regex.IsMatch(tb.Text))
+            {
+
+                lbl.ForeColor = Color.Green;
+                if (s == "Name ")
+                    cname = true;
+                else if (s == "Age ")
+                    age = true;
+             
+
+                lbl.Visible = false;
+
+            }
+            else
+            {
+
+                lbl.ForeColor = Color.Red;
+                lbl.Visible = true;
+                lbl.Text = s + " Invalid";
+
+            }
+        }
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
@@ -61,8 +88,13 @@ namespace Mart_Management_System
 
         private void UPDATE_Click(object sender, EventArgs e)
         {
-            AddData();
-            loaddata();
+            if (NAME_TXT.Text != "" && AGE_TXT.Text != "" && EMAIL_TXT.Text != "" && PASS_TXT.Text != "")
+            {
+                AddData();
+                loaddata();
+            }
+            else
+                MessageBox.Show("Please Fill the form Correctly");
         }
 
         private void view_data_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -84,23 +116,41 @@ namespace Mart_Management_System
                
             }
         }
+
+        private void validatename(object sender, KeyEventArgs e)
+        {
+            Regexp(@"^[a-zA-Z\s]+$", NAME_TXT, Name_lbl, "Name ");
+        }
+
+        private void validateage(object sender, KeyEventArgs e)
+        {
+            Regexp(@"^[0-9]+$", AGE_TXT, Age_lbl, "Password ");
+        }
+
         private void AddData()
         {
-            using (SqlConnection con = new SqlConnection(cs))
+            try
             {
-                con.Open();
-                //     string query = "update product set pro_name='" + NAME_TXT.Text + "', pro_comp='" + Int32.Parse(PRO_C_ID.Text) + "', pro_cat='" + Int32.Parse(PRO_TXT.Text) + "', pro_price='" + PRICE_TXT.Text + "', pro_manuf_date='" + MANU_DATE.Text.ToString() + "', pro_exp_date='" + EXP_DATE.Text.ToString() + "', quantity='" + QUANTITY_TXT.Text + "' where pro_id='" + ID_TXT.Text.ToString() + "'";
-                string query = "update Customer set cust_name='" + NAME_TXT.Text + "', cust_gender='" + GENDER.Text+ "', cust_age='" + AGE_TXT.Text + "', cust_address='" + ADDRESS_TXT.Text + "',cust_email'"+EMAIL_TXT.Text+"',cust_pass='"+PASS_TXT.Text+"' where pro_id='" + ID_TXT.Text.ToString() + "'";
-                //  string query = "update product set pro_name='" + NAME_TXT.Text + "', pro_comp='" + Int32.Parse(PRO_C_ID.Text) + "', pro_cat='" + Int32.Parse(PRO_TXT.Text) + "', pro_price='" + PRICE_TXT.Text + "', pro_manuf_date='" + MANU_DATE.Text.ToString() + "', pro_exp_date='" + EXP_DATE.Text.ToString() + "', quantity='" + QUANTITY_TXT.Text + "' where pro_id='" + ID_TXT.Text.ToString() + "'";
-                SqlCommand cmd = new SqlCommand(query, con);
-                cmd.CommandText = query;
-
-                if (cmd.ExecuteNonQuery() > 0)
+                using (SqlConnection con = new SqlConnection(cs))
                 {
-                    MessageBox.Show("Record Updated !");
+                    con.Open();
+                    //     string query = "update product set pro_name='" + NAME_TXT.Text + "', pro_comp='" + Int32.Parse(PRO_C_ID.Text) + "', pro_cat='" + Int32.Parse(PRO_TXT.Text) + "', pro_price='" + PRICE_TXT.Text + "', pro_manuf_date='" + MANU_DATE.Text.ToString() + "', pro_exp_date='" + EXP_DATE.Text.ToString() + "', quantity='" + QUANTITY_TXT.Text + "' where pro_id='" + ID_TXT.Text.ToString() + "'";
+                    string query = "update Customer set cust_name='" + NAME_TXT.Text + "', cust_gender='" + GENDER.Text + "', cust_age='" + AGE_TXT.Text + "', cust_address='" + ADDRESS_TXT.Text + "',cust_email'" + EMAIL_TXT.Text + "',cust_pass='" + PASS_TXT.Text + "' where pro_id='" + ID_TXT.Text.ToString() + "'";
+                    //  string query = "update product set pro_name='" + NAME_TXT.Text + "', pro_comp='" + Int32.Parse(PRO_C_ID.Text) + "', pro_cat='" + Int32.Parse(PRO_TXT.Text) + "', pro_price='" + PRICE_TXT.Text + "', pro_manuf_date='" + MANU_DATE.Text.ToString() + "', pro_exp_date='" + EXP_DATE.Text.ToString() + "', quantity='" + QUANTITY_TXT.Text + "' where pro_id='" + ID_TXT.Text.ToString() + "'";
+                    SqlCommand cmd = new SqlCommand(query, con);
+                    cmd.CommandText = query;
+
+                    if (cmd.ExecuteNonQuery() > 0)
+                    {
+                        MessageBox.Show("Record Updated !");
+                    }
+
+
                 }
-
-
+            }
+            catch(Exception Ex)
+            {
+                MessageBox.Show(Ex.ToString());
             }
         }
     }

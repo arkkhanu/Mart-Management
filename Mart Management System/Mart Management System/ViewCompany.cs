@@ -26,18 +26,25 @@ namespace Mart_Management_System
             SqlDataAdapter sda;
             DataTable dt = new DataTable();
             // System.Data.DataSet ds = new System.Data.DataSet();
-            using (SqlConnection con = new SqlConnection(cs))
+            try
             {
-                con.Open();
-                sda = new SqlDataAdapter("select * from Company where comp_id=@comp", con);
-                sda.SelectCommand.Parameters.AddWithValue("@comp", txt_id.Value);
-                sda.Fill(dt);
-                if (dt.Rows.Count > 0)
-                    COMPANY_VIEW.DataSource = dt;
-                else
-                    MessageBox.Show("No Company Found !");
+                using (SqlConnection con = new SqlConnection(cs))
+                {
+                    con.Open();
+                    sda = new SqlDataAdapter("select * from Company where comp_id=@comp", con);
+                    sda.SelectCommand.Parameters.AddWithValue("@comp", txt_id.Value);
+                    sda.Fill(dt);
+                    if (dt.Rows.Count > 0)
+                        COMPANY_VIEW.DataSource = dt;
+                    else
+                        MessageBox.Show("No Company Found !");
 
 
+                }
+            }
+            catch(Exception Ex)
+            {
+                MessageBox.Show(Ex.ToString());
             }
         }
 

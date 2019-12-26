@@ -42,6 +42,7 @@
             this.ID = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.ID_TXT = new System.Windows.Forms.TextBox();
+            this.Name_lbl = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.COMPANY_BOX)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BACK_BOX)).BeginInit();
@@ -142,6 +143,7 @@
             this.NAME_TXT.Name = "NAME_TXT";
             this.NAME_TXT.Size = new System.Drawing.Size(172, 20);
             this.NAME_TXT.TabIndex = 19;
+            this.NAME_TXT.KeyUp += new System.Windows.Forms.KeyEventHandler(this.validatename);
             // 
             // PASSWORD
             // 
@@ -168,23 +170,33 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.Name_lbl);
             this.groupBox1.Controls.Add(this.ID_TXT);
             this.groupBox1.Controls.Add(this.ID);
             this.groupBox1.Controls.Add(this.PASSWORD);
             this.groupBox1.Controls.Add(this.NAME_TXT);
             this.groupBox1.Location = new System.Drawing.Point(22, 156);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(284, 140);
+            this.groupBox1.Size = new System.Drawing.Size(390, 140);
             this.groupBox1.TabIndex = 50;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Update_box";
             // 
             // ID_TXT
             // 
+            this.ID_TXT.Enabled = false;
             this.ID_TXT.Location = new System.Drawing.Point(106, 30);
             this.ID_TXT.Name = "ID_TXT";
             this.ID_TXT.Size = new System.Drawing.Size(172, 20);
             this.ID_TXT.TabIndex = 20;
+            // 
+            // Name_lbl
+            // 
+            this.Name_lbl.AutoSize = true;
+            this.Name_lbl.Location = new System.Drawing.Point(313, 83);
+            this.Name_lbl.Name = "Name_lbl";
+            this.Name_lbl.Size = new System.Drawing.Size(0, 13);
+            this.Name_lbl.TabIndex = 21;
             // 
             // UpdateCompany
             // 
@@ -226,5 +238,6 @@
         private System.Windows.Forms.Label ID;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TextBox ID_TXT;
+        private System.Windows.Forms.Label Name_lbl;
     }
 }

@@ -37,9 +37,10 @@
             this.Show_Data = new System.Windows.Forms.GroupBox();
             this.view_data = new System.Windows.Forms.DataGridView();
             this.Update_Box = new System.Windows.Forms.GroupBox();
+            this.EMAIL_TXT = new System.Windows.Forms.TextBox();
             this.QUAN_LBL = new System.Windows.Forms.Label();
             this.QUANTITY_TXT = new System.Windows.Forms.TextBox();
-            this.EX_LBL = new System.Windows.Forms.Label();
+            this.PASS_LBL = new System.Windows.Forms.Label();
             this.MANU_LBL = new System.Windows.Forms.Label();
             this.ID_TXT = new System.Windows.Forms.TextBox();
             this.ID = new System.Windows.Forms.Label();
@@ -52,7 +53,8 @@
             this.AGE_TXT = new System.Windows.Forms.TextBox();
             this.NAME = new System.Windows.Forms.Label();
             this.UPDATE = new System.Windows.Forms.Button();
-            this.EMAIL_TXT = new System.Windows.Forms.TextBox();
+            this.Name_lbl = new System.Windows.Forms.Label();
+            this.Age_lbl = new System.Windows.Forms.Label();
             this.PASS_TXT = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CATEGORY_BOX)).BeginInit();
@@ -71,7 +73,7 @@
             this.panel1.Controls.Add(this.BACK_BOX);
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1000, 127);
+            this.panel1.Size = new System.Drawing.Size(1124, 127);
             this.panel1.TabIndex = 3;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint_1);
             // 
@@ -100,7 +102,7 @@
             // 
             this.CATEGORY_BOX.BackColor = System.Drawing.SystemColors.Control;
             this.CATEGORY_BOX.Image = ((System.Drawing.Image)(resources.GetObject("CATEGORY_BOX.Image")));
-            this.CATEGORY_BOX.Location = new System.Drawing.Point(841, 25);
+            this.CATEGORY_BOX.Location = new System.Drawing.Point(969, 25);
             this.CATEGORY_BOX.Name = "CATEGORY_BOX";
             this.CATEGORY_BOX.Size = new System.Drawing.Size(127, 70);
             this.CATEGORY_BOX.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -122,7 +124,7 @@
             // Show_Data
             // 
             this.Show_Data.Controls.Add(this.view_data);
-            this.Show_Data.Location = new System.Drawing.Point(380, 192);
+            this.Show_Data.Location = new System.Drawing.Point(492, 189);
             this.Show_Data.Name = "Show_Data";
             this.Show_Data.Size = new System.Drawing.Size(604, 246);
             this.Show_Data.TabIndex = 49;
@@ -132,7 +134,7 @@
             // view_data
             // 
             this.view_data.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.view_data.Location = new System.Drawing.Point(22, 20);
+            this.view_data.Location = new System.Drawing.Point(22, 19);
             this.view_data.Name = "view_data";
             this.view_data.Size = new System.Drawing.Size(576, 212);
             this.view_data.TabIndex = 0;
@@ -141,11 +143,13 @@
             // 
             // Update_Box
             // 
+            this.Update_Box.Controls.Add(this.Age_lbl);
+            this.Update_Box.Controls.Add(this.Name_lbl);
             this.Update_Box.Controls.Add(this.PASS_TXT);
             this.Update_Box.Controls.Add(this.EMAIL_TXT);
             this.Update_Box.Controls.Add(this.QUAN_LBL);
             this.Update_Box.Controls.Add(this.QUANTITY_TXT);
-            this.Update_Box.Controls.Add(this.EX_LBL);
+            this.Update_Box.Controls.Add(this.PASS_LBL);
             this.Update_Box.Controls.Add(this.MANU_LBL);
             this.Update_Box.Controls.Add(this.ID_TXT);
             this.Update_Box.Controls.Add(this.ID);
@@ -159,10 +163,17 @@
             this.Update_Box.Controls.Add(this.NAME);
             this.Update_Box.Location = new System.Drawing.Point(1, 147);
             this.Update_Box.Name = "Update_Box";
-            this.Update_Box.Size = new System.Drawing.Size(373, 471);
+            this.Update_Box.Size = new System.Drawing.Size(473, 471);
             this.Update_Box.TabIndex = 50;
             this.Update_Box.TabStop = false;
             this.Update_Box.Text = "Update";
+            // 
+            // EMAIL_TXT
+            // 
+            this.EMAIL_TXT.Location = new System.Drawing.Point(172, 305);
+            this.EMAIL_TXT.Name = "EMAIL_TXT";
+            this.EMAIL_TXT.Size = new System.Drawing.Size(173, 20);
+            this.EMAIL_TXT.TabIndex = 47;
             // 
             // QUAN_LBL
             // 
@@ -182,16 +193,16 @@
             this.QUANTITY_TXT.Size = new System.Drawing.Size(173, 20);
             this.QUANTITY_TXT.TabIndex = 41;
             // 
-            // EX_LBL
+            // PASS_LBL
             // 
-            this.EX_LBL.AutoSize = true;
-            this.EX_LBL.BackColor = System.Drawing.SystemColors.Control;
-            this.EX_LBL.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EX_LBL.Location = new System.Drawing.Point(7, 359);
-            this.EX_LBL.Name = "EX_LBL";
-            this.EX_LBL.Size = new System.Drawing.Size(89, 13);
-            this.EX_LBL.TabIndex = 31;
-            this.EX_LBL.Text = "EXPIRY DATE";
+            this.PASS_LBL.AutoSize = true;
+            this.PASS_LBL.BackColor = System.Drawing.SystemColors.Control;
+            this.PASS_LBL.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PASS_LBL.Location = new System.Drawing.Point(7, 359);
+            this.PASS_LBL.Name = "PASS_LBL";
+            this.PASS_LBL.Size = new System.Drawing.Size(78, 13);
+            this.PASS_LBL.TabIndex = 31;
+            this.PASS_LBL.Text = "PASSWORD\r\n";
             // 
             // MANU_LBL
             // 
@@ -230,6 +241,7 @@
             this.NAME_TXT.Name = "NAME_TXT";
             this.NAME_TXT.Size = new System.Drawing.Size(173, 20);
             this.NAME_TXT.TabIndex = 29;
+            this.NAME_TXT.KeyUp += new System.Windows.Forms.KeyEventHandler(this.validatename);
             // 
             // ADDRESS_TXT
             // 
@@ -286,6 +298,7 @@
             this.AGE_TXT.Name = "AGE_TXT";
             this.AGE_TXT.Size = new System.Drawing.Size(173, 20);
             this.AGE_TXT.TabIndex = 39;
+            this.AGE_TXT.KeyUp += new System.Windows.Forms.KeyEventHandler(this.validateage);
             // 
             // NAME
             // 
@@ -309,12 +322,21 @@
             this.UPDATE.UseVisualStyleBackColor = true;
             this.UPDATE.Click += new System.EventHandler(this.UPDATE_Click);
             // 
-            // EMAIL_TXT
+            // Name_lbl
             // 
-            this.EMAIL_TXT.Location = new System.Drawing.Point(172, 305);
-            this.EMAIL_TXT.Name = "EMAIL_TXT";
-            this.EMAIL_TXT.Size = new System.Drawing.Size(173, 20);
-            this.EMAIL_TXT.TabIndex = 47;
+            this.Name_lbl.AutoSize = true;
+            this.Name_lbl.Location = new System.Drawing.Point(371, 93);
+            this.Name_lbl.Name = "Name_lbl";
+            this.Name_lbl.Size = new System.Drawing.Size(0, 13);
+            this.Name_lbl.TabIndex = 49;
+            // 
+            // Age_lbl
+            // 
+            this.Age_lbl.AutoSize = true;
+            this.Age_lbl.Location = new System.Drawing.Point(371, 203);
+            this.Age_lbl.Name = "Age_lbl";
+            this.Age_lbl.Size = new System.Drawing.Size(0, 13);
+            this.Age_lbl.TabIndex = 50;
             // 
             // PASS_TXT
             // 
@@ -328,7 +350,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.ClientSize = new System.Drawing.Size(996, 569);
+            this.ClientSize = new System.Drawing.Size(1123, 569);
             this.Controls.Add(this.UPDATE);
             this.Controls.Add(this.Update_Box);
             this.Controls.Add(this.Show_Data);
@@ -360,7 +382,7 @@
         private System.Windows.Forms.GroupBox Update_Box;
         private System.Windows.Forms.Label QUAN_LBL;
         private System.Windows.Forms.TextBox QUANTITY_TXT;
-        private System.Windows.Forms.Label EX_LBL;
+        private System.Windows.Forms.Label PASS_LBL;
         private System.Windows.Forms.Label MANU_LBL;
         private System.Windows.Forms.TextBox ID_TXT;
         private System.Windows.Forms.Label ID;
@@ -373,7 +395,9 @@
         private System.Windows.Forms.TextBox AGE_TXT;
         private System.Windows.Forms.Label NAME;
         private System.Windows.Forms.Button UPDATE;
-        private System.Windows.Forms.TextBox PASS_TXT;
         private System.Windows.Forms.TextBox EMAIL_TXT;
+        private System.Windows.Forms.Label Age_lbl;
+        private System.Windows.Forms.Label Name_lbl;
+        private System.Windows.Forms.TextBox PASS_TXT;
     }
 }

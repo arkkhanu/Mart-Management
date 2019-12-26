@@ -40,6 +40,7 @@
             this.UPDATE = new System.Windows.Forms.Button();
             this.cat_data = new System.Windows.Forms.DataGridView();
             this.ID_TXT = new System.Windows.Forms.TextBox();
+            this.Name_lbl = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CATEGORY_BOX)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BACK_BOX)).BeginInit();
@@ -55,7 +56,7 @@
             this.panel1.Controls.Add(this.BACK_BOX);
             this.panel1.Location = new System.Drawing.Point(1, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(802, 127);
+            this.panel1.Size = new System.Drawing.Size(983, 127);
             this.panel1.TabIndex = 2;
             // 
             // SIGN_LBL
@@ -83,7 +84,7 @@
             // 
             this.CATEGORY_BOX.BackColor = System.Drawing.SystemColors.Control;
             this.CATEGORY_BOX.Image = ((System.Drawing.Image)(resources.GetObject("CATEGORY_BOX.Image")));
-            this.CATEGORY_BOX.Location = new System.Drawing.Point(606, 34);
+            this.CATEGORY_BOX.Location = new System.Drawing.Point(812, 25);
             this.CATEGORY_BOX.Name = "CATEGORY_BOX";
             this.CATEGORY_BOX.Size = new System.Drawing.Size(127, 70);
             this.CATEGORY_BOX.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -130,6 +131,7 @@
             this.NAME_TXT.Name = "NAME_TXT";
             this.NAME_TXT.Size = new System.Drawing.Size(173, 20);
             this.NAME_TXT.TabIndex = 18;
+            this.NAME_TXT.KeyUp += new System.Windows.Forms.KeyEventHandler(this.validatename);
             // 
             // UPDATE
             // 
@@ -145,7 +147,7 @@
             // cat_data
             // 
             this.cat_data.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.cat_data.Location = new System.Drawing.Point(393, 174);
+            this.cat_data.Location = new System.Drawing.Point(567, 168);
             this.cat_data.Name = "cat_data";
             this.cat_data.Size = new System.Drawing.Size(383, 150);
             this.cat_data.TabIndex = 26;
@@ -153,17 +155,27 @@
             // 
             // ID_TXT
             // 
+            this.ID_TXT.Enabled = false;
             this.ID_TXT.Location = new System.Drawing.Point(138, 187);
             this.ID_TXT.Name = "ID_TXT";
             this.ID_TXT.Size = new System.Drawing.Size(173, 20);
             this.ID_TXT.TabIndex = 27;
+            // 
+            // Name_lbl
+            // 
+            this.Name_lbl.AutoSize = true;
+            this.Name_lbl.Location = new System.Drawing.Point(347, 241);
+            this.Name_lbl.Name = "Name_lbl";
+            this.Name_lbl.Size = new System.Drawing.Size(0, 13);
+            this.Name_lbl.TabIndex = 28;
             // 
             // UpdateCategory
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(987, 450);
+            this.Controls.Add(this.Name_lbl);
             this.Controls.Add(this.ID_TXT);
             this.Controls.Add(this.cat_data);
             this.Controls.Add(this.UPDATE);
@@ -197,5 +209,6 @@
         private System.Windows.Forms.Button UPDATE;
         private System.Windows.Forms.DataGridView cat_data;
         private System.Windows.Forms.TextBox ID_TXT;
+        private System.Windows.Forms.Label Name_lbl;
     }
 }

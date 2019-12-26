@@ -55,19 +55,26 @@ namespace Mart_Management_System
 
         private void DELETE_Click(object sender, EventArgs e)
         {
-            using (SqlConnection con = new SqlConnection(cs))
+            try
             {
-                string query = "delete Category where cat_id=@cat_id";
-                con.Open();
-                SqlDataAdapter adp = new SqlDataAdapter(query, con);
+                using (SqlConnection con = new SqlConnection(cs))
+                {
+                    string query = "delete Category where cat_id=@cat_id";
+                    con.Open();
+                    SqlDataAdapter adp = new SqlDataAdapter(query, con);
 
-                adp.DeleteCommand = con.CreateCommand();
-                adp.DeleteCommand.CommandText = query;
-                adp.DeleteCommand.Parameters.AddWithValue("@cat_id", CATEGORY_COMBO.SelectedItem.ToString());
-                adp.DeleteCommand.ExecuteNonQuery();
-                MessageBox.Show("Record Deleted !");
+                    adp.DeleteCommand = con.CreateCommand();
+                    adp.DeleteCommand.CommandText = query;
+                    adp.DeleteCommand.Parameters.AddWithValue("@cat_id", CATEGORY_COMBO.SelectedItem.ToString());
+                    adp.DeleteCommand.ExecuteNonQuery();
+                    MessageBox.Show("Record Deleted !");
+                }
+                loadCat();
             }
-            loadCat();
+            catch (Exception Ex)
+            {
+                MessageBox.Show("Please Select Category to Delete");
+            }
         }
     }
 }

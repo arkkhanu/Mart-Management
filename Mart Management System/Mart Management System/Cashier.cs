@@ -108,7 +108,7 @@ namespace Mart_Management_System
             PRO_TXT.Text = "";
             PRICE_TXT.Text = "";
             CASHIER_NAME.Text = "";
-            DATE_TXT.Text = "";
+            MANU_DATE.Text = "";
             CASH_Combo.SelectedIndex = -1;
             CUSTOM_COMBO.SelectedIndex = -1;
             
@@ -140,7 +140,7 @@ namespace Mart_Management_System
             da.InsertCommand.Parameters.AddWithValue("@proname",PRO_TXT.Text);
             da.InsertCommand.Parameters.AddWithValue("@price", PRICE_TXT.Text);
             da.InsertCommand.Parameters.AddWithValue("@quan", QUANTITY_TXT.Text);
-            da.InsertCommand.Parameters.AddWithValue("@date", DATE_TXT.Text);
+            da.InsertCommand.Parameters.AddWithValue("@date", MANU_DATE.Text.ToString());
             da.InsertCommand.Parameters.AddWithValue("@trasid", TRAN_TXT.Text);
             da.InsertCommand.CommandType = CommandType.StoredProcedure;
             try

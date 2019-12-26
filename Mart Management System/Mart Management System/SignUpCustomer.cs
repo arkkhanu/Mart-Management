@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.Configuration;
-using System.Net.Mail;
+
 using System.Text.RegularExpressions;
 
 namespace Mart_Management_System
@@ -22,19 +22,7 @@ namespace Mart_Management_System
         {
             InitializeComponent();
         }
-        public bool IsValid(string emailaddress)
-        {
-            try
-            {
-                MailAddress m = new MailAddress(emailaddress);
-
-                return true;
-            }
-            catch (FormatException)
-            {
-                return false;
-            }
-        }
+    
       
         private void BACK_BOX_Click(object sender, EventArgs e)
         {

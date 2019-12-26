@@ -9,11 +9,13 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.Configuration;
+using System.Text.RegularExpressions;
 
 namespace Mart_Management_System
 {
     public partial class UpdateCompany : Form
     {
+        bool cname;
         string cs = ConfigurationManager.ConnectionStrings["myCon"].ConnectionString;
         public UpdateCompany()
         {
@@ -36,6 +38,31 @@ namespace Mart_Management_System
 
 
         }
+        public void Regexp(string re, TextBox tb, Label lbl, string s)
+        {
+            Regex regex = new Regex(re);
+
+            if (regex.IsMatch(tb.Text))
+            {
+
+                lbl.ForeColor = Color.Green;
+                if (s == "Name ")
+                    cname = true;
+
+
+                lbl.Visible = false;
+
+            }
+            else
+            {
+
+                lbl.ForeColor = Color.Red;
+                lbl.Visible = true;
+                lbl.Text = s + " Invalid";
+
+            }
+        }
+
 
         private void UpdateCompany_Load(object sender, EventArgs e)
         {
@@ -44,20 +71,27 @@ namespace Mart_Management_System
 
         private void AddData()
         {
-            using (SqlConnection con = new SqlConnection(cs))
+            try
             {
-                con.Open();
-                
-                string query = "update Company set comp_name='" + NAME_TXT.Text + "' where comp_id='"+ID_TXT.Text.ToString()+"'";
-                SqlCommand cmd = new SqlCommand(query, con);
-                cmd.CommandText = query;
-
-                if (cmd.ExecuteNonQuery() > 0)
+                using (SqlConnection con = new SqlConnection(cs))
                 {
-                    MessageBox.Show("Record Updated !");
+                    con.Open();
+
+                    string query = "update Company set comp_name='" + NAME_TXT.Text + "' where comp_id='" + ID_TXT.Text.ToString() + "'";
+                    SqlCommand cmd = new SqlCommand(query, con);
+                    cmd.CommandText = query;
+
+                    if (cmd.ExecuteNonQuery() > 0)
+                    {
+                        MessageBox.Show("Record Updated !");
+                    }
+
+
                 }
-
-
+            }
+            catch (Exception Ex)
+            {
+                MessageBox.Show("Please Fill the form Correctly");
             }
         }
 
@@ -81,6 +115,11 @@ namespace Mart_Management_System
                 ID_TXT.Text = View_Company.SelectedRows[0].Cells[0].Value.ToString();
                 NAME_TXT.Text = View_Company.SelectedRows[0].Cells[1].Value.ToString();
             }
+        }
+
+        private void validatename(object sender, KeyEventArgs e)
+        {
+            Regexp(@"^[a-zA-Z\s]+$", NAME_TXT, Name_lbl, "Name ");
         }
     }
 }

@@ -47,19 +47,27 @@ namespace Mart_Management_System
 
         private void DELETE_Click(object sender, EventArgs e)
         {
-            using (SqlConnection con = new SqlConnection(cs))
-            {
-                string query = "delete Customer where cust_id=@cust_id";
-                con.Open();
-                SqlDataAdapter adp = new SqlDataAdapter(query, con);
 
-                adp.DeleteCommand = con.CreateCommand();
-                adp.DeleteCommand.CommandText = query;
-                adp.DeleteCommand.Parameters.AddWithValue("@cust_id", CUSTOMER_COMBO.SelectedItem.ToString());
-                adp.DeleteCommand.ExecuteNonQuery();
-                MessageBox.Show("Record Deleted !");
+            try
+            {
+                using (SqlConnection con = new SqlConnection(cs))
+                {
+                    string query = "delete Customer where cust_id=@cust_id";
+                    con.Open();
+                    SqlDataAdapter adp = new SqlDataAdapter(query, con);
+
+                    adp.DeleteCommand = con.CreateCommand();
+                    adp.DeleteCommand.CommandText = query;
+                    adp.DeleteCommand.Parameters.AddWithValue("@cust_id", CUSTOMER_COMBO.SelectedItem.ToString());
+                    adp.DeleteCommand.ExecuteNonQuery();
+                    MessageBox.Show("Record Deleted !");
+                }
+                loadCust();
             }
-            loadCust();
+            catch
+            {
+                MessageBox.Show("Please Select Customer ID to Delete");
+            }
         }
 
         private void BACK_BOX_Click(object sender, EventArgs e)

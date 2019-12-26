@@ -9,21 +9,51 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.Configuration;
-
+using System.Text.RegularExpressions;
 namespace Mart_Management_System
 {
     public partial class UpdateCategory : Form
     {
+        bool cname;
         string cs = ConfigurationManager.ConnectionStrings["myCon"].ConnectionString;
         public UpdateCategory()
         {
             InitializeComponent();
         }
 
+        public void Regexp(string re, TextBox tb, Label lbl, string s)
+        {
+            Regex regex = new Regex(re);
+
+            if (regex.IsMatch(tb.Text))
+            {
+
+                lbl.ForeColor = Color.Green;
+                if (s == "Name ")
+                    cname = true;
+
+
+                lbl.Visible = false;
+
+            }
+            else
+            {
+
+                lbl.ForeColor = Color.Red;
+                lbl.Visible = true;
+                lbl.Text = s + " Invalid";
+
+            }
+        }
         private void UPDATE_Click(object sender, EventArgs e)
         {
-            AddData();
-            LoadData();
+            if (NAME_TXT.Text != "")
+            {
+                AddData();
+                LoadData();
+            }
+            else
+                MessageBox.Show("Please Fill the Form Correctly");
         }
 
         private void UpdateCategory_Load(object sender, EventArgs e)
@@ -53,16 +83,23 @@ namespace Mart_Management_System
             SqlDataAdapter sda;
             DataTable dt = new DataTable();
             // System.Data.DataSet ds = new System.Data.DataSet();
-            using (SqlConnection con = new SqlConnection(cs))
+            try
             {
-                con.Open();
-                sda = new SqlDataAdapter("select * from Category", con);
-                sda.Fill(dt);
-                cat_data.DataSource = dt;
+                using (SqlConnection con = new SqlConnection(cs))
+                {
+                    con.Open();
+                    sda = new SqlDataAdapter("select * from Category", con);
+                    sda.Fill(dt);
+                    cat_data.DataSource = dt;
 
 
+                }
             }
-        }
+            catch (Exception Ex)
+            {
+                MessageBox.Show(Ex.ToString());
+            }
+         }
 
         private void cat_data_CellClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -72,6 +109,11 @@ namespace Mart_Management_System
                 NAME_TXT.Text = cat_data.SelectedRows[0].Cells[1].Value.ToString();
                
             }
+        }
+
+        private void validatename(object sender, KeyEventArgs e)
+        {
+            Regexp(@"^[a-zA-Z\s]+$", NAME_TXT, Name_lbl, "Name ");
         }
     }
 }

@@ -54,19 +54,26 @@ namespace Mart_Management_System
 
         private void DELETE_Click(object sender, EventArgs e)
         {
-            using (SqlConnection con = new SqlConnection(cs))
+            try
             {
-                string query = "delete Cashier where cashier_id=@cashier_id";
-                con.Open();
-                SqlDataAdapter adp = new SqlDataAdapter(query, con);
+                using (SqlConnection con = new SqlConnection(cs))
+                {
+                    string query = "delete Cashier where cashier_id=@cashier_id";
+                    con.Open();
+                    SqlDataAdapter adp = new SqlDataAdapter(query, con);
 
-                adp.DeleteCommand = con.CreateCommand();
-                adp.DeleteCommand.CommandText = query;
-                adp.DeleteCommand.Parameters.AddWithValue("@cashier_id", CASHIER_COMBO.SelectedItem.ToString());
-                adp.DeleteCommand.ExecuteNonQuery();
-                MessageBox.Show("Record Deleted !");
+                    adp.DeleteCommand = con.CreateCommand();
+                    adp.DeleteCommand.CommandText = query;
+                    adp.DeleteCommand.Parameters.AddWithValue("@cashier_id", CASHIER_COMBO.SelectedItem.ToString());
+                    adp.DeleteCommand.ExecuteNonQuery();
+                    MessageBox.Show("Record Deleted !");
+                }
+                loadCash();
             }
-            loadCash();
+            catch (Exception Ex)
+            {
+                MessageBox.Show("Please Select Cashier Id to Delete");
+            }
         }
     }
 }

@@ -77,7 +77,7 @@ namespace Mart_Management_System
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (cname)
+            if (NAME_TXT.Text != "" && SALARY_TXT.Text != "" && PASSWORD_TXT.Text != "") 
             {
                 AddData();
                 loaddata();

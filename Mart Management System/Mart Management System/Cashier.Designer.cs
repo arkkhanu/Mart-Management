@@ -41,7 +41,6 @@
             this.CUSTOM_COMBO = new System.Windows.Forms.ComboBox();
             this.CASHIER_NAME = new System.Windows.Forms.TextBox();
             this.DATE_LBL = new System.Windows.Forms.Label();
-            this.DATE_TXT = new System.Windows.Forms.TextBox();
             this.TRAN_LBL = new System.Windows.Forms.Label();
             this.TRAN_TXT = new System.Windows.Forms.TextBox();
             this.PRODUCTNAME = new System.Windows.Forms.Label();
@@ -53,6 +52,7 @@
             this.CASHIER_VIEW = new System.Windows.Forms.DataGridView();
             this.SUBMIT_BTN = new System.Windows.Forms.Button();
             this.CLEAR_BTN = new System.Windows.Forms.Button();
+            this.MANU_DATE = new System.Windows.Forms.DateTimePicker();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CASHIER_BOX)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BACK_BOX)).BeginInit();
@@ -186,13 +186,6 @@
             this.DATE_LBL.TabIndex = 37;
             this.DATE_LBL.Text = "DATE";
             // 
-            // DATE_TXT
-            // 
-            this.DATE_TXT.Location = new System.Drawing.Point(158, 215);
-            this.DATE_TXT.Name = "DATE_TXT";
-            this.DATE_TXT.Size = new System.Drawing.Size(173, 20);
-            this.DATE_TXT.TabIndex = 38;
-            // 
             // TRAN_LBL
             // 
             this.TRAN_LBL.AutoSize = true;
@@ -305,12 +298,22 @@
             this.CLEAR_BTN.UseVisualStyleBackColor = true;
             this.CLEAR_BTN.Click += new System.EventHandler(this.CLEAR_BTN_Click);
             // 
+            // MANU_DATE
+            // 
+            this.MANU_DATE.CustomFormat = "dd-MM-yyyy";
+            this.MANU_DATE.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.MANU_DATE.Location = new System.Drawing.Point(158, 216);
+            this.MANU_DATE.Name = "MANU_DATE";
+            this.MANU_DATE.Size = new System.Drawing.Size(173, 20);
+            this.MANU_DATE.TabIndex = 56;
+            // 
             // Cashier
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ClientSize = new System.Drawing.Size(805, 528);
+            this.Controls.Add(this.MANU_DATE);
             this.Controls.Add(this.CLEAR_BTN);
             this.Controls.Add(this.SUBMIT_BTN);
             this.Controls.Add(this.CASHIER_VIEW);
@@ -322,7 +325,6 @@
             this.Controls.Add(this.PRODUCTNAME);
             this.Controls.Add(this.TRAN_TXT);
             this.Controls.Add(this.TRAN_LBL);
-            this.Controls.Add(this.DATE_TXT);
             this.Controls.Add(this.DATE_LBL);
             this.Controls.Add(this.CASHIER_NAME);
             this.Controls.Add(this.CUSTOM_COMBO);
@@ -359,7 +361,6 @@
         private System.Windows.Forms.ComboBox CUSTOM_COMBO;
         private System.Windows.Forms.TextBox CASHIER_NAME;
         private System.Windows.Forms.Label DATE_LBL;
-        private System.Windows.Forms.TextBox DATE_TXT;
         private System.Windows.Forms.Label TRAN_LBL;
         private System.Windows.Forms.TextBox TRAN_TXT;
         private System.Windows.Forms.Label PRODUCTNAME;
@@ -371,5 +372,6 @@
         private System.Windows.Forms.DataGridView CASHIER_VIEW;
         private System.Windows.Forms.Button SUBMIT_BTN;
         private System.Windows.Forms.Button CLEAR_BTN;
+        private System.Windows.Forms.DateTimePicker MANU_DATE;
     }
 }

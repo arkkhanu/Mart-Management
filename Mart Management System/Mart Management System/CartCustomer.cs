@@ -74,7 +74,7 @@ namespace Mart_Management_System
                 comp_combo.Items.Add(rdr["comp_name"].ToString());
                 while (rdr.Read())
                 {
-                   comp_combo.Items.Add(rdr["comp_name"].ToString());
+                    comp_combo.Items.Add(rdr["comp_name"].ToString());
                 }
             }
 
@@ -82,7 +82,7 @@ namespace Mart_Management_System
 
         private void btn_go_Click(object sender, EventArgs e)
         {
-            int cat=-1,comp=-1;
+            int cat = -1, comp = -1;
 
             if (cat_combo.SelectedIndex > -1 && comp_combo.SelectedIndex > -1)
             {
@@ -132,8 +132,8 @@ namespace Mart_Management_System
                     {
                         foreach (DataRow item in ds.Tables[0].Rows)
                         {
-                            pro_list.Items.Add(item["pro_name"].ToString() +" Rs."+ item["pro_price"]);
-                           
+                            pro_list.Items.Add(item["pro_name"].ToString() + " Rs." + item["pro_price"]);
+
                         }
                     }
                     else
@@ -155,51 +155,59 @@ namespace Mart_Management_System
 
         private void btn_addPro_Click(object sender, EventArgs e)
         {
-           using(SqlConnection con=new SqlConnection(cs))
-           {
-              
-               foreach(object item in pro_list.CheckedItems)
-               {
-                   DataSet ds = new DataSet();
-                   string query = "select * from Cart where 0=1";
-                   SqlDataAdapter adp = new SqlDataAdapter(query, con);
-                   adp.Fill(ds, "cart");
+            try
+            {
+                using (SqlConnection con = new SqlConnection(cs))
+                {
 
-                   DataRow dr = ds.Tables["cart"].NewRow();
+                    foreach (object item in pro_list.CheckedItems)
+                    {
+                        DataSet ds = new DataSet();
+                        string query = "select * from Cart where 0=1";
+                        SqlDataAdapter adp = new SqlDataAdapter(query, con);
+                        adp.Fill(ds, "cart");
 
-               string product="";
-               int price=0;
-               int quantity=1;
-               
+                        DataRow dr = ds.Tables["cart"].NewRow();
+
+                        string product = "";
+                        int price = 0;
+                        int quantity = 1;
 
 
-               //product contain string i.e only product name i.e string before Rs.
-               product = item.ToString().Substring(0,item.ToString().IndexOf("Rs."));
 
-               //price contain string after the product name
-               price = Int32.Parse(item.ToString().Substring(product.Length + 3)) *quantity;
-              
-               quantity = Int32.Parse(Interaction.InputBox("Enter Quantity of "+ product +" ", "Quantity", "1", -1, -1));
+                        //product contain string i.e only product name i.e string before Rs.
+                        product = item.ToString().Substring(0, item.ToString().IndexOf("Rs."));
 
-              
-               dr["product"] = product;
-               dr["price"] = price;
-               dr["quantity"] = quantity;
-               dr["id"] = id_box.Text.ToString();
-               dr["phone"] = phone_box.Text.ToString();
-               dr["email"] = email_box.Text.ToString();
-             
-               ds.Tables["Cart"].Rows.Add(dr);
-               new SqlCommandBuilder(adp);
-               adp.Update(ds, "Cart");
-                
+                        //price contain string after the product name
+                        price = Int32.Parse(item.ToString().Substring(product.Length + 3)) * quantity;
 
-               }
-               MessageBox.Show("Record Inserted !");
-               clear();
-           }
-           
+                        quantity = Int32.Parse(Interaction.InputBox("Enter Quantity of " + product + " ", "Quantity", "1", -1, -1));
+
+
+                        dr["product"] = product;
+                        dr["price"] = price;
+                        dr["quantity"] = quantity;
+                        dr["id"] = id_box.Text.ToString();
+                        dr["phone"] = phone_box.Text.ToString();
+                        dr["email"] = email_box.Text.ToString();
+
+                        ds.Tables["Cart"].Rows.Add(dr);
+                        new SqlCommandBuilder(adp);
+                        adp.Update(ds, "Cart");
+
+
+                    }
+                    MessageBox.Show("Record Inserted !");
+                    clear();
+
+                }
+
+            }
+            catch (Exception Ex)
+            {
+                MessageBox.Show(Ex.ToString());
+            }
+
         }
-
     }
 }
