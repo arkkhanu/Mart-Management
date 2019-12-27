@@ -164,3 +164,46 @@ F:\University Material\5th Semister\Project\Visual Programing\Git\Mart Managemen
 C:\Users\USER\Desktop\mart\Mart Management System\Mart Management System\obj\Debug\Mart_Management_System.CustomerPortal.resources
 C:\Users\USER\Desktop\mart\Mart Management System\Mart Management System\obj\Debug\Mart_Management_System.CustomersDetails.resources
 C:\Users\USER\Desktop\mart\Mart Management System\Mart Management System\obj\Debug\Mart_Management_System.AddCategory.resources
+C:\Users\arkkhanu\Desktop\Semester 5\C# programing Lab\Project\Mart Management System\Mart Management System\bin\Debug\Mart Management System.exe.config
+C:\Users\arkkhanu\Desktop\Semester 5\C# programing Lab\Project\Mart Management System\Mart Management System\bin\Debug\Mart Management System.exe
+C:\Users\arkkhanu\Desktop\Semester 5\C# programing Lab\Project\Mart Management System\Mart Management System\bin\Debug\Mart Management System.pdb
+C:\Users\arkkhanu\Desktop\Semester 5\C# programing Lab\Project\Mart Management System\Mart Management System\obj\Debug\Mart Management System.csprojAssemblyReference.cache
+C:\Users\arkkhanu\Desktop\Semester 5\C# programing Lab\Project\Mart Management System\Mart Management System\obj\Debug\Mart_Management_System.AddCashier.resources
+C:\Users\arkkhanu\Desktop\Semester 5\C# programing Lab\Project\Mart Management System\Mart Management System\obj\Debug\Mart_Management_System.AddCategory.resources
+C:\Users\arkkhanu\Desktop\Semester 5\C# programing Lab\Project\Mart Management System\Mart Management System\obj\Debug\Mart_Management_System.AddCompany.resources
+C:\Users\arkkhanu\Desktop\Semester 5\C# programing Lab\Project\Mart Management System\Mart Management System\obj\Debug\Mart_Management_System.AddProduct.resources
+C:\Users\arkkhanu\Desktop\Semester 5\C# programing Lab\Project\Mart Management System\Mart Management System\obj\Debug\Mart_Management_System.Admin.resources
+C:\Users\arkkhanu\Desktop\Semester 5\C# programing Lab\Project\Mart Management System\Mart Management System\obj\Debug\Mart_Management_System.CartCustomer.resources
+C:\Users\arkkhanu\Desktop\Semester 5\C# programing Lab\Project\Mart Management System\Mart Management System\obj\Debug\Mart_Management_System.Cashier.resources
+C:\Users\arkkhanu\Desktop\Semester 5\C# programing Lab\Project\Mart Management System\Mart Management System\obj\Debug\Mart_Management_System.CashierOperations.resources
+C:\Users\arkkhanu\Desktop\Semester 5\C# programing Lab\Project\Mart Management System\Mart Management System\obj\Debug\Mart_Management_System.CategoryOperations.resources
+C:\Users\arkkhanu\Desktop\Semester 5\C# programing Lab\Project\Mart Management System\Mart Management System\obj\Debug\Mart_Management_System.CompanyOpearations.resources
+C:\Users\arkkhanu\Desktop\Semester 5\C# programing Lab\Project\Mart Management System\Mart Management System\obj\Debug\Mart_Management_System.CustomerOperations.resources
+C:\Users\arkkhanu\Desktop\Semester 5\C# programing Lab\Project\Mart Management System\Mart Management System\obj\Debug\Mart_Management_System.CustomerPortal.resources
+C:\Users\arkkhanu\Desktop\Semester 5\C# programing Lab\Project\Mart Management System\Mart Management System\obj\Debug\Mart_Management_System.CustomersDetails.resources
+C:\Users\arkkhanu\Desktop\Semester 5\C# programing Lab\Project\Mart Management System\Mart Management System\obj\Debug\Mart_Management_System.CustomerView.resources
+C:\Users\arkkhanu\Desktop\Semester 5\C# programing Lab\Project\Mart Management System\Mart Management System\obj\Debug\Mart_Management_System.DeleteCashier.resources
+C:\Users\arkkhanu\Desktop\Semester 5\C# programing Lab\Project\Mart Management System\Mart Management System\obj\Debug\Mart_Management_System.DeleteCategory.resources
+C:\Users\arkkhanu\Desktop\Semester 5\C# programing Lab\Project\Mart Management System\Mart Management System\obj\Debug\Mart_Management_System.DeleteCompany.resources
+C:\Users\arkkhanu\Desktop\Semester 5\C# programing Lab\Project\Mart Management System\Mart Management System\obj\Debug\Mart_Management_System.DeleteCustomer.resources
+C:\Users\arkkhanu\Desktop\Semester 5\C# programing Lab\Project\Mart Management System\Mart Management System\obj\Debug\Mart_Management_System.DeleteProduct.resources
+C:\Users\arkkhanu\Desktop\Semester 5\C# programing Lab\Project\Mart Management System\Mart Management System\obj\Debug\Mart_Management_System.LoginAdmin.resources
+C:\Users\arkkhanu\Desktop\Semester 5\C# programing Lab\Project\Mart Management System\Mart Management System\obj\Debug\Mart_Management_System.LoginCashier.resources
+C:\Users\arkkhanu\Desktop\Semester 5\C# programing Lab\Project\Mart Management System\Mart Management System\obj\Debug\Mart_Management_System.LoginCustomer.resources
+C:\Users\arkkhanu\Desktop\Semester 5\C# programing Lab\Project\Mart Management System\Mart Management System\obj\Debug\Mart_Management_System.LoginForm.resources
+C:\Users\arkkhanu\Desktop\Semester 5\C# programing Lab\Project\Mart Management System\Mart Management System\obj\Debug\Mart_Management_System.ProductOperations.resources
+C:\Users\arkkhanu\Desktop\Semester 5\C# programing Lab\Project\Mart Management System\Mart Management System\obj\Debug\Mart_Management_System.Properties.Resources.resources
+C:\Users\arkkhanu\Desktop\Semester 5\C# programing Lab\Project\Mart Management System\Mart Management System\obj\Debug\Mart_Management_System.UpdateCashier.resources
+C:\Users\arkkhanu\Desktop\Semester 5\C# programing Lab\Project\Mart Management System\Mart Management System\obj\Debug\Mart_Management_System.UpdateCategory.resources
+C:\Users\arkkhanu\Desktop\Semester 5\C# programing Lab\Project\Mart Management System\Mart Management System\obj\Debug\Mart_Management_System.UpdateCompany.resources
+C:\Users\arkkhanu\Desktop\Semester 5\C# programing Lab\Project\Mart Management System\Mart Management System\obj\Debug\Mart_Management_System.UpdateCustomer.resources
+C:\Users\arkkhanu\Desktop\Semester 5\C# programing Lab\Project\Mart Management System\Mart Management System\obj\Debug\Mart_Management_System.UpdateProduct.resources
+C:\Users\arkkhanu\Desktop\Semester 5\C# programing Lab\Project\Mart Management System\Mart Management System\obj\Debug\Mart_Management_System.SignUpCustomer.resources
+C:\Users\arkkhanu\Desktop\Semester 5\C# programing Lab\Project\Mart Management System\Mart Management System\obj\Debug\Mart_Management_System.TransactionOperation.resources
+C:\Users\arkkhanu\Desktop\Semester 5\C# programing Lab\Project\Mart Management System\Mart Management System\obj\Debug\Mart_Management_System.ViewCashier.resources
+C:\Users\arkkhanu\Desktop\Semester 5\C# programing Lab\Project\Mart Management System\Mart Management System\obj\Debug\Mart_Management_System.ViewCategory.resources
+C:\Users\arkkhanu\Desktop\Semester 5\C# programing Lab\Project\Mart Management System\Mart Management System\obj\Debug\Mart_Management_System.ViewCompany.resources
+C:\Users\arkkhanu\Desktop\Semester 5\C# programing Lab\Project\Mart Management System\Mart Management System\obj\Debug\Mart_Management_System.ViewProduct.resources
+C:\Users\arkkhanu\Desktop\Semester 5\C# programing Lab\Project\Mart Management System\Mart Management System\obj\Debug\Mart Management System.csproj.GenerateResource.cache
+C:\Users\arkkhanu\Desktop\Semester 5\C# programing Lab\Project\Mart Management System\Mart Management System\obj\Debug\Mart Management System.exe
+C:\Users\arkkhanu\Desktop\Semester 5\C# programing Lab\Project\Mart Management System\Mart Management System\obj\Debug\Mart Management System.pdb

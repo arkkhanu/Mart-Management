@@ -56,7 +56,7 @@ namespace Mart_Management_System
 
         private void BACK_BOX_Click(object sender, EventArgs e)
         {
-           CustomerOperations cu = new CustomerOperations();
+           CustomerPortal cu = new CustomerPortal();
             this.Hide();
             cu.Show();
         }
