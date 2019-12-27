@@ -185,7 +185,9 @@
             this.Controls.Add(this.ID);
             this.Controls.Add(this.LOGIN_LBL);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "LoginCustomer";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "LoginCustomer";
             this.Load += new System.EventHandler(this.LoginCustomer_Load);
             this.panel1.ResumeLayout(false);

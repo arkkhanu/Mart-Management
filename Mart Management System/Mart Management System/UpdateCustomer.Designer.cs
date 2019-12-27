@@ -37,6 +37,9 @@
             this.Show_Data = new System.Windows.Forms.GroupBox();
             this.view_data = new System.Windows.Forms.DataGridView();
             this.Update_Box = new System.Windows.Forms.GroupBox();
+            this.Age_lbl = new System.Windows.Forms.Label();
+            this.Name_lbl = new System.Windows.Forms.Label();
+            this.PASS_TXT = new System.Windows.Forms.TextBox();
             this.EMAIL_TXT = new System.Windows.Forms.TextBox();
             this.QUAN_LBL = new System.Windows.Forms.Label();
             this.QUANTITY_TXT = new System.Windows.Forms.TextBox();
@@ -53,9 +56,6 @@
             this.AGE_TXT = new System.Windows.Forms.TextBox();
             this.NAME = new System.Windows.Forms.Label();
             this.UPDATE = new System.Windows.Forms.Button();
-            this.Name_lbl = new System.Windows.Forms.Label();
-            this.Age_lbl = new System.Windows.Forms.Label();
-            this.PASS_TXT = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CATEGORY_BOX)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BACK_BOX)).BeginInit();
@@ -167,6 +167,29 @@
             this.Update_Box.TabIndex = 50;
             this.Update_Box.TabStop = false;
             this.Update_Box.Text = "Update";
+            // 
+            // Age_lbl
+            // 
+            this.Age_lbl.AutoSize = true;
+            this.Age_lbl.Location = new System.Drawing.Point(371, 203);
+            this.Age_lbl.Name = "Age_lbl";
+            this.Age_lbl.Size = new System.Drawing.Size(0, 13);
+            this.Age_lbl.TabIndex = 50;
+            // 
+            // Name_lbl
+            // 
+            this.Name_lbl.AutoSize = true;
+            this.Name_lbl.Location = new System.Drawing.Point(371, 93);
+            this.Name_lbl.Name = "Name_lbl";
+            this.Name_lbl.Size = new System.Drawing.Size(0, 13);
+            this.Name_lbl.TabIndex = 49;
+            // 
+            // PASS_TXT
+            // 
+            this.PASS_TXT.Location = new System.Drawing.Point(172, 359);
+            this.PASS_TXT.Name = "PASS_TXT";
+            this.PASS_TXT.Size = new System.Drawing.Size(173, 20);
+            this.PASS_TXT.TabIndex = 48;
             // 
             // EMAIL_TXT
             // 
@@ -322,29 +345,6 @@
             this.UPDATE.UseVisualStyleBackColor = true;
             this.UPDATE.Click += new System.EventHandler(this.UPDATE_Click);
             // 
-            // Name_lbl
-            // 
-            this.Name_lbl.AutoSize = true;
-            this.Name_lbl.Location = new System.Drawing.Point(371, 93);
-            this.Name_lbl.Name = "Name_lbl";
-            this.Name_lbl.Size = new System.Drawing.Size(0, 13);
-            this.Name_lbl.TabIndex = 49;
-            // 
-            // Age_lbl
-            // 
-            this.Age_lbl.AutoSize = true;
-            this.Age_lbl.Location = new System.Drawing.Point(371, 203);
-            this.Age_lbl.Name = "Age_lbl";
-            this.Age_lbl.Size = new System.Drawing.Size(0, 13);
-            this.Age_lbl.TabIndex = 50;
-            // 
-            // PASS_TXT
-            // 
-            this.PASS_TXT.Location = new System.Drawing.Point(172, 359);
-            this.PASS_TXT.Name = "PASS_TXT";
-            this.PASS_TXT.Size = new System.Drawing.Size(173, 20);
-            this.PASS_TXT.TabIndex = 48;
-            // 
             // UpdateCustomer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -355,7 +355,9 @@
             this.Controls.Add(this.Update_Box);
             this.Controls.Add(this.Show_Data);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "UpdateCustomer";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "UpdateCustomer";
             this.Load += new System.EventHandler(this.UpdateCustomer_Load);
             this.panel1.ResumeLayout(false);

@@ -18,6 +18,7 @@ namespace Mart_Management_System
         public ViewCategory()
         {
             InitializeComponent();
+            this.MaximizeBox = false;
         }
         void loaddata()
         {

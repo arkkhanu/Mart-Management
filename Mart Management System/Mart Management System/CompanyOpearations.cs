@@ -15,6 +15,7 @@ namespace Mart_Management_System
         public CompanyOpearations()
         {
             InitializeComponent();
+            this.MaximizeBox = false;
         }
 
         private void BACK_BOX_Click(object sender, EventArgs e)
@@ -50,6 +51,11 @@ namespace Mart_Management_System
             UpdateCompany co = new UpdateCompany();
             this.Hide();
             co.Show();
+        }
+
+        private void CompanyOpearations_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

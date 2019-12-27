@@ -12,13 +12,15 @@ using System.Configuration;
 using System.Text.RegularExpressions;
 namespace Mart_Management_System
 {
-    public partial class AddCategoru : Form
+    public partial class AddCategory : Form
     {
         bool cname;
         string cs = ConfigurationManager.ConnectionStrings["myCon"].ConnectionString;
-        public AddCategoru()
+        public AddCategory()
         {
             InitializeComponent();
+                this.MaximizeBox = false;
+
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)

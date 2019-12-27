@@ -20,6 +20,7 @@ namespace Mart_Management_System
         public AddCashier()
         {
             InitializeComponent();
+            this.MaximizeBox = false;
         }
         public void Regexp(string re, TextBox tb, Label lbl, string s)
         {

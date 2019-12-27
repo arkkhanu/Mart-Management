@@ -17,6 +17,7 @@ namespace Mart_Management_System
         public TransactionOperation()
         {
             InitializeComponent();
+            this.MaximizeBox = false;
         }
 
         private void TransactionOperation_Load(object sender, EventArgs e)

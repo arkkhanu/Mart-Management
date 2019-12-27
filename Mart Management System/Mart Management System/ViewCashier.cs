@@ -17,6 +17,7 @@ namespace Mart_Management_System
         public ViewCashier()
         {
             InitializeComponent();
+            this.MaximizeBox = false;
         }
         void loaddata()
         {
@@ -54,6 +55,11 @@ namespace Mart_Management_System
         private void btn_search_Click(object sender, EventArgs e)
         {
             loaddata();
+        }
+
+        private void ViewCashier_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

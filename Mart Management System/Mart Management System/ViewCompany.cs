@@ -19,6 +19,7 @@ namespace Mart_Management_System
         public ViewCompany()
         {
             InitializeComponent();
+            this.MaximizeBox = false;
         }
         void loaddata()
         {

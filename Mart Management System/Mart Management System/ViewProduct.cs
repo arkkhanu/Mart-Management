@@ -24,6 +24,7 @@ namespace Mart_Management_System
         public ViewProduct()
         {
             InitializeComponent();
+            this.MaximizeBox = false;
         }
        
         private void panel1_Paint(object sender, PaintEventArgs e)

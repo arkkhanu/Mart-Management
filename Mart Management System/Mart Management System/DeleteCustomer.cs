@@ -17,6 +17,7 @@ namespace Mart_Management_System
         public DeleteCustomer()
         {
             InitializeComponent();
+            this.MaximizeBox = false;
         }
         void loadCust()
         {

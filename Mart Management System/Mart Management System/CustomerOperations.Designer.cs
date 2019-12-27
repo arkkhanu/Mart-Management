@@ -196,7 +196,9 @@
             this.Controls.Add(this.VIEW_BOX);
             this.Controls.Add(this.DELETE_BOX);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "CustomerOperations";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CustomerOperations";
             this.Load += new System.EventHandler(this.CustomerOperations_Load);
             this.panel1.ResumeLayout(false);

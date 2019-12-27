@@ -239,8 +239,11 @@
             this.Controls.Add(this.CASHIER_BOX);
             this.Controls.Add(this.PRODUCT_BOX);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Admin";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Admin";
+            this.Load += new System.EventHandler(this.Admin_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.Log_Out)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Admin_box)).EndInit();

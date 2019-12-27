@@ -141,7 +141,6 @@
             this.ID_TXT.Name = "ID_TXT";
             this.ID_TXT.Size = new System.Drawing.Size(164, 20);
             this.ID_TXT.TabIndex = 6;
-            
             // 
             // PASSWORD_TXT
             // 
@@ -150,7 +149,6 @@
             this.PASSWORD_TXT.Size = new System.Drawing.Size(164, 20);
             this.PASSWORD_TXT.TabIndex = 7;
             this.PASSWORD_TXT.UseSystemPasswordChar = true;
-           
             // 
             // LOGIN
             // 
@@ -177,7 +175,9 @@
             this.Controls.Add(this.LOGIN_LBL);
             this.Controls.Add(this.panel1);
             this.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "LoginAdmin";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "LoginAdmin";
             this.Load += new System.EventHandler(this.LoginAdmin_Load);
             this.panel1.ResumeLayout(false);

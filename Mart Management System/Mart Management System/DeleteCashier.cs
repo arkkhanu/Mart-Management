@@ -18,6 +18,7 @@ namespace Mart_Management_System
         public DeleteCashier()
         {
             InitializeComponent();
+            this.MaximizeBox = false;
         }
         void loadCash()
         {

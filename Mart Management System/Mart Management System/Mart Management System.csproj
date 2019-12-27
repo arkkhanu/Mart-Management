@@ -55,11 +55,11 @@
     <Compile Include="AddCashier.Designer.cs">
       <DependentUpon>AddCashier.cs</DependentUpon>
     </Compile>
-    <Compile Include="AddCategoru.cs">
+    <Compile Include="AddCategory.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AddCategoru.Designer.cs">
-      <DependentUpon>AddCategoru.cs</DependentUpon>
+    <Compile Include="AddCategory.Designer.cs">
+      <DependentUpon>AddCategory.cs</DependentUpon>
     </Compile>
     <Compile Include="AddCompany.cs">
       <SubType>Form</SubType>
@@ -284,8 +284,8 @@
     <EmbeddedResource Include="AddCashier.resx">
       <DependentUpon>AddCashier.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AddCategoru.resx">
-      <DependentUpon>AddCategoru.cs</DependentUpon>
+    <EmbeddedResource Include="AddCategory.resx">
+      <DependentUpon>AddCategory.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AddCompany.resx">
       <DependentUpon>AddCompany.cs</DependentUpon>

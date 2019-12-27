@@ -15,6 +15,7 @@ namespace Mart_Management_System
         public ProductOperations()
         {
             InitializeComponent();
+            this.MaximizeBox = false;
         }
 
         private void ADD_BTN_Click(object sender, EventArgs e)
@@ -63,6 +64,11 @@ namespace Mart_Management_System
         }
 
         private void VIEW_BOX_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ProductOperations_Load(object sender, EventArgs e)
         {
 
         }

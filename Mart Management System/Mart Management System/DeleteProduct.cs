@@ -19,6 +19,7 @@ namespace Mart_Management_System
         public DeleteProduct()
         {
             InitializeComponent();
+            this.MaximizeBox = false;
         }
 
         private void DELETE_Click(object sender, EventArgs e)

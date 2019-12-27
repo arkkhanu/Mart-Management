@@ -165,7 +165,9 @@
             this.Controls.Add(this.txt_id);
             this.Controls.Add(this.ID_LBL);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "CustomersDetails";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CustomersDetails";
             this.Load += new System.EventHandler(this.CustomersDetails_Load);
             this.panel1.ResumeLayout(false);

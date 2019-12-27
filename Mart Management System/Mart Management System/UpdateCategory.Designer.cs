@@ -183,7 +183,9 @@
             this.Controls.Add(this.NAME);
             this.Controls.Add(this.ID);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "UpdateCategory";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SearchUpdateCategory";
             this.Load += new System.EventHandler(this.UpdateCategory_Load);
             this.panel1.ResumeLayout(false);

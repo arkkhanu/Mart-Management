@@ -20,6 +20,7 @@ namespace Mart_Management_System
         public Cashier()
         {
             InitializeComponent();
+            this.MaximizeBox = false;
         }
 
         private void Cashier_Load(object sender, EventArgs e)

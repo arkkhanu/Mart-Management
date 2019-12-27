@@ -20,6 +20,7 @@ namespace Mart_Management_System
         public AddCompany()
         {
             InitializeComponent();
+            this.MaximizeBox = false;
         }
       
         private void NAME_TXT_TextChanged(object sender, EventArgs e)

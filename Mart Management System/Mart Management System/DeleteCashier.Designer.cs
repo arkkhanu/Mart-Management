@@ -150,7 +150,9 @@
             this.Controls.Add(this.DELETE);
             this.Controls.Add(this.ID_LBL);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "DeleteCashier";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "DeleteCashier";
             this.Load += new System.EventHandler(this.DeleteCashier_Load);
             this.panel1.ResumeLayout(false);

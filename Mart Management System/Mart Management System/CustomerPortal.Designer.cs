@@ -170,8 +170,11 @@
             this.Controls.Add(this.AMS_BTN);
             this.Controls.Add(this.panel1);
             this.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "CustomerPortal";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CustomerPortal";
+            this.Load += new System.EventHandler(this.CustomerPortal_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CUSTOMER_BOX)).EndInit();

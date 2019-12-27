@@ -52,15 +52,15 @@
             this.EXP_DATE = new System.Windows.Forms.DateTimePicker();
             this.ID_TXT = new System.Windows.Forms.TextBox();
             this.Update_Box = new System.Windows.Forms.GroupBox();
+            this.pr_lbl = new System.Windows.Forms.Label();
+            this.quantity_lbl = new System.Windows.Forms.Label();
+            this.Name_lbl = new System.Windows.Forms.Label();
             this.price_error_label = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.PRO_BOX = new System.Windows.Forms.PictureBox();
             this.Show_Data = new System.Windows.Forms.GroupBox();
             this.view_data = new System.Windows.Forms.DataGridView();
             this.BRO_BTN = new System.Windows.Forms.Button();
-            this.Name_lbl = new System.Windows.Forms.Label();
-            this.quantity_lbl = new System.Windows.Forms.Label();
-            this.pr_lbl = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PRODUCT_BOX)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BACK_BOX)).BeginInit();
@@ -324,6 +324,30 @@
             this.Update_Box.TabStop = false;
             this.Update_Box.Text = "Update";
             // 
+            // pr_lbl
+            // 
+            this.pr_lbl.AutoSize = true;
+            this.pr_lbl.Location = new System.Drawing.Point(368, 265);
+            this.pr_lbl.Name = "pr_lbl";
+            this.pr_lbl.Size = new System.Drawing.Size(0, 13);
+            this.pr_lbl.TabIndex = 59;
+            // 
+            // quantity_lbl
+            // 
+            this.quantity_lbl.AutoSize = true;
+            this.quantity_lbl.Location = new System.Drawing.Point(368, 427);
+            this.quantity_lbl.Name = "quantity_lbl";
+            this.quantity_lbl.Size = new System.Drawing.Size(0, 13);
+            this.quantity_lbl.TabIndex = 58;
+            // 
+            // Name_lbl
+            // 
+            this.Name_lbl.AutoSize = true;
+            this.Name_lbl.Location = new System.Drawing.Point(368, 93);
+            this.Name_lbl.Name = "Name_lbl";
+            this.Name_lbl.Size = new System.Drawing.Size(0, 13);
+            this.Name_lbl.TabIndex = 57;
+            // 
             // price_error_label
             // 
             this.price_error_label.AutoSize = true;
@@ -380,30 +404,6 @@
             this.BRO_BTN.UseVisualStyleBackColor = true;
             this.BRO_BTN.Click += new System.EventHandler(this.BRO_BTN_Click);
             // 
-            // Name_lbl
-            // 
-            this.Name_lbl.AutoSize = true;
-            this.Name_lbl.Location = new System.Drawing.Point(368, 93);
-            this.Name_lbl.Name = "Name_lbl";
-            this.Name_lbl.Size = new System.Drawing.Size(0, 13);
-            this.Name_lbl.TabIndex = 57;
-            // 
-            // quantity_lbl
-            // 
-            this.quantity_lbl.AutoSize = true;
-            this.quantity_lbl.Location = new System.Drawing.Point(368, 427);
-            this.quantity_lbl.Name = "quantity_lbl";
-            this.quantity_lbl.Size = new System.Drawing.Size(0, 13);
-            this.quantity_lbl.TabIndex = 58;
-            // 
-            // pr_lbl
-            // 
-            this.pr_lbl.AutoSize = true;
-            this.pr_lbl.Location = new System.Drawing.Point(368, 265);
-            this.pr_lbl.Name = "pr_lbl";
-            this.pr_lbl.Size = new System.Drawing.Size(0, 13);
-            this.pr_lbl.TabIndex = 59;
-            // 
             // UpdateProduct
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -415,7 +415,9 @@
             this.Controls.Add(this.Show_Data);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.Update_Box);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "UpdateProduct";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SearchUpdateProduct";
             this.Load += new System.EventHandler(this.UpdateProduct_Load);
             this.panel1.ResumeLayout(false);

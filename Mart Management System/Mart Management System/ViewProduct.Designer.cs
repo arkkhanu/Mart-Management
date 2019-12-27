@@ -167,7 +167,9 @@
             this.Controls.Add(this.btn_search);
             this.Controls.Add(this.View_Product);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "ViewProduct";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ViewProduct";
             this.Load += new System.EventHandler(this.ViewProduct_Load);
             this.panel1.ResumeLayout(false);

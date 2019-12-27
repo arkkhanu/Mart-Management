@@ -164,7 +164,9 @@
             this.Controls.Add(this.lbl_id);
             this.Controls.Add(this.CATEGORY_VIEW);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "ViewCategory";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ViewCategory";
             this.Load += new System.EventHandler(this.ViewCategory_Load);
             this.panel1.ResumeLayout(false);

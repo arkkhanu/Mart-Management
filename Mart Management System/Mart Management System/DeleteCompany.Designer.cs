@@ -152,7 +152,9 @@
             this.Controls.Add(this.COMPANY_COMBO);
             this.Controls.Add(this.ID_LBL);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "DeleteCompany";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "DeleteCompany";
             this.Load += new System.EventHandler(this.DeleteCompany_Load);
             this.panel1.ResumeLayout(false);

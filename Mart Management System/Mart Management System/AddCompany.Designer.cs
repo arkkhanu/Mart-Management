@@ -189,7 +189,9 @@
             this.Controls.Add(this.PASSWORD);
             this.Controls.Add(this.ID);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "AddCompany";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AddCompany";
             this.Load += new System.EventHandler(this.AddCompany_Load);
             this.panel1.ResumeLayout(false);

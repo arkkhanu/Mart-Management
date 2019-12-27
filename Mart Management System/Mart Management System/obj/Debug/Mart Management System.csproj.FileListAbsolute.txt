@@ -85,7 +85,6 @@ C:\Users\USER\Desktop\mart\Mart Management System\Mart Management System\bin\Deb
 C:\Users\USER\Desktop\mart\Mart Management System\Mart Management System\bin\Debug\Mart Management System.pdb
 C:\Users\USER\Desktop\mart\Mart Management System\Mart Management System\obj\Debug\Mart Management System.csprojAssemblyReference.cache
 C:\Users\USER\Desktop\mart\Mart Management System\Mart Management System\obj\Debug\Mart_Management_System.AddCashier.resources
-C:\Users\USER\Desktop\mart\Mart Management System\Mart Management System\obj\Debug\Mart_Management_System.AddCategoru.resources
 C:\Users\USER\Desktop\mart\Mart Management System\Mart Management System\obj\Debug\Mart_Management_System.AddCompany.resources
 C:\Users\USER\Desktop\mart\Mart Management System\Mart Management System\obj\Debug\Mart_Management_System.AddProduct.resources
 C:\Users\USER\Desktop\mart\Mart Management System\Mart Management System\obj\Debug\Mart_Management_System.Admin.resources
@@ -164,3 +163,4 @@ F:\University Material\5th Semister\Project\Visual Programing\Git\Mart Managemen
 F:\University Material\5th Semister\Project\Visual Programing\Git\Mart Management System\Mart Management System\Mart Management System\obj\Debug\Mart Management System.csproj.GenerateResource.Cache
 C:\Users\USER\Desktop\mart\Mart Management System\Mart Management System\obj\Debug\Mart_Management_System.CustomerPortal.resources
 C:\Users\USER\Desktop\mart\Mart Management System\Mart Management System\obj\Debug\Mart_Management_System.CustomersDetails.resources
+C:\Users\USER\Desktop\mart\Mart Management System\Mart Management System\obj\Debug\Mart_Management_System.AddCategory.resources

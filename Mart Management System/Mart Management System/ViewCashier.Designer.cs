@@ -165,8 +165,11 @@
             this.Controls.Add(this.lbl_id);
             this.Controls.Add(this.CASHIER_VIEW);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "ViewCashier";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ViewCashier";
+            this.Load += new System.EventHandler(this.ViewCashier_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.LOOK_BOX)).EndInit();

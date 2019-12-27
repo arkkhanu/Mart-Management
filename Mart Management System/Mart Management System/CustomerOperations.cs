@@ -15,6 +15,7 @@ namespace Mart_Management_System
         public CustomerOperations()
         {
             InitializeComponent();
+            this.MaximizeBox = false;
         }
 
         private void BACK_BOX_Click(object sender, EventArgs e)

@@ -151,7 +151,9 @@
             this.Controls.Add(this.CUSTOMER_COMBO);
             this.Controls.Add(this.ID_LBL);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "DeleteCustomer";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "DeleteCustomer";
             this.Load += new System.EventHandler(this.DeleteCustomer_Load);
             this.panel1.ResumeLayout(false);

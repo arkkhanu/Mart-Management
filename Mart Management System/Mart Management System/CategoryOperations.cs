@@ -15,11 +15,12 @@ namespace Mart_Management_System
         public CategoryOperations()
         {
             InitializeComponent();
+            this.MaximizeBox = false;
         }
 
         private void ADD_BTN_Click(object sender, EventArgs e)
         {
-            AddCategoru ad = new AddCategoru();
+            AddCategory ad = new AddCategory();
             this.Hide();
             ad.Show();
 
@@ -51,6 +52,11 @@ namespace Mart_Management_System
             UpdateCategory cat = new UpdateCategory();
             this.Hide();
             cat.Show();
+        }
+
+        private void CategoryOperations_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

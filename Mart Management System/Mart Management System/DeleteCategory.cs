@@ -18,6 +18,7 @@ namespace Mart_Management_System
         public DeleteCategory()
         {
             InitializeComponent();
+            this.MaximizeBox = false;
         }
         void loadCat()
         {

@@ -1,6 +1,6 @@
 ﻿namespace Mart_Management_System
 {
-    partial class AddCategoru
+    partial class AddCategory
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddCategoru));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddCategory));
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.LINE_LBL = new System.Windows.Forms.Label();
@@ -189,7 +189,9 @@
             this.Controls.Add(this.PASSWORD);
             this.Controls.Add(this.ID);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "AddCategoru";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AddCategoru";
             this.Load += new System.EventHandler(this.AddCategoru_Load);
             this.panel1.ResumeLayout(false);

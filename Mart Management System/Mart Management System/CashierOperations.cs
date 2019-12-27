@@ -15,6 +15,7 @@ namespace Mart_Management_System
         public CashierOperations()
         {
             InitializeComponent();
+            this.MaximizeBox = false;
         }
 
         private void BACK_BOX_Click(object sender, EventArgs e)
@@ -52,6 +53,11 @@ namespace Mart_Management_System
             UpdateCashier co = new UpdateCashier();
             this.Hide();
             co.Show();
+        }
+
+        private void CashierOperations_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

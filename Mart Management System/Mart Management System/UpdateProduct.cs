@@ -22,6 +22,7 @@ namespace Mart_Management_System
         public UpdateProduct()
         {
             InitializeComponent();
+            this.MaximizeBox = false;
         }
         private void IntializeComponent()
         {

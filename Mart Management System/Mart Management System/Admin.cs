@@ -16,6 +16,7 @@ namespace Mart_Management_System
         public Admin()
         {
             InitializeComponent();
+            this.MaximizeBox = false;
         }
 
        
@@ -75,6 +76,11 @@ namespace Mart_Management_System
             TransactionOperation op = new TransactionOperation();
             this.Hide();
             op.Show();
+        }
+
+        private void Admin_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

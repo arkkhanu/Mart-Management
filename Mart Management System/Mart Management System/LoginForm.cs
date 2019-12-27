@@ -16,22 +16,10 @@ namespace Mart_Management_System
         public LoginForm()
         {
             InitializeComponent();
+            this.MaximizeBox=false;
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void pictureBox4_Click(object sender, EventArgs e)
-        {
-
-        }
+        
 
         private void ADMIN_Click(object sender, EventArgs e)
         {
@@ -62,16 +50,6 @@ namespace Mart_Management_System
         }
 
         private void LoginForm_Load(object sender, EventArgs e)
-        {
-           
-        }
-
-        private void Admin_Box_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
         }

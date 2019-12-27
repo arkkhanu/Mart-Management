@@ -15,6 +15,7 @@ namespace Mart_Management_System
         public CustomerPortal()
         {
             InitializeComponent();
+            this.MaximizeBox = false;
         }
 
         private void BACK_BOX_Click(object sender, EventArgs e)
@@ -39,6 +40,11 @@ namespace Mart_Management_System
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void CustomerPortal_Load(object sender, EventArgs e)
         {
 
         }

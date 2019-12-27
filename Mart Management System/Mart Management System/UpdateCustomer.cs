@@ -20,6 +20,7 @@ namespace Mart_Management_System
         public UpdateCustomer()
         {
             InitializeComponent();
+            this.MaximizeBox = false;
         }
         void loaddata()
         {

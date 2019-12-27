@@ -19,6 +19,7 @@ namespace Mart_Management_System
         public CartCustomer()
         {
             InitializeComponent();
+            this.MaximizeBox = false;
         }
 
         private void CUSTOMER_LBL_Click(object sender, EventArgs e)

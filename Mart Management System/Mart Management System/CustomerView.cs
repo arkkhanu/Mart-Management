@@ -17,6 +17,7 @@ namespace Mart_Management_System
         public CustomerView()
         {
             InitializeComponent();
+            this.MaximizeBox = false;
         }
         void loaddata()
         {

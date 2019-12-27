@@ -22,6 +22,7 @@ namespace Mart_Management_System
         public AddProduct()
         {
             InitializeComponent();
+            this.MaximizeBox = false;
         }
 
         private void AddProduct_Load(object sender, EventArgs e)

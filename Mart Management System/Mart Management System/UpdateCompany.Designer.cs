@@ -41,8 +41,8 @@
             this.PASSWORD = new System.Windows.Forms.Label();
             this.ID = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.ID_TXT = new System.Windows.Forms.TextBox();
             this.Name_lbl = new System.Windows.Forms.Label();
+            this.ID_TXT = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.COMPANY_BOX)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BACK_BOX)).BeginInit();
@@ -182,14 +182,6 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Update_box";
             // 
-            // ID_TXT
-            // 
-            this.ID_TXT.Enabled = false;
-            this.ID_TXT.Location = new System.Drawing.Point(106, 30);
-            this.ID_TXT.Name = "ID_TXT";
-            this.ID_TXT.Size = new System.Drawing.Size(172, 20);
-            this.ID_TXT.TabIndex = 20;
-            // 
             // Name_lbl
             // 
             this.Name_lbl.AutoSize = true;
@@ -197,6 +189,14 @@
             this.Name_lbl.Name = "Name_lbl";
             this.Name_lbl.Size = new System.Drawing.Size(0, 13);
             this.Name_lbl.TabIndex = 21;
+            // 
+            // ID_TXT
+            // 
+            this.ID_TXT.Enabled = false;
+            this.ID_TXT.Location = new System.Drawing.Point(106, 30);
+            this.ID_TXT.Name = "ID_TXT";
+            this.ID_TXT.Size = new System.Drawing.Size(172, 20);
+            this.ID_TXT.TabIndex = 20;
             // 
             // UpdateCompany
             // 
@@ -208,7 +208,9 @@
             this.Controls.Add(this.Show_Data);
             this.Controls.Add(this.UPDATE);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "UpdateCompany";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SearchUpdateCompany";
             this.Load += new System.EventHandler(this.UpdateCompany_Load);
             this.panel1.ResumeLayout(false);

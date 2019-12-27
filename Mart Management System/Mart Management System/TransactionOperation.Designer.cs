@@ -125,7 +125,9 @@
             this.ClientSize = new System.Drawing.Size(854, 404);
             this.Controls.Add(this.TRANSACTION_VIEW);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "TransactionOperation";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "TransactionOperation";
             this.Load += new System.EventHandler(this.TransactionOperation_Load);
             this.panel1.ResumeLayout(false);

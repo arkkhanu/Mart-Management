@@ -19,6 +19,7 @@ namespace Mart_Management_System
         public UpdateCategory()
         {
             InitializeComponent();
+            this.MaximizeBox = false;
         }
 
         public void Regexp(string re, TextBox tb, Label lbl, string s)

@@ -222,8 +222,11 @@
             this.Controls.Add(this.DELETE_BOX);
             this.Controls.Add(this.ADD_BOX);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "CompanyOpearations";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CompanyOpearations";
+            this.Load += new System.EventHandler(this.CompanyOpearations_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CATEGORY_BOX)).EndInit();

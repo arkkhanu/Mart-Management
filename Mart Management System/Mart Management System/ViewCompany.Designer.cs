@@ -167,7 +167,9 @@
             this.Controls.Add(this.lbl_id);
             this.Controls.Add(this.COMPANY_VIEW);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "ViewCompany";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ViewCompany";
             this.Load += new System.EventHandler(this.ViewCompany_Load);
             this.panel1.ResumeLayout(false);

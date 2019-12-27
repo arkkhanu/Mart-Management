@@ -228,7 +228,7 @@
             this.AGE_TXT.Name = "AGE_TXT";
             this.AGE_TXT.Size = new System.Drawing.Size(173, 20);
             this.AGE_TXT.TabIndex = 17;
-            this.AGE_TXT.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.validateage);
+            this.AGE_TXT.KeyUp += new System.Windows.Forms.KeyEventHandler(this.validateAge);
             // 
             // ADDRESS_TXT
             // 
@@ -355,7 +355,9 @@
             this.Controls.Add(this.PASSWORD);
             this.Controls.Add(this.ID_LBl);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "SignUpCustomer";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SignUpCustomer";
             this.Load += new System.EventHandler(this.SignUpCustomer_Load);
             this.panel1.ResumeLayout(false);

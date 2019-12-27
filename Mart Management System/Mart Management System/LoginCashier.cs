@@ -18,6 +18,7 @@ namespace Mart_Management_System
         public LoginCashier()
         {
             InitializeComponent();
+            this.MaximizeBox = false;
         }
 
         private void ADMIN_BOX_Click(object sender, EventArgs e)

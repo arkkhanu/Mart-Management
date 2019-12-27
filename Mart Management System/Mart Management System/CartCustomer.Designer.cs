@@ -266,7 +266,9 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.panel1);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "CartCustomer";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CartCustomer";
             this.Load += new System.EventHandler(this.CartCustomer_Load);
             this.panel1.ResumeLayout(false);

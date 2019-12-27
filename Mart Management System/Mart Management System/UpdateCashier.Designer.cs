@@ -44,14 +44,14 @@
             this.HIREDATE = new System.Windows.Forms.Label();
             this.UPDATE = new System.Windows.Forms.Button();
             this.UPDATE_RECORD = new System.Windows.Forms.GroupBox();
+            this.pass_lbl = new System.Windows.Forms.Label();
+            this.sal_lbl = new System.Windows.Forms.Label();
+            this.name_lbl = new System.Windows.Forms.Label();
             this.HIREDATE_TXT = new System.Windows.Forms.DateTimePicker();
             this.ID_TXT = new System.Windows.Forms.TextBox();
             this.Show_Data = new System.Windows.Forms.GroupBox();
             this.View_Cashier = new System.Windows.Forms.DataGridView();
             this.UPDATE_BTN = new System.Windows.Forms.Button();
-            this.name_lbl = new System.Windows.Forms.Label();
-            this.sal_lbl = new System.Windows.Forms.Label();
-            this.pass_lbl = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CASHIER_BOX)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BACK_BOX)).BeginInit();
@@ -229,6 +229,30 @@
             this.UPDATE_RECORD.TabStop = false;
             this.UPDATE_RECORD.Text = "UPDATE";
             // 
+            // pass_lbl
+            // 
+            this.pass_lbl.AutoSize = true;
+            this.pass_lbl.Location = new System.Drawing.Point(295, 263);
+            this.pass_lbl.Name = "pass_lbl";
+            this.pass_lbl.Size = new System.Drawing.Size(0, 13);
+            this.pass_lbl.TabIndex = 29;
+            // 
+            // sal_lbl
+            // 
+            this.sal_lbl.AutoSize = true;
+            this.sal_lbl.Location = new System.Drawing.Point(295, 155);
+            this.sal_lbl.Name = "sal_lbl";
+            this.sal_lbl.Size = new System.Drawing.Size(0, 13);
+            this.sal_lbl.TabIndex = 28;
+            // 
+            // name_lbl
+            // 
+            this.name_lbl.AutoSize = true;
+            this.name_lbl.Location = new System.Drawing.Point(295, 95);
+            this.name_lbl.Name = "name_lbl";
+            this.name_lbl.Size = new System.Drawing.Size(0, 13);
+            this.name_lbl.TabIndex = 27;
+            // 
             // HIREDATE_TXT
             // 
             this.HIREDATE_TXT.CustomFormat = "dd-MM-yyyy";
@@ -277,30 +301,6 @@
             this.UPDATE_BTN.UseVisualStyleBackColor = true;
             this.UPDATE_BTN.Click += new System.EventHandler(this.button1_Click);
             // 
-            // name_lbl
-            // 
-            this.name_lbl.AutoSize = true;
-            this.name_lbl.Location = new System.Drawing.Point(295, 95);
-            this.name_lbl.Name = "name_lbl";
-            this.name_lbl.Size = new System.Drawing.Size(0, 13);
-            this.name_lbl.TabIndex = 27;
-            // 
-            // sal_lbl
-            // 
-            this.sal_lbl.AutoSize = true;
-            this.sal_lbl.Location = new System.Drawing.Point(295, 155);
-            this.sal_lbl.Name = "sal_lbl";
-            this.sal_lbl.Size = new System.Drawing.Size(0, 13);
-            this.sal_lbl.TabIndex = 28;
-            // 
-            // pass_lbl
-            // 
-            this.pass_lbl.AutoSize = true;
-            this.pass_lbl.Location = new System.Drawing.Point(295, 263);
-            this.pass_lbl.Name = "pass_lbl";
-            this.pass_lbl.Size = new System.Drawing.Size(0, 13);
-            this.pass_lbl.TabIndex = 29;
-            // 
             // UpdateCashier
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -311,7 +311,9 @@
             this.Controls.Add(this.Show_Data);
             this.Controls.Add(this.UPDATE_RECORD);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "UpdateCashier";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SearchUpdateCashier";
             this.Load += new System.EventHandler(this.UpdateCashier_Load);
             this.panel1.ResumeLayout(false);
