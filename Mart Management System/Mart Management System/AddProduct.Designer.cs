@@ -180,11 +180,11 @@
             this.EX_LBL.AutoSize = true;
             this.EX_LBL.BackColor = System.Drawing.SystemColors.Control;
             this.EX_LBL.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EX_LBL.Location = new System.Drawing.Point(69, 561);
+            this.EX_LBL.Location = new System.Drawing.Point(68, 554);
             this.EX_LBL.Name = "EX_LBL";
-            this.EX_LBL.Size = new System.Drawing.Size(89, 13);
+            this.EX_LBL.Size = new System.Drawing.Size(174, 13);
             this.EX_LBL.TabIndex = 34;
-            this.EX_LBL.Text = "EXPIRY DATE";
+            this.EX_LBL.Text = "EXPIRY DATE / WARRENTY";
             // 
             // PRO_LBL
             // 
@@ -296,6 +296,7 @@
             this.PRO_BOX.Location = new System.Drawing.Point(553, 305);
             this.PRO_BOX.Name = "PRO_BOX";
             this.PRO_BOX.Size = new System.Drawing.Size(148, 146);
+            this.PRO_BOX.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.PRO_BOX.TabIndex = 53;
             this.PRO_BOX.TabStop = false;
             // 

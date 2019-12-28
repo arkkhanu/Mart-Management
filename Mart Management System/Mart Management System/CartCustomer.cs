@@ -29,9 +29,9 @@ namespace Mart_Management_System
 
         private void BACK_BOX_Click(object sender, EventArgs e)
         {
-            CustomerOperations cuo = new CustomerOperations();
+            CustomerPortal cp = new CustomerPortal();
             this.Hide();
-            cuo.Show();
+            cp.Show();
         }
 
         private void CartCustomer_Load(object sender, EventArgs e)
@@ -125,7 +125,9 @@ namespace Mart_Management_System
                 {
 
                     con.Open();
-                    SqlDataAdapter da = new SqlDataAdapter("select pro_name, pro_price from Product where pro_comp='" + comp + "' and pro_cat='" + cat + "'", con);
+                    SqlDataAdapter da = new SqlDataAdapter("select pro_name, pro_price from Product where pro_comp=@compid and pro_cat=@catid", con);
+                    da.SelectCommand.Parameters.AddWithValue("compid", comp);
+                    da.SelectCommand.Parameters.AddWithValue("catid", cat);
                     DataSet ds = new DataSet();
                     da.Fill(ds);
 
@@ -152,56 +154,68 @@ namespace Mart_Management_System
             id_box.Text = "";
             phone_box.Text = "";
             email_box.Text = "";
+            pro_list.Items.Clear();
+           
         }
 
         private void btn_addPro_Click(object sender, EventArgs e)
         {
+            int totalbill = 0;
             try
             {
-                using (SqlConnection con = new SqlConnection(cs))
+                if (id_box.Text != "" && email_box.Text != "" && phone_box.Text != "" && pro_list.CheckedIndices.Count > 0)
                 {
-
-                    foreach (object item in pro_list.CheckedItems)
+                    using (SqlConnection con = new SqlConnection(cs))
                     {
-                        DataSet ds = new DataSet();
-                        string query = "select * from Cart where 0=1";
-                        SqlDataAdapter adp = new SqlDataAdapter(query, con);
-                        adp.Fill(ds, "cart");
 
-                        DataRow dr = ds.Tables["cart"].NewRow();
+                        foreach (object item in pro_list.CheckedItems)
+                        {
+                            DataSet ds = new DataSet();
+                            string query = "select * from Cart where 0=1";
+                            SqlDataAdapter adp = new SqlDataAdapter(query, con);
+                            adp.Fill(ds, "cart");
 
-                        string product = "";
-                        int price = 0;
-                        int quantity = 1;
+                            DataRow dr = ds.Tables["cart"].NewRow();
+
+                            string product = "";
+                            int price = 0;
+                            int quantity = 1;
+                            int totalamount=0;
+
+                            //product contain string i.e only product name i.e string before Rs.
+                            product = item.ToString().Substring(0, item.ToString().IndexOf("Rs."));
+
+                            //price contain string after the product name
+                            price = Int32.Parse(item.ToString().Substring(product.Length + 3)) * quantity;
+
+                            quantity = Int32.Parse(Interaction.InputBox("Enter Quantity of " + product + " ", "Quantity", "1", -1, -1));
+                            totalamount=price*quantity;
+
+                            dr["product"] = product;
+                            dr["price"] = price;
+                            dr["quantity"] = quantity;
+                            dr["id"] = id_box.Text.ToString();
+                            dr["phone"] = phone_box.Text.ToString();
+                            dr["email"] = email_box.Text.ToString();
+                            dr["totalAmount"] = totalamount;
+
+                            ds.Tables["Cart"].Rows.Add(dr);
+                            new SqlCommandBuilder(adp);
+                            adp.Update(ds, "Cart");
+                            totalbill += totalamount;
 
 
-
-                        //product contain string i.e only product name i.e string before Rs.
-                        product = item.ToString().Substring(0, item.ToString().IndexOf("Rs."));
-
-                        //price contain string after the product name
-                        price = Int32.Parse(item.ToString().Substring(product.Length + 3)) * quantity;
-
-                        quantity = Int32.Parse(Interaction.InputBox("Enter Quantity of " + product + " ", "Quantity", "1", -1, -1));
-
-
-                        dr["product"] = product;
-                        dr["price"] = price;
-                        dr["quantity"] = quantity;
-                        dr["id"] = id_box.Text.ToString();
-                        dr["phone"] = phone_box.Text.ToString();
-                        dr["email"] = email_box.Text.ToString();
-
-                        ds.Tables["Cart"].Rows.Add(dr);
-                        new SqlCommandBuilder(adp);
-                        adp.Update(ds, "Cart");
-
+                        }
+                        MessageBox.Show("Record Inserted !");
+                        //totalcost
+                        
+                        clear();
 
                     }
-                    MessageBox.Show("Record Inserted !");
-                    clear();
 
                 }
+                else
+                    MessageBox.Show("Please Fill Form Correctly !");
 
             }
             catch (Exception Ex)

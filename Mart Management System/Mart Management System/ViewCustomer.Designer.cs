@@ -1,6 +1,6 @@
 ﻿namespace Mart_Management_System
 {
-    partial class CustomerView
+    partial class ViewCustomer
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CustomerView));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ViewCustomer));
             this.panel1 = new System.Windows.Forms.Panel();
             this.LINE_LBL = new System.Windows.Forms.Label();
             this.LINE_LBL2 = new System.Windows.Forms.Label();

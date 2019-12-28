@@ -44,6 +44,7 @@
             this.COMPANY_BUTTON = new System.Windows.Forms.Button();
             this.TRANSACTION = new System.Windows.Forms.Button();
             this.CUSTOMER = new System.Windows.Forms.Button();
+            this.lbl_logout = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Log_Out)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Admin_box)).BeginInit();
@@ -58,6 +59,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.panel1.Controls.Add(this.lbl_logout);
             this.panel1.Controls.Add(this.Log_Out);
             this.panel1.Controls.Add(this.Admin_box);
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -220,6 +222,17 @@
             this.CUSTOMER.UseVisualStyleBackColor = true;
             this.CUSTOMER.Click += new System.EventHandler(this.CUSTOMER_Click);
             // 
+            // lbl_logout
+            // 
+            this.lbl_logout.AutoSize = true;
+            this.lbl_logout.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_logout.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.lbl_logout.Location = new System.Drawing.Point(31, 108);
+            this.lbl_logout.Name = "lbl_logout";
+            this.lbl_logout.Size = new System.Drawing.Size(45, 15);
+            this.lbl_logout.TabIndex = 3;
+            this.lbl_logout.Text = "Logout";
+            // 
             // Admin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -245,6 +258,7 @@
             this.Text = "Admin";
             this.Load += new System.EventHandler(this.Admin_Load);
             this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Log_Out)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Admin_box)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PRODUCT_BOX)).EndInit();
@@ -274,5 +288,6 @@
         private System.Windows.Forms.Button COMPANY_BUTTON;
         private System.Windows.Forms.Button TRANSACTION;
         private System.Windows.Forms.Button CUSTOMER;
+        private System.Windows.Forms.Label lbl_logout;
     }
 }

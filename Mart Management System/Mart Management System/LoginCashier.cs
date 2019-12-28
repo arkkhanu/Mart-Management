@@ -66,9 +66,10 @@ namespace Mart_Management_System
                         da.Fill(dt);
                         if (dt.Rows.Count == 1)
                         {
-                            MessageBox.Show("Welcome");
+                            MessageBox.Show("Welcome "+dt.Rows[0].ItemArray[1].ToString());
 
                             Cashier cu = new Cashier();
+                           Cashier.cashier_Id = ID_TXT.Text.ToString();
                             this.Hide();
                             cu.Show();
                         }

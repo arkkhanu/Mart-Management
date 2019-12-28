@@ -128,11 +128,11 @@
     <Compile Include="CustomersDetails.Designer.cs">
       <DependentUpon>CustomersDetails.cs</DependentUpon>
     </Compile>
-    <Compile Include="CustomerView.cs">
+    <Compile Include="ViewCustomer.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CustomerView.Designer.cs">
-      <DependentUpon>CustomerView.cs</DependentUpon>
+    <Compile Include="ViewCustomer.Designer.cs">
+      <DependentUpon>ViewCustomer.cs</DependentUpon>
     </Compile>
     <Compile Include="DeleteCashier.cs">
       <SubType>Form</SubType>
@@ -278,7 +278,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="AddCashier.resx">
@@ -320,8 +322,8 @@
     <EmbeddedResource Include="CustomersDetails.resx">
       <DependentUpon>CustomersDetails.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CustomerView.resx">
-      <DependentUpon>CustomerView.cs</DependentUpon>
+    <EmbeddedResource Include="ViewCustomer.resx">
+      <DependentUpon>ViewCustomer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DeleteCashier.resx">
       <DependentUpon>DeleteCashier.cs</DependentUpon>

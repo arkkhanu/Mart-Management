@@ -14,6 +14,7 @@ namespace Mart_Management_System
 {
     public partial class Cashier : Form
     {
+        public static string cashier_Id = "";
         string cs = ConfigurationManager.ConnectionStrings["myCon"].ConnectionString;
 
         int total_amt = 0;
@@ -32,21 +33,26 @@ namespace Mart_Management_System
 
         void loadCashid()
         {
-            string query = "select cashier_id from Cashier;";
-            SqlConnection con = new SqlConnection(cs);
+            //string query = "select cashier_id from Cashier;";
+            //SqlConnection con = new SqlConnection(cs);
             
 
-                SqlCommand cmd = new SqlCommand(query, con);
-                con.Open();
-                SqlDataReader rdr = cmd.ExecuteReader();
+            //    SqlCommand cmd = new SqlCommand(query, con);
+            //    con.Open();
+            //    SqlDataReader rdr = cmd.ExecuteReader();
 
-            if (rdr.Read())
+            //if (rdr.Read())
+            //{
+            //    CASH_Combo.Items.Add(rdr["cashier_id"].ToString());
+            //    while (rdr.Read())
+            //    {
+            //        CASH_Combo.Items.Add( rdr["cashier_id"].ToString());
+            //    }
+            //}
+            if (cashier_Id != "")
             {
-                CASH_Combo.Items.Add(rdr["cashier_id"].ToString());
-                while (rdr.Read())
-                {
-                    CASH_Combo.Items.Add( rdr["cashier_id"].ToString());
-                }
+
+                CASH_Combo.Items.Add(cashier_Id.ToString());
             }
         }
         void loadCustid()
@@ -97,6 +103,7 @@ namespace Mart_Management_System
                 QUANTITY_TXT.Text = CASHIER_VIEW.SelectedRows[0].Cells[3].Value.ToString();
                 PRO_TXT.Text = CASHIER_VIEW.SelectedRows[0].Cells[1].Value.ToString();
                 PRICE_TXT.Text = CASHIER_VIEW.SelectedRows[0].Cells[2].Value.ToString();
+                ttl_amtBox.Text = CASHIER_VIEW.SelectedRows[0].Cells[7].Value.ToString();
     
 
             }
@@ -109,7 +116,7 @@ namespace Mart_Management_System
             PRO_TXT.Text = "";
             PRICE_TXT.Text = "";
             CASHIER_NAME.Text = "";
-            MANU_DATE.Text = "";
+            DATE.Text = "";
             CASH_Combo.SelectedIndex = -1;
             CUSTOM_COMBO.SelectedIndex = -1;
             
@@ -141,8 +148,9 @@ namespace Mart_Management_System
             da.InsertCommand.Parameters.AddWithValue("@proname",PRO_TXT.Text);
             da.InsertCommand.Parameters.AddWithValue("@price", PRICE_TXT.Text);
             da.InsertCommand.Parameters.AddWithValue("@quan", QUANTITY_TXT.Text);
-            da.InsertCommand.Parameters.AddWithValue("@date", MANU_DATE.Text.ToString());
+            da.InsertCommand.Parameters.AddWithValue("@date", DATE.Text.ToString());
             da.InsertCommand.Parameters.AddWithValue("@trasid", TRAN_TXT.Text);
+            da.InsertCommand.Parameters.AddWithValue("@totalamount", ttl_amtBox.Text);
             da.InsertCommand.CommandType = CommandType.StoredProcedure;
             try
             {
@@ -178,9 +186,6 @@ namespace Mart_Management_System
             }
         }
 
-        private void CASHIER_VIEW_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
+       
     }
 }

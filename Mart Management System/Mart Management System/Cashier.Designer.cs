@@ -52,7 +52,9 @@
             this.CASHIER_VIEW = new System.Windows.Forms.DataGridView();
             this.SUBMIT_BTN = new System.Windows.Forms.Button();
             this.CLEAR_BTN = new System.Windows.Forms.Button();
-            this.MANU_DATE = new System.Windows.Forms.DateTimePicker();
+            this.DATE = new System.Windows.Forms.DateTimePicker();
+            this.ttl_amtBox = new System.Windows.Forms.TextBox();
+            this.ttl_amt = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CASHIER_BOX)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BACK_BOX)).BeginInit();
@@ -146,6 +148,7 @@
             this.CASH_Combo.Name = "CASH_Combo";
             this.CASH_Combo.Size = new System.Drawing.Size(173, 21);
             this.CASH_Combo.TabIndex = 32;
+            //this.CASH_Combo.SelectedIndexChanged += new System.EventHandler(this.CASH_Combo_SelectedIndexChanged);
             // 
             // label1
             // 
@@ -274,7 +277,7 @@
             this.CASHIER_VIEW.Size = new System.Drawing.Size(777, 150);
             this.CASHIER_VIEW.TabIndex = 52;
             this.CASHIER_VIEW.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.CASHIER_VIEW_CellClick);
-            this.CASHIER_VIEW.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.CASHIER_VIEW_CellContentClick);
+//            this.CASHIER_VIEW.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.CASHIER_VIEW_CellContentClick);
             // 
             // SUBMIT_BTN
             // 
@@ -298,14 +301,34 @@
             this.CLEAR_BTN.UseVisualStyleBackColor = true;
             this.CLEAR_BTN.Click += new System.EventHandler(this.CLEAR_BTN_Click);
             // 
-            // MANU_DATE
+            // DATE
             // 
-            this.MANU_DATE.CustomFormat = "dd-MM-yyyy";
-            this.MANU_DATE.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.MANU_DATE.Location = new System.Drawing.Point(158, 216);
-            this.MANU_DATE.Name = "MANU_DATE";
-            this.MANU_DATE.Size = new System.Drawing.Size(173, 20);
-            this.MANU_DATE.TabIndex = 56;
+            this.DATE.CustomFormat = "dd-MM-yyyy";
+            this.DATE.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.DATE.Location = new System.Drawing.Point(158, 216);
+            this.DATE.Name = "DATE";
+            this.DATE.Size = new System.Drawing.Size(173, 20);
+            this.DATE.TabIndex = 56;
+            // 
+            // ttl_amtBox
+            // 
+            this.ttl_amtBox.Enabled = false;
+            this.ttl_amtBox.Location = new System.Drawing.Point(550, 262);
+            this.ttl_amtBox.Name = "ttl_amtBox";
+            this.ttl_amtBox.Size = new System.Drawing.Size(173, 20);
+            this.ttl_amtBox.TabIndex = 58;
+            // 
+            // ttl_amt
+            // 
+            this.ttl_amt.AutoSize = true;
+            this.ttl_amt.BackColor = System.Drawing.SystemColors.Control;
+            this.ttl_amt.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ttl_amt.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.ttl_amt.Location = new System.Drawing.Point(414, 262);
+            this.ttl_amt.Name = "ttl_amt";
+            this.ttl_amt.Size = new System.Drawing.Size(82, 13);
+            this.ttl_amt.TabIndex = 57;
+            this.ttl_amt.Text = "Total Amount";
             // 
             // Cashier
             // 
@@ -313,7 +336,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ClientSize = new System.Drawing.Size(805, 528);
-            this.Controls.Add(this.MANU_DATE);
+            this.Controls.Add(this.ttl_amtBox);
+            this.Controls.Add(this.ttl_amt);
+            this.Controls.Add(this.DATE);
             this.Controls.Add(this.CLEAR_BTN);
             this.Controls.Add(this.SUBMIT_BTN);
             this.Controls.Add(this.CASHIER_VIEW);
@@ -373,6 +398,8 @@
         private System.Windows.Forms.DataGridView CASHIER_VIEW;
         private System.Windows.Forms.Button SUBMIT_BTN;
         private System.Windows.Forms.Button CLEAR_BTN;
-        private System.Windows.Forms.DateTimePicker MANU_DATE;
+        private System.Windows.Forms.DateTimePicker DATE;
+        private System.Windows.Forms.TextBox ttl_amtBox;
+        private System.Windows.Forms.Label ttl_amt;
     }
 }

@@ -20,9 +20,16 @@ namespace Mart_Management_System
 
         private void BACK_BOX_Click(object sender, EventArgs e)
         {
-            LoginCustomer lo = new LoginCustomer();
-            this.Hide();
-            lo.Show();
+
+            DialogResult dialogResult = MessageBox.Show("Are you sure you want to logout ?", "Customer",
+                                                        MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (dialogResult == DialogResult.Yes)
+            {
+                LoginCustomer lo = new LoginCustomer();
+                this.Hide();
+                lo.Show();
+            }
+            
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -34,7 +41,7 @@ namespace Mart_Management_System
 
         private void VIEW_BTN_Click(object sender, EventArgs e)
         {
-            CustomerView u = new CustomerView();
+            ViewCustomer u = new ViewCustomer("customer");
             this.Hide();
             u.Show();
         }

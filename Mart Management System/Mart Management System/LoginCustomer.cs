@@ -69,7 +69,7 @@ namespace Mart_Management_System
                         da.Fill(dt);
                         if (dt.Rows.Count == 1)
                         {
-                            MessageBox.Show("Welcome");
+                            MessageBox.Show("Welcome " + dt.Rows[0].ItemArray[1].ToString());
 
                             CustomerPortal co = new CustomerPortal();
                             this.Hide();

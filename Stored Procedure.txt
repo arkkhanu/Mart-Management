@@ -1,3 +1,17 @@
+*new
+create procedure getCustid
+as
+begin
+select max(cust_id) as cust_id from customer
+end
+
+ALTER procedure [dbo].[cashierWork]
+@trasid int, @custid int, @cashid int, @cashname varchar(50), @proname varchar(50), @quan int, @price int, @date varchar(20), @totalamount int
+as
+begin
+  insert into details (cashier_id, customer_id, cashier_name, product_name, price, quantity, date, trans_id, totalAmount) values(@cashid,@custid, @cashname, @proname, @price, @quan, @date, @trasid, @totalamount)
+end
+
 create procedure GetCompid
 @compname varchar(50)
 as

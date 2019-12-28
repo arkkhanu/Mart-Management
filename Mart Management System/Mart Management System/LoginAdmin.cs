@@ -73,7 +73,7 @@ namespace Mart_Management_System
                         da.Fill(dt);
                         if (dt.Rows.Count == 1)
                         {
-                            MessageBox.Show("Welcome");
+                            MessageBox.Show("Welcome "+dt.Rows[0].ItemArray[1].ToString()); //itemArray work as column
                             Admin ad = new Admin();
                             this.Hide();
                             ad.Show();

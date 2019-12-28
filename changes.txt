@@ -19,4 +19,10 @@ create table cart(transaction_id int primary key not null,product varchar(50), p
 PRODUCT  TABLE :
 image field data type image 
 
+Add new stored pro getCustID
+change DT of phone no to bigInt in Cart table
+add column totalAmount in details and cart
+alter procedure cashierWork
+
+
         

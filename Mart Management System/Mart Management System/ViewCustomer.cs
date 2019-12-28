@@ -11,17 +11,24 @@ using System.Data.SqlClient;
 using System.Configuration;
 namespace Mart_Management_System
 {
-    public partial class CustomerView : Form
+    public partial class ViewCustomer : Form
     {
+        string caller;
         string cs = ConfigurationManager.ConnectionStrings["myCon"].ConnectionString;
-        public CustomerView()
+        public ViewCustomer()
         {
             InitializeComponent();
             this.MaximizeBox = false;
         }
+        public ViewCustomer(string c)
+        {
+            InitializeComponent();
+            this.MaximizeBox = false;
+            caller = c;
+        }
         void loaddata()
         {
-
+            
             SqlDataAdapter sda;
             DataTable dt = new DataTable();
             // System.Data.DataSet ds = new System.Data.DataSet();
@@ -56,9 +63,18 @@ namespace Mart_Management_System
 
         private void BACK_BOX_Click(object sender, EventArgs e)
         {
-           CustomerPortal cu = new CustomerPortal();
-            this.Hide();
-            cu.Show();
+            if (caller == "admin")
+            {
+                CustomerOperations co = new CustomerOperations();
+                this.Hide();
+                co.Show();
+            }
+            else if (caller == "customer")
+            {
+                CustomerPortal cu = new CustomerPortal();
+                this.Hide();
+                cu.Show();
+            }
         }
     }
 }

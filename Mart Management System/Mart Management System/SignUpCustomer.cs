@@ -54,11 +54,9 @@ namespace Mart_Management_System
                     else
                         type = Female_Radio.Text.ToString();
                     ////////////////////////////
-                    ///
+                    
                     dr["cust_gender"] = type;
                     dr["cust_age"] = AGE_TXT.Text;
-
-
 
                     dr["cust_address"] = ADDRESS_TXT.Text;
                     dr["cust_email"] = EMAIL_TXT.Text;
@@ -68,14 +66,14 @@ namespace Mart_Management_System
                     ds.Tables["Customer"].Rows.Add(dr);
                     new SqlCommandBuilder(adp);
                     adp.Update(ds, "Customer");
-
-                    MessageBox.Show("Record Inserted !");
+                   
+                   
 
                 }
             }
             catch(Exception Ex)
             {
-                MessageBox.Show("Please Fill the form Correctly");
+                MessageBox.Show(Ex.Message);
             }
             
 
@@ -122,19 +120,63 @@ namespace Mart_Management_System
             Regexp(@"^[0-9]+$", AGE_TXT, ag_lbl, "Age ");
         }
 
-        private void SignUpCustomer_Load(object sender, EventArgs e)
+        void clear()
         {
-        
+            NAME_TXT.Text = "";
+            AGE_TXT.Text = "";
+            ADDRESS_TXT.Text = "";
+            EMAIL_TXT.Text = "";
+            PASSWORD_TXT.Text = "";
+            Male_Radio.Checked = false;
+            Female_Radio.Checked = false;
         }
 
+        
         private void SIGNUP_BUTTON_Click(object sender, EventArgs e)
         {
-            if (NAME_TXT.Text!="" && AGE_TXT.Text!="" && ADDRESS_TXT.Text!="" && EMAIL_TXT.Text!="" && PASSWORD_TXT.Text!="" )
+
+            if (NAME_TXT.Text != "" && AGE_TXT.Text != "" && ADDRESS_TXT.Text != "" && EMAIL_TXT.Text != "" && PASSWORD_TXT.Text != "")
             {
                 insertdata();
+                MessageBox.Show("Account Has Been Created ! "+ Environment.NewLine+ "Your Id is: "+GetCustomerId().ToString());
+                clear();
             }
             else
                 MessageBox.Show("Please Fill the form Correctly");
+           
+        }
+        int GetCustomerId()
+        {
+            using(SqlConnection con=new SqlConnection(cs))
+            {
+                
+                try
+                {
+                    con.Open();
+                    SqlCommand cmd = new SqlCommand("getCustid", con);
+                    cmd.CommandType = CommandType.StoredProcedure;
+                
+                    SqlDataReader rdr = cmd.ExecuteReader();
+                    if (rdr.Read())
+                    {
+                        return Int32.Parse(rdr["cust_id"].ToString());
+
+                    }
+                   
+                   
+                }
+                catch(Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+                return 0;
+               
+            }
+        }
+
+        private void SignUpCustomer_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

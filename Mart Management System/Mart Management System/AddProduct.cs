@@ -50,7 +50,6 @@ namespace Mart_Management_System
         private void ADD_BUTTON_Click(object sender, EventArgs e)
         {
 
-
             if (cname && cprice && cquantity && Cat_Combo.SelectedIndex>-1 && Product_Combo.SelectedIndex>-1 && imglocation!="" )
             {
                 AddData();
@@ -137,6 +136,9 @@ namespace Mart_Management_System
 
                 MessageBox.Show("Record Inserted !");
                 clear();
+
+                loadCatrec();
+                loadComrec();
 
                 }
                 catch(Exception e)
