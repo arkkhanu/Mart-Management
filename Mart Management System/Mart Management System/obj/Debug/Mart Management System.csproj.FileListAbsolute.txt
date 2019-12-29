@@ -179,7 +179,6 @@ C:\Users\arkkhanu\Desktop\Semester 5\C# programing Lab\Project\Mart Management S
 C:\Users\arkkhanu\Desktop\Semester 5\C# programing Lab\Project\Mart Management System\Mart Management System\obj\Debug\Mart_Management_System.CustomerOperations.resources
 C:\Users\arkkhanu\Desktop\Semester 5\C# programing Lab\Project\Mart Management System\Mart Management System\obj\Debug\Mart_Management_System.CustomerPortal.resources
 C:\Users\arkkhanu\Desktop\Semester 5\C# programing Lab\Project\Mart Management System\Mart Management System\obj\Debug\Mart_Management_System.CustomersDetails.resources
-C:\Users\arkkhanu\Desktop\Semester 5\C# programing Lab\Project\Mart Management System\Mart Management System\obj\Debug\Mart_Management_System.CustomerView.resources
 C:\Users\arkkhanu\Desktop\Semester 5\C# programing Lab\Project\Mart Management System\Mart Management System\obj\Debug\Mart_Management_System.DeleteCashier.resources
 C:\Users\arkkhanu\Desktop\Semester 5\C# programing Lab\Project\Mart Management System\Mart Management System\obj\Debug\Mart_Management_System.DeleteCategory.resources
 C:\Users\arkkhanu\Desktop\Semester 5\C# programing Lab\Project\Mart Management System\Mart Management System\obj\Debug\Mart_Management_System.DeleteCompany.resources
@@ -209,3 +208,4 @@ F:\University Material\5th Semister\Project\Visual Programing\Git\Mart Managemen
 F:\University Material\5th Semister\Project\Visual Programing\Git\Mart Management System\Mart Management System\obj\Debug\Mart_Management_System.CustomerPortal.resources
 F:\University Material\5th Semister\Project\Visual Programing\Git\Mart Management System\Mart Management System\obj\Debug\Mart_Management_System.CustomersDetails.resources
 F:\University Material\5th Semister\Project\Visual Programing\Git\Mart Management System\Mart Management System\obj\Debug\Mart_Management_System.ViewCustomer.resources
+C:\Users\arkkhanu\Desktop\Semester 5\C# programing Lab\Project\Mart Management System\Mart Management System\obj\Debug\Mart_Management_System.ViewCustomer.resources

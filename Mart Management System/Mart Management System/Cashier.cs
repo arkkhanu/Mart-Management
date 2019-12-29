@@ -18,6 +18,8 @@ namespace Mart_Management_System
         string cs = ConfigurationManager.ConnectionStrings["myCon"].ConnectionString;
 
         int total_amt = 0;
+        string total_quantity = "";
+        int updatedQuantity = 0;
         public Cashier()
         {
             InitializeComponent();
@@ -33,22 +35,6 @@ namespace Mart_Management_System
 
         void loadCashid()
         {
-            //string query = "select cashier_id from Cashier;";
-            //SqlConnection con = new SqlConnection(cs);
-            
-
-            //    SqlCommand cmd = new SqlCommand(query, con);
-            //    con.Open();
-            //    SqlDataReader rdr = cmd.ExecuteReader();
-
-            //if (rdr.Read())
-            //{
-            //    CASH_Combo.Items.Add(rdr["cashier_id"].ToString());
-            //    while (rdr.Read())
-            //    {
-            //        CASH_Combo.Items.Add( rdr["cashier_id"].ToString());
-            //    }
-            //}
             if (cashier_Id != "")
             {
 
@@ -128,11 +114,44 @@ namespace Mart_Management_System
             if (TRAN_TXT.Text != ""&& QUANTITY_TXT.Text != ""&& PRO_TXT.Text != ""&& PRICE_TXT.Text != "" && CASH_Combo.SelectedIndex>-1 && CUSTOM_COMBO.SelectedIndex>-1)
             {
                 adddata();
+                updateingQuantity();
             }
             else
                 MessageBox.Show("please Fill Complete Form !");
             
             
+        }
+
+        private void getQuantityFunction()
+        {
+            using (SqlConnection con = new SqlConnection(cs))
+            {
+                DataTable dt = new DataTable();
+                SqlDataAdapter da = new SqlDataAdapter();
+                da.SelectCommand = new SqlCommand("GetQuantity", con);
+                da.SelectCommand.Parameters.AddWithValue("@proname", PRO_TXT.Text);
+                da.SelectCommand.CommandType = CommandType.StoredProcedure;
+                try
+                {
+                    con.Open();
+                    da.Fill(dt);
+                    //dataGridView1.DataSource = dt;
+                    for(int i=0; i<dt.Rows.Count; i++)
+                    {
+                        string quant = dt.Rows[i][0].ToString();
+                        total_quantity = quant;
+                        break;
+                    }
+                    int cartquantity = Convert.ToInt32(QUANTITY_TXT.Text);
+                    int remaingQuantity = Convert.ToInt32(total_quantity) - cartquantity;
+                    updatedQuantity = remaingQuantity;
+                    //MessageBox.Show(updatedQuantity.ToString());
+                }
+                catch(Exception e)
+                {
+                    MessageBox.Show(e.Message);
+                }
+            }
         }
         void adddata()
         {
@@ -186,6 +205,43 @@ namespace Mart_Management_System
             }
         }
 
-       
+        private void button1_Click(object sender, EventArgs e)
+        {
+            getQuantityFunction();
+        }
+        private void updateingQuantity()
+        {
+            getQuantityFunction();
+            using (SqlConnection con = new SqlConnection(cs))
+            {
+                DataTable dt = new DataTable();
+                SqlDataAdapter da = new SqlDataAdapter();
+                da.SelectCommand = new SqlCommand("updatedQuantity", con);
+                da.SelectCommand.Parameters.AddWithValue("@proname", PRO_TXT.Text);
+                da.SelectCommand.Parameters.AddWithValue("@quantityValue", updatedQuantity.ToString());
+                da.SelectCommand.CommandType = CommandType.StoredProcedure;
+                try
+                {
+                    con.Open();
+                    da.Fill(dt);
+                    string ss1 = "";
+                    dataGridView1.DataSource = dt;
+                    for (int i = 0; i < dt.Rows.Count; i++)
+                    {
+                        string quant = dt.Rows[i][0].ToString();
+                        ss1 = quant;
+                        break;
+                    }
+                    //int cartquantity = Convert.ToInt32(QUANTITY_TXT.Text);
+                    //int remaingQuantity = Convert.ToInt32(total_quantity) - cartquantity;
+                    //updatedQuantity = remaingQuantity;
+                    //MessageBox.Show(ss1);
+                }
+                catch (Exception e)
+                {
+                    MessageBox.Show(e.Message);
+                }
+            }
+        }
     }
 }

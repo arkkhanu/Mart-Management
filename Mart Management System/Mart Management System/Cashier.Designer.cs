@@ -55,10 +55,13 @@
             this.DATE = new System.Windows.Forms.DateTimePicker();
             this.ttl_amtBox = new System.Windows.Forms.TextBox();
             this.ttl_amt = new System.Windows.Forms.Label();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CASHIER_BOX)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BACK_BOX)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CASHIER_VIEW)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -148,7 +151,6 @@
             this.CASH_Combo.Name = "CASH_Combo";
             this.CASH_Combo.Size = new System.Drawing.Size(173, 21);
             this.CASH_Combo.TabIndex = 32;
-            //this.CASH_Combo.SelectedIndexChanged += new System.EventHandler(this.CASH_Combo_SelectedIndexChanged);
             // 
             // label1
             // 
@@ -277,7 +279,6 @@
             this.CASHIER_VIEW.Size = new System.Drawing.Size(777, 150);
             this.CASHIER_VIEW.TabIndex = 52;
             this.CASHIER_VIEW.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.CASHIER_VIEW_CellClick);
-//            this.CASHIER_VIEW.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.CASHIER_VIEW_CellContentClick);
             // 
             // SUBMIT_BTN
             // 
@@ -330,12 +331,32 @@
             this.ttl_amt.TabIndex = 57;
             this.ttl_amt.Text = "Total Amount";
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(375, 281);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(321, 44);
+            this.dataGridView1.TabIndex = 59;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(337, 133);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 60;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Cashier
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ClientSize = new System.Drawing.Size(805, 528);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.ttl_amtBox);
             this.Controls.Add(this.ttl_amt);
             this.Controls.Add(this.DATE);
@@ -368,6 +389,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.CASHIER_BOX)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BACK_BOX)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CASHIER_VIEW)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -401,5 +423,7 @@
         private System.Windows.Forms.DateTimePicker DATE;
         private System.Windows.Forms.TextBox ttl_amtBox;
         private System.Windows.Forms.Label ttl_amt;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button button1;
     }
 }

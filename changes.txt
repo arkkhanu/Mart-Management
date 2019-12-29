@@ -25,4 +25,21 @@ add column totalAmount in details and cart
 alter procedure cashierWork
 
 
+ ** Changes 29 Dec 2019 11:43 PM ** 
+
+/////////////////////////
+create procedure updatedQuantity
+@proname varchar(50) , @quantityValue varchar(50)
+ as 
+ begin
+ update Product set quantity=@quantityValue where pro_name =@proname
+ end
+//////////////////////////
+create procedure GetQuantity
+ @proname varchar(25) 
+ as 
+ begin
+ select quantity from Product where pro_name = @proname
+ end
+
         
