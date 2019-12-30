@@ -15,6 +15,7 @@ namespace Mart_Management_System
 {
     public partial class LoginCustomer : Form
     {
+        //connection string
         string cs = ConfigurationManager.ConnectionStrings["myCon"].ConnectionString;
         public LoginCustomer()
         {
@@ -22,12 +23,15 @@ namespace Mart_Management_System
             this.MaximizeBox = false;
         }
 
+        //method to go back
         private void BACK_BOX_Click(object sender, EventArgs e)
         {
             LoginForm c = new LoginForm();
             this.Hide();
             c.Show();
         }
+
+        //method to insert customer data
 
         private void SIGNUP_Click(object sender, EventArgs e)
         {
@@ -36,14 +40,11 @@ namespace Mart_Management_System
             cs.Show();
         }
 
-        private void LoginCustomer_Load(object sender, EventArgs e)
-        {
-
-        }
+       //method to authenticate customer
 
         private void LOGIN_BUTTON_Click(object sender, EventArgs e)
         {
-
+            //validation
             if (ID_TXT.Text == "")
             {
                 MessageBox.Show("Please Enter ID");

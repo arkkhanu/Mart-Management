@@ -19,6 +19,8 @@ namespace Mart_Management_System
             InitializeComponent();
             this.MaximizeBox = false;
         }
+
+        //method to load customer data
         void loaddata()
         {
 
@@ -28,7 +30,7 @@ namespace Mart_Management_System
             using (SqlConnection con = new SqlConnection(cs))
             {
                 con.Open();
-                sda = new SqlDataAdapter("select * from Customer where cust_id=@cust", con);
+                sda = new SqlDataAdapter("select * from Customer where cust_id=@cust", con); //load selected id data
                 sda.SelectCommand.Parameters.AddWithValue("@cust", txt_id.Value);
                 sda.Fill(dt);
                 if (dt.Rows.Count > 0)
@@ -39,16 +41,14 @@ namespace Mart_Management_System
 
             }
         }
-        private void CustomersDetails_Load(object sender, EventArgs e)
-        {
-
-        }
+       //method to load customer ids
 
         private void btn_search_Click(object sender, EventArgs e)
         {
             loaddata();
         }
 
+        //method to go back
         private void BACK_BOX_Click(object sender, EventArgs e)
         {
             CustomerPortal cu = new CustomerPortal();

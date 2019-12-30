@@ -115,12 +115,12 @@
             // 
             // COMPANY_VIEW
             // 
+            this.COMPANY_VIEW.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.COMPANY_VIEW.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.COMPANY_VIEW.Location = new System.Drawing.Point(1, 288);
+            this.COMPANY_VIEW.Location = new System.Drawing.Point(204, 288);
             this.COMPANY_VIEW.Name = "COMPANY_VIEW";
-            this.COMPANY_VIEW.Size = new System.Drawing.Size(798, 150);
+            this.COMPANY_VIEW.Size = new System.Drawing.Size(373, 150);
             this.COMPANY_VIEW.TabIndex = 5;
-            this.COMPANY_VIEW.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.COMPANY_VIEW_CellContentClick);
             // 
             // lbl_id
             // 
@@ -131,7 +131,6 @@
             this.lbl_id.Size = new System.Drawing.Size(223, 18);
             this.lbl_id.TabIndex = 9;
             this.lbl_id.Text = "Enter Company ID to Search";
-            this.lbl_id.Click += new System.EventHandler(this.lbl_id_Click);
             // 
             // txt_id
             // 
@@ -144,7 +143,6 @@
             this.txt_id.Name = "txt_id";
             this.txt_id.Size = new System.Drawing.Size(120, 20);
             this.txt_id.TabIndex = 10;
-            this.txt_id.ValueChanged += new System.EventHandler(this.txt_id_ValueChanged);
             // 
             // btn_search
             // 
@@ -171,7 +169,6 @@
             this.Name = "ViewCompany";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ViewCompany";
-            this.Load += new System.EventHandler(this.ViewCompany_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.LOOK_BOX)).EndInit();

@@ -35,7 +35,7 @@
             this.LINE_LBL = new System.Windows.Forms.Label();
             this.CUSTOMER_LBL = new System.Windows.Forms.Label();
             this.BACK_BOX = new System.Windows.Forms.PictureBox();
-            this.ID_LBL = new System.Windows.Forms.Label();
+            this.NAME_LBL = new System.Windows.Forms.Label();
             this.CATEGORY_COMBO = new System.Windows.Forms.ComboBox();
             this.DELETE = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
@@ -110,21 +110,21 @@
             this.BACK_BOX.TabStop = false;
             this.BACK_BOX.Click += new System.EventHandler(this.BACK_BOX_Click);
             // 
-            // ID_LBL
+            // NAME_LBL
             // 
-            this.ID_LBL.AutoSize = true;
-            this.ID_LBL.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ID_LBL.ForeColor = System.Drawing.SystemColors.Control;
-            this.ID_LBL.Location = new System.Drawing.Point(148, 271);
-            this.ID_LBL.Name = "ID_LBL";
-            this.ID_LBL.Size = new System.Drawing.Size(91, 13);
-            this.ID_LBL.TabIndex = 12;
-            this.ID_LBL.Text = "CATEGORY ID";
+            this.NAME_LBL.AutoSize = true;
+            this.NAME_LBL.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NAME_LBL.ForeColor = System.Drawing.SystemColors.Control;
+            this.NAME_LBL.Location = new System.Drawing.Point(196, 271);
+            this.NAME_LBL.Name = "NAME_LBL";
+            this.NAME_LBL.Size = new System.Drawing.Size(113, 13);
+            this.NAME_LBL.TabIndex = 12;
+            this.NAME_LBL.Text = "CATEGORY NAME";
             // 
             // CATEGORY_COMBO
             // 
             this.CATEGORY_COMBO.FormattingEnabled = true;
-            this.CATEGORY_COMBO.Location = new System.Drawing.Point(263, 268);
+            this.CATEGORY_COMBO.Location = new System.Drawing.Point(311, 268);
             this.CATEGORY_COMBO.Name = "CATEGORY_COMBO";
             this.CATEGORY_COMBO.Size = new System.Drawing.Size(121, 21);
             this.CATEGORY_COMBO.TabIndex = 15;
@@ -148,7 +148,7 @@
             this.ClientSize = new System.Drawing.Size(607, 450);
             this.Controls.Add(this.DELETE);
             this.Controls.Add(this.CATEGORY_COMBO);
-            this.Controls.Add(this.ID_LBL);
+            this.Controls.Add(this.NAME_LBL);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "DeleteCategory";
@@ -172,7 +172,7 @@
         private System.Windows.Forms.Label LINE_LBL;
         private System.Windows.Forms.Label CUSTOMER_LBL;
         private System.Windows.Forms.PictureBox BACK_BOX;
-        private System.Windows.Forms.Label ID_LBL;
+        private System.Windows.Forms.Label NAME_LBL;
         private System.Windows.Forms.ComboBox CATEGORY_COMBO;
         private System.Windows.Forms.Button DELETE;
     }

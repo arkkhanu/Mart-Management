@@ -14,6 +14,7 @@ namespace Mart_Management_System
 {
     public partial class LoginCashier : Form
     {
+        //connection string
         string cs = ConfigurationManager.ConnectionStrings["myCon"].ConnectionString;
         public LoginCashier()
         {
@@ -21,10 +22,7 @@ namespace Mart_Management_System
             this.MaximizeBox = false;
         }
 
-        private void ADMIN_BOX_Click(object sender, EventArgs e)
-        {
-
-        }
+       //method to go back
 
         private void BACK_BOX_Click(object sender, EventArgs e)
         {
@@ -33,15 +31,13 @@ namespace Mart_Management_System
             lo.Show();
         }
 
-        private void LoginCashier_Load(object sender, EventArgs e)
-        {
-
-        }
+        //method to call stored procedure to authenticate cashier
 
         private void LOGIN_BUTTON_Click(object sender, EventArgs e)
         {
             using (SqlConnection con = new SqlConnection(cs))
             {
+                //validation
 
                 if (ID_TXT.Text == "")
                 {
@@ -55,6 +51,8 @@ namespace Mart_Management_System
                 {
                     DataTable dt = new DataTable();
                     SqlDataAdapter da = new SqlDataAdapter();
+
+                    //paramertised query with stored procedure
 
                     da.SelectCommand = new SqlCommand("LoginCashier", con);
                     da.SelectCommand.Parameters.AddWithValue("@id", ID_TXT.Text);

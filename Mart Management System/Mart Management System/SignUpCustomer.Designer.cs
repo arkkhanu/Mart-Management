@@ -359,7 +359,7 @@
             this.Name = "SignUpCustomer";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SignUpCustomer";
-            this.Load += new System.EventHandler(this.SignUpCustomer_Load);
+//            this.Load += new System.EventHandler(this.SignUpCustomer_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CUSTOMER_BOX)).EndInit();

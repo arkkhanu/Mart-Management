@@ -16,8 +16,8 @@ namespace Mart_Management_System
 {
     public partial class SignUpCustomer : Form
     {
-        bool cname, age, pass;
-        string cs = ConfigurationManager.ConnectionStrings["myCon"].ConnectionString;
+        bool cname, age, pass; //bools to validate fields
+        string cs = ConfigurationManager.ConnectionStrings["myCon"].ConnectionString; //connection string
         public SignUpCustomer()
         {
             InitializeComponent();
@@ -25,12 +25,15 @@ namespace Mart_Management_System
         }
     
       
+        //method to go back
         private void BACK_BOX_Click(object sender, EventArgs e)
         {
             LoginCustomer cu = new LoginCustomer();
             this.Hide();
             cu.Show();
         }
+
+        //method to insert customer data
         private void insertdata()
         {
             try
@@ -79,6 +82,7 @@ namespace Mart_Management_System
 
 
         }
+        //regular expression for validation
         public void Regexp(string re, TextBox tb, Label lbl, string s)
         {
             Regex regex = new Regex(re);
@@ -105,21 +109,26 @@ namespace Mart_Management_System
 
             }
         }
+
+        //method to validate name
         private void validatename(object sender, KeyEventArgs e)
         {
             Regexp(@"^[a-zA-Z\s]+$", NAME_TXT, name_lbl, "Name ");
         }
+        //method to validate password
 
         private void validatepass(object sender, KeyEventArgs e)
         {
             Regexp(@"^[0-9]+$", PASSWORD_TXT,pa_lbl , "Password ");
         }
 
+        //method to validate age
         private void validateAge(object sender, KeyEventArgs e)
         {
             Regexp(@"^[0-9]+$", AGE_TXT, ag_lbl, "Age ");
         }
 
+        //method to clear all fields
         void clear()
         {
             NAME_TXT.Text = "";
@@ -131,7 +140,7 @@ namespace Mart_Management_System
             Female_Radio.Checked = false;
         }
 
-        
+        //method to insert customer data
         private void SIGNUP_BUTTON_Click(object sender, EventArgs e)
         {
 
@@ -145,6 +154,8 @@ namespace Mart_Management_System
                 MessageBox.Show("Please Fill the form Correctly");
            
         }
+
+        //method to load customer ids
         int GetCustomerId()
         {
             using(SqlConnection con=new SqlConnection(cs))
@@ -174,9 +185,6 @@ namespace Mart_Management_System
             }
         }
 
-        private void SignUpCustomer_Load(object sender, EventArgs e)
-        {
-
-        }
+        
     }
 }

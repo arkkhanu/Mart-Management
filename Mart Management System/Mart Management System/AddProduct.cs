@@ -11,20 +11,20 @@ using System.Data.SqlClient;
 using System.Configuration;
 using System.IO;
 using System.Text.RegularExpressions;
-using System.Data;
 using System.Collections.Specialized;
 namespace Mart_Management_System
 {
     public partial class AddProduct : Form
     {
-        bool cname, cprice, cquantity;
-        string cs = ConfigurationManager.ConnectionStrings["myCon"].ConnectionString;
+        bool cname, cprice, cquantity; //bools to check correct input
+        string cs = ConfigurationManager.ConnectionStrings["myCon"].ConnectionString; //connection string
         public AddProduct()
         {
             InitializeComponent();
             this.MaximizeBox = false;
         }
 
+        //method to load all companies and categories
         private void AddProduct_Load(object sender, EventArgs e)
         {
 
@@ -33,7 +33,7 @@ namespace Mart_Management_System
 
         }
         
-       
+       //method to clear all fields
         private void clear()
         {
             //  ID_TXT.Text = "";
@@ -46,6 +46,8 @@ namespace Mart_Management_System
 
 
         }
+
+        //method to call insert data
 
         private void ADD_BUTTON_Click(object sender, EventArgs e)
         {
@@ -65,6 +67,8 @@ namespace Mart_Management_System
           
             
         }
+
+        //method to insert data
         private void AddData()
         {
 
@@ -153,6 +157,7 @@ namespace Mart_Management_System
 
         }
 
+        //this method will load categories
         void loadCatrec()
         {
             string query = "select cat_name from Category;";
@@ -175,6 +180,7 @@ namespace Mart_Management_System
 
         }
 
+        //this method will load companies
         void loadComrec()
         {
             string query = "select comp_name from Company";
@@ -196,7 +202,7 @@ namespace Mart_Management_System
         }
 
 
-
+        //method to go back
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             ProductOperations p = new ProductOperations();
@@ -204,6 +210,7 @@ namespace Mart_Management_System
             p.Show();
         }
 
+        //browse button to upload picture
 
         string imglocation = "";
         private void BRO_BTN_Click(object sender, EventArgs e)
@@ -219,7 +226,7 @@ namespace Mart_Management_System
 
         }
 
-
+        //regular expression for valdation
        
         public void Regexp(string re, TextBox tb, Label lbl, string s)
         {
@@ -249,17 +256,20 @@ namespace Mart_Management_System
             }
         }
 
+        //method to validate price
         private void validatePrice(object sender, KeyEventArgs e)
         {
             Regexp(@"^[0-9]+$", PRICE_TXT, price_error_label, "Price ");
         }
 
+        //method to validate name
         private void validateName(object sender, KeyEventArgs e)
         {
 
             Regexp(@"^[a-zA-Z\s]+$", NAME_TXT, lbl_name, "Name ");
 
         }
+        //method to validate quantity
 
         private void validatequan(object sender, KeyEventArgs e)
         {

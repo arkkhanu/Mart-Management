@@ -15,6 +15,7 @@ namespace Mart_Management_System
 {
     public partial class LoginAdmin : Form
     {
+        //connection string
         string cs = ConfigurationManager.ConnectionStrings["myCon"].ConnectionString;
         public LoginAdmin()
         {
@@ -22,16 +23,8 @@ namespace Mart_Management_System
             this.MaximizeBox = false;
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
 
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
+        //method to go back
         private void BACK_BOX_Click(object sender, EventArgs e)
         {
             LoginForm ad = new LoginForm();
@@ -41,13 +34,11 @@ namespace Mart_Management_System
 
         }
 
-        private void LoginAdmin_Load(object sender, EventArgs e)
-        {
-            
-        }
+        //method to call stored procedure to authenticate admin
 
         private void LOGIN_Click(object sender, EventArgs e)
         {
+            //validation
             if(ID_TXT.Text == "")
                 MessageBox.Show("Please Enter ID");
 
@@ -63,6 +54,7 @@ namespace Mart_Management_System
                     DataTable dt = new DataTable();
                     SqlDataAdapter da = new SqlDataAdapter();
 
+                    //paramertised query with stored procedure
                     da.SelectCommand = new SqlCommand("LoginAdmin", con);
                     da.SelectCommand.Parameters.AddWithValue("@id", ID_TXT.Text);
                     da.SelectCommand.Parameters.AddWithValue("@password", PASSWORD_TXT.Text);

@@ -18,6 +18,7 @@ namespace Mart_Management_System
             this.MaximizeBox = false;
         }
 
+        //method to go back
         private void BACK_BOX_Click(object sender, EventArgs e)
         {
             Admin ad = new Admin();
@@ -26,6 +27,7 @@ namespace Mart_Management_System
 
 
         }
+        //method to add cashier data
 
         private void ADD_BTN_Click(object sender, EventArgs e)
         {
@@ -34,6 +36,7 @@ namespace Mart_Management_System
             ad.Show();
         }
 
+        //method to delete cashier data
         private void DELETE_BTN_Click(object sender, EventArgs e)
         {
             DeleteCashier de = new DeleteCashier();
@@ -41,6 +44,7 @@ namespace Mart_Management_System
             de.Show();
         }
 
+        //method to view cashier data
         private void VIEW_BTN_Click(object sender, EventArgs e)
         {
             ViewCashier ci = new ViewCashier();
@@ -48,6 +52,7 @@ namespace Mart_Management_System
             ci.Show();
         }
 
+        //method to update cashier data
         private void SEARCH_BTN_Click(object sender, EventArgs e)
         {
             UpdateCashier co = new UpdateCashier();
@@ -55,9 +60,6 @@ namespace Mart_Management_System
             co.Show();
         }
 
-        private void CashierOperations_Load(object sender, EventArgs e)
-        {
-
-        }
+       
     }
 }

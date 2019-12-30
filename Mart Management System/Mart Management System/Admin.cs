@@ -20,7 +20,7 @@ namespace Mart_Management_System
         }
 
        
-
+        //method to logout and go back
         private void Log_Out_Click(object sender, EventArgs e)
         {
             DialogResult dialogResult = MessageBox.Show("Are you sure you want to logout ?", "Admin",
@@ -35,6 +35,7 @@ namespace Mart_Management_System
             
         }
 
+        //method to call product operations
         private void PRODUCT_BUTTON_Click(object sender, EventArgs e)
         {
             ProductOperations op = new ProductOperations();
@@ -42,6 +43,7 @@ namespace Mart_Management_System
             op.Show();
         }
 
+        //method to call Company operations
         private void COMPANY_BUTTON_Click(object sender, EventArgs e)
         {
             CompanyOpearations co = new CompanyOpearations();
@@ -50,6 +52,7 @@ namespace Mart_Management_System
 
         }
 
+        //method to call Category operations
         private void CATEGORY_BUTTON_Click(object sender, EventArgs e)
         {
             CategoryOperations g = new CategoryOperations();
@@ -57,12 +60,15 @@ namespace Mart_Management_System
             g.Show();
         }
 
+        //method to call Cashier  operations
         private void CASHIER_BUTTON_Click(object sender, EventArgs e)
         {
             CashierOperations co = new CashierOperations();
             this.Hide();
             co.Show();
         }
+
+        //method to Customer product operations
 
         private void CUSTOMER_Click(object sender, EventArgs e)
         {
@@ -71,6 +77,7 @@ namespace Mart_Management_System
             cu.Show();
         }
 
+        //method to call Transactions
         private void TRANSACTION_Click(object sender, EventArgs e)
         {
             TransactionOperation op = new TransactionOperation();
@@ -78,9 +85,6 @@ namespace Mart_Management_System
             op.Show();
         }
 
-        private void Admin_Load(object sender, EventArgs e)
-        {
-
-        }
+       
     }
 }

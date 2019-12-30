@@ -18,6 +18,7 @@ namespace Mart_Management_System
             this.MaximizeBox = false;
         }
 
+        //method to call add category form
         private void ADD_BTN_Click(object sender, EventArgs e)
         {
             AddCategory ad = new AddCategory();
@@ -26,6 +27,7 @@ namespace Mart_Management_System
 
         }
 
+        //method to go back
         private void BACK_BOX_Click(object sender, EventArgs e)
         {
             Admin ad = new Admin();
@@ -33,12 +35,15 @@ namespace Mart_Management_System
             ad.Show();
         }
 
+        //method to call delete category form
         private void DELETE_BTN_Click(object sender, EventArgs e)
         {
             DeleteCategory de = new DeleteCategory();
             this.Hide();
             de.Show();
         }
+
+        //method to call view category form
 
         private void VIEW_BTN_Click(object sender, EventArgs e)
         {
@@ -47,6 +52,7 @@ namespace Mart_Management_System
             vi.Show();
         }
 
+        //method to call update category form
         private void SEARCH_BTN_Click(object sender, EventArgs e)
         {
             UpdateCategory cat = new UpdateCategory();
@@ -54,9 +60,6 @@ namespace Mart_Management_System
             cat.Show();
         }
 
-        private void CategoryOperations_Load(object sender, EventArgs e)
-        {
-
-        }
+        
     }
 }

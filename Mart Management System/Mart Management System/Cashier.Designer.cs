@@ -338,16 +338,18 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(321, 44);
             this.dataGridView1.TabIndex = 59;
+            this.dataGridView1.Visible = false;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(337, 133);
+            this.button1.Location = new System.Drawing.Point(704, 288);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 60;
             this.button1.Text = "button1";
             this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button1.Visible = false;
+//            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Cashier
             // 

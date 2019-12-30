@@ -58,7 +58,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(848, 161);
             this.panel1.TabIndex = 0;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // LINE_LBL
             // 
@@ -116,12 +115,12 @@
             // 
             // View_Product
             // 
+            this.View_Product.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.View_Product.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.View_Product.Location = new System.Drawing.Point(0, 288);
             this.View_Product.Name = "View_Product";
             this.View_Product.Size = new System.Drawing.Size(848, 150);
             this.View_Product.TabIndex = 5;
-            this.View_Product.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.View_Product_CellContentClick);
             this.View_Product.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.View_Product_DataError);
             // 
             // btn_search
@@ -171,7 +170,6 @@
             this.Name = "ViewProduct";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ViewProduct";
-            this.Load += new System.EventHandler(this.ViewProduct_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.LOOK_BOX)).EndInit();

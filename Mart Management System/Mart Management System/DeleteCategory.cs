@@ -60,13 +60,13 @@ namespace Mart_Management_System
             {
                 using (SqlConnection con = new SqlConnection(cs))
                 {
-                    string query = "delete Category where cat_id=@cat_id";
+                    string query = "delete Category where cat_name=@cat_name";
                     con.Open();
                     SqlDataAdapter adp = new SqlDataAdapter(query, con);
 
                     adp.DeleteCommand = con.CreateCommand();
                     adp.DeleteCommand.CommandText = query;
-                    adp.DeleteCommand.Parameters.AddWithValue("@cat_id", CATEGORY_COMBO.SelectedItem.ToString());
+                    adp.DeleteCommand.Parameters.AddWithValue("@cat_name", CATEGORY_COMBO.SelectedItem.ToString());
                     adp.DeleteCommand.ExecuteNonQuery();
                     MessageBox.Show("Record Deleted !");
                 }

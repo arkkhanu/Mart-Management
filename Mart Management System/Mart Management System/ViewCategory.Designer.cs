@@ -115,10 +115,11 @@
             // 
             // CATEGORY_VIEW
             // 
+            this.CATEGORY_VIEW.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.CATEGORY_VIEW.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.CATEGORY_VIEW.Location = new System.Drawing.Point(-1, 259);
+            this.CATEGORY_VIEW.Location = new System.Drawing.Point(263, 263);
             this.CATEGORY_VIEW.Name = "CATEGORY_VIEW";
-            this.CATEGORY_VIEW.Size = new System.Drawing.Size(798, 150);
+            this.CATEGORY_VIEW.Size = new System.Drawing.Size(320, 150);
             this.CATEGORY_VIEW.TabIndex = 6;
             // 
             // btn_search

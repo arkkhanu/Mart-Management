@@ -116,5 +116,12 @@ namespace Mart_Management_System
         {
             Regexp(@"^[a-zA-Z\s]+$", NAME_TXT, Name_lbl, "Name ");
         }
+
+        private void BACK_BOX_Click(object sender, EventArgs e)
+        {
+            CategoryOperations co = new CategoryOperations();
+            this.Hide();
+            co.Show();
+        }
     }
 }

@@ -56,7 +56,7 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(247, 346);
             this.panel1.TabIndex = 0;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+//            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // LINE_LBL2
             // 
@@ -111,7 +111,7 @@
             this.LOGIN_LBL.Size = new System.Drawing.Size(143, 24);
             this.LOGIN_LBL.TabIndex = 4;
             this.LOGIN_LBL.Text = "LOGIN ADMIN";
-            this.LOGIN_LBL.Click += new System.EventHandler(this.label3_Click);
+//            this.LOGIN_LBL.Click += new System.EventHandler(this.label3_Click);
             // 
             // ID
             // 
@@ -179,7 +179,7 @@
             this.Name = "LoginAdmin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "LoginAdmin";
-            this.Load += new System.EventHandler(this.LoginAdmin_Load);
+//            this.Load += new System.EventHandler(this.LoginAdmin_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ADMIN_BOX)).EndInit();

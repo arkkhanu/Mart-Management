@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.Configuration;
-using System.Data;
+
 
 namespace Mart_Management_System
 {
@@ -27,10 +27,6 @@ namespace Mart_Management_System
             this.MaximizeBox = false;
         }
        
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
        
         void loaddata()
         {
@@ -67,12 +63,7 @@ namespace Mart_Management_System
             }
         }
 
-        private void ViewProduct_Load(object sender, EventArgs e)
-        {
-
-
-
-        }
+      
       
         private void BACK_BOX_Click(object sender, EventArgs e)
         {
@@ -81,10 +72,7 @@ namespace Mart_Management_System
             p.Show();
         }
 
-        private void View_Product_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
+       
 
         private void btn_search_Click(object sender, EventArgs e)
         {

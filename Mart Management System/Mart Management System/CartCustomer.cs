@@ -15,17 +15,14 @@ namespace Mart_Management_System
 {
     public partial class CartCustomer : Form
     {
-        string cs = ConfigurationManager.ConnectionStrings["myCon"].ConnectionString;
+        string cs = ConfigurationManager.ConnectionStrings["myCon"].ConnectionString; //connection string
         public CartCustomer()
         {
             InitializeComponent();
             this.MaximizeBox = false;
         }
 
-        private void CUSTOMER_LBL_Click(object sender, EventArgs e)
-        {
-
-        }
+       //method to go back
 
         private void BACK_BOX_Click(object sender, EventArgs e)
         {
@@ -34,11 +31,14 @@ namespace Mart_Management_System
             cp.Show();
         }
 
+        //method to load companies and categories
         private void CartCustomer_Load(object sender, EventArgs e)
         {
             loadCatrec();
             loadComrec();
         }
+
+        //method to load categories
         void loadCatrec()
         {
             string query = "select cat_name from Category;";
@@ -61,6 +61,7 @@ namespace Mart_Management_System
 
         }
 
+        //method to load companies
         void loadComrec()
         {
             string query = "select comp_name from Company";
@@ -81,10 +82,12 @@ namespace Mart_Management_System
 
         }
 
+        //method to load all products
         private void btn_go_Click(object sender, EventArgs e)
         {
             int cat = -1, comp = -1;
 
+            //this method will load company and category id from name
             if (cat_combo.SelectedIndex > -1 && comp_combo.SelectedIndex > -1)
             {
                 using (SqlConnection con = new SqlConnection(cs))
@@ -147,6 +150,8 @@ namespace Mart_Management_System
             else
                 MessageBox.Show("Please Select Category And Company First !");
         }
+
+        //method to clear fields
         void clear()
         {
             cat_combo.SelectedIndex = -1;
@@ -157,6 +162,8 @@ namespace Mart_Management_System
             pro_list.Items.Clear();
            
         }
+
+        //method to add products
 
         private void btn_addPro_Click(object sender, EventArgs e)
         {
@@ -171,7 +178,7 @@ namespace Mart_Management_System
                         foreach (object item in pro_list.CheckedItems)
                         {
                             DataSet ds = new DataSet();
-                            string query = "select * from Cart where 0=1";
+                            string query = "select * from Cart where 0=1"; //this will load column names
                             SqlDataAdapter adp = new SqlDataAdapter(query, con);
                             adp.Fill(ds, "cart");
 
@@ -207,8 +214,8 @@ namespace Mart_Management_System
 
                         }
                         MessageBox.Show("Record Inserted !");
-                        //totalcost
-                        
+                       
+                       //clear fields method call 
                         clear();
 
                     }

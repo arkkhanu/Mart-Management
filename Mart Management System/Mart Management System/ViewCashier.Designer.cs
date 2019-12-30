@@ -115,10 +115,11 @@
             // 
             // CASHIER_VIEW
             // 
+            this.CASHIER_VIEW.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.CASHIER_VIEW.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.CASHIER_VIEW.Location = new System.Drawing.Point(0, 288);
+            this.CASHIER_VIEW.Location = new System.Drawing.Point(12, 288);
             this.CASHIER_VIEW.Name = "CASHIER_VIEW";
-            this.CASHIER_VIEW.Size = new System.Drawing.Size(798, 150);
+            this.CASHIER_VIEW.Size = new System.Drawing.Size(785, 150);
             this.CASHIER_VIEW.TabIndex = 6;
             this.CASHIER_VIEW.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.COMPANY_VIEW_CellContentClick);
             // 

@@ -18,6 +18,7 @@ namespace Mart_Management_System
             this.MaximizeBox = false;
         }
 
+        //method to go back
         private void BACK_BOX_Click(object sender, EventArgs e)
         {
 
@@ -32,6 +33,7 @@ namespace Mart_Management_System
             
         }
 
+        //method to call add product to cart form
         private void button1_Click(object sender, EventArgs e)
         {
             CartCustomer cart = new CartCustomer();
@@ -39,6 +41,7 @@ namespace Mart_Management_System
             cart.Show();
         }
 
+        //method to call view customer data form
         private void VIEW_BTN_Click(object sender, EventArgs e)
         {
             ViewCustomer u = new ViewCustomer("customer");
@@ -46,14 +49,6 @@ namespace Mart_Management_System
             u.Show();
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void CustomerPortal_Load(object sender, EventArgs e)
-        {
-
-        }
+      
     }
 }

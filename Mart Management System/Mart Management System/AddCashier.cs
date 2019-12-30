@@ -15,13 +15,16 @@ namespace Mart_Management_System
 {
     public partial class AddCashier : Form
     {
-        bool cname, pass, salary;
-        string cs = ConfigurationManager.ConnectionStrings["myCon"].ConnectionString;
+
+        bool cname, pass, salary; //bool to check valid data
+        string cs = ConfigurationManager.ConnectionStrings["myCon"].ConnectionString; //connection string
         public AddCashier()
         {
             InitializeComponent();
             this.MaximizeBox = false;
         }
+
+        //Regular expression for validation
         public void Regexp(string re, TextBox tb, Label lbl, string s)
         {
             Regex regex = new Regex(re);
@@ -49,12 +52,14 @@ namespace Mart_Management_System
 
             }
         }
+
+        //method to insert cashier data
         private void AddData()
         {
             using (SqlConnection con = new SqlConnection(cs))
             {
                 DataSet ds = new DataSet();
-                string query = "select * from Cashier where 0=1";
+                string query = "select * from Cashier where 0=1"; //this will load column names
                 SqlDataAdapter adp = new SqlDataAdapter(query, con);
                 adp.Fill(ds, "Cashier");
 
@@ -79,10 +84,7 @@ namespace Mart_Management_System
             }
         }
 
-        private void AddCashier_Load(object sender, EventArgs e)
-        {
-
-        }
+       // method to go back
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
@@ -91,20 +93,19 @@ namespace Mart_Management_System
             co.Show();
         }
 
+        //method to check correct data in salary
         private void validatesalary(object sender, KeyEventArgs e)
         {
             Regexp(@"^[0-9]+$", SALARY_TXT, sal_lbl, "Salary ");
         }
 
+        //method to check correct data in password
         private void validatepass(object sender, KeyEventArgs e)
         {
             Regexp(@"^[0-9]+$", PASSWORD_TXT, pass_lbl, "Password ");
         }
 
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
+        //method to call function to insert data of cashier
 
         private void ADD_BUTTON_Click(object sender, EventArgs e)
         {
@@ -119,6 +120,7 @@ namespace Mart_Management_System
             
         }
 
+        //method to check correct data in name
         private void validatename(object sender, KeyEventArgs e)
         {
             Regexp(@"^[a-zA-Z\s]+$", NAME_TXT, lbl_name, "Name ");

@@ -18,6 +18,7 @@ namespace Mart_Management_System
             this.MaximizeBox = false;
         }
 
+        //method to go back
         private void BACK_BOX_Click(object sender, EventArgs e)
         {
             Admin ad = new Admin();
@@ -25,6 +26,7 @@ namespace Mart_Management_System
             ad.Show();
         }
 
+        //method to call add company operations
         private void ADD_BTN_Click(object sender, EventArgs e)
         {
             AddCompany a = new AddCompany();
@@ -32,6 +34,7 @@ namespace Mart_Management_System
             a.Show();
         }
 
+        //method to call delete company operations
         private void DELETE_BTN_Click(object sender, EventArgs e)
         {
             DeleteCompany co = new DeleteCompany();
@@ -39,6 +42,7 @@ namespace Mart_Management_System
             co.Show();
         }
 
+        //method to call view company operations
         private void VIEW_BTN_Click(object sender, EventArgs e)
         {
             ViewCompany v = new ViewCompany();
@@ -46,6 +50,7 @@ namespace Mart_Management_System
             v.Show();
         }
 
+        //method to call update company form
         private void UPDATE_BUTTON_Click(object sender, EventArgs e)
         {
             UpdateCompany co = new UpdateCompany();
@@ -53,9 +58,6 @@ namespace Mart_Management_System
             co.Show();
         }
 
-        private void CompanyOpearations_Load(object sender, EventArgs e)
-        {
-
-        }
+        
     }
 }

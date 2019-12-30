@@ -14,8 +14,8 @@ namespace Mart_Management_System
 {
     public partial class Cashier : Form
     {
-        public static string cashier_Id = "";
-        string cs = ConfigurationManager.ConnectionStrings["myCon"].ConnectionString;
+        public static string cashier_Id = ""; //to load cahsier id
+        string cs = ConfigurationManager.ConnectionStrings["myCon"].ConnectionString; //connection string
 
         int total_amt = 0;
         string total_quantity = "";
@@ -26,6 +26,7 @@ namespace Mart_Management_System
             this.MaximizeBox = false;
         }
 
+        //method to load cashier and company
         private void Cashier_Load(object sender, EventArgs e)
         {
             loaddata();
@@ -33,6 +34,7 @@ namespace Mart_Management_System
             loadCustid();
         }
 
+        //method to fill cashier combo
         void loadCashid()
         {
             if (cashier_Id != "")
@@ -41,6 +43,8 @@ namespace Mart_Management_System
                 CASH_Combo.Items.Add(cashier_Id.ToString());
             }
         }
+
+        //method to load customer ids
         void loadCustid()
         {
             string query = "select cust_id from Customer;";
@@ -60,6 +64,8 @@ namespace Mart_Management_System
                 }
             }
         }
+
+        //this will load all purchased products by customers
         void loaddata()
         {
 
@@ -81,6 +87,8 @@ namespace Mart_Management_System
             }
         }
 
+        //fill data grid with data
+
         private void CASHIER_VIEW_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (CASHIER_VIEW.SelectedRows.Count > 0)
@@ -95,6 +103,7 @@ namespace Mart_Management_System
             }
         }
 
+        //method to clear all fields
         private void CLEAR_BTN_Click(object sender, EventArgs e)
         {
             TRAN_TXT.Text = "";
@@ -109,6 +118,7 @@ namespace Mart_Management_System
 
         }
 
+        //this will add data into details table
         private void SUBMIT_BTN_Click(object sender, EventArgs e)
         {
             if (TRAN_TXT.Text != ""&& QUANTITY_TXT.Text != ""&& PRO_TXT.Text != ""&& PRICE_TXT.Text != "" && CASH_Combo.SelectedIndex>-1 && CUSTOM_COMBO.SelectedIndex>-1)
@@ -121,7 +131,7 @@ namespace Mart_Management_System
             
             
         }
-
+        //this method will update qunatity
         private void getQuantityFunction()
         {
             using (SqlConnection con = new SqlConnection(cs))
@@ -153,6 +163,8 @@ namespace Mart_Management_System
                 }
             }
         }
+
+        //this will insert data
         void adddata()
         {
             using (SqlConnection con = new SqlConnection(cs))
@@ -185,15 +197,9 @@ namespace Mart_Management_System
             }
       }
         
+        //method to go back
 
-        private void BACK_BOX_Click(object sender, EventArgs e)
-        {
-            LoginForm log = new LoginForm();
-            this.Hide();
-            log.Show();
-        }
-
-        private void BACK_BOX_Click_1(object sender, EventArgs e)
+         private void BACK_BOX_Click_1(object sender, EventArgs e)
         {
             DialogResult dialogResult = MessageBox.Show("Are you sure you want to logout ?", "Admin",
                                                         MessageBoxButtons.YesNo, MessageBoxIcon.Question);
@@ -205,10 +211,7 @@ namespace Mart_Management_System
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            getQuantityFunction();
-        }
+     //this method will update quantity in product
         private void updateingQuantity()
         {
             getQuantityFunction();
@@ -243,5 +246,7 @@ namespace Mart_Management_System
                 }
             }
         }
+
+       
     }
 }

@@ -18,6 +18,7 @@ namespace Mart_Management_System
             this.MaximizeBox = false;
         }
 
+        //method to go back
         private void BACK_BOX_Click(object sender, EventArgs e)
         {
                 Admin lc = new Admin();
@@ -26,11 +27,7 @@ namespace Mart_Management_System
             
 
         }
-
-        private void CustomerOperations_Load(object sender, EventArgs e)
-        {
-
-        }
+        //method to call view customer form
 
         private void VIEW_BTN_Click(object sender, EventArgs e)
         {
@@ -39,6 +36,7 @@ namespace Mart_Management_System
             co.Show();
         }
 
+        //method to call delete customer form
         private void DELETE_BTN_Click(object sender, EventArgs e)
         {
             DeleteCustomer c = new DeleteCustomer();
@@ -46,6 +44,7 @@ namespace Mart_Management_System
             c.Show();
         }
 
+        //method to call update customer form
         private void SEARCH_BTN_Click(object sender, EventArgs e)
         {
             UpdateCustomer u = new UpdateCustomer();
@@ -53,6 +52,7 @@ namespace Mart_Management_System
             u.Show();
         }
 
+        //method to call update customer form
         private void button1_Click(object sender, EventArgs e)
         {
             CartCustomer cart = new CartCustomer();
@@ -60,9 +60,6 @@ namespace Mart_Management_System
             cart.Show();
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
+        
     }
 }

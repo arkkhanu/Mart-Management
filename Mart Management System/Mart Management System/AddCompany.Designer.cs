@@ -40,6 +40,8 @@
             this.NAME_TXT = new System.Windows.Forms.TextBox();
             this.ADD_BUTTON = new System.Windows.Forms.Button();
             this.lbl_id = new System.Windows.Forms.Label();
+            this.cat_lbl = new System.Windows.Forms.Label();
+            this.cat_combo = new System.Windows.Forms.ComboBox();
             this.name_lbl = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.COMPANY_BOX)).BeginInit();
@@ -142,7 +144,6 @@
             this.NAME_TXT.Name = "NAME_TXT";
             this.NAME_TXT.Size = new System.Drawing.Size(173, 20);
             this.NAME_TXT.TabIndex = 20;
-            this.NAME_TXT.TextChanged += new System.EventHandler(this.NAME_TXT_TextChanged);
             this.NAME_TXT.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Validatename);
             // 
             // ADD_BUTTON
@@ -168,6 +169,26 @@
             this.lbl_id.TabIndex = 57;
             this.lbl_id.Text = "*Will generate automatically";
             // 
+            // cat_lbl
+            // 
+            this.cat_lbl.AutoSize = true;
+            this.cat_lbl.BackColor = System.Drawing.SystemColors.Control;
+            this.cat_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cat_lbl.Location = new System.Drawing.Point(233, 310);
+            this.cat_lbl.Name = "cat_lbl";
+            this.cat_lbl.Size = new System.Drawing.Size(57, 13);
+            this.cat_lbl.TabIndex = 59;
+            this.cat_lbl.Text = "Category";
+            // 
+            // cat_combo
+            // 
+            this.cat_combo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cat_combo.FormattingEnabled = true;
+            this.cat_combo.Location = new System.Drawing.Point(335, 310);
+            this.cat_combo.Name = "cat_combo";
+            this.cat_combo.Size = new System.Drawing.Size(173, 21);
+            this.cat_combo.TabIndex = 60;
+            // 
             // name_lbl
             // 
             this.name_lbl.AutoSize = true;
@@ -182,6 +203,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.cat_combo);
+            this.Controls.Add(this.cat_lbl);
             this.Controls.Add(this.name_lbl);
             this.Controls.Add(this.lbl_id);
             this.Controls.Add(this.ADD_BUTTON);
@@ -216,6 +239,8 @@
         private System.Windows.Forms.TextBox NAME_TXT;
         private System.Windows.Forms.Button ADD_BUTTON;
         private System.Windows.Forms.Label lbl_id;
+        private System.Windows.Forms.Label cat_lbl;
+        private System.Windows.Forms.ComboBox cat_combo;
         private System.Windows.Forms.Label name_lbl;
     }
 }

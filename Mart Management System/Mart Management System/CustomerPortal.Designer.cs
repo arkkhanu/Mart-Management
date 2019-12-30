@@ -58,7 +58,7 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(801, 161);
             this.panel1.TabIndex = 4;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+//            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // LINE_LBL
             // 
@@ -128,6 +128,7 @@
             // AMS_BTN
             // 
             this.AMS_BTN.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AMS_BTN.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.AMS_BTN.Location = new System.Drawing.Point(92, 362);
             this.AMS_BTN.Name = "AMS_BTN";
             this.AMS_BTN.Size = new System.Drawing.Size(121, 23);
@@ -139,6 +140,7 @@
             // VIEW_BTN
             // 
             this.VIEW_BTN.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.VIEW_BTN.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.VIEW_BTN.Location = new System.Drawing.Point(536, 364);
             this.VIEW_BTN.Name = "VIEW_BTN";
             this.VIEW_BTN.Size = new System.Drawing.Size(75, 23);
@@ -174,7 +176,7 @@
             this.Name = "CustomerPortal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CustomerPortal";
-            this.Load += new System.EventHandler(this.CustomerPortal_Load);
+//            this.Load += new System.EventHandler(this.CustomerPortal_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CUSTOMER_BOX)).EndInit();

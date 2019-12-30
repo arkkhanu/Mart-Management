@@ -35,7 +35,7 @@ namespace Mart_Management_System
         void loadComp()
         {
             COMPANY_COMBO.Items.Clear();
-            string query = "select comp_id from Company";
+            string query = "select comp_name from Company";
             SqlConnection con = new SqlConnection(cs);
 
 
@@ -44,10 +44,10 @@ namespace Mart_Management_System
             SqlDataReader rdr = cmd.ExecuteReader();
             if (rdr.Read())
             {
-                COMPANY_COMBO.Items.Add(rdr["comp_id"].ToString());
+                COMPANY_COMBO.Items.Add(rdr["comp_name"].ToString());
                 while (rdr.Read())
                 {
-                    COMPANY_COMBO.Items.Add(rdr["comp_id"].ToString());
+                    COMPANY_COMBO.Items.Add(rdr["comp_name"].ToString());
                 }
             }
 
@@ -63,13 +63,13 @@ namespace Mart_Management_System
             {
                 using (SqlConnection con = new SqlConnection(cs))
                 {
-                    string query = "delete Company where comp_id=@comp_id";
+                    string query = "delete Company where comp_name=@comp_name";
                     con.Open();
                     SqlDataAdapter adp = new SqlDataAdapter(query, con);
 
                     adp.DeleteCommand = con.CreateCommand();
                     adp.DeleteCommand.CommandText = query;
-                    adp.DeleteCommand.Parameters.AddWithValue("@comp_id", COMPANY_COMBO.SelectedItem.ToString());
+                    adp.DeleteCommand.Parameters.AddWithValue("@comp_name", COMPANY_COMBO.SelectedItem.ToString());
                     adp.DeleteCommand.ExecuteNonQuery();
                     MessageBox.Show("Record Deleted !");
                 }

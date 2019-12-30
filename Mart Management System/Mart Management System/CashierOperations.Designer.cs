@@ -226,7 +226,7 @@
             this.Name = "CashierOperations";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CashierOperations";
-            this.Load += new System.EventHandler(this.CashierOperations_Load);
+//            this.Load += new System.EventHandler(this.CashierOperations_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CASHIER_BOX)).EndInit();

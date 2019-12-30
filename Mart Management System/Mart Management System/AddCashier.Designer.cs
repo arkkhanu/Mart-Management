@@ -34,7 +34,7 @@
             this.LINE_LBL = new System.Windows.Forms.Label();
             this.CASHIER_LBL = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.backButton = new System.Windows.Forms.PictureBox();
             this.ID = new System.Windows.Forms.Label();
             this.PASSWORD = new System.Windows.Forms.Label();
             this.NAME = new System.Windows.Forms.Label();
@@ -51,7 +51,7 @@
             this.pass_lbl = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.backButton)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -61,7 +61,7 @@
             this.panel1.Controls.Add(this.LINE_LBL);
             this.panel1.Controls.Add(this.CASHIER_LBL);
             this.panel1.Controls.Add(this.pictureBox2);
-            this.panel1.Controls.Add(this.pictureBox1);
+            this.panel1.Controls.Add(this.backButton);
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(802, 134);
@@ -109,17 +109,17 @@
             this.pictureBox2.TabIndex = 1;
             this.pictureBox2.TabStop = false;
             // 
-            // pictureBox1
+            // backButton
             // 
-            this.pictureBox1.BackColor = System.Drawing.SystemColors.Control;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(12, 34);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(78, 60);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.backButton.BackColor = System.Drawing.SystemColors.Control;
+            this.backButton.Image = ((System.Drawing.Image)(resources.GetObject("backButton.Image")));
+            this.backButton.Location = new System.Drawing.Point(12, 34);
+            this.backButton.Name = "backButton";
+            this.backButton.Size = new System.Drawing.Size(78, 60);
+            this.backButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.backButton.TabIndex = 0;
+            this.backButton.TabStop = false;
+            this.backButton.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // ID
             // 
@@ -248,7 +248,7 @@
             this.sal_lbl.Name = "sal_lbl";
             this.sal_lbl.Size = new System.Drawing.Size(0, 13);
             this.sal_lbl.TabIndex = 59;
-            this.sal_lbl.Click += new System.EventHandler(this.label2_Click);
+//            this.sal_lbl.Click += new System.EventHandler(this.label2_Click);
             // 
             // pass_lbl
             // 
@@ -283,11 +283,10 @@
             this.Name = "AddCashier";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AddCashier";
-            this.Load += new System.EventHandler(this.AddCashier_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.backButton)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -297,7 +296,7 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox backButton;
         private System.Windows.Forms.Label CASHIER_LBL;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label LINE_LBL;

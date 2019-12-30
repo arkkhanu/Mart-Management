@@ -226,7 +226,7 @@
             this.Name = "CategoryOperations";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CategoryOperations";
-            this.Load += new System.EventHandler(this.CategoryOperations_Load);
+//            this.Load += new System.EventHandler(this.CategoryOperations_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CATEGORY_BOX)).EndInit();

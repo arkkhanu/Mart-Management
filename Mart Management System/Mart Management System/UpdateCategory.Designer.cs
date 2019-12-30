@@ -101,6 +101,7 @@
             this.BACK_BOX.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.BACK_BOX.TabIndex = 1;
             this.BACK_BOX.TabStop = false;
+            this.BACK_BOX.Click += new System.EventHandler(this.BACK_BOX_Click);
             // 
             // ID
             // 
@@ -149,7 +150,7 @@
             this.cat_data.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.cat_data.Location = new System.Drawing.Point(567, 168);
             this.cat_data.Name = "cat_data";
-            this.cat_data.Size = new System.Drawing.Size(383, 150);
+            this.cat_data.Size = new System.Drawing.Size(331, 150);
             this.cat_data.TabIndex = 26;
             this.cat_data.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.cat_data_CellClick);
             // 

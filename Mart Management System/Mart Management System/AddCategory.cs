@@ -14,8 +14,8 @@ namespace Mart_Management_System
 {
     public partial class AddCategory : Form
     {
-        bool cname;
-        string cs = ConfigurationManager.ConnectionStrings["myCon"].ConnectionString;
+        bool cname; //bool to check correct name
+        string cs = ConfigurationManager.ConnectionStrings["myCon"].ConnectionString; //connection string
         public AddCategory()
         {
             InitializeComponent();
@@ -23,6 +23,7 @@ namespace Mart_Management_System
 
         }
 
+        //method to go back
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             CategoryOperations a = new CategoryOperations();
@@ -30,10 +31,7 @@ namespace Mart_Management_System
             a.Show();
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
+       //regular expression for validation
         public void Regexp(string re, TextBox tb, Label lbl, string s)
         {
             Regex regex = new Regex(re);
@@ -58,6 +56,7 @@ namespace Mart_Management_System
 
             }
         }
+        //method to add category data
         private void AddCat()
         {
             try
@@ -65,7 +64,7 @@ namespace Mart_Management_System
                 using (SqlConnection con = new SqlConnection(cs))
                 {
                     DataSet ds = new DataSet();
-                    string query = "select * from Category where 0=1";
+                    string query = "select * from Category where 0=1"; //this will load column names
                     SqlDataAdapter adp = new SqlDataAdapter(query, con);
                     adp.Fill(ds, "Category");
                     DataRow dr = ds.Tables["Category"].NewRow();
@@ -85,10 +84,8 @@ namespace Mart_Management_System
                 MessageBox.Show(Ex.ToString());
             }
         }
-        private void AddCategoru_Load(object sender, EventArgs e)
-        {
-
-        }
+        
+        //method to add category
 
         private void ADD_BUTTON_Click(object sender, EventArgs e)
         {
@@ -101,6 +98,7 @@ namespace Mart_Management_System
             
         }
 
+        //method to check correct input
         private void validatename(object sender, KeyEventArgs e)
         {
 

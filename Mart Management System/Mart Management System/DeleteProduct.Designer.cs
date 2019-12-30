@@ -35,9 +35,11 @@
             this.LINE_LBL = new System.Windows.Forms.Label();
             this.PRODUCT_LBL = new System.Windows.Forms.Label();
             this.BACK_BOX = new System.Windows.Forms.PictureBox();
-            this.ID_LBL = new System.Windows.Forms.Label();
+            this.NAME_LBL = new System.Windows.Forms.Label();
             this.PRODUCT_COMBO = new System.Windows.Forms.ComboBox();
             this.DELETE = new System.Windows.Forms.Button();
+            this.pro_cat = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CROSS_BOX)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BACK_BOX)).BeginInit();
@@ -110,22 +112,22 @@
             this.BACK_BOX.TabStop = false;
             this.BACK_BOX.Click += new System.EventHandler(this.BACK_BOX_Click);
             // 
-            // ID_LBL
+            // NAME_LBL
             // 
-            this.ID_LBL.AutoSize = true;
-            this.ID_LBL.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ID_LBL.ForeColor = System.Drawing.SystemColors.Control;
-            this.ID_LBL.Location = new System.Drawing.Point(160, 288);
-            this.ID_LBL.Name = "ID_LBL";
-            this.ID_LBL.Size = new System.Drawing.Size(84, 13);
-            this.ID_LBL.TabIndex = 14;
-            this.ID_LBL.Text = "PRODUCT ID";
+            this.NAME_LBL.AutoSize = true;
+            this.NAME_LBL.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NAME_LBL.ForeColor = System.Drawing.SystemColors.Control;
+            this.NAME_LBL.Location = new System.Drawing.Point(150, 234);
+            this.NAME_LBL.Name = "NAME_LBL";
+            this.NAME_LBL.Size = new System.Drawing.Size(106, 13);
+            this.NAME_LBL.TabIndex = 14;
+            this.NAME_LBL.Text = "PRODUCT NAME";
             // 
             // PRODUCT_COMBO
             // 
             this.PRODUCT_COMBO.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.PRODUCT_COMBO.FormattingEnabled = true;
-            this.PRODUCT_COMBO.Location = new System.Drawing.Point(264, 288);
+            this.PRODUCT_COMBO.Location = new System.Drawing.Point(287, 234);
             this.PRODUCT_COMBO.Name = "PRODUCT_COMBO";
             this.PRODUCT_COMBO.Size = new System.Drawing.Size(121, 21);
             this.PRODUCT_COMBO.TabIndex = 17;
@@ -142,15 +144,37 @@
             this.DELETE.UseVisualStyleBackColor = true;
             this.DELETE.Click += new System.EventHandler(this.DELETE_Click);
             // 
+            // pro_cat
+            // 
+            this.pro_cat.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.pro_cat.FormattingEnabled = true;
+            this.pro_cat.Location = new System.Drawing.Point(287, 275);
+            this.pro_cat.Name = "pro_cat";
+            this.pro_cat.Size = new System.Drawing.Size(121, 21);
+            this.pro_cat.TabIndex = 20;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.Control;
+            this.label2.Location = new System.Drawing.Point(150, 275);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(131, 13);
+            this.label2.TabIndex = 19;
+            this.label2.Text = "PRODUCT COMPANY";
+            // 
             // DeleteProduct
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ClientSize = new System.Drawing.Size(608, 450);
+            this.Controls.Add(this.pro_cat);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.DELETE);
             this.Controls.Add(this.PRODUCT_COMBO);
-            this.Controls.Add(this.ID_LBL);
+            this.Controls.Add(this.NAME_LBL);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "DeleteProduct";
@@ -174,8 +198,10 @@
         private System.Windows.Forms.Label LINE_LBL;
         private System.Windows.Forms.Label PRODUCT_LBL;
         private System.Windows.Forms.PictureBox BACK_BOX;
-        private System.Windows.Forms.Label ID_LBL;
+        private System.Windows.Forms.Label NAME_LBL;
         private System.Windows.Forms.ComboBox PRODUCT_COMBO;
         private System.Windows.Forms.Button DELETE;
+        private System.Windows.Forms.ComboBox pro_cat;
+        private System.Windows.Forms.Label label2;
     }
 }

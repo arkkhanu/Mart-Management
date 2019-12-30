@@ -370,6 +370,7 @@
             this.PRO_BOX.Location = new System.Drawing.Point(181, 467);
             this.PRO_BOX.Name = "PRO_BOX";
             this.PRO_BOX.Size = new System.Drawing.Size(148, 104);
+            this.PRO_BOX.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.PRO_BOX.TabIndex = 54;
             this.PRO_BOX.TabStop = false;
             // 

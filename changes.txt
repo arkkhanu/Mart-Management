@@ -42,4 +42,7 @@ create procedure GetQuantity
  select quantity from Product where pro_name = @proname
  end
 
+changes 3o dec 2019
+add column category_id in company and make it foreign with category.cat_id
+
         

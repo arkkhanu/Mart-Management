@@ -87,7 +87,7 @@
             this.CASHIER_BOX.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.CASHIER_BOX.TabIndex = 1;
             this.CASHIER_BOX.TabStop = false;
-            this.CASHIER_BOX.Click += new System.EventHandler(this.ADMIN_BOX_Click);
+//            this.CASHIER_BOX.Click += new System.EventHandler(this.ADMIN_BOX_Click);
             // 
             // BACK_BOX
             // 
@@ -177,7 +177,7 @@
             this.Name = "LoginCashier";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "LoginCashier";
-            this.Load += new System.EventHandler(this.LoginCashier_Load);
+//            this.Load += new System.EventHandler(this.LoginCashier_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CASHIER_BOX)).EndInit();

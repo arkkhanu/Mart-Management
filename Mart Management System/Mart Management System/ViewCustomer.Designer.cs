@@ -116,6 +116,7 @@
             // 
             // CUSTOMER_VIEW
             // 
+            this.CUSTOMER_VIEW.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.CUSTOMER_VIEW.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.CUSTOMER_VIEW.Location = new System.Drawing.Point(-3, 288);
             this.CUSTOMER_VIEW.Name = "CUSTOMER_VIEW";
@@ -155,7 +156,7 @@
             this.btn_search.UseVisualStyleBackColor = true;
             this.btn_search.Click += new System.EventHandler(this.btn_search_Click);
             // 
-            // CustomerView
+            // ViewCustomer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -167,7 +168,7 @@
             this.Controls.Add(this.CUSTOMER_VIEW);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Name = "CustomerView";
+            this.Name = "ViewCustomer";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CustomerView";
             this.Load += new System.EventHandler(this.CustomerView_Load);

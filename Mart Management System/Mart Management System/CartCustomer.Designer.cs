@@ -98,7 +98,6 @@
             this.CUSTOMER_LBL.Size = new System.Drawing.Size(272, 24);
             this.CUSTOMER_LBL.TabIndex = 2;
             this.CUSTOMER_LBL.Text = "HAVE A HAPPY SHOPPING";
-            this.CUSTOMER_LBL.Click += new System.EventHandler(this.CUSTOMER_LBL_Click);
             // 
             // CUSTOMER_BOX
             // 

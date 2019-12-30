@@ -21,6 +21,8 @@ namespace Mart_Management_System
             InitializeComponent();
             this.MaximizeBox = false;
         }
+
+        //method to load companies
         void loaddata()
         {
 
@@ -49,10 +51,7 @@ namespace Mart_Management_System
             }
         }
 
-        private void COMPANY_VIEW_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
+       
 
         private void BACK_BOX_Click(object sender, EventArgs e)
         {
@@ -66,19 +65,6 @@ namespace Mart_Management_System
             loaddata();
         }
 
-        private void ViewCompany_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lbl_id_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txt_id_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
+      
     }
 }
