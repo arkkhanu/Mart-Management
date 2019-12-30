@@ -89,7 +89,6 @@
             this.CUSTOMER_LBL.Size = new System.Drawing.Size(183, 24);
             this.CUSTOMER_LBL.TabIndex = 2;
             this.CUSTOMER_LBL.Text = "VIEW CUSTOMER";
-            this.CUSTOMER_LBL.Click += new System.EventHandler(this.CATEGORY_LBL_Click);
             // 
             // CUSTOMER_BOX
             // 
@@ -128,7 +127,7 @@
             this.ID_LBL.AutoSize = true;
             this.ID_LBL.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ID_LBL.ForeColor = System.Drawing.SystemColors.Control;
-            this.ID_LBL.Location = new System.Drawing.Point(178, 197);
+            this.ID_LBL.Location = new System.Drawing.Point(284, 205);
             this.ID_LBL.Name = "ID_LBL";
             this.ID_LBL.Size = new System.Drawing.Size(93, 13);
             this.ID_LBL.TabIndex = 10;
@@ -136,7 +135,7 @@
             // 
             // txt_id
             // 
-            this.txt_id.Location = new System.Drawing.Point(309, 195);
+            this.txt_id.Location = new System.Drawing.Point(415, 203);
             this.txt_id.Maximum = new decimal(new int[] {
             2000,
             0,
@@ -148,7 +147,7 @@
             // 
             // btn_search
             // 
-            this.btn_search.Location = new System.Drawing.Point(321, 250);
+            this.btn_search.Location = new System.Drawing.Point(380, 242);
             this.btn_search.Name = "btn_search";
             this.btn_search.Size = new System.Drawing.Size(75, 23);
             this.btn_search.TabIndex = 12;
@@ -171,7 +170,6 @@
             this.Name = "ViewCustomer";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CustomerView";
-            this.Load += new System.EventHandler(this.CustomerView_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CUSTOMER_BOX)).EndInit();

@@ -1,6 +1,6 @@
 ﻿namespace Mart_Management_System
 {
-    partial class CustomerPortal
+    partial class PurchasedHistory
     {
         /// <summary>
         /// Required designer variable.
@@ -28,25 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CustomerPortal));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PurchasedHistory));
             this.panel1 = new System.Windows.Forms.Panel();
             this.LINE_LBL = new System.Windows.Forms.Label();
             this.LINE_LBL2 = new System.Windows.Forms.Label();
             this.CUSTOMER_LBL = new System.Windows.Forms.Label();
             this.CUSTOMER_BOX = new System.Windows.Forms.PictureBox();
             this.BACK_BOX = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.AMS_BTN = new System.Windows.Forms.Button();
-            this.VIEW_BTN = new System.Windows.Forms.Button();
-            this.VIEW_BOX = new System.Windows.Forms.PictureBox();
-            this.history_box = new System.Windows.Forms.PictureBox();
-            this.btn_history = new System.Windows.Forms.Button();
+            this.history_grid = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CUSTOMER_BOX)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BACK_BOX)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VIEW_BOX)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.history_box)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.history_grid)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -57,10 +50,10 @@
             this.panel1.Controls.Add(this.CUSTOMER_LBL);
             this.panel1.Controls.Add(this.CUSTOMER_BOX);
             this.panel1.Controls.Add(this.BACK_BOX);
-            this.panel1.Location = new System.Drawing.Point(0, 2);
+            this.panel1.Location = new System.Drawing.Point(1, 1);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(801, 161);
-            this.panel1.TabIndex = 4;
+            this.panel1.TabIndex = 5;
             // 
             // LINE_LBL
             // 
@@ -116,100 +109,33 @@
             this.BACK_BOX.TabStop = false;
             this.BACK_BOX.Click += new System.EventHandler(this.BACK_BOX_Click);
             // 
-            // pictureBox1
+            // history_grid
             // 
-            this.pictureBox1.BackColor = System.Drawing.SystemColors.Control;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(73, 230);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(169, 107);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 26;
-            this.pictureBox1.TabStop = false;
+            this.history_grid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.history_grid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.history_grid.Location = new System.Drawing.Point(1, 158);
+            this.history_grid.Name = "history_grid";
+            this.history_grid.Size = new System.Drawing.Size(801, 201);
+            this.history_grid.TabIndex = 6;
             // 
-            // AMS_BTN
-            // 
-            this.AMS_BTN.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AMS_BTN.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.AMS_BTN.Location = new System.Drawing.Point(92, 362);
-            this.AMS_BTN.Name = "AMS_BTN";
-            this.AMS_BTN.Size = new System.Drawing.Size(121, 23);
-            this.AMS_BTN.TabIndex = 25;
-            this.AMS_BTN.Text = "Go to AMS Mart";
-            this.AMS_BTN.UseVisualStyleBackColor = true;
-            this.AMS_BTN.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // VIEW_BTN
-            // 
-            this.VIEW_BTN.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.VIEW_BTN.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.VIEW_BTN.Location = new System.Drawing.Point(354, 362);
-            this.VIEW_BTN.Name = "VIEW_BTN";
-            this.VIEW_BTN.Size = new System.Drawing.Size(75, 23);
-            this.VIEW_BTN.TabIndex = 28;
-            this.VIEW_BTN.Text = "Profile";
-            this.VIEW_BTN.UseVisualStyleBackColor = true;
-            this.VIEW_BTN.Click += new System.EventHandler(this.VIEW_BTN_Click);
-            // 
-            // VIEW_BOX
-            // 
-            this.VIEW_BOX.BackColor = System.Drawing.SystemColors.Control;
-            this.VIEW_BOX.Image = ((System.Drawing.Image)(resources.GetObject("VIEW_BOX.Image")));
-            this.VIEW_BOX.Location = new System.Drawing.Point(318, 230);
-            this.VIEW_BOX.Name = "VIEW_BOX";
-            this.VIEW_BOX.Size = new System.Drawing.Size(166, 107);
-            this.VIEW_BOX.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.VIEW_BOX.TabIndex = 27;
-            this.VIEW_BOX.TabStop = false;
-            // 
-            // history_box
-            // 
-            this.history_box.BackColor = System.Drawing.SystemColors.Control;
-            this.history_box.Image = ((System.Drawing.Image)(resources.GetObject("history_box.Image")));
-            this.history_box.Location = new System.Drawing.Point(560, 230);
-            this.history_box.Name = "history_box";
-            this.history_box.Size = new System.Drawing.Size(166, 107);
-            this.history_box.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.history_box.TabIndex = 29;
-            this.history_box.TabStop = false;
-            // 
-            // btn_history
-            // 
-            this.btn_history.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_history.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btn_history.Location = new System.Drawing.Point(579, 362);
-            this.btn_history.Name = "btn_history";
-            this.btn_history.Size = new System.Drawing.Size(136, 23);
-            this.btn_history.TabIndex = 30;
-            this.btn_history.Text = "Purchased History";
-            this.btn_history.UseVisualStyleBackColor = true;
-            this.btn_history.Click += new System.EventHandler(this.btn_history_Click);
-            // 
-            // CustomerPortal
+            // PurchasedHistory
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.btn_history);
-            this.Controls.Add(this.history_box);
-            this.Controls.Add(this.VIEW_BTN);
-            this.Controls.Add(this.VIEW_BOX);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.AMS_BTN);
+            this.ClientSize = new System.Drawing.Size(800, 405);
+            this.Controls.Add(this.history_grid);
             this.Controls.Add(this.panel1);
-            this.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Name = "CustomerPortal";
+            this.Name = "PurchasedHistory";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "CustomerPortal";
+            this.Text = "PurchasedHistory";
+            this.Load += new System.EventHandler(this.PurchasedHistory_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CUSTOMER_BOX)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BACK_BOX)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VIEW_BOX)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.history_box)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.history_grid)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -222,11 +148,8 @@
         private System.Windows.Forms.Label CUSTOMER_LBL;
         private System.Windows.Forms.PictureBox CUSTOMER_BOX;
         private System.Windows.Forms.PictureBox BACK_BOX;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button AMS_BTN;
-        private System.Windows.Forms.Button VIEW_BTN;
-        private System.Windows.Forms.PictureBox VIEW_BOX;
-        private System.Windows.Forms.PictureBox history_box;
-        private System.Windows.Forms.Button btn_history;
+        private System.Windows.Forms.DataGridView history_grid;
+
+
     }
 }

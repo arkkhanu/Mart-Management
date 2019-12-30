@@ -98,10 +98,7 @@ namespace Mart_Management_System
                 MessageBox.Show("Please Fill the form Correctly");
         }
 
-        private void view_data_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
+     
 
         private void view_data_CellClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -135,9 +132,9 @@ namespace Mart_Management_System
                 using (SqlConnection con = new SqlConnection(cs))
                 {
                     con.Open();
-                    //     string query = "update product set pro_name='" + NAME_TXT.Text + "', pro_comp='" + Int32.Parse(PRO_C_ID.Text) + "', pro_cat='" + Int32.Parse(PRO_TXT.Text) + "', pro_price='" + PRICE_TXT.Text + "', pro_manuf_date='" + MANU_DATE.Text.ToString() + "', pro_exp_date='" + EXP_DATE.Text.ToString() + "', quantity='" + QUANTITY_TXT.Text + "' where pro_id='" + ID_TXT.Text.ToString() + "'";
-                    string query = "update Customer set cust_name='" + NAME_TXT.Text + "', cust_gender='" + GENDER.Text + "', cust_age='" + AGE_TXT.Text + "', cust_address='" + ADDRESS_TXT.Text + "',cust_email'" + EMAIL_TXT.Text + "',cust_pass='" + PASS_TXT.Text + "' where pro_id='" + ID_TXT.Text.ToString() + "'";
-                    //  string query = "update product set pro_name='" + NAME_TXT.Text + "', pro_comp='" + Int32.Parse(PRO_C_ID.Text) + "', pro_cat='" + Int32.Parse(PRO_TXT.Text) + "', pro_price='" + PRICE_TXT.Text + "', pro_manuf_date='" + MANU_DATE.Text.ToString() + "', pro_exp_date='" + EXP_DATE.Text.ToString() + "', quantity='" + QUANTITY_TXT.Text + "' where pro_id='" + ID_TXT.Text.ToString() + "'";
+                    
+                    string query = "update Customer set cust_name='" + NAME_TXT.Text + "', cust_gender='" + GENDER.Text + "', cust_age='" + AGE_TXT.Text + "', cust_address='" + ADDRESS_TXT.Text + "',cust_email='" + EMAIL_TXT.Text + "',cust_pass='" + PASS_TXT.Text + "' where cust_id='" + ID_TXT.Text.ToString() + "'";
+                   
                     SqlCommand cmd = new SqlCommand(query, con);
                     cmd.CommandText = query;
 

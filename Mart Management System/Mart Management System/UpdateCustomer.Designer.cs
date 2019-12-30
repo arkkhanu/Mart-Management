@@ -139,7 +139,7 @@
             this.view_data.Size = new System.Drawing.Size(576, 212);
             this.view_data.TabIndex = 0;
             this.view_data.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.view_data_CellClick);
-            this.view_data.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.view_data_CellContentClick);
+//            this.view_data.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.view_data_CellContentClick);
             // 
             // Update_Box
             // 

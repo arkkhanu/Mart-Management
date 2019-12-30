@@ -12,6 +12,7 @@ namespace Mart_Management_System
 {
     public partial class CustomerPortal : Form
     {
+        
         public CustomerPortal()
         {
             InitializeComponent();
@@ -47,6 +48,13 @@ namespace Mart_Management_System
             ViewCustomer u = new ViewCustomer("customer");
             this.Hide();
             u.Show();
+        }
+
+        private void btn_history_Click(object sender, EventArgs e)
+        {
+            PurchasedHistory ph = new PurchasedHistory();
+            this.Hide();
+            ph.Show();
         }
 
       

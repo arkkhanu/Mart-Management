@@ -73,6 +73,8 @@ namespace Mart_Management_System
                             MessageBox.Show("Welcome " + dt.Rows[0].ItemArray[1].ToString());
 
                             CustomerPortal co = new CustomerPortal();
+                            PurchasedHistory.cust_id = ID_TXT.Text.ToString();
+                            ViewCustomer.cust_id = ID_TXT.Text.ToString();
                             this.Hide();
                             co.Show();
                         }
