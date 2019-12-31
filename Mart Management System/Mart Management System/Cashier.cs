@@ -125,6 +125,7 @@ namespace Mart_Management_System
             {
                 adddata();
                 updateingQuantity();
+                deletedata();
             }
             else
                 MessageBox.Show("please Fill Complete Form !");
@@ -247,6 +248,25 @@ namespace Mart_Management_System
             }
         }
 
-       
+       void deletedata()
+        {
+           using(SqlConnection con=new SqlConnection(cs))
+           {
+               try
+               {
+                   con.Open();
+                   string query = "delete cart where transaction_id=@tid";
+
+                   SqlCommand cmd = new SqlCommand(query, con);
+                   cmd.Parameters.AddWithValue("tid", TRAN_TXT.Text);
+                   cmd.ExecuteNonQuery();
+                   con.Close();
+               }
+               catch(Exception e)
+               {
+                   MessageBox.Show(e.Message);
+               }
+           }
+        }
     }
 }

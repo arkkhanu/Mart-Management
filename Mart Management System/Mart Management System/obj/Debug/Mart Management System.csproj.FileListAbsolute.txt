@@ -253,3 +253,7 @@ F:\University Material\5th Semister\Project\Visual Programing\Git\Mart-Managemen
 F:\University Material\5th Semister\Project\Visual Programing\Git\Mart-Management\Mart Management System\Mart Management System\obj\Debug\Mart_Management_System.ViewProduct.resources
 F:\University Material\5th Semister\Project\Visual Programing\Git\Mart-Management\Mart Management System\Mart Management System\obj\Debug\Mart Management System.csproj.GenerateResource.Cache
 F:\University Material\5th Semister\Project\Visual Programing\Git\Mart Management System\Mart Management System\obj\Debug\Mart_Management_System.PurchasedHistory.resources
+F:\University Material\5th Semister\Project\Visual Programing\Git\Mart Management System\Mart Management System\bin\Debug\Mart Management System.exe.manifest
+F:\University Material\5th Semister\Project\Visual Programing\Git\Mart Management System\Mart Management System\bin\Debug\Mart Management System.application
+F:\University Material\5th Semister\Project\Visual Programing\Git\Mart Management System\Mart Management System\obj\Debug\Mart Management System.exe.manifest
+F:\University Material\5th Semister\Project\Visual Programing\Git\Mart Management System\Mart Management System\obj\Debug\Mart Management System.application

@@ -36,7 +36,7 @@ namespace Mart_Management_System
             using (SqlConnection con = new SqlConnection(cs))
             {
                 con.Open();
-                sda = new SqlDataAdapter("select * from cart", con);
+                sda = new SqlDataAdapter("select * from details", con);
 
                 sda.Fill(dt);
                 if (dt.Rows.Count > 0)
